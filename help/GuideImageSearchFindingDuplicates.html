@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Finding Duplicates</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideImageSearch.html" title="Search and Select">Search and Select</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageSearchSearch.html" title="Search Window">Previous</a><a href="GuideImageMarks.html" title="Marking Images">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideImageSearchFindingDuplicates"></a>Finding Duplicates</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">Geeqie provides a utility to find images that have similar attributes or content.</p>
+<p class="para">
+    To display a new Find Duplicates Window select
+    <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Find duplicates</span></span>
+    .
+  </p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Addingfilestobecompared" title="Adding files to be compared">Adding files to be compared</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Comparisonmethods" title="Comparison methods">Comparison methods</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Resultslist" title="Results list">Results list</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Statusbar" title="Status bar">Status bar</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Thumbnails" title="Thumbnails">Thumbnails</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Orientation" title="Ignore Orientation">Ignore Orientation</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Sort" title="Sort">Sort</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Comparetwofilesets" title="Compare two file sets">Compare two file sets</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#DragandDrop" title="Drag and Drop">Drag and Drop</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#ImageDataWindow" title="Image Data Window">Image Data Window</a></li>
+</ul></div>
+</div>
+<section id="Addingfilestobecompared" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Adding files to be compared</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Add files to be compared using drag and drop. Drop files or folders onto the Find Duplicates window to add them to the list of files to compare. When one or more folders are dropped onto the window a menu will appear allowing you to choose the desired action:</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Add contents</span>
+        </dt>
+<dd class="terms">The contents of dropped folders will added to the window.</dd>
+<dt class="terms">
+          <span class="gui guilabel">Add contents recursive</span>
+        </dt>
+<dd class="terms">The contents of dropped folders and all sub folders will be added to the window.</dd>
+<dt class="terms">
+          <span class="gui guilabel">Skip folders</span>
+        </dt>
+<dd class="terms">
+          Ignore folders contained in the drop list.
+          <p class="para"></p>
+          When files are added to the window, the comparison is restarted to include the new files.
+        </dd>
+</dl></div></div></div></div>
+<p class="para">
+      <div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+        <p class="para">Symbolic links to folders will be followed, but symbolic links to files will be ignored. Only actual files will be tested.</p>
+      </div></div></div>
+</div>
+    </p>
+</div></div>
+</div></section><section id="Comparisonmethods" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Comparison methods</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      The attribute to use for two images to match can be selected with the
+      <span class="em em-bold emphasis">Compare by:</span>
+      drop down menu. Each method is explained below:
+    </p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Name</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The file name.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Name case-insensitive</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The file name but ignoring case.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Size</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The file size.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Date</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The file date.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Dimensions</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The image dimensions.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Checksum</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The MD5 file checksum.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Path</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The complete path to file.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Similarity (high)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Very similar image content. Preset to 95%.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Similarity</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Similar image content. Preset to 90%.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Similarity (low)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Slightly similar image content. Preset to 85%.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Similarity (custom)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            The percentage value to used to consider two images a match is configured in the spin box at the bottom of the window. Setting a value to less than 85 is not likely to be useful.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Name ≠ Content</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Show images with the same name but different content.
+            <div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+              <p class="para">Because pairs of files are being compared, when there are multiple hits care should be taken when analyzing the results.</p>
+            </div></div></div>
+</div>
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Name case-insensitive ≠ Content</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Show images with the same name, ignoring case, but different content.
+            <div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+              <p class="para">Because pairs of files are being compared, when there are multiple hits care should be taken when analyzing the results.</p>
+            </div></div></div>
+</div>
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Show all</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Do not compare. Show all images.
+          </p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section><section id="Resultslist" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Results list</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Files that match with the selected comparison method will appear in the list. Matching files are grouped in alternating color.</p>
+<p class="para">The order of the result list can be changed by clicking on the column header. This will re-order the images within each set. When comparing by image content similarity, the matching sets will be sorted by order of rank starting with the files that are most similar.</p>
+<p class="para">
+      A
+      <span class="em em-bold emphasis">context menu</span>
+      is available for the result list by right clicking the mouse or pressing the Menu key when a row has the focus.
+    </p>
+<p class="para">
+      Groups in the results list may be selected by using the keyboard. Refer to the <span class="em emphasis">Find Duplicates Window</span> section of
+       <a class="link" href="GuideReferenceKeyboardShortcuts.html#DuplicatesKeyboardShortcuts" title="Duplicates keyboard shortcuts">Keyboard Shortcuts</a>
+      .
+    </p>
+<p class="para">
+      The
+      <span class="em em-bold emphasis">selection</span>
+      can be changed using the keyboard and mouse the same as in a
+      <a class="link" href="GuideMainWindowFilePane.html" title="File Pane">file pane</a>
+      of the main window.
+    </p>
+<p class="para">The image Dimensions column of the result list will only contain dimension information when comparing by dimensions, or when the data is easily available from memory or has been read from the cache.</p>
+</div></div>
+</div></section><section id="Statusbar" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Status bar</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Along the bottom of the Find Duplicates window is an area that displays the count of files contained in the window, and the number of files in the result list.</p>
+<p class="para">The status bar will also display the status of an active compare operation using the progress bar. A compare operation involves 2 or 3 stages, depending on the type of comparison. These are the stages in order:</p>
+<div class="list orderedlist"><div class="inner"><div class="region"><div class="contents"><ol class="list orderedlist">
+<li class="list orderedlist">
+        <p class="para">If necessary, extra data is read into memory for the comparison stage and the progress bar will indicate this stage with text such as “Reading dimensions...”, “Reading checksums...”, or “Reading similarity data...”.</p>
+      </li>
+<li class="list orderedlist">The images are compared using the selected method, the progress bar will indicate this stage with the text “Comparing...”.</li>
+<li class="list orderedlist">
+        <p class="para">The results are sorted for display, the progress bar will indicate this stage with the text “Sorting...”.</p>
+        <p class="para">Stage 1 is only used for the Dimensions, Checksum, and Similarity compare methods.</p>
+        <p class="para">If the time to complete a stage will be significant, an estimated time to completion will also be displayed in the progress bar. The estimated time only refers to the current stage, other stages are not included in the estimate. The time estimate is displayed using the format MINUTES:SECONDS.</p>
+      </li>
+</ol></div></div></div></div>
+</div></div>
+</div></section><section id="Thumbnails" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Thumbnails</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">Thumbnails can be displayed beside each image in the result list by enabling the Thumbnails check box.</p></div></div>
+</div></section><section id="Orientation" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Ignore Orientation</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">When selected and a similarity compare is being used, the images are checked against 4 rotations: 0°, 90°, 180°, 270°, plus flip and mirror.</p></div></div>
+</div></section><section id="Sort" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Sort</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+      The normal sort order is for groups (in the case of Similarity checks) with the highest number of near-100% matches to be at the top of the list.
+      <p class="para"></p>
+      If this box is checked, groups with the lowest number of matches are placed at the top of the list.
+    </p></div></div>
+</div></section><section id="Comparetwofilesets" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Compare two file sets</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Sometimes it is useful to compare one group of files to another, different group of files. Enable this check box to compare two groups of files. When enabled, a second list will appear and files can be added to this list using the same methods for the main list.</p>
+<p class="para">When comparing two file sets the results list will display matches between the two lists. For each match group, the first file is always from the main group, and the remaining files are always from the second group.</p>
+</div></div>
+</div></section><section id="DragandDrop" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Drag and Drop</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">Drag and drop can be initiated with the primary or middle mouse buttons. Dragging a file that is selected will include all selected files in the drag. Dragging a file that is not selected will first change the selection to the dragged file, and clear the previous selection.</p></div></div>
+</div></section><section id="ImageDataWindow" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Image Data Window</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      <span class="code">Ctrl+Shift+Right Mouse click</span>
+      : Use this to display a dialog containing the data stored for the clicked image file. This is usually only useful for debugging purposes.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageSearchSearch.html" title="Search Window">Previous</a><a href="GuideImageMarks.html" title="Marking Images">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Image Pane</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideMainWindow.html" title="Main Window">Main Window</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideMainWindowFolderPane.html" title="Folder pane">Previous</a><a href="GuideMainWindowNavigation.html" title="Navigation">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideMainWindowImagePane"></a>Image Pane</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">The image pane is the region of the main window that displays the selected image. The image pane allows adjustment of display size and orientation; it also provides several methods to manipulate the image with the mouse and keyboard.</p>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideMainWindowImagePane.html#Imagedisplay" title="Image display">Image display</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowImagePane.html#InformationandhistogramOverlay" title="Image Overlay">Image Overlay</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowImagePane.html#Imagepanningandmanipulation" title="Image panning and manipulation">Image panning and manipulation</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowImagePane.html#Navigation" title="Navigation">Navigation</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowImagePane.html#Contextmenu" title="Context menu">Context menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowImagePane.html#ImagePaneDragandDrop" title="Drag and Drop">Drag and Drop</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowImagePane.html#Displayingimagessidebyside" title="Displaying images side by side">Displaying images side by side</a></li>
+</ul></div>
+</div>
+<section id="Imagedisplay" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Image display</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The image is drawn to the screen as it is decoded from disk. The image can be panned and zoomed while it is still loading. Image adjustment operations for rotation, mirror, and flip will delay until the image is completed. The adjustment queue will remember one operation and will retain the most recently requested function, which will be performed once the image has finished loading.</p>
+<p class="para">
+      The quality of the image, especially when using the zoom feature, is dependent on the settings that are available on the
+      <a class="link" href="GuideOptionsImage.html" title="Image Options">Image tab</a>
+      of the preferences dialog.
+    </p>
+<p class="para">
+      To increase the speed of loading the next image when navigating the image list in sequence, enable the
+      <a class="link" href="GuideOptionsImage.html" title="Image Options">Preload next image</a>
+      option.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="InformationandhistogramOverlay" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">
+<a name="titleInformationandhistogramOverlay"></a>Image Overlay</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      An image overlay can be turned on and off by repeatedly pressing
+      <span class="key keycap"><kbd>I</kbd></span>
+      . This overlay can either display image data such as f-stop, shutter speed and descriptive text, or a histogram.
+    </p>
+<p class="para">
+      Data the overlay will always show is:
+      <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist"><li class="list itemizedlist">
+          <a class="link" href="GuideImageMarks.html" title="Marking Images">Marks</a>
+          , if they are selected
+        </li></ul></div></div></div></div>
+    </p>
+<p class="para">
+      If the histogram is being displayed,
+      <span class="key keycap"><kbd>K</kbd></span>
+      will switch the histogram between colors, and
+      <span class="key keycap"><kbd>J</kbd></span>
+      will toggle between a linear or logarithmic histogram.
+    </p>
+<p class="para">
+      Data the overlay displays is customizable through the
+      <a class="link" href="GuideOptionsOSD.html#OverlayScreenDisplay" title="Overlay Screen Display">Image Overlay Template</a>
+      option in the Windows tab in the Preferences dialog.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Imagepanningandmanipulation" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Image panning and manipulation</h2></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">When the image size is larger than the image pane, the visible region can be changed with the keyboard or mouse. The keyboard can also be used to adjust the orientation of the image.</p>
+<p class="para"></p>
+</div>
+<section id="Keyboard" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Keyboard and mouse</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+        <a class="link" href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Keyboard and Mouse Shortcuts</a>
+        describes how you may manipulate the image displayed.
+      </p>
+<div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+        <p class="para">
+          The rotation, mirror, and flip functions do not change the image data, they merely change the image as you view it. You may store the modified orientation into metadata manually with
+          <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guimenuitem">Orientation</span> ▸ <span class="gui guimenuitem">Apply the orientation to image content</span></span>
+          , or this may happen automatically if
+          <span class="em emphasis">Write altered image orientation to the metadata</span>
+          is set in
+          <a class="link" href="GuideOptionsMetadata.html" title="Metadata">Metadata Options</a>
+        </p>
+      </div></div></div>
+</div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Mouse" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Mouse</h3></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+        Press the primary mouse button on the image and hold it, then move the mouse to pan the image in the desired direction. Releasing the mouse button will stop the panning operation. The mouse wheel can also be used to scroll the image when holding down the Shift key
+        <sup class="footnote"><a class="footnote" href="#ref2" id="-noteref-ref2">2</a></sup>
+        .
+      </p>
+<p class="para">To scale the image size hold down the Ctrl key and scroll the mouse wheel up to zoom in, or down to zoom out.</p>
+<p class="para"></p>
+</div>
+<section id="SmoothScroll" class="section"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">Smooth Scroll</h4></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">To start the smooth scroll function hold down the Shift key and click the primary mouse button. An icon will appear at the location of the mouse pointer, the mouse can then be positioned to pan the image. The image will pan in the direction of the mouse pointer relative to the icon. The pan speed will increase in proportion to the distance that the pointer is from the center of the icon. To end the smooth scroll function click the primary mouse button within the image pane.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="MouseWheelMode" class="section"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">Mouse Wheel Mode</h4></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">A single click on the mouse middle button will toggle the function of the mouse wheel between "change image" and "change zoom".</p>
+<div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+          <p class="para">
+            This option cannot be used if either the Preference
+            <span class="em emphasis">Mouse wheel scrolls image</span>
+            or
+            <span class="em emphasis">Navigation by left or middle click on image</span>
+            are selected.
+          </p>
+        </div></div></div>
+</div>
+<p class="para">In Split View mode, each window can be clicked individually so that, in Quad View for example, Connected Zoom can be on 2, 3 or all 4 windows.</p>
+</div></div>
+</div></section>
+</div>
+</div></section>
+</div>
+</div></section><section id="Navigation" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Navigation</h2></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">The displayed image can be changed to the next or previous image using the keyboard or mouse.</p>
+<p class="para"></p>
+</div>
+<section id="Keyboard1" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Keyboard</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The PageDown and PageUp keys will change the image to the next or previous image, respectively, in the list. The Home and End keys will jump to the first and last image, respectively. When the image has the focus, the SpaceBar and BackSpace keys can also be used to change the image.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Mouse1" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Mouse</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+        To change to the next image in the list click the left mouse button, click the middle mouse button to change to the previous image. The mouse wheel can also be used to change the current image
+        
+        .
+      </p>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+</div></section><section id="Contextmenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Context menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      Right clicking the mouse or pressing the menu key while the image has the focus will display a menu. The menu functions will perform the same as those that match the window's
+      <a class="link" href="GuideMainWindowMenus.html" title="Menus">menu bar</a>
+      , however a few functions are unique to the context menu:
+    </p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">View in new window</dt>
+<dd class="terms">
+          <p class="para">Opens a new window containing a second copy of the current image.</p>
+        </dd>
+<dt class="terms">Pause slide show, Continue slide show</dt>
+<dd class="terms">
+          <p class="para">Controls the pause state of an active slide show, the text of the menu will change to reflect the action that will be performed.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="ImagePaneDragandDrop" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">
+<a name="titleImagePaneDragandDrop"></a>Drag and Drop</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Files and folders can be dropped onto the image pane, dropping a file will display the file and dropping a folder will change the main window to display the contents of the folder. When dropping multiple items on the image pane, only the first item in the list will be used, all additional items will be ignored.</p>
+<p class="para">A drag and drop operation can be initiated from the image pane with the middle mouse button, the dragged item will contain the file path of the displayed image.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Displayingimagessidebyside" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Displaying images side by side</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Using View &gt; Split item from the main menu, image pane can be split into either two or four panes, allowing one to display images side by side. You may use drag'n drop to change images in each pane.</p>
+<p class="para">
+      Connected zoom is possible through the
+      <span class="em em-bold emphasis">View▸Zoom▸Connected Zoom</span>
+      menu item. Zoom is then applied to all displayed images.
+    </p>
+<p class="para">Connected scrolling is also possible using Shift and primary mouse button.</p>
+<p class="para">As a general rule, hotkeys and mouse without shift affects just one image and with shift all images.</p>
+<p class="para"></p>
+</div></div>
+</div></section><div class="footnotes"><div id="ref2" class="footnote">
+<a class="footnote" href="#-noteref-ref2">2</a>
+          The mouse wheel behavior for scrolling and image step can be swapped with the "Mouse wheel scrolls image" option located on the
+          <a class="link" href="GuideOptionsBehavior.html" title="Behavior Options">Behaviour tab</a>
+          of the preferences dialog.
+        </div></div>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideMainWindowFolderPane.html" title="Folder pane">Previous</a><a href="GuideMainWindowNavigation.html" title="Navigation">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

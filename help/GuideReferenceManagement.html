@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Cache and Data Maintenance</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideImageManagement.html" title="File Management">File Management</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageManagementDelete.html" title="Delete">Previous</a><a href="GuideColorManagement.html" title="Color Management">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideReferenceManagement"></a>Cache and Data Maintenance</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+    Thumbnails and other cached data can be maintained from the dialog accessible by selecting
+    <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guimenuitem">Cache maintenance</span></span>
+    .
+  </p>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideReferenceManagement.html#Geeqiethumbnailcache" title="Geeqie thumbnail and sim. cache">Geeqie thumbnail and sim. cache</a></li>
+<li class="links"><a class="xref" href="GuideReferenceManagement.html#Sharedthumbnailcache" title="Shared thumbnail cache">Shared thumbnail cache</a></li>
+<li class="links"><a class="xref" href="GuideReferenceManagement.html#Createthumbnails" title="Create thumbnails">Create thumbnails</a></li>
+<li class="links"><a class="xref" href="GuideReferenceManagement.html#CreateSimFiles" title="Create file similarity cache">Create file similarity cache</a></li>
+<li class="links"><a class="xref" href="GuideReferenceManagement.html#Metadata" title="Metadata">Metadata</a></li>
+</ul></div>
+</div>
+<section id="Geeqiethumbnailcache" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Geeqie thumbnail and sim. cache</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      The utilities listed here operate on the Geeqie caching mechanism. This also includes the data cached for the
+      <a class="link" href="GuideImageSearchSearch.html" title="Search Window">search</a>
+      and
+      <a class="link" href="GuideImageSearchFindingDuplicates.html" title="Finding Duplicates">find duplicates</a>
+      utilities.
+    </p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Clean up</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Removes thumbnails, sim. files, and data for which the source image is no longer present, or has been modified since the thumbnail was generated.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Clear cache</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Removes all thumbnails, sim. files, and data stored in the designated folder.</p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section><section id="Sharedthumbnailcache" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Shared thumbnail cache</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The utilities listed here operate on the shared thumbnail mechanism.</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Clean up</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Removes thumbnails for which the source image is no longer present, or has been modified since the thumbnail was generated.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Clear cache</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Removes all thumbnails stored in the designated folder.</p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section><section id="Createthumbnails" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Create thumbnails</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      This utility will render thumbnails using the current thumbnail caching mechanism, as determined in
+      <a class="link" href="GuideOptionsGeneral.html" title="General Options">Preferences</a>
+      .
+    </p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Render</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Pre-render thumbnails for a specific folder, the utility has the following options:</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Include subfolders</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Enable to include all images contained in the subfolders of folder.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Store thumbnails local to source images</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The generated thumbnails will be stored local to the source images, if you have the permissions to write to the folder containing the images.</p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section><section id="CreateSimFiles" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Create file similarity cache</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+      Some file operations, such as
+      <a class="link" href="GuideImageSearchSearch.html" title="Search Window">search</a>
+      and
+      <a class="link" href="GuideImageSearchFindingDuplicates.html" title="Finding Duplicates">find duplicates</a>
+      , are speeded up if similarity data files for the images have been created. This utility will create sim. files recursively under the specified folder.
+      <p class="para"></p>
+      The sim. files contain some or all of the following fields:
+      <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+            <span class="gui guilabel">Dimensions</span>
+          </dt>
+<dd class="terms">
+            <p class="para">width x height</p>
+          </dd>
+<dt class="terms">
+            <span class="gui guilabel">Date</span>
+          </dt>
+<dd class="terms">
+            <p class="para">Exif date in time_t format</p>
+          </dd>
+<dt class="terms">
+            <span class="gui guilabel">checksum</span>
+          </dt>
+<dd class="terms">
+            <p class="para">MD5sum 32 character ascii text digest</p>
+          </dd>
+<dt class="terms">
+            <span class="gui guilabel">SimilarityGrid</span>
+          </dt>
+<dd class="terms">
+            <p class="para">[32 x 32] = 3072 bytes of data (1024 pixels in RGB format, 1 pixel is 24bits)</p>
+          </dd>
+</dl></div></div></div></div>
+    </p></div></div>
+</div></section><section id="Metadata" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Metadata</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      This utility operates on the data store for
+      <a class="link" href="GuideOptionsMetadata.html#MetadataWritingProcess" title="Metadata writing process">Metadata</a>
+      located in the folder:
+      <div class="code"><pre class="contents"><code>$HOME/.local/share/Geeqie/metadata</code></pre></div>
+      .
+    </p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Clean up</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Removes keywords and comments for which the source image is no longer present.</p>
+          <p class="para"></p>
+          <p class="para"></p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageManagementDelete.html" title="Delete">Previous</a><a href="GuideColorManagement.html" title="Color Management">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

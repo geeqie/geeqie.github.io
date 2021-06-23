@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>File Pane</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideMainWindow.html" title="Main Window">Main Window</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideMainWindow.html" title="Main Window">Previous</a><a href="GuideMainWindowFolderPane.html" title="Folder pane">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideMainWindowFilePane"></a>File Pane</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">The file pane displays the images contained in the active folder. It has two modes of display, allows multiple selection, and can initiate drag and drop operations.</p>
+<p class="para">
+    A
+    <span class="em em-bold emphasis">context menu</span>
+    can be displayed by clicking the right mouse button on the file pane or pressing the menu key while the file pane has the focus.
+  </p>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideMainWindowFilePane.html#Listview" title="List view">List view</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFilePane.html#Iconview" title="Icon view">Icon view</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFilePane.html#Filefilter" title="File Filter">File Filter</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFilePane.html#Multipleselection" title="Multiple selection">Multiple selection</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFilePane.html#Sorting" title="Sorting">Sorting</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFilePane.html#Contextmenu" title="Context menu">Context menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFilePane.html#DragandDrop" title="Drag and Drop">Drag and Drop</a></li>
+</ul></div>
+</div>
+<section id="Listview" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">List view</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      This mode can be enabled by selecting
+      <span class="em em-bold emphasis">List</span>
+      from the
+      <span class="em em-bold emphasis">View</span>
+      menu, pressing <span class="code">Ctrl + L</span>, or unselecting
+      <span class="em em-bold emphasis">View as icons</span>
+      from the context menu.
+    </p>
+<p class="para">The list view mode displays images in a standard vertical list. Three columns provide the file name, size in bytes, and the time the contents were last modified.</p>
+<p class="para">
+      Thumbnails can be displayed next to each file in the list, to toggle thumbnails on or off by selecting
+      <span class="em em-bold emphasis">Thumbnails</span>
+      from the
+      <span class="em em-bold emphasis">View</span>
+      menu, pressing <span class="code">T</span>, clicking <div class="media media-image"><div class="inner"><img src="icon_thumb.png"></div></div> on the tool bar, or selecting
+      <span class="em em-bold emphasis">Show thumbnails</span>
+      from the context menu.
+    </p>
+<p class="para">
+      <a class="link" href="GuideOptionsFiltering.html" title="Files Options">Grouped sidecar files</a>
+      are represented by the main file with an expander. Clicking on the expander shows sidecar files.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Iconview" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">
+<a name="titleIconview"></a>Icon view</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      This mode can be enabled by selecting
+      <span class="em em-bold emphasis">Icons</span>
+      from the View menu, pressing <span class="code">Ctrl + I</span>, or selecting
+      <span class="em em-bold emphasis">View as icons</span>
+      from the context menu.
+    </p>
+<p class="para">The icon view mode displays images as thumbnails in a grid, and by default a file name below each thumbnail.</p>
+<p class="para">
+      The 
+      file name displayed below each thumbnail can be turned on or off by selecting
+      <span class="em em-bold emphasis">Show filename text</span>
+      from the context menu.
+    </p>
+<p class="para">
+      <a class="link" href="GuideOptionsFiltering.html" title="Files Options">Grouped sidecar files</a>
+      are represented by the main file. For accessing sidecars switch to List mode.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Filefilter" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">
+<a name="titleFilefilter"></a>File Filter</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      A filter box can be opened by selecting
+      <span class="em em-bold emphasis">Show File Filter</span>
+      from the View menu.
+    </p>
+<p class="para">
+      Characters you type into this box will be used for pattern matching to select the files displayed.
+      <a class="link" href="GuideReferencePCRE.html" title="Perl Compatible Regular Expressions">Regular expressions</a>
+      are used in this field.
+      <p class="para"></p>
+      For basic pattern matching "JPG" will match any filename containing those characters.
+      <p class="para"></p>
+      If you type a newline, the text will be saved in the dropdown box list. The last 10 items are saved.
+      <p class="para"></p>
+      To delete an item, select it from the drop-down list, click on the text box to select the text, and then press
+      <span class="key keycap"><kbd>Delete</kbd></span>
+      followed by
+      <span class="key keycap"><kbd>Enter</kbd></span>
+      .
+    </p>
+<p class="para">By default filtering is case-insensitive. A checkbox labelled "Case" permits the filter to be made case-sensitive.
+    </p>
+<p class="para">Additionally a drop-down box permits any of the file <a class="link" href="GuideOptionsFiltering.html#Filetypes" title="File types">Classes</a> to be selected or deselected from the viewed list.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Multipleselection" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Multiple selection</h2></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">It is possible to select more than one image from the file pane. Multiple files can be selected with several methods:</p>
+<p class="para"></p>
+</div>
+<section id="Mouse" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Mouse</h3></div>
+<div class="region"><div class="contents pagewide">
+<div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist compact">
+<li class="list itemizedlist">
+          <p class="para"><span class="code">Ctrl</span> + Primary mouse button will add or remove the file from the selection.</p>
+        </li>
+<li class="list itemizedlist">
+          <p class="para">Middle mouse button will toggle selection of the file.</p>
+        </li>
+<li class="list itemizedlist">
+          <p class="para"><span class="code">Shift</span> + Primary mouse button will select all images between the clicked and focused image, or it will unselect all those images if the clicked image is already selected.</p>
+        </li>
+<li class="list itemizedlist">
+          <p class="para"><span class="code">Shift + Ctrl</span> + Primary mouse button works as Shift + Primary mouse button, but will not change the selection of files outside the region between the focus and clicked image.</p>
+        </li>
+</ul></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Keyboard" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Keyboard</h3></div>
+<div class="region"><div class="contents pagewide">
+<div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist compact">
+<li class="list itemizedlist">
+          <p class="para"><span class="code">Ctrl + Arrows</span> will move the focus without changing the selection.</p>
+        </li>
+<li class="list itemizedlist">
+          <p class="para"><span class="code">Ctrl + Space</span> will toggle selection of the focused image.</p>
+        </li>
+<li class="list itemizedlist">
+          <p class="para"><span class="code">Shift + Arrows</span> will select a region of images.</p>
+        </li>
+<li class="list itemizedlist">
+          <p class="para"><span class="code">Shift + Ctrl + Arrows</span> works as <span class="code">Shift + Arrows</span>, but will not change the selection of files outside the current focus region.</p>
+        </li>
+</ul></div></div></div></div>
+<p class="para">
+        To select all files press <span class="code">Ctrl + A</span>, or to unselect all image press <span class="code">Ctrl + Shift + A</span>. These operations are also available from the
+        <span class="em em-bold emphasis">Edit</span>
+        menu as
+        <span class="em em-bold emphasis">Select all</span>
+        and
+        <span class="em em-bold emphasis">Select none</span>
+        .
+      </p>
+<p class="para">
+        The current number of selected images and their total size will be indicated in the File list section of the
+        <a class="link" href="GuideMainWindowStatusBar.html" title="Status Bar">status bar</a>
+        .
+      </p>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+</div></section><section id="Sorting" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Sorting</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The order of the images can be changed by clicking the sort area of the status bar or from the context menu. The sort methods are by file name, number, file date, or file size. The number method will sort file names by their natural order, for example files with names of file_10, file_12, and file_9 will appear in order file_9, file_10, and file_12.</p>
+<p class="para">Selecting the ascending menu item will toggle between increasing and decreasing sort order.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Contextmenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Context menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      Right clicking the mouse or pressing the menu key while the file pane has focus will display a menu. The menu functions will perform the same as those that match the window's
+      <a class="link" href="GuideMainWindowMenus.html" title="Menus">menu bar</a>
+      , however a few functions are unique to the context menu:
+    </p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="em em-bold emphasis">View in new window</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a new window containing a list of the currently selected images.</p>
+        </dd>
+<dt class="terms">
+          <span class="em em-bold emphasis">Sort</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Changes the sort order of file pane.</p>
+        </dd>
+<dt class="terms">
+          <span class="em em-bold emphasis">View as icons</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles between the list and icon view modes.</p>
+        </dd>
+<dt class="terms">
+          <span class="em em-bold emphasis">Show thumbnails</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles display of thumbnails in the list view display mode.</p>
+        </dd>
+<dt class="terms">
+          <span class="em em-bold emphasis">Show filename text</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles display of file names in the icon view display mode.</p>
+        </dd>
+<dt class="terms">
+          <span class="em em-bold emphasis">Show star rating</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles display of the "star rating" (Xmp.xmp.Rating).</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="DragandDrop" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Drag and Drop</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Drag and drop can be initialized with the primary or middle mouse buttons in the file pane. Dragging a file that is selected will include all selected files in the drag. Dragging a file that is not selected will first change the selection to the dragged file, and clear the previous selection.</p>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideMainWindow.html" title="Main Window">Previous</a><a href="GuideMainWindowFolderPane.html" title="Folder pane">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

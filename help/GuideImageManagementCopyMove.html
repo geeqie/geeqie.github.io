@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Copy and Move</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideImageManagement.html" title="File Management">File Management</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageManagement.html" title="File Management">Previous</a><a href="GuideImageManagementRename.html" title="Rename">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">Copy and Move</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+    To copy a file in Geeqie select
+    <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Copy</span> <span class="shortcut">(
+        <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>C</kbd></span></span>
+      )</span></span>
+    and to move a file select
+    <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Move</span> <span class="shortcut">(
+        <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>M</kbd></span></span>
+      )</span></span>
+    . These operations also appear in the context menu of all images and files.
+  </p>
+<p class="para">The Copy and Move operations and dialogs behave the same in Geeqie, with the only difference being the final result. The remaining text of this page applies equally to the Copy and Move operations, for the remainder of this page these will be referred to as a Copy/Move operation.</p>
+<p class="para">Initiating a Copy/Move operation will display a dialog to select the destination folder to Copy/Move the selected file, after the destination folder is selected Geeqie will proceed to Copy/Move the images to the destination. If an error occurs or a file exists with the same name as one of the files being Copy/Moved, a dialog will appear prompting how to handle the situation.</p>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideImageManagementCopyMove.html#TheCopyMovedialog" title="The Copy/Move dialog">The Copy/Move dialog</a></li>
+<li class="links"><a class="xref" href="GuideImageManagementCopyMove.html#Theerrordialog" title="The error dialog">The error dialog</a></li>
+<li class="links"><a class="xref" href="GuideImageManagementCopyMove.html#Theoverwritedialog" title="The overwrite dialog">The overwrite dialog</a></li>
+</ul></div>
+</div>
+<section id="TheCopyMovedialog" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">The Copy/Move dialog</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">This is the dialog that is displayed when initiating a Copy/Move operation. The dialog contains a row of buttons near the top, vertical list of bookmarks along the left side, a vertical list of folders in the current path, a text entry field, and a row of buttons along the bottom.</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Home button</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Activate this button to change the active path to your home folder.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">New Folder button</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Activate this to create a new empty folder as a sub folder of the active path. The new folder will appear in the folder list ready for you to type in the desired name.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Show Hidden check box</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Enabling this check box will cause hidden folders to appear in the folder list.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Bookmark list</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            This list on the left side of the window allows you to save links to folders that are frequently used. Activating a bookmark will change the active path to that pointed to by the link. To add items to the bookmark list highlight a folder and press
+            <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>B</kbd></span></span>
+            )</span>
+            , select “Add bookmark” from the folder's context menu, or drag a folder onto the bookmark list.
+            <p class="para"></p>
+            The bookmark has a context menu that can be displayed by clicking the right mouse button, or pressing the Menu key when a bookmark has the focus. From the context menu you can edit a bookmark, move it up or down in the list, or remove the bookmark from the list. A bookmark can also be moved by pressing Shift + Up or Shift + Down while it has the focus.
+          </p>
+          <p class="para">A bookmark with the name "." is treated as a special case. Each time this bookmark is displayed, its path is loaded with Geeqie's current working folder. This bookmark, like any other, can be deleted and re-created at any time.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Folder list</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            This is the list that displays the folders contained in the active path. To change the active path to a folder displayed in this list double click the primary mouse button or highlight the folder with the keyboard and press
+            <span class="key keycap"><kbd>Enter</kbd></span>
+            or
+            <span class="key keycap"><kbd>Spacebar</kbd></span>
+            . This list has a context menu that allows renaming or bookmarking the selected folder. A folder can also be dragged onto the bookmark list to add a bookmark.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Path entry</span>
+        </dt>
+<dd class="terms">
+          <p class="para">This text entry displays the active path of the dialog. The path can be directly edited using this entry. Tab completion is supported, and the drop down arrow will display a list of recently selected folders.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Copy/Move button</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The name of this button will differ depending on the selected operation, activating it will start the operation with the folder displayed in the path entry as the destination.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Cancel button</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Activate this button to close the dialog, the operation will be aborted.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Theerrordialog" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">The error dialog</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">If a problem occurs because Geeqie is unable to Copy or Move a selected file a dialog will appear to notify the user. The dialog will also ask if the operation should continue if one or more files remain to be Copied or Moved.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Theoverwritedialog" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">The overwrite dialog</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">If a file with the same name exists in the selected destination a dialog will appear to notify the user and ask how to resolve the conflict. The dialog will also display the source and destination images. The following possible solutions will be offered:</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Auto rename</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Enabling this check box to have Geeqie select a unique name for the destination file, the proposed new name will appear in the rename entry field.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Rename</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Enable this check box to manually enter a new name for the file.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Overwrite</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Activate this will overwrite the existing file, or rename it if one of the rename check boxes are enabled.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Overwrite all</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Activating this will perform the same operation as the Yes button, however any further file name conflicts will be handled quietly in the same method as is selected for the current file.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Skip</span>
+        </dt>
+<dd class="terms">
+          <p class="para">This button will skip doing anything to the file in question, and resume the operation with the next file. The source file will remain untouched.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Skip All</span>
+        </dt>
+<dd class="terms">
+          <p class="para">This will perform the same as the Skip button, however any further file name conflicts will be quietly ignored for all remaining files.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Cancel</span>
+        </dt>
+<dd class="terms">
+          <p class="para">This will close the dialog and stop the operation, all remaining files will be ignored.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageManagement.html" title="File Management">Previous</a><a href="GuideImageManagementRename.html" title="Rename">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

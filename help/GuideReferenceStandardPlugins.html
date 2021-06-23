@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Standard Plugins</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideReference.html" title="Reference">Reference</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferencePixbufLoaders.html" title="Additional pixbuf loaders">Previous</a><a href="GuideReferenceUTC.html" title="UTC and Daylight Saving Time (DST)">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideReferenceStandardPlugins"></a>Standard Plugins</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">The following plugins are supplied as standard with Geeqie.</p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#EditUFRawIDfile" title="Edit UFRaw ID file">Edit UFRaw ID file</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#UFRawBatch" title="UFRaw Batch">UFRaw Batch</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#UFRawBatchrecursive" title="UFRaw Batch recursive">UFRaw Batch recursive</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Symlink" title="Symlink">Symlink</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Applytheorientationtoimagecontent" title="Apply the orientation to image content">Apply the orientation to image content</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Cameraimport" title="Camera import">Camera import</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Exportjpeg" title="Export jpeg">Export jpeg</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Imagecrop" title="Image crop">Image crop</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Randomimage" title="Random image">Random image</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Tetheredphotography" title="Tethered photography">Tethered photography</a></li>
+</ul></div>
+</div>
+<section id="EditUFRawIDfile" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Edit UFRaw ID file</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Creates a UFRaw ID file for each of the selected files.</p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Edit</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="UFRawBatch" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">UFRaw Batch</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      Searches for new RAW files or for modified UFRaw 
+      ID files and processes them with
+      <span class="code">ufraw-batch</span>
+      .
+    </p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Edit</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="UFRawBatchrecursive" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">UFRaw Batch recursive</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">As above, with a recursive search.</p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Edit</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="Symlink" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Symlink</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Creates a symbolic link on the selected files. If a file has sidecars, they will also be symlinked.</p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">File</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="Applytheorientationtoimagecontent" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Apply the orientation to image content</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">This command affects only jpeg, tiff and png files. The image file on disk is rotated to the orientation as specified by its Exif Orientation tag.</p>
+<div class="note note-warning" title="Warning">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m11.92 3.3047a1.3872 1.3872 0 0 0-1.129 0.6933l-8.6055 14.922a1.3872 1.3872 0 0 0 1.2012 2.08l17.226-8e-3a1.3872 1.3872 0 0 0 1.201-2.08l-8.619-14.916a1.3872 1.3872 0 0 0-1.136-0.6913 1.3872 1.3872 0 0 0-0.139 0zm0.08 4.6953a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm0 9a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+      <p class="para">External commands exiftran, exiv2 and mogrify, are used to implement this command.</p>
+    </div></div></div>
+</div>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Edit/Orientation</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="Cameraimport" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Camera import</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Imports images from an attached camera to the current folder. If a file with the same name already exists it will not be overwritten, and the new image will not be downloaded.</p>
+<p class="para">File names on digital cameras are not necessarily unique. In some cases the same file name can exist in more than one sub-folder on the camera. As existing images will not be overwritten, subsequent files of the same name will not be downloaded. In this case a dialog will be shown to warn you of this.</p>
+<p class="para">
+      You may use the gphoto2 option
+      <span class="code">--filename</span>
+      option to ensure that all filenames are unique when downloading. Refer to the
+      <a href="http://www.gphoto.org/doc/manual/ref-gphoto2-cli.html" class="ulink" title="http://www.gphoto.org/doc/manual/ref-gphoto2-cli.html">gphoto2 documentation.</a>
+    </p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Plugins</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="Exportjpeg" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Export jpeg</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      Extracts an embedded jpeg from a raw image to a file in the
+      <span class="code">/tmp</span>
+      folder. If you wish to to keep this image, it must be copied or moved.
+      <p class="para"></p>
+      If
+      <span class="code">jpgicc</span>
+      is installed, the image will be colour-corrected for the currently selected rendering intent.
+    </p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Plugins</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="Imagecrop" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Image crop</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      If rectangle coordinates have been set by
+      <span class="em em-bold emphasis">Edit/Draw Rectangle</span>
+      , a cropped image will be stored in the
+      <span class="code">/tmp</span>
+      folder. If you wish to to keep this image, it must be copied or moved.
+    </p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Plugins</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="Randomimage" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Random image</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Selects and displays a random image from a list of all images in Collections and the currently displayed folder.</p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Plugins</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="Tetheredphotography" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Tethered photography</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      If a camera is connected to the computer via USB, photos taken are immediately downloaded to the current folder and displayed on the computer.
+      <p class="para"></p>
+      If a file already exists with the same name, it is not overwritten but the download will not take place.
+      <p class="para"></p>
+      Auto-rename can be achieved with the --filename option of gphoto2.
+      <p class="para"></p>
+      In file
+      <span class="code">$HOME/.config/gphoto2/settings</span>
+      , set the option:
+      <span class="code">gphoto2=filename=&lt;see the gphoto2 manual&gt;</span>
+    </p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Plugins</span>
+      menu.
+    </p>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferencePixbufLoaders.html" title="Additional pixbuf loaders">Previous</a><a href="GuideReferenceUTC.html" title="UTC and Daylight Saving Time (DST)">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

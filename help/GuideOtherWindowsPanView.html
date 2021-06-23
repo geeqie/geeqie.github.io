@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Pan View</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideOtherWindows.html" title="Stand-alone Windows">Stand-alone Windows</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOtherWindowsExif.html" title="Exif Window">Previous</a><a href="GuideCollections.html" title="Collections">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">Pan View</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+    This window offers alternative views of the
+    <span class="em emphasis">current directory and its children</span>
+    .
+    <p class="para"></p>
+    It may be opened by
+    <span class="guiseq menuchoice"><span class="gui guimenu">View</span> ▸ <span class="gui guimenuitem">Pan view</span> <span class="shortcut">(
+        <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>J</kbd></span></span>
+      )</span></span>
+    .
+    
+    You can pan the view as you pan an image in normal view mode, using left mouse button and drag.
+  </p>
+<p class="para">A primary mouse button click on any image will display information about the image. Secondary mouse button will show a context menu.</p>
+<p class="para">
+    The
+    <a class="link" href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Keyboard and Mouse Shortcuts</a>
+    available are listed in the Reference section.
+  </p>
+<div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+    <p class="para">Pan view recursively visits each folder under the specified folder. This can consume considerable computer resources.</p>
+  </div></div></div>
+</div>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideOtherWindowsPanView.html#Selectafolder" title="Select a folder">Select a folder</a></li>
+<li class="links"><a class="xref" href="GuideOtherWindowsPanView.html#Chooseaviewmode" title="Choose a view mode">Choose a view mode</a></li>
+<li class="links"><a class="xref" href="GuideOtherWindowsPanView.html#Howeachimageshouldberepresented" title="How each image should be represented">How each image should be represented</a></li>
+<li class="links"><a class="xref" href="GuideOtherWindowsPanView.html#Find" title="Find">Find</a></li>
+</ul></div>
+</div>
+<section id="Selectafolder" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Select a folder</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Location</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The initial location is the current Geeqie folder when the Pan view window is opened.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Chooseaviewmode" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Choose a view mode</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">A select box let you choose among different view modes:</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Timeline</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Shows images grouped by date.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Calendar</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Shows a calendar with the number of images indicated for each day (as dots and number). Left mouse button click will show images in a pop-up.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Folders</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Show images grouped by folder. Each box represents a folder. Parent and children folders are shown as boxes enclosing other boxes.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Folders (flower)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Show images grouped by folder. Each box represents a folder. Parent folders are linked to children by a line. The top folder is the center of the flower.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Grid</span>
+        </dt>
+<dd class="terms">
+          <p class="para">All images are shown on a grid.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Howeachimageshouldberepresented" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">How each image should be represented</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Another select box let you choose the representation of each image:</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Dots</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image is represented by a dot.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">No images</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image is represented by a square box.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Small thumbnails</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image is represented by a small thumbnail.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Normal thumbnails</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image is represented by a normal thumbnail.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Large thumbnails</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image is represented by a large thumbnail.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">1:10 (10%)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image is represented by reduced image (1/10 of the original's dimensions).</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">1:4 (25%)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image is represented by reduced image (1/4 of the original's dimensions).</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">1:3 (33%)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image is represented by reduced image (1/3 of the original's dimensions).</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">1:2 (50%)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image is represented by reduced image (1/2 of the original's dimensions).</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">1:1 (100%)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The original image is shown at its normal dimensions.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Find" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Find</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">At the bottom of the window:</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Find button</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Shows a text field for image search. One can enter either:
+            <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">filename or part filename</li>
+<li class="list itemizedlist">
+                file date in any of the following forms, where the separator may one of
+                <span class="code">/</span>
+                <span class="code">-</span>
+                <span class="code">,</span>
+                <span class="code">.</span>
+                or a space:
+                <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">yyyy-mm-dd</li>
+<li class="list itemizedlist">yyyy-mm</li>
+<li class="list itemizedlist">yyyy</li>
+</ul></div></div></div></div>
+              </li>
+</ul></div></div></div></div>
+            <p class="para"></p>
+            <span class="key keycap"><kbd>Enter</kbd></span>
+            will start the search, pressing it again will move to the next match. The matched file is made visible and details are shown for it.
+          </p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOtherWindowsExif.html" title="Exif Window">Previous</a><a href="GuideCollections.html" title="Collections">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

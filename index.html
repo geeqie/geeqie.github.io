@@ -1,83 +1,380 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-   <head>
-      <title>Geeqie Image Viewer -- Main Project Page</title>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <meta name="description" content="Geeqie -- aiming to be the The Best Image/Photo Collection Viewer." />
-      <link rel="stylesheet" type="text/css" href="default.css" />
-   </head>
-   <body>
-      <div id="header">
-	 <h1>Geeqie Image Viewer</h1>
-      </div>
-      <div id="side">
-	 <ul>
-	    <li><a href="//www.geeqie.org">Main Page</a></li>
-	    <li><a href="//github.com/BestImageViewer/geeqie/releases" rel="nofollow">Releases</a></li>
-	    <li><a href="//github.com/BestImageViewer/geeqie">Git Source</a></li>
-	    <!-- only while we still host the ML at sf. -->
-	    <li><a href="//lists.sourceforge.net/lists/listinfo/geeqie-devel">Mailinglist</a></li>
-	    <!-- sf links dropped: apps trac geeqie wiki GuideIndex, roadmap, new_features, TODO, screenshots, links, DocStatus -->
-	    <li><a href="//www.mail-archive.com/geeqie-devel@lists.sourceforge.net/">mail-archive</a></li>
-	    <li><a href="//news.gmane.org/gmane.comp.gnome.apps.geeqie.devel">gmane.org</a></li>
-	 </ul>
-      </div>
-      <div id="main"> Geeqie is a lightweight image viewer for Linux, BSDs and "compatibles".
-	 <h1>Geeqie Project Status</h1>
-	 <p>Geeqie is currently (February 2016) on stable release 1.2.2,
-	 and actively being developed by a number of contributors,
-	 with upcoming maintenance release v1.2.3 and feature release 1.3.
-	 both expected in March 2016.</p>
-	 <p>
-	 However, there is a big mess with the old project pages at SF.
-	 Even though we still use their mailing list infrastructure for now,
-	 the canonical Geeqie project information, Geeqie help and
-	 documentation, relevant links and other things of interest for
-	 Geeqie users, contributors and developers is, or will be, here.</p>
-	 <h1>Main features</h1>
-	 <ul>
-	    <li><A href="//en.wikipedia.org/wiki/Exif">EXIF</A>,
-	       <A href="//en.wikipedia.org/wiki/IPTC">IPTC</A>
-	       and <A href="//en.wikipedia.org/wiki/Extensible_Metadata_Platform">XMP</A>
-	       metadata browsing and editing</li>
-	    <li>interoperability, easy integration with other software</li>
-	    <li>geeqie works on files and directories, there is no need to import images</li>
-	    <li>fast preview for many <A href="//en.wikipedia.org/wiki/Raw_image_format">raw image formats</A></li>
-	    <li>tools for image comparison, sorting and managing photo collection</li>
-	 </ul>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-	 <h2>Want to contribute?</h2>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	 <ul>
-	 <li>We are looking for translators and documentation writers.</li>
-	 <li>Obviously this project page could do with some fancy webdesign,
-	 screenshots, documentation and testimonials.</li>
-         </ul>
-	 <p>If you think you can help us out here, contact us on the mailing list.</p>
+    <title>Geeqie, lightweight image viewer</title>
+    <link rel="icon" href="https://www.geeqie.org/geeqie.svg" type="image/x-icon">
 
-	 <h3>Requirements</h3>
-	 Required libraries:
-	 <ul>
-	    <li><A href="//www.gtk.org">GTK 2</A></li>
-	 </ul>
-	 Optional libraries
-	 <ul>
-	    <li><A href="//www.exiv2.org">Exiv2</A></li>
-	    <li><A href="//www.littlecms.com">lcms</A></li>
-	    <li><A href="//projects.gnome.org/libchamplain/">libchamplain</A></li>
-	    <li><a href="//www.lua.org/">liblua</a></li>
-	 </ul>
+    <!-- Bootstrap Core CSS -->
+    <link href="web-files/bootstrap.css" rel="stylesheet">
 
-	 <h3>History</h3>
-	 <p>Back in 2008, Geeqie has been forked from the GQview
-	 project, because it was not possible to contact the GQview author and only maintainer.</p>
-	 <p>Geeqie has quickly integrated existing patches, and keeps moving the development forward.</p>
-	 <p>We had this project on SF for a long time, then moved to
-	 Gitosis when SF decided to bundle malware with downloads.</p>
-	 <p>After the closing of Gitosis we moved to this place here, to have a
-	 stable address for the project. However, there are still many links to
-	 the old locations out there.</p>
-	 <p>There used to be some links to Source Forge here.
-	 Those are unmaintained, and nobody is able to access it anymore.</p>
-   </body>
-</html>
+    <!-- Custom Fonts -->
+    <link href="web-files/css_002.css" rel="stylesheet">
+    <link href="web-files/css_003.css" rel="stylesheet">
+    <link href="web-files/css.css" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="web-files/font-awesome.css">
+    <link rel="stylesheet" href="web-files/simple-line-icons.css">
+    <link rel="stylesheet" href="web-files/device-mockups.css">
+
+    <!-- Theme CSS -->
+    <link href="web-files/new-age.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+.bg-primary {
+    background: #fdcc52;
+    background: -webkit-linear-gradient(#fdcc52, #fdc539);
+    background: linear-gradient(#E5E5E5, #D5E0E7);
+    color: #bbb;
+}
+</style>
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><img src="web-files/icon.png" style="display:inline;">Geeqie, lightweight image viewer and organiser</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Get it!</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#doc">Documentation</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#history">History</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contacts and resources</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <h1>Geeqie is a free open software <u>image viewer</u> and <u>organiser</u> program for Linux, FreeBSD and other Unix-like operating systems</h1>
+                            <a href="#features" class="btn btn-outline btn-xl page-scroll">Learn more...</a>
+                            <a href="#download" class="btn btn-outline btn-xl page-scroll">Get it</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="device-container">
+                        <div class="device-mockup macbook portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <!-- <img src="img/demo-screen-1.jpg" class="img-responsive" alt=""> -->
+                                    <div class="video-wrapper">
+                                        <video autoplay="autoplay" loop="" width="400">
+                                            <source src="web-files/video-output-4-r.mp4" type="video/mp4">
+                                            <source src="web-files/video-output-4-r.ogv" type="video/ogg">
+                                            Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>Many features focused on speed and image previewing and organising</h2>
+                        <p class="text-muted">Check out what you can do with Geeqie</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="device-container">
+                        <div class="device-mockup macbook portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <img src="web-files/2011haircut1g.png" class="img-responsive" alt=""> </div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa fa-bolt text-primary"></i>
+                            <h3>Fast and accurate</h3>
+                            <p class="text-muted">Fast preview for many raw image formats and many other supported.</p>
+                            <p class="text-muted">Color management. Histogram and Pixel information</p>
+                            <p class="text-muted">Split View (up to 4) for image comparison</p>
+                            <img src="web-files/icon.svg" style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="fa fa-pie-chart text-primary"></i>
+                                    <h3>Organize without losing space</h3>
+                                    <p class="text-muted">No need to import images.</p>
+                                    <p class="text-muted">Direct file and directory management in app</p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn" data-toggle="modal" data-target="#modalTagging">
+                                          <i class="fa fa-play-circle-o"></i>
+                                        </button>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fa fa-puzzle-piece text-primary"></i>
+                                    <h3>Customization and Interoperability</h3>
+                                    <p class="text-muted">Geeqie has great defaults but also offers lots of customization options. Check Preferences menu.</p>
+                                    <p class="text-muted">Easy integration with other software: open images with your favourite editor.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="fa fa-tags text-primary"></i>
+                                    <h3>Always find the image you are looking for:</h3>
+                                    <p class="text-muted">Bookmarks</p>
+                                    <p class="text-muted">Easy tagging</p>
+                                    <p class="text-muted">Comments and Exif information browsing and editing. Supported Metadata formats Exif, IPTC and XMP.</p>
+                                    <p class="text-muted">Collection Management.</p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn" data-toggle="modal" data-target="#modalTagging">
+                                          <i class="fa fa-play-circle-o"></i>
+                                        </button>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fa fa-print text-primary"></i>
+                                    <h3>Printing: Multipage and Samples page. Configurable image information on printed page.</h3>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fa fa-unlock text-primary"></i>
+                                    <h3>Open Source</h3>
+                                    <p class="text-muted">Geeqie is licensed under GPLv2.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="download" class="download bg-primary text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="section-heading">Get Geeqie</h2>
+                    <p>Available for most Unix distributions:  GNU/Linux, FreeBSD, NetBSD, OpenBSD, MacOS X and Solaris
+                    </p>
+                    <style>
+                        .btn.btn-primary.btn-black {background-color:#000;border-radius:5px;border:1px solid #fff;}
+                    </style>
+                    <div class="badges">
+                        <a class="btn btn-primary btn-black" role="button" data-toggle="collapse" href="#collapseLinux" aria-expanded="false" aria-controls="collapseLinux"><i class="fa fa-linux fa-3x"></i>Available<br> for Linux</a>
+                        <div class="collapse" id="collapseLinux">
+                            <div class="well">
+                            <ul class="list-unstyled">
+                            <li><a href="https://apps.fedoraproject.org/packages/geeqie">Fedora</a></li>
+                            <li><a href="http://packages.ubuntu.com/geeqie">Ubuntu</a></li>
+                            <li><a href="https://community.linuxmint.com/software/view/gqview">Linux Mint</a></li>
+                            <li><a href="https://packages.debian.org/stable/geeqie">Debian</a></li>
+                            <li><a href="https://packages.gentoo.org/packages/media-gfx/geeqie">Gentoo</a></li>
+                            <li><a href="https://www.archlinux.org/packages/extra/x86_64/geeqie/">Arch</a></li>
+                            <li><a href="https://software.opensuse.org/package/geeqie">OpenSuse</a></li>
+                            <li><a href="http://madb.mageia.org/package/show/release/3/name/geeqie">Mageia</a></li>
+                            <li><a href="https://pkgs.alpinelinux.org/contents?branch=edge&amp;name=geeqie&amp;arch=x86&amp;repo=main">Alpine Linux</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary btn-black" role="button" data-toggle="collapse" href="#collapseBSD" aria-expanded="false" aria-controls="collapseBSD"><span class="fa fa-3x">*BSD</span>
+                        Available<br> for *BSD</a>
+                        <div class="collapse" id="collapseBSD">
+                            <div class="well">
+                            <ul class="list-unstyled">
+                            <li><a href="ftp://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/graphics/geeqie/">NetBSD</a></li>
+                            <li><a href="http://ports.su/graphics/geeqie">OpenBSD</a></li>
+                            <li><a href="https://www.freshports.org/graphics/geeqie/">FreeBSD</a></li>
+                            </ul>
+                            </div>                            
+                        </div>
+                        <a class="btn btn-primary btn-black" role="button" data-toggle="collapse" href="#collapseMAC" aria-expanded="false" aria-controls="collapseMAC"><i class="fa fa-apple fa-3x"></i>Available<br> for MacOS X</a>
+                        <div class="collapse" id="collapseMAC">
+                            <div class="well">
+                            <ul class="list-unstyled">
+                             <li><a href="https://formulae.brew.sh/formula/geeqie">https://formulae.brew.sh/formula/geeqie</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary btn-black" role="button" data-toggle="collapse" href="#collapseSolaris" aria-expanded="false" aria-controls="collapseSolaris"><i class="fa fa-sun-o fa-3x"></i>Available<br> for Solaris</a>
+                        <div class="collapse" id="collapseSolaris">
+                            <div class="well">
+                            <ul class="list-unstyled">
+                            <li><a href="https://www.opencsw.org/package/geeqie/"> Openscw.org Solaris 10 &amp; 11</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                       <a class="btn btn-primary btn-black" role="button" data-toggle="collapse" href="#collapseFlatpak" aria-expanded="false" aria-controls="collapseFlatpak"><img src="web-files/220px-Flatpak_logo.png" width=40 height=40>Flatpak<br> at Flathub</a>
+                        <div class="collapse" id="collapseFlatpak">
+                            <div class="well">
+                            <ul class="list-unstyled">
+                            <li><a href="https://flathub.org/apps/details/org.geeqie.Geeqie"> Geeqie as a Flatpak</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                      <a class="btn btn-primary btn-black" role="button" data-toggle="collapse" href="#collapseAppImages" aria-expanded="false" aria-controls="collapseAppImages"><img src="web-files/App-image-logo.svg.png" width=40 height=40>AppImages<br> from latest sources</a>
+                        <div class="collapse" id="collapseAppImages">
+                            <div class="well">
+                            <ul class="list-unstyled">
+                            <li><a href="https://www.geeqie.org/AppImage/index.html"> Geeqie AppImages</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="doc" class="cta">
+        <div class="cta-content">
+            <div class="container">
+                <h2>Stop endless browsing.<br>Start finding.</h2>
+                <a href="https://www.geeqie.org/help/GuideIndex.html" class="btn btn-outline btn-xl page-scroll">Read the Manual</a>
+                <a href="https://github.com/BestImageViewer/geeqie#description--features" class="btn btn-outline btn-xl page-scroll">List of features</a>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <section id="history" class="hta">
+        <div class="cta-content">
+            <div class="container">
+                <div class="row">
+                <div class="col-md-6">
+                <h2>History</h2>
+                <div style="color:#fff">
+                <p>Geeqie is the successor to GqView, which was first <br>released in 1998.</p>
+                <p>In 2007 GqView was renamed Geeqie.</p>
+                <p>Over the years many new features have been implemented.</p>
+                <p>Since the start of the project more than 3000 commits<br> have been made, and the project continues to be actively maintained.</p>
+                <p><br></p>
+                <p><br></p>
+                <p><br></p>
+                <p><br></p>
+                <p><br></p>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+
+    <section id="contact" class="contact bg-primary">
+        <div class="container">
+            <h2>Contacts and Resources</h2>
+            <ul class="list-unstyled">
+                <div title="In order to minimize developer workload,&#013;please visit the mailing list archive&#013;and subscribe to the mailing list&#013;before making a post.&#013;&#013;You will not receive automated&#013;responses unless you are subscribed." >
+                <li class="">
+                    <a href="mailto:geeqie@freelists.org"><i class="fa fa-twitter"></i> send message to mailing list</a>
+                </li>
+                </div>
+                <li class="">
+                    <a href="https://www.freelists.org/list/geeqie"><i class="fa fa-twitter"></i> mailing list archive</a>
+                </li>
+                <li class="">
+                    <a href="https://github.com/BestImageViewer/geeqie"><i class="fa fa-github"></i> report Geeqie bugs</a>
+                </li>
+                <li class="">
+                    <a href="https://github.com/geeqie/geeqie.github.io"><i class="fa fa-github"></i> report web page bugs</a>
+                </li>
+                <li class="">
+                    <a href="http://geeqie.org/cgi-bin/gitweb.cgi?p=geeqie.git;a=summary"><i class="fa fa-git-square"></i> main source repository</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>© 2021 Geeqie, lightweight image viewer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalTagging" tabindex="-1" role="dialog" aria-labelledby="modalTaggingLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="modalTaggingLabel">Easy tagging and searching</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="video-wrapper text-center">
+                        <video style="width:100%" controls="controls">
+                            <source src="web-files/video-output-3-r.mp4" type="video/mp4">
+                            <source src="web-files/video-output-3-r.ogv" type="video/ogg">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="web-files/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="web-files/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="web-files/jquery_002.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="web-files/new-age.js"></script>
+
+
+
+
+</body></html>

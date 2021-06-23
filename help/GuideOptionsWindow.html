@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Window Options</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideOptionsMain.html" title="Preferences">Preferences</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOptionsOSD.html" title="OverlayScreen Display">Previous</a><a href="GuideOptionsKeyboard.html" title="Keyboard Options">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">Window Options</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">This section describes the options presented under the Windows Tab of the preferences dialog.</p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideOptionsWindow.html#State" title="State">State</a></li>
+<li class="links"><a class="xref" href="GuideOptionsWindow.html#Size" title="Size">Size</a></li>
+<li class="links"><a class="xref" href="GuideOptionsWindow.html#FullScreen" title="Full Screen">Full Screen</a></li>
+</ul></div>
+</div>
+<section id="State" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">State</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Remember window positions</span>
+        </dt>
+<dd class="terms">
+          <p class="para">This will maintain windows size and position between Geeqie sessions.</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Use saved window positions also for new windows</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            A new window opened by menu
+            <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">New Window</span> <span class="shortcut">(
+                <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>N</kbd></span></span>
+              )</span></span>
+            will use the saved window positions also.
+          </p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Remember window workspace</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Remember which workspace a window was displayed in.
+          </p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Remember tool state</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Maintains the selection set by
+            <span class="guiseq menuchoice"><span class="gui guimenu">View</span> ▸ <span class="gui guimenuitem">File and Folders</span> ▸ <span class="gui guimenuitem">Float File List</span> <span class="shortcut">(
+                <span class="keyseq keycombo"><span class="key keycap"><kbd>L</kbd></span></span>
+              )</span></span>
+          </p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Remember dialog window positions</span>
+        </dt>
+<dd class="terms">
+          <p class="para">This will maintain dialog windows size and position between Geeqie sessions.</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Show window IDs</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Show the window ID in the titlebar of each window. When multiple Geeqie windows are opened, this option shows a unique identifier for each window. It may be used in conjunction with the command line option:
+            <a class="link" href="GuideReferenceCommandLine.html#Remotecommands" title="Remote commands">
+              <div class="code"><pre class="contents"><code>--remote --id:&lt;ID&gt;</code></pre></div>
+            </a>
+          </p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section><section id="Size" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Size</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Fit window to image when tools are hidden/floating</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The main window will be resized to accommodate each image's size and proportions when the image pane is the only one visible within the window.</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Limit size when auto-sizing window</span>
+        </dt>
+<dd class="terms">
+          <p class="para">This will restrict the maximum size a window can grow to automatically fit an image. The value represents the percentage of the desktop size in width and height.</p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section><section id="FullScreen" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Full Screen</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Location</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Selects the location and position of the full screen window. 'Determined by window manager' will leave the window placement up to the window manager. 'Active screen' places the window on the same screen as the Geeqie main window. 'Active monitor' does the same, but limits the full screen window size to the monitor containing the main window. The remaining choices are dependent on the multiple monitor configuration.</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Smooth image flip</span>
+        </dt>
+<dd class="terms">
+          <p class="para">This option delays the image change in full screen until the next image is entirely decoded into memory, the result is a smoother transition between images.</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Disable screen saver</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            This option will execute
+            <span class="em emphasis">xscreensaver-command --deactivate</span>
+            once per minute to avoid the screen saver from activating when Geeqie is displayed full screen.
+          </p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOptionsOSD.html" title="OverlayScreen Display">Previous</a><a href="GuideOptionsKeyboard.html" title="Keyboard Options">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

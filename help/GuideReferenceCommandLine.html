@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Command Line Options</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideReference.html" title="Reference">Reference</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReference.html" title="Reference">Previous</a><a href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">Command Line Options</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+    Geeqie is called by the command:
+    <div class="code"><pre class="contents"><code>      geeqie [options] [path_to_file_or_collection]
+      <sup class="footnote"><a class="footnote" href="#ref1" id="-noteref-ref1">8</a></sup>
+    </code></pre></div>
+  </p>
+<p class="para">You may also use a URL as a filename. The file will be downloaded to a temporary file and displayed.</p>
+<p class="para">These are the command line options available to Geeqie:</p>
+<div class="table"><table style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">Short Option</th>
+<th class="td-colsep">Long Option</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">+t</td>
+<td class="td-colsep td-rowsep">--with-tools</td>
+<td class="td-rowsep">Show file list, menu, and statusbar.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-t</td>
+<td class="td-colsep td-rowsep">--without-tools</td>
+<td class="td-rowsep">Hide file list, menu, and statusbar. Window contains image only.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-f</td>
+<td class="td-colsep td-rowsep">--fullscreen</td>
+<td class="td-rowsep">Start up in fullscreen.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-s</td>
+<td class="td-colsep td-rowsep">--slideshow</td>
+<td class="td-rowsep">Start up in slideshow mode.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-l [filelist] [collectionlist]</td>
+<td class="td-colsep td-rowsep">--list [filelist] [collectionlist]</td>
+<td class="td-rowsep">Open collection window containing images specified on the command line. Any collections on the command line will also be appended to this collection.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--blank</td>
+<td class="td-rowsep">Start with file list blank.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--geometry=&lt;w&gt;x&lt;h&gt;+&lt;x&gt;+&lt;y&gt;</td>
+<td class="td-rowsep">Set the &lt;width&gt; &lt;height&gt; &lt;xoffset&gt; &lt;yoffset&gt; of the window. The parameters are in pixels.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-n</td>
+<td class="td-colsep td-rowsep">--new-instance</td>
+<td class="td-rowsep">Open a new instance of Geeqie.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-r</td>
+<td class="td-colsep td-rowsep">--remote</td>
+<td class="td-rowsep">Send command line options to existing Geeqie process.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-rh</td>
+<td class="td-colsep td-rowsep">--remote-help</td>
+<td class="td-rowsep">List command line options available to --remote.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-h</td>
+<td class="td-colsep td-rowsep">--help</td>
+<td class="td-rowsep">Display brief command line option list.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-v</td>
+<td class="td-colsep td-rowsep">--version</td>
+<td class="td-rowsep">Display version of Geeqie.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--debug[=&lt;level&gt;]</td>
+<td class="td-rowsep">Turn on debugging output (when compiled with Debug enabled). &lt;level&gt; is 0 to 4.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-g:&lt;regexp&gt;</td>
+<td class="td-colsep td-rowsep">--grep:&lt;regexp&gt;</td>
+<td class="td-rowsep">Filter debug output with regular expression</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">+w</td>
+<td class="td-colsep td-rowsep">--show-log-window</td>
+<td class="td-rowsep">Display log window</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-o:&lt;file&gt;</td>
+<td class="td-colsep td-rowsep">--log-file:&lt;file&gt;</td>
+<td class="td-rowsep">Save log data to file</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--alternate</td>
+<td class="td-rowsep">Use alternate similarity algorithm - experimental - requires re-compile.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep"></td>
+<td class="td-colsep">--disable-clutter</td>
+<td>Disable use of Clutter library (i.e. GPU accel.). If the Clutter library is compiled into Geeqie but Clutter fails to initialize, it is necessary to start Geeqie with this option.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul><li class="links"><a class="xref" href="GuideReferenceCommandLine.html#Remotecommands" title="Remote commands">Remote commands</a></li></ul></div>
+</div>
+<section id="Remotecommands" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Remote commands</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The --remote command line option will send all entered commands to an existing Geeqie process, a new process will be started if one does not exist. These are the additional commands that can be used with the remote command:</p>
+<div class="table"><table style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">Short Option</th>
+<th class="td-colsep">Long Option</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">-n</td>
+<td class="td-colsep td-rowsep">--next</td>
+<td class="td-rowsep">Change main window to display next image.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-b</td>
+<td class="td-colsep td-rowsep">--back</td>
+<td class="td-rowsep">Change main window to display previous image.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--first</td>
+<td class="td-rowsep">Change main window to display first image.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--last</td>
+<td class="td-rowsep">Change main window to display last image.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-f</td>
+<td class="td-colsep td-rowsep">--fullscreen</td>
+<td class="td-rowsep">Toggle full screen mode of the main window.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-fs</td>
+<td class="td-colsep td-rowsep">--fullscreen-start</td>
+<td class="td-rowsep">Start full screen mode for main window.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-fS</td>
+<td class="td-colsep td-rowsep">--fullscreen-stop</td>
+<td class="td-rowsep">Stop full screen mode for main window.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-s</td>
+<td class="td-colsep td-rowsep">--slideshow</td>
+<td class="td-rowsep">Toggle slide show for main window.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-ss</td>
+<td class="td-colsep td-rowsep">--slideshow-start</td>
+<td class="td-rowsep">Start slide show for main window.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-sS</td>
+<td class="td-colsep td-rowsep">--slideshow-stop</td>
+<td class="td-rowsep">Stop slide show for main window.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--slideshow-recurse:&lt;folder&gt;</td>
+<td class="td-rowsep">Start recursive slide show for &lt;folder&gt; in main window.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-d&lt;[h:][m:][n][.m]&gt;</td>
+<td class="td-colsep td-rowsep">--delay=&lt;[h:][m:][n][.m]&gt;</td>
+<td class="td-rowsep">Set slide show delay to &lt;[hrs:][mins:][n][.m]&gt; seconds, range is 0.1 secs to 24 hours</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">+t</td>
+<td class="td-colsep td-rowsep">--tools-show</td>
+<td class="td-rowsep">Show tools for main window.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-t</td>
+<td class="td-colsep td-rowsep">--tools-hide</td>
+<td class="td-rowsep">Hide tools for main window.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-q</td>
+<td class="td-colsep td-rowsep">--quit</td>
+<td class="td-rowsep">Quit Geeqie.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--config-load:&lt;file&gt;|layout ID</td>
+<td class="td-rowsep">Load configuration from &lt;file&gt;. Use either a full path, or a saved window layout ID.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--get-sidecars:&lt;file&gt;</td>
+<td class="td-rowsep">Get list of sidecars of &lt;file&gt;.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--get-destination:&lt;file&gt;</td>
+<td class="td-rowsep">Get destination path of &lt;file&gt;. This is used by the symlink desktop file to implement the symbolic link operation. There is no useful function for the user.</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">file:&lt;file&gt;|&lt;URL&gt;</td>
+<td class="td-rowsep">Open  &lt;file&gt; or &lt;URL&gt; and bring Geeqie window to the top</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--file:&lt;file&gt;|&lt;URL&gt;</td>
+<td class="td-rowsep">Open  &lt;file&gt; or &lt;URL&gt; and bring Geeqie window to the top</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">File:&lt;file&gt;|&lt;URL&gt;</td>
+<td class="td-rowsep">Open  &lt;file&gt; or &lt;URL&gt; and do not bring Geeqie window to the top</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--File:&lt;file&gt;|&lt;URL&gt;</td>
+<td class="td-rowsep">Open  &lt;file&gt; or &lt;URL&gt; and do not bring Geeqie window to the top</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--tell</td>
+<td class="td-rowsep">Print filename [and Collection] of current image</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--pixel-info</td>
+<td class="td-rowsep">Print X, Y and RGB of mouse pointer on current image</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--get-rectangle</td>
+<td class="td-rowsep">Get rectangle coordinates</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--get-render-intent</td>
+<td class="td-rowsep">Get render intent</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--get-filelist:[&lt;FOLDER&gt;]</td>
+<td class="td-rowsep">Get list of files and class</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--get-filelist-recurse:[&lt;FOLDER&gt;]</td>
+<td class="td-rowsep">Get list of files and class recursive</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--get-collection:&lt;COLLECTION&gt;</td>
+<td class="td-rowsep">Get collection content</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--get-collection-list</td>
+<td class="td-rowsep">Get collection list</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--get-file-info</td>
+<td class="td-rowsep">
+              Get file info
+              <sup class="footnote"><a class="footnote" href="#fileinfo" id="-noteref-fileinfo">9</a></sup>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">view:&lt;file&gt;</td>
+<td class="td-rowsep">Open new window containing &lt;file&gt;</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--view:&lt;file&gt;</td>
+<td class="td-rowsep">Open new window containing &lt;file&gt;</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--list-clear</td>
+<td class="td-rowsep">Clear command line collection list</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--list-add:&lt;file&gt;</td>
+<td class="td-rowsep">Add &lt;file&gt; to command line collection list</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">raise</td>
+<td class="td-rowsep">Bring the geeqie window to the top</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--raise</td>
+<td class="td-rowsep">Bring the geeqie window to the top</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--id:&lt;ID&gt;</td>
+<td class="td-rowsep">
+              Window ID for following commands
+              <sup class="footnote"><a class="footnote" href="#ref3" id="-noteref-ref3">10</a></sup>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--new-window</td>
+<td class="td-rowsep">Open new window</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--close-window</td>
+<td class="td-rowsep">Close window</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--geometry=[&lt;w&gt;x&lt;h&gt;][+&lt;x&gt;+&lt;y&gt;]</td>
+<td class="td-rowsep">Set the &lt;width&gt; &lt;height&gt; &lt;xoffset&gt; &lt;yoffset&gt; of the window. The parameters are in pixels.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-ct:clear|clean</td>
+<td class="td-colsep td-rowsep">--cache-thumbs:clear|clean</td>
+<td class="td-rowsep">clear or clean thumbnail cache</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-cs:clear|clean</td>
+<td class="td-colsep td-rowsep">--cache-shared:clear|clean</td>
+<td class="td-rowsep">clear or clean shared thumbnail cache</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-cm</td>
+<td class="td-colsep td-rowsep">--cache-metadata</td>
+<td class="td-rowsep">clean the metadata cache</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-cr:&lt;folder&gt;</td>
+<td class="td-colsep td-rowsep">--cache-render:&lt;folder&gt;</td>
+<td class="td-rowsep">render thumbnails</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-crr:&lt;folder&gt;</td>
+<td class="td-colsep td-rowsep">--cache-render-recurse:&lt;folder&gt;</td>
+<td class="td-rowsep">render thumbnails recursively</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">-crs:&lt;folder&gt;</td>
+<td class="td-colsep td-rowsep">--cache-render-shared:&lt;folder&gt;</td>
+<td class="td-rowsep">
+              render thumbnails
+              <sup class="footnote"><a class="footnote" href="#ref2" id="-noteref-ref2">11</a></sup>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">-crsr:&lt;folder&gt;</td>
+<td class="td-colsep td-rowsep">--cache-render-shared-recurse:&lt;folder&gt;</td>
+<td class="td-rowsep">render thumbnails recursively</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--lua:&lt;file&gt;,&lt;lua script&gt;</td>
+<td class="td-rowsep">run lua script on file</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--PWD:&lt;PWD&gt;</td>
+<td class="td-rowsep">Use PWD as working directory for following commands</td>
+</tr>
+<tr>
+<td class="td-colsep"></td>
+<td class="td-colsep">--print0</td>
+<td>Terminate returned data with null character instead of newline</td>
+</tr>
+</tbody>
+</table></div>
+<p class="para"></p>
+</div></div>
+</div></section><div class="footnotes">
+<div id="ref1" class="footnote">
+<a class="footnote" href="#-noteref-ref1">8</a>The name of a collection, with or without either path or extension (.gqv) may be used. If a path is not used and there is a name conflict with a file or folder, that will take precedence.</div>
+<div id="fileinfo" class="footnote">
+<a class="footnote" href="#-noteref-fileinfo">9</a>
+                <p class="para">File info consists of: class, no. of pages (if multi-page image), (and if exif exists) country name, country code, timezone, local time.</p>
+              </div>
+<div id="ref3" class="footnote">
+<a class="footnote" href="#-noteref-ref3">10</a>
+                <p class="para">The ID is shown in the titlebar of the window. If multiple windows are open, it can be used to direct commands to a particular window e.g. --remote --id:main --tell</p>
+              </div>
+<div id="ref2" class="footnote">
+<a class="footnote" href="#-noteref-ref2">11</a>
+                <p class="para">If standard thumbnail cache is not enabled, this command will be ignored.</p>
+              </div>
+</div>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReference.html" title="Reference">Previous</a><a href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

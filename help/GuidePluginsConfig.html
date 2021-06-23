@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Plugins Configuration</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideOptionsAdditional.html" title="Additional Preferences">Additional Preferences</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOptionsLayout.html" title="Window Layout">Previous</a><a href="GuideOptionsHidden.html" title="Legacy Configuration File Options">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuidePluginsConfig"></a>Plugins Configuration</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuidePluginsConfig.html#PluginsConfigurationDialog" title="Plugins Configuration Dialog">Plugins Configuration Dialog</a></li>
+<li class="links"><a class="xref" href="GuidePluginsConfig.html#Addingnewplugin" title="Adding new plugin">Adding new plugin</a></li>
+<li class="links"><a class="xref" href="GuidePluginsConfig.html#Modifyinganexistingplugin" title="Modifying an existing plugin">Modifying an existing plugin</a></li>
+<li class="links"><a class="xref" href="GuidePluginsConfig.html#Deletingaplugin" title="Deleting a plugin">Deleting a plugin</a></li>
+<li class="links"><a class="xref" href="GuidePluginsConfig.html#Specialplugins" title="Special plugins">Special plugins</a></li>
+<li class="links"><a class="xref" href="GuidePluginsConfig.html#Geeqieextensions" title="Geeqie desktop file keys">Geeqie desktop file keys</a></li>
+</ul></div>
+</div>
+<section id="PluginsConfigurationDialog" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Plugins Configuration Dialog</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      This dialog allows user to add new plugins or modify the system ones. It is available in the menu
+      <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guimenuitem">Configure Plugins</span></span>
+      .
+    </p>
+<p class="para">
+      The Plugins dialog shows list of all relevant plugins i.e. all installed desktop files that are designated either:
+      <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist compact">
+<li class="list itemizedlist">
+          <span class="code literal">Categories=Graphics</span>
+        </li>
+<li class="list itemizedlist">
+          <span class="code literal">Categories=X-Geeqie</span>
+        </li>
+</ul></div></div></div></div>
+      <p class="para"></p>
+      The list has the following columns:
+    </p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Disabled</span>
+        </dt>
+<dd class="terms">
+          <p class="para">If the checkbox is ticked, the plugin will not be displayed in Geeqie menus.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Name</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Plugin name as specified in desktop file, and is the name displayed in menus.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Hidden</span>
+        </dt>
+<dd class="terms">
+          A plugin can be
+          <span class="em emphasis">Hidden</span>
+          for one of these reasons:
+          <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">
+              the desktop file contains
+              <span class="code literal">Hidden=TRUE</span>
+              or
+              <span class="code literal">NoDisplay=TRUE</span>
+            </li>
+<li class="list itemizedlist">
+              <span class="code literal">TryExec</span>
+              binary was not found
+            </li>
+<li class="list itemizedlist">
+              <span class="code literal">MimeType</span>
+              list does not contain images
+            </li>
+<li class="list itemizedlist">
+              <span class="code literal">MimeType</span>
+              list is empty and
+              <span class="code literal">Categories</span>
+              does not contain
+              <span class="code literal">X-Geeqie</span>
+            </li>
+</ul></div></div></div></div>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Desktop file</span>
+        </dt>
+<dd class="terms">
+          Name of the desktop file, used as an identifier in
+          <a class="link" href="GuideOptionsKeyboard.html" title="Keyboard Options">Keyboard Options</a>
+          .
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Path</span>
+        </dt>
+<dd class="terms">Full path to the desktop file. Desktop files in user directories override the system ones with the same name.</dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section><section id="Addingnewplugin" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Adding new plugin</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      <span class="code">
+        <span class="gui guibutton">
+          <span class="gui guiicon">
+            <span class="inlinegraphic"><img src="document-new.png"></span>
+          </span>
+          New
+        </span>
+      </span>
+      opens a text editor with a desktop file template. You must amend the line
+      <div class="code"><pre class="contents"><code>Exec=command %f</code></pre></div>
+      to contain the command you wish to execute. If it is more than a single command, you must create a script file and call that. If the location of the script file is not in your $PATH environment variable, you must include the full pathname.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Modifyinganexistingplugin" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Modifying an existing plugin</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+      <span class="code">
+        <span class="gui guibutton">
+          <span class="gui guiicon">
+            <span class="inlinegraphic"><img src="gtk-edit.png"></span>
+          </span>
+          Edit
+        </span>
+      </span>
+      opens a text editor with existing desktop file. For desktop files that are not writable by user, it allows saving to a Geeqie specific directory, where it overrides the system file (but only for Geeqie).
+    </p></div></div>
+</div></section><section id="Deletingaplugin" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Deleting a plugin</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+      <span class="code">
+        <span class="gui guibutton">
+          <span class="gui guiicon">
+            <span class="inlinegraphic"><img src="edit-delete.png"></span>
+          </span>
+          Delete
+        </span>
+      </span>
+      can delete user writable desktop files. System desktop files can't be deleted directly, but it is possible to edit them and set
+      <span class="code literal">Hidden=TRUE</span>
+      , see above.
+    </p></div></div>
+</div></section><section id="Specialplugins" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Special plugins</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">A desktop file with one of the following names has a special function. It will replace the corresponding internal command.</p>
+<p class="para">
+      <div class="code"><pre class="contents"><code>        geeqie-copy-command.desktop
+        geeqie-move-command.desktop
+        geeqie-rename-command.desktop
+        geeqie-delete-command.desktop
+        geeqie-folder-command.desktop
+      </code></pre></div>
+    </p>
+<p class="para">This can be used for example for a custom trash command or for manipulation of files under version control.</p>
+</div></div>
+</div></section><section id="Geeqieextensions" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Geeqie desktop file keys</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      A desktop file for use only by Geeqie should have the following entries:
+      <div class="code"><pre class="contents"><code>        Categories=X-Geeqie;
+        OnlyShowIn=X-Geeqie;
+      </code></pre></div>
+    </p>
+<p class="para">
+      A menu path where the plugin will appear, instead of in the default
+      <span class="guiseq menuchoice"><span class="gui guimenu">Plugins</span></span>
+      , can be set by including:
+      <div class="code"><pre class="contents"><code>X-Geeqie-Menu-Path=&lt;FileMenuPath&gt;</code></pre></div>
+    </p>
+<p class="para">
+      Possible vales for
+      <span class="em emphasis">FileMenuPath</span>
+      are:
+      <div class="code"><pre class="contents"><code>        FileMenu
+        FileMenu/OpenSection
+        FileMenu/SearchSection
+        FileMenu/PrintSection
+        FileMenu/FileOpsSection
+        FileMenu/QuitSection
+        GoMenu
+        SelectMenu
+        SelectMenu/SelectSection
+        SelectMenu/ClipboardSection
+        SelectMenu/MarksSection
+        EditMenu/EditMenu
+        EditMenu/EditSection
+        EditMenu/OrientationMenu
+        EditMenu/RatingMenu
+        EditMenu/PropertiesSection
+        EditMenu/PreferencesSection
+        PluginsMenu
+        ViewMenu
+        ViewMenu/WindowSection
+        ViewMenu/FileDirMenu
+        ViewMenu/FileDirMenu/FolderSection
+        ViewMenu/FileDirMenu/ListSection
+        ViewMenu/DirSection
+        ViewMenu/ZoomMenu
+        ViewMenu/ZoomMenu/ConnectZoomMenu
+        ViewMenu/SplitMenu
+        ViewMenu/StereoMenu
+        ViewMenu/ColorMenu
+        ViewMenu/OverlayMenu
+        ViewMenu/ViewSection
+        ViewMenu/ToolsSection
+        ViewMenu/SlideShowSection
+        HelpMenu
+        HelpMenu/HelpSection
+      </code></pre></div>
+    </p>
+<p class="para">
+      If you want a plugin to use a user-definable path, the following entry must be made in the desktop file:
+      <div class="code"><pre class="contents"><code>X-Geeqie-Filter=true</code></pre></div>
+    </p>
+<p class="para">
+      Desktop files containing this entry will be displayed in the Folder action list of the
+      <a class="link" href="GuideSidebarsSortManager.html#CopyMoveandLink" title="Copy, Move, Link and Desktop actions">Sort Manager Sidebar</a>
+      . The path of the bookmark clicked will be used by the desktop file.
+      <p class="para"></p>
+      If the desktop file is called from the menu, when the plugin is executed you are presented with a dialogue which enables a path to be selected. The path selected, appended by the filename currently being processed, is made available to the shell script either as an environment variable or via a call to geeqie --remote. The following code demonstrates the use of both methods:
+      <div class="code"><pre class="contents"><code>        for file in "$@"
+        do
+        destination=$(geeqie --remote --get-destination:"$file")
+        
+        echo "$destination"
+        echo $GEEQIE_DESTINATION
+        done
+      </code></pre></div>
+    </p>
+<p class="para">
+      If you want to run a plugin in full-screen mode and wish full-screen to be maintained, include the following entry in the desktop file:
+      <div class="code"><pre class="contents"><code>X-Geeqie-Keep-Fullscreen=true</code></pre></div>
+    </p>
+<p class="para">
+      Any terminal output from the plugin command can be displayed with the following command:
+      <div class="code"><pre class="contents"><code>X-Geeqie-Verbose=true</code></pre></div>
+    </p>
+<p class="para">
+      Any terminal output from the plugin command can be displayed, only when multiple files are selected, with the following command:
+      <div class="code"><pre class="contents"><code>X-Geeqie-Verbose-Multi=true</code></pre></div>
+    </p>
+<p class="para">
+      The plugin can be restricted to run on only certain file types, for example:
+      <div class="code"><pre class="contents"><code>X-Geeqie-File-Extensions=.jpg; .cr2</code></pre></div>
+      The entries are case insensitive.
+    </p>
+<p class="para">
+      The key or key combination to execute this function can be set with:
+      <div class="code"><pre class="contents"><code>X-Geeqie-Hotkey=</code></pre></div>
+      Key combinations are of the form:
+
+      <div class="code"><pre class="contents"><code>X-Geeqie-Hotkey=&lt;control&gt;y</code></pre></div>
+      <div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+        This value may conflict with a setting in
+        <a class="link" href="GuideOptionsKeyboard.html" title="Keyboard Options">Keyboard Options</a>
+      </div></div></div>
+</div>
+    </p>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOptionsLayout.html" title="Window Layout">Previous</a><a href="GuideOptionsHidden.html" title="Legacy Configuration File Options">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

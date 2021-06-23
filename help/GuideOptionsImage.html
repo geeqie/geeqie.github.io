@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Image Options</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideOptionsMain.html" title="Preferences">Preferences</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOptionsGeneral.html" title="General Options">Previous</a><a href="GuideOptionsOSD.html" title="OverlayScreen Display">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">Image Options</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">This section describes the options presented under the Image Tab of the preferences dialog.</p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideOptionsImage.html#Zoom" title="Zoom">Zoom</a></li>
+<li class="links"><a class="xref" href="GuideOptionsImage.html#FitImageToWindow" title="Fit Image To Window">Fit Image To Window</a></li>
+<li class="links"><a class="xref" href="GuideOptionsImage.html#Appearance" title="Appearance">Appearance</a></li>
+<li class="links"><a class="xref" href="GuideOptionsImage.html#Convenience" title="Convenience">Convenience</a></li>
+</ul></div>
+</div>
+<section id="Zoom" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Zoom</h2></div>
+<div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Quality</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Selects the method used to scale the size of an image:
+            <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+                  <span class="gui guilabel">Nearest</span>
+                </dt>
+<dd class="terms">
+                  <p class="para">Fastest scaler, but results in poor image quality.</p>
+                </dd>
+<dt class="terms">
+                  <span class="gui guilabel">Tiles</span>
+                </dt>
+<dd class="terms">
+                  <p class="para">Results are somewhat close to bilinear, with better speed.</p>
+                </dd>
+<dt class="terms">
+                  <span class="gui guilabel">Bilinear</span>
+                </dt>
+<dd class="terms">
+                  <p class="para">High quality results, moderately fast.</p>
+                </dd>
+</dl></div></div></div></div>
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Use GPU acceleration via Clutter library</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Use alternate renderer. Geeqie must be compiled with the --enable-gpu-accel option.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Two pass zooming</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Enables Geeqie to first display a scaled image using the
+            <span class="em emphasis">Nearest</span>
+            zoom quality. After image decoding is complete, the image is scaled again using the selected
+            <span class="em emphasis">Zoom Quality</span>
+            method. This allows faster display of an image as it is decoded from the source file.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Zoom increment</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Adjusts the step size when zooming in or out on an image. This value corresponds to the percentage of the original image.</p>
+        </dd>
+</dl></div></div></div></div></div></div>
+</div></section><section id="FitImageToWindow" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Fit Image To Window</h2></div>
+<div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Allow enlargement of image (max. size in %)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Enable this to allow Geeqie to increase the image size for images that are smaller than the current view area when the zoom is set to
+            <span class="em emphasis">Fit image to window</span>
+            . This value sets the maximum expansion permitted in percent i.e. 100% is full-size.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Virtual window size (% of actual window)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            This value will set the virtual size of the window when
+            <span class="em emphasis">Fit image to window</span>
+            is set. Instead of using the actual size of the window, the specified percentage of the window will be used. It allows one to keep a border around the image (values lower than 100%) or to auto zoom the image (values greater than 100%). It affects fullscreen mode too.
+          </p>
+        </dd>
+</dl></div></div></div></div></div></div>
+</div></section><section id="Appearance" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Appearance</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Custom border color</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Enable this to draw the image background (the area around the image) in the specified color.</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Border color</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Use this color chooser to define the color to use as image background.</p>
+          <div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+            <p class="para">
+              You may use the
+              <span class="em emphasis">Virtual window size</span>
+              (see above) option to keep a border around the image in fullscreen mode.
+            </p>
+          </div></div></div>
+</div>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Alpha channel color 1/2</span>
+        </dt>
+<dd class="terms">
+          <p class="para">These two colors define the checkerboard background used when images with an alpha channel are displayed.</p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section><section id="Convenience" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Convenience</h2></div>
+<div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Auto rotate proofs using EXIF information</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Auto rotate images on print proof sheet.</p>
+        </dd>
+</dl></div></div></div></div></div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOptionsGeneral.html" title="General Options">Previous</a><a href="GuideOptionsOSD.html" title="OverlayScreen Display">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

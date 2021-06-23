@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Exif Auto Rotation</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideFaq.html" title="Frequently Asked Questions">Frequently Asked Questions</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="Miscellaneous.html" title="Miscellaneous">Previous</a><a href="GuideLicence.html" title="Licence">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">Exif Auto Rotation</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul><li class="links"><a class="xref" href="ExifRotation.html#HowdotheExifauto-rotationcommandswork" title="How do the Exif auto-rotation commands work?">How do the Exif auto-rotation commands work?</a></li></ul></div>
+</div>
+<section id="HowdotheExifauto-rotationcommandswork" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">How do the Exif auto-rotation commands work?</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+        Image auto-rotation works in either of two modes, set by
+        <a class="link" href="GuideOptionsMetadata.html#MetadataMiscellaneous" title="Miscellaneous">Write altered image orientation to the metadata</a>
+        option.
+      </p>
+<p class="para">
+        <span class="gui guilabel">Write altered image orientation to the metadata not set</span>
+        <p class="para"></p>
+        If you change the orientation of an image using any of the available commands, the image will always be displayed in the modified orientation. This new orientation is stored in temporary data structures associated with each image file. When Geeqie closes, these changes will be lost.
+      </p>
+<div class="note note-warning" title="Warning">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m11.92 3.3047a1.3872 1.3872 0 0 0-1.129 0.6933l-8.6055 14.922a1.3872 1.3872 0 0 0 1.2012 2.08l17.226-8e-3a1.3872 1.3872 0 0 0 1.201-2.08l-8.619-14.916a1.3872 1.3872 0 0 0-1.136-0.6913 1.3872 1.3872 0 0 0-0.139 0zm0.08 4.6953a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm0 9a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+        <p class="para">It is not possible to determine if the image as displayed is the original image or one which has been temporarily rotated.</p>
+      </div></div></div>
+</div>
+<p class="para">
+        If the option
+        <a class="link" href="GuideMainWindowMenus.html#Editmenu" title="Edit menu">Auto rotate image using EXIF information</a>
+        is selected, any images which have Exif orientation data will also be shown rotated. However, any rotation you have selected manually will always over-ride the embedded Exif rotation value.
+      </p>
+<p class="para">
+        <span class="gui guilabel">Write altered image orientation to the metadata set</span>
+        <p class="para"></p>
+        <p class="para">If you change the orientation of an image using any of the available commands, this new orientation is stored in a metadata write queue.</p>
+        <p class="para">
+          If the option
+          <a class="link" href="GuideMainWindowMenus.html#Editmenu" title="Edit menu">Auto rotate image using EXIF information</a>
+          is selected, any images which have Exif orientation data will be shown rotated, including any in the metadata write queue.
+        </p>
+        <p class="para">
+          However if the option
+          <a class="link" href="GuideMainWindowMenus.html#Editmenu" title="Edit menu">Auto rotate image using EXIF information</a>
+          is not selected, no images will be auto-rotated. If you have manually rotated any images, the metadata write icon on the status bar will alert you to that fact. Clicking the icon will give a list of the modified files.
+        </p>
+      </p>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="Miscellaneous.html" title="Miscellaneous">Previous</a><a href="GuideLicence.html" title="Licence">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

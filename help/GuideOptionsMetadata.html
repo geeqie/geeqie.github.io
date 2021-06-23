@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Metadata</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideOptionsMain.html" title="Preferences">Preferences</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOptionsFiltering.html" title="Files Options">Previous</a><a href="GuideOptionsKeywords.html" title="Keywords">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideOptionsMetadata"></a>Metadata</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">This section describes the options for metadata writing.</p>
+<p class="para"></p>
+<p class="para">
+    The settings in the
+    <a class="link" href="GuideOptionsFiltering.html#Filetypes" title="File types">Files tab of Preferences</a>
+    influence whether an attempt is made to write metadata to the file itself, to a sidecar file or to a local folder.
+  </p>
+<p class="para">
+    Refer also to
+    <a class="link" href="GuideReferenceMetadata.html" title="Metadata Processing">Metadata Processing</a>
+    in the Reference section.
+  </p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#MetadataWritingProcess" title="Metadata writing process">Metadata writing process</a></li>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#WriteToImageFiles" title="Step 1: Write to image files">Step 1: Write to image files</a></li>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#WriteToGeeqiePrivateFiles" title="Steps 2 and 3: Write to Geeqie private files">Steps 2 and 3: Write to Geeqie private files</a></li>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#MetadataMiscellaneous" title="Miscellaneous">Miscellaneous</a></li>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#AutoSaveOptions" title="Auto-save options">Auto-save options</a></li>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#PreLoadMetadata" title="Pre-load metadata">Pre-load metadata</a></li>
+</ul></div>
+</div>
+<section id="MetadataWritingProcess" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">
+<a name="titleMetadataWritingProcess"></a>Metadata writing process</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      When writing metadata, Geeqie will follow three steps. This process will stop when the first successful write occurs.
+      <div class="list orderedlist"><div class="inner"><div class="region"><div class="contents"><ol class="list orderedlist">
+<li class="list orderedlist">
+          <p class="para">
+            <span class="gui guilabel">Save metadata in image files, resp. sidecar files, according to the XMP standard</span>
+            <p class="para"></p>
+            If checked, Geeqie will attempt to write metadata to the file itself, or to an associated XMP sidecar file
+          </p>
+        </li>
+<li class="list orderedlist">
+          <p class="para">
+            <span class="gui guilabel">Save metadata in '.metadata' folder, local to image folder (non-standard)</span>
+            <p class="para"></p>
+            If checked, Geeqie will attempt to write to an xmp file in a local .metadata folder
+          </p>
+        </li>
+<li class="list orderedlist">
+          <p class="para">
+            <span class="gui guilabel">Save metadata in Geeqie private directory</span>
+            <p class="para"></p>
+            If neither of the above are successful, Geeqie will write to an xmp file in the folder
+            <div class="code"><pre class="contents"><code>$HOME/.local/share/geeqie/metadata</code></pre></div>
+          </p>
+        </li>
+</ol></div></div></div></div>
+    </p>
+<p class="para">When writing to local metadata folders, the directory structure duplicates that of the location of the source files.</p>
+</div></div>
+</div></section><section id="WriteToImageFiles" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Step 1: Write to image files</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">If Step 1 above was successful, the following options take effect:</p>
+<div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Store metadata also in legacy IPTC tags (converted according to IPTC4XMP standard)</span>
+          <p class="para"></p>
+          If checked, Geeqie will write IPTC tags as defined in
+          <a class="link" href="GuideReferenceStandards.html" title="Standards">Standards</a>
+        </p>
+      </li>
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Warn if the image files are not writeable</span>
+          <p class="para"></p>
+          If checked, open a warning dialogue if the file is not writeable
+        </p>
+      </li>
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Ask before writing to image files</span>
+          <p class="para"></p>
+          If checked, open a confirmation dialogue before writing to the file
+        </p>
+      </li>
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Create sidecar files named image.ext.xmp (as opposed to image.xmp)</span>
+          <p class="para"></p>
+          If checked, new sidecar files will use image.ext.xmp naming scheme
+        </p>
+      </li>
+</ul></div></div></div></div>
+</div></div>
+</div></section><section id="WriteToGeeqiePrivateFiles" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Steps 2 and 3: Write to Geeqie private files</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">If Step 2 or 3 above was successful, the following option takes effect:</p>
+<div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist"><li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Use GQview legacy metadata format (supports only keywords and comments) instead of XMP</span>
+          <p class="para"></p>
+          If checked, Geeqie will write metadata in GQview legacy files (file extension .meta) format
+        </p>
+      </li></ul></div></div></div></div>
+</div></div>
+</div></section><section id="MetadataMiscellaneous" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Miscellaneous</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Write the same description tags (keywords, comment, title) to all grouped sidecars</span>
+          <p class="para"></p>
+          If checked the same descriptive tags are written to all files in a group. File grouping is as defined in the
+          <a class="link" href="GuideOptionsFiltering.html#Groupingsidecarextensions" title="Grouping sidecar extensions">Files tab</a>
+          of main Preferences. Technical tags (exif) are handled separately for each file.
+        </p>
+      </li>
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Allow keywords to differ only in case</span>
+          <p class="para"></p>
+          If checked, permits keywords to be case-sensitive (e.g.
+          <span class="em emphasis">Place</span>
+          and
+          <span class="em emphasis">place</span>
+          are two different keywords)
+        </p>
+      </li>
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Write altered image orientation to the metadata</span>
+          <p class="para"></p>
+          If checked, the results of orientation commands (Rotate, Mirror and Flip) issued on an image will be written to metadata either automatically as specified below or when manually initiated. This option also affects the
+          <a class="link" href="GuideMainWindowMenus.html#Editmenu" title="Edit menu">Auto rotate image using EXIF information</a>
+          menu item.
+        </p>
+        <div class="note note-warning" title="Warning">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m11.92 3.3047a1.3872 1.3872 0 0 0-1.129 0.6933l-8.6055 14.922a1.3872 1.3872 0 0 0 1.2012 2.08l17.226-8e-3a1.3872 1.3872 0 0 0 1.201-2.08l-8.619-14.916a1.3872 1.3872 0 0 0-1.136-0.6913 1.3872 1.3872 0 0 0-0.139 0zm0.08 4.6953a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm0 9a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+          <p class="para">If this option is not checked, the results of orientation commands will be lost when Geeqie closes.</p>
+          <p class="para">Do not change this option while you have temporary rotations applied to images.</p>
+        </div></div></div>
+</div>
+      </li>
+</ul></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="AutoSaveOptions" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Auto-save options</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Write metadata after timeout</span>
+          <p class="para"></p>
+          If checked, metadata writes will be made automatically at the defined interval. Warning dialogues will be issued if required.
+        </p>
+      </li>
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Write metadata on image change</span>
+          <p class="para"></p>
+          If checked, metadata writes will be made when you move focus to another image.
+        </p>
+      </li>
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Write metadata on directory change</span>
+          <p class="para"></p>
+          If checked, metadata writes will be made when you move focus to another folder.
+        </p>
+      </li>
+</ul></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="PreLoadMetadata" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Pre-load metadata</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist"><li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Read metadata in background</span>
+          <p class="para"></p>
+          Using the folder sorting options:
+          <p class="para"></p>
+          <span class="gui guilabel">Exif date original</span>
+          <p class="para"></p>
+          <span class="gui guilabel">Exif date digitized</span>
+          <p class="para"></p>
+          <span class="gui guilabel">Rating</span>
+          <p class="para"></p>
+          requires metadata to be read from all files in a folder before the sort action can be made. If a folder contains a large number of file, this can take a noticeable period of time.
+          <p class="para"></p>
+          If this option is checked, Geeqie will automatically read the required metatada in the background as soon as a folder is opened. This will reduce the amount of time you have to wait until the sort is completed.
+          <p class="para"></p>
+          If you do not use these sort options, leave this option unchecked.
+        </p>
+      </li></ul></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideOptionsFiltering.html" title="Files Options">Previous</a><a href="GuideOptionsKeywords.html" title="Keywords">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Configuration Files and Locations</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideReference.html" title="Reference">Reference</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferenceLuaAPI.html" title="Lua API">Previous</a><a href="GuideReferenceFileDates.html" title="File date types">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideReferenceConfig"></a>Configuration Files and Locations</h1></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The following data lists the locations Geeqie uses for various actions. The uppercase symbols are environment variables. If they are not set on your system the fallback locations are listed in parentheses.</p>
+<p class="para">
+    Geeqie will first attempt to load a configuration file from:
+    <div class="code"><pre class="contents"><code>/etc/geeqie/geeqierc.xml</code></pre></div>
+  </p>
+<p class="para">It will then continue with the following locations.</p>
+<p class="para">
+    Most of Geeqie's configuration files are contained in the folder, and sub-folders of:
+    <div class="code"><pre class="contents"><code>$XDG_CONFIG_HOME/geeqie/</code></pre></div>
+    <div class="code"><pre class="contents"><code>($HOME/.config/geeqie/)</code></pre></div>
+  </p>
+<p class="para">
+    Geeqie's standard configuration file is:
+    <div class="code"><pre class="contents"><code>.../geeqierc.xml</code></pre></div>
+  </p>
+<p class="para">
+    An alternative configuration file may be used by executing:
+    <div class="code"><pre class="contents"><code>geeqie -r --config-load:&lt;filename&gt;</code></pre></div>
+  </p>
+<p class="para">
+    Saved window layout files are in the folder:
+    <div class="code"><pre class="contents"><code>.../layouts</code></pre></div>
+  </p>
+<p class="para">
+    Geeqie-created desktop files used by
+    <a class="link" href="GuideImageManagementPlugins.html" title="Plugins">Plugins</a>
+    are in the folder:
+    <div class="code"><pre class="contents"><code>.../applications</code></pre></div>
+  </p>
+<p class="para">
+    Lua script files for
+    <a class="link" href="GuideReferenceLua.html" title="Lua Extensions">Lua Extensions</a>
+    are in the folder:
+    <div class="code"><pre class="contents"><code>.../lua</code></pre></div>
+  </p>
+<p class="para">
+    Historic data such as last several folders visited, bookmarks, and recently used collections, as well as default print settings are contained in this text file:
+    <div class="code"><pre class="contents"><code>.../history</code></pre></div>
+  </p>
+<p class="para">
+    Keyboard shortcut maps are contained in this text file:
+    <div class="code"><pre class="contents"><code>.../accels</code></pre></div>
+  </p>
+<p class="para">
+    The location for Collections is in the folder:
+    <div class="code"><pre class="contents"><code>$XDG_DATA_HOME/geeqie/collections</code></pre></div>
+    <div class="code"><pre class="contents"><code>($HOME/.local/share/geeqie/collections)</code></pre></div>
+  </p>
+<p class="para">
+    The lirc
+    <a class="link" href="GuideReferenceLIRC.html" title="Infra-red controller">Infra-red controller</a>
+    configuration file must be located at:
+    <div class="code"><pre class="contents"><code>$HOME/.lircrc</code></pre></div>
+  </p>
+<p class="para">
+    Thumbnails are stored in a location specified in
+    <a class="link" href="GuideOptionsGeneral.html#PreferencesThumbnails" title="Thumbnails">Thumbnail Preferences</a>
+  </p>
+<p class="para">
+    Metadata is stored either in the image file or in the location specified in
+    <a class="link" href="GuideOptionsMetadata.html#MetadataWritingProcess" title="Metadata writing process">Metadata</a>
+  </p>
+<p class="para">
+    Similarity files are stored in the folder:
+    <div class="code"><pre class="contents"><code>($HOME/.cache/geeqie/)</code></pre></div>
+  </p>
+<p class="para">
+    The safe delete folder is specified in the
+    <a class="link" href="GuideOptionsBehavior.html#Delete" title="Delete">Safe Delete</a>
+    tab of main Preferences
+  </p>
+</div></div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferenceLuaAPI.html" title="Lua API">Previous</a><a href="GuideReferenceFileDates.html" title="File date types">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

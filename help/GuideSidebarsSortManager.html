@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Sort Manager Sidebar</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideSidebars.html" title="Sidebars">Sidebars</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideSidebarsInfo.html" title="Info Sidebar">Previous</a><a href="GuideOtherWindows.html" title="Stand-alone Windows">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideSidebarsSortManager"></a>Sort Manager Sidebar</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">The Sort Manager sidebar provides a convenient method to quickly sort many files into a set of folders or collections.</p>
+<p class="para">
+    To toggle display of the Sort Manager select
+    <span class="guiseq menuchoice"><span class="gui guimenu">View</span> ▸ <span class="gui guimenuitem">Sort Manager</span> <span class="shortcut">(
+        <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>S</kbd></span></span>
+      )</span></span>
+    .
+  </p>
+<p class="para">The mode of the Sort Manager is selected by the drop down list under the sidebar title. The Folder mode allows moving or copying the visible image to a folder, and the Collection mode allows adding the visible image or file selection to a collection.</p>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideSidebarsSortManager.html#Folderview" title="Folder view">Folder view</a></li>
+<li class="links"><a class="xref" href="GuideSidebarsSortManager.html#Collectionview" title="Collection view">Collection view</a></li>
+</ul></div>
+</div>
+<section id="Folderview" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Folder view</h2></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">The Sort Manager folder view consists of a vertical list for bookmarking folders, a section to select the operation to perform, and a set of buttons along the bottom.</p>
+<p class="para">Clicking or activating an item in the list will copy, move, or link the active image's file to that location. The active image will then change to the next image.</p>
+<p class="para"></p>
+</div>
+<section id="Bookmarklist" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Bookmark list</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">This is a list of possible folders to use as a destination for the selected operation. A context menu will appear by right clicking on an item, or pressing the menu key when the item has the focus.</p>
+<p class="para">Folders can be added to the list by activating the Add button at the bottom of the sidebar, or dragging a folder onto the list.</p>
+<p class="para">
+        To edit an item select
+        <span class="em em-bold emphasis">Properties</span>
+        from its context menu. A dialog will appear allowing the Name, Path, and Icon for the item to be changed. Select OK to close the dialog and apply the changes, or Cancel to close the dialog and discard the changes.
+      </p>
+<p class="para">
+        To change the order of the list, select
+        <span class="em em-bold emphasis">Move up</span>
+        or
+        <span class="em em-bold emphasis">Move down</span>
+        from the item's context menu. To move an item with the keyboard move the focus to that item, then press
+        <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>Up</kbd></span></span>
+        or
+        <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>Down</kbd></span></span>
+        to move the item.
+      </p>
+<p class="para">
+        To remove an item from the list select
+        <span class="em em-bold emphasis">Remove</span>
+        from it's context menu.
+      </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="CopyMoveandLink" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Copy, Move, Link and Desktop actions</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+        Copy, Move and Symbolic Link are available operations to use on the active image; they should be self explanatory. In some cases, Desktop files are also listed. This is detailed in
+        <a class="link" href="GuidePluginsConfig.html#Geeqieextensions" title="Geeqie desktop file keys">Plugins Configuration</a>
+      </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Addbutton" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Add button</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Activate this button to add a folder to the bookmark list. A dialog will appear to allow selection of the folder to use for the new item.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Undobutton" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Undo button</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Activate this button to undo the last copy, move, or link operation. The undo function can only reverse the most recent operation.</p>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+</div></section><section id="Collectionview" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Collection view</h2></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">The Sort Manager collection view consists of a vertical list of collection, a section to determine the current selection, and a set of buttons along the bottom.</p>
+<p class="para">Clicking or activating an item in the list will add the selected image to that collection.</p>
+<p class="para"></p>
+</div>
+<section id="Collectionlist" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Collection list</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+        This is the list of collections located in the folder listed in
+        <a class="link" href="GuideReferenceConfig.html" title="Configuration Files and Locations">Configuration Files</a>
+        . Activating a member of this list will result in the current image selection to be added to the collection. If the image already exists within the collection, it will not be added a second time.
+      </p>
+<p class="para">A new empty collection can be added to the list by activating the Add button at the bottom of the sidebar.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Choosingtheselectionstyle" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Choosing the selection style</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The images to add when activating a collection is determined by the selection style:</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+            <span class="gui guilabel">Add image</span>
+          </dt>
+<dd class="terms">
+            <p class="para">The visible image is added to the collection.</p>
+          </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+            <span class="gui guilabel">Add selection</span>
+          </dt>
+<dd class="terms">
+            <p class="para">All images selected in the file list will be added to the collection.</p>
+          </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Addbutton1" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Add button</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Activate this button to add a new empty collection to the visible list. A dialog will appear to allow entry of the name to use for the new collection.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Undobutton1" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Undo button</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Activate this button to undo the last add operation. The undo function can only reverse the most recent operation.</p>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideSidebarsInfo.html" title="Info Sidebar">Previous</a><a href="GuideOtherWindows.html" title="Stand-alone Windows">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

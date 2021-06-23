@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Folder pane</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideMainWindow.html" title="Main Window">Main Window</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideMainWindowFilePane.html" title="File Pane">Previous</a><a href="GuideMainWindowImagePane.html" title="Image Pane">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideMainWindowFolderPane"></a>Folder pane</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">The folder pane contains the menu bar, tool bar, path entry, and folder list.</p>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideMainWindowFolderPane.html#Menubar" title="Menu bar">Menu bar</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFolderPane.html#Toolbar" title="Tool bar">Tool bar</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFolderPane.html#Pathentry" title="Path entry">Path entry</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFolderPane.html#Folderlist" title="Folder list">Folder list</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFolderPane.html#Listview" title="List view">List view</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFolderPane.html#Treeview" title="Tree view">Tree view</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFolderPane.html#Sorting" title="Sorting">Sorting</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFolderPane.html#Contextmenu" title="Context menu">Context menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowFolderPane.html#Draganddrop" title="Drag and drop">Drag and drop</a></li>
+</ul></div>
+</div>
+<section id="Menubar" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Menu bar</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      The main menu of the window. The functions available from the main menu are described in the
+      <a class="link" href="GuideMainWindowMenus.html" title="Menus">Menus</a>
+      chapter.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Toolbar" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Tool bar</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      The tool bar includes buttons for often used operations. The tool bar can be hidden or shown by selecting
+      <span class="em em-bold emphasis">Hide toolbar</span>
+      from the
+      <span class="em em-bold emphasis">View</span>
+      menu.
+    </p>
+<div class="table"><table style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">Icon</th>
+<th class="td-colsep">Tooltip</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="icon_thumb.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Show thumbnails</td>
+<td class="td-rowsep">
+              <p class="para">This button is active when the file list is in list view mode, and activating it will toggle the display of thumbnails.</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="go-previous.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Back</td>
+<td class="td-rowsep">
+              <p class="para">Move back in folder history</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="go-up.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Up</td>
+<td class="td-rowsep">
+              <p class="para">Move up one folder</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="user-home.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Home</td>
+<td class="td-rowsep">
+              <p class="para">Change the main window to display the contents of the user's home folder</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="view-refresh.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Refresh folder display</td>
+<td class="td-rowsep">
+              <p class="para">Refresh the contents of the file pane</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="zoom-in.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Zoom in</td>
+<td class="td-rowsep">
+              <p class="para">Increase the image display size.</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="zoom-out.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Zoom out</td>
+<td class="td-rowsep">
+              <p class="para">Decrease the image display size.</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="zoom-fit-best.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Zoom to fit</td>
+<td class="td-rowsep">
+              <p class="para">This will size the image to fit within the window</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="zoom-original.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Zoom 1:1</td>
+<td class="td-rowsep">
+              <p class="para">Restore zoom to the image's original size.</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="preferences-desktop.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Preferences</td>
+<td class="td-rowsep">
+              <p class="para">
+                Displays the
+                <a class="link" href=".html#GuideOptions" title="">Preferences window</a>
+                .
+              </p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="icon_float.png"></span>
+              </span>
+            </td>
+<td class="td-colsep">Float file list</td>
+<td>
+              <p class="para">Toggle the folder pane, file pane, and status bar between the main window and a secondary window.</p>
+            </td>
+</tr>
+</tbody>
+</table></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Pathentry" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Path entry</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">This displays the active folder of the window and allows typing a location.</p>
+<p class="para">
+      A folder or file can be typed into the entry to quickly change to a desired location or image, the main window will update after pressing the
+      <span class="code">Enter</span>
+      key. Tab completion is also available in the path entry.
+    </p>
+<div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+      <p class="para">
+        Tab completion uses the
+        <span class="keycode">Tab</span>
+        key, press the
+        <span class="keycode">Down</span>
+        key to move the focus from the entry.
+      </p>
+    </div></div></div>
+</div>
+<p class="para">Next to the path entry is a button with a down arrow, clicking this will display a drop down list containing the most recent locations viewed. The list is ordered such that the most recent location is at the top. Selecting a location from the drop down list will change the window to display the location.</p>
+<p class="para">An Internet URL may be typed or drag-and-dropped into this field. The file will be downloaded to a temporary file and displayed.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Folderlist" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Folder list</h2></div>
+<div class="region">
+<div class="contents pagewide"><p class="para">This pane consists of two sections: a folder pane and a shortcuts pane. The shortcuts pane may be hidden or revealed simply by moving the vertical divider to or from the extreme left.</p></div>
+<section id="folders" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Folders</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">This displays a list of sub folders contained in the active folder, or a tree that includes all folders in the file system.</p>
+<p class="para">
+        A
+        <span class="em em-bold emphasis">context menu</span>
+        can be displayed by clicking the right mouse button on the folder pane or pressing the menu key while the folder pane has the focus
+      </p>
+</div></div>
+</div></section><section id="Shortcutslist" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Shortcuts</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">This is a list of shortcuts (bookmarks) to commonly used folders, images and collections. A context menu will appear by right clicking on an item, or pressing the menu key when the item has the focus.</p>
+<p class="para">Folders or images can be added to the list by activating the Add button at the bottom of the pane, or dragging a folder or image onto the list.</p>
+<p class="para">
+        Collections may be added by opening the
+        <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Open collection...</span> <span class="shortcut">(
+            <span class="keyseq keycombo"><span class="key keycap"><kbd>O</kbd></span></span>
+          )</span></span>
+        dialog and dragging a collection onto the list.
+      </p>
+<p class="para">
+        To edit an item select
+        <span class="em em-bold emphasis">Properties</span>
+        from its context menu. A dialog will appear allowing the Name, Path, and Icon for the item to be changed. Select OK to close the dialog and apply the changes, or Cancel to close the dialog and discard the changes.
+      </p>
+<p class="para">
+        To change the order of the list, select
+        <span class="em em-bold emphasis">Move up</span>
+        or
+        <span class="em em-bold emphasis">Move down</span>
+        from the item's context menu. To move an item with the keyboard move the focus to that item, then press
+        <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>Up</kbd></span></span>
+        or
+        <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>Down</kbd></span></span>
+        to move the item.
+      </p>
+<p class="para">
+        To remove an item from the list select
+        <span class="em em-bold emphasis">Remove</span>
+        from it's context menu.
+      </p>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+</div></section><section id="Listview" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">List view</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      This mode can be enabled by from the
+      <span class="em em-bold emphasis">View</span>
+      menu, from the context menu, or pressing
+      <span class="code">Ctrl + T</span>
+      .
+    </p>
+<p class="para">The list view mode displays sub folders contained in the active folder in a standard vertical list. The parent folder can be selected with the folder named “..”.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Treeview" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Tree view</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      This mode can be enabled by selecting
+      <span class="em em-bold emphasis">Tree</span>
+      from the View menu, pressing
+      <span class="code">Ctrl + T</span>
+      , or selecting
+      <span class="em em-bold emphasis">View as tree</span>
+      from the context menu.
+    </p>
+<p class="para">
+      The tree view mode displays all folders in the file system, starting with the root folder and branching out to include sub folders. A folder branch can be expanded or collapsed by clicking the expander next to each folder icon, or by pressing the respective
+      <span class="code">+</span>
+      or
+      <span class="code">-</span>
+      keys when the folder branch has the focus.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Sorting" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Sorting</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The order of the folder names will match the order selected for the file pane. Sort order can be changed by clicking the sort area of the status bar or from the context menu of the file pane.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Contextmenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Context menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      Right clicking the mouse or pressing the menu key while the folder pane has focus will display a menu. The menu functions will perform the same as those that match the window's
+      <a class="link" href="GuideMainWindowMenus.html" title="Menus">menu bar</a>
+      , however a few functions are unique to the context menu:
+    </p>
+<div class="table"><table style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">Icon</th>
+<th class="td-colsep">Text</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="go-up.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Up to parent</td>
+<td class="td-rowsep">
+              <p class="para">This will change the window to display the contents of the parent folder.</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">Slide show</td>
+<td class="td-rowsep">
+              <p class="para">
+                Start a
+                <a class="link" href="GuideImagePresentationSlideshow.html" title="Slide Show">slide show</a>
+                that contains all images in the selected folder.
+              </p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">Slide show recursive</td>
+<td class="td-rowsep">
+              <p class="para">
+                Start a
+                <a class="link" href="GuideImagePresentationSlideshow.html" title="Slide Show">slide show</a>
+                that contains all images in the selected folder, and all images in the sub folders of that folder.
+              </p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="edit-find.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Find duplicates</td>
+<td class="td-rowsep">
+              <p class="para">
+                This will open a new
+                <a class="link" href="GuideImageSearchFindingDuplicates.html" title="Finding Duplicates">find duplicates</a>
+                window containing all images in the selected folder.
+              </p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="edit-find.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Find duplicates recursive</td>
+<td class="td-rowsep">
+              <p class="para">
+                This will open a new
+                <a class="link" href="GuideImageSearchFindingDuplicates.html" title="Finding Duplicates">find duplicates</a>
+                window containing all image in the selected folder, and all images in the sub folders of that folder.
+              </p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">New folder</td>
+<td class="td-rowsep">
+              <p class="para">Creates a new folder that is a sub folder of the selected folder.</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">Rename</td>
+<td class="td-rowsep">
+              <p class="para">Renames the selected folder.</p>
+              <div class="note note-warning" title="Warning">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m11.92 3.3047a1.3872 1.3872 0 0 0-1.129 0.6933l-8.6055 14.922a1.3872 1.3872 0 0 0 1.2012 2.08l17.226-8e-3a1.3872 1.3872 0 0 0 1.201-2.08l-8.619-14.916a1.3872 1.3872 0 0 0-1.136-0.6913 1.3872 1.3872 0 0 0-0.139 0zm0.08 4.6953a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm0 9a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+                <span class="em em-bold emphasis">Warning:</span>
+                Renaming a folder will not update metadata, such as keywords, or cached thumbnails for images contained in that folder, the data will be lost.
+              </div></div></div>
+</div>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="edit-delete.png"></span>
+              </span>
+            </td>
+<td class="td-colsep td-rowsep">Delete</td>
+<td class="td-rowsep">
+              <p class="para">Delete file or folder</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">Copy path</td>
+<td class="td-rowsep">
+              <p class="para">
+                Copy selected item-path(s) to clipboard
+                <sup class="footnote"><a class="footnote" href="#ref1" id="-noteref-ref1">1</a></sup>
+                . Each data item copied will be enclosed in quotes.
+              </p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">Copy path unquoted</td>
+<td class="td-rowsep">
+              <p class="para">Copy selected item-path(s) to clipboard. The data will not be enclosed in quotes.</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">View as list</td>
+<td class="td-rowsep">
+              <p class="para">Switches to list tree mode of the folder pane.</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">View as tree</td>
+<td class="td-rowsep">
+              <p class="para">Switches to tree mode of the folder pane.</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">Show hidden files</td>
+<td class="td-rowsep">
+              <p class="para">Switches to list tree mode of the folder pane.</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="view-refresh.png"></span>
+              </span>
+            </td>
+<td class="td-colsep">Refresh</td>
+<td>
+              <p class="para">Switches to tree mode of the folder pane.</p>
+            </td>
+</tr>
+</tbody>
+</table></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Draganddrop" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Drag and drop</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Image files can be dropped onto folders displayed in the folder pane. A menu will appear allowing you to select to move or copy the dropped images into the target folder. The list will automatically scroll up or down when the drag pointer is near the respective top or bottom of the list. When in tree mode, hovering over a folder for a brief period of time will expand that folder.</p>
+<p class="para">The folders can used as a drag source for drag and drop, for example to add images in a folder to a collection window. However drag and drop can not be used to move or copy folders in Geeqie.</p>
+<p class="para">
+      Using
+      <span class="code">Shift</span>
+      key while dragging is a shortcut to move action. Menu will not appear but move will occur.
+    </p>
+<p class="para">
+      Using
+      <span class="code">Ctrl</span>
+      key while dragging is a shortcut to copy action. Menu will not appear but copy will occur.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><div class="footnotes"><div id="ref1" class="footnote">
+<a class="footnote" href="#-noteref-ref1">1</a>
+                  The clipboard used is selected
+                  <a class="link" href="GuideOptionsBehavior.html#Behaviour" title="Behavior">here.</a>
+                </div></div>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideMainWindowFilePane.html" title="File Pane">Previous</a><a href="GuideMainWindowImagePane.html" title="Image Pane">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

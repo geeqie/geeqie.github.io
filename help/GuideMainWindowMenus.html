@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Menus</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideMainWindow.html" title="Main Window">Main Window</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideMainWindowNavigation.html" title="Navigation">Previous</a><a href="GuideMainWindowStatusBar.html" title="Status Bar">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideMainWindowMenus"></a>Menus</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">This section describes the functions of each item on the menu bar in the Geeqie main window.</p>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#FileMenu" title="File Menu">File Menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Gomenu" title="Go menu">Go menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Selectmenu" title="Select menu">Select menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Editmenu" title="Edit menu">Edit menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Pluginsmenu" title="Plugins menu">Plugins menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Viewmenu" title="View menu">View menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Windowmenu" title="Windows menu">Windows menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Helpmenu" title="Help menu">Help menu</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Tearoffmenus" title="Tear off menus">Tear off menus</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Keyboardshortcuts" title="Keyboard shortcuts">Keyboard shortcuts</a></li>
+<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Changingthemainwindowmenubarkeyboardshortcuts" title="Changing the main window menu bar keyboard shortcuts">Changing the main window menu bar keyboard shortcuts</a></li>
+</ul></div>
+</div>
+<section id="FileMenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">File Menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">New window</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>N</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a new main window, with the initial path set to the current folder.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">New collection</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>C</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a new collection window, the new collection will be empty.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Open collection</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>O</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Displays a dialog to open a collection stored on disk, the selected collection will then appear in a new window.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Open recent</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            This menu item lists the recently active collections, selecting an item from the list will open that collection in a new window. The most recent item will appear at the top of the list. Maximum number of entries can be modified through
+            <a class="link" href="GuideOptionsBehavior.html#Behaviour" title="Behavior">Open recent list maximum size</a>
+            option.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Search…</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>F3</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a new Search window.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Find duplicates...</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>D</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a new Find Duplicates window.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Print..</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>P</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a print dialog.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">New folder…</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>F</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Creates a new folder in the current path.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Copy…</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>C</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a dialog to select a destination to copy the currently selected files.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Move…</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>M</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a dialog to select a destination to move currently selected files.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Rename…</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>R</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Renames the current file selection.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Delete…</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>D</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Deletes the current file selection.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Symlink</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Creates a symbolic link. This is implemented via a
+            <a class="link" href="GuideImageManagementPlugins.html" title="Plugins">plugin</a>
+            .
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Close window</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>W</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Closes the window containing the menu, if the window is the last main window Geeqie will quit.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Quit</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Q</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Quits the Geeqie application, if collections or image metadata have been changed but not saved, the user will be prompted for confirmation.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Gomenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Go menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The Page commands are for files which contain multiple images e.g. .tiff files</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">First Image</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Home</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the first image.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Previous Image</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Backspace</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the previous image.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Next Image</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Space</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the next image</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Last Image</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>End</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the last image</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Image Back</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Each image you view is appended to a chain. You may traverse forwards and backwards through this chain using this and the following key. Move to the previous image in the chain.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Image Forward</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Move to the next image in the chain.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Back</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Back Goes to the previous folder</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Home</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Home</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Goes to the the Home folder as defined in
+            <a class="link" href="GuideOptionsLayout.html" title="Window Layout">Window Layout</a>
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">First Page</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Home</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the first page.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Last Page</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>End</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the last page.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Previous Page</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>PageUp</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the previous page.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Next Page</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>PageDown</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the next page.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Selectmenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Select menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Select all</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>A</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Selects all files in the current list</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Select none</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>A</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Deselects all files</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Invert selection</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>I</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Inverts current selection</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Rectangular selection</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Alt</kbd></span>+<span class="key keycap"><kbd>R</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles rectangular selection mode for icons</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Copy path</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Copy selected item-path(s) to clipboard
+            <sup class="footnote"><a class="footnote" href="#ref1" id="-noteref-ref1">3</a></sup>
+            . Each data item copied will be enclosed in quotes.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Copy path unquoted</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Copy selected item-path(s) to clipboard. The data will not be enclosed in quotes.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Show marks</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>M</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Displays marks in the file list</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Clear marks</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Clear all marks for all images</p>
+          <div class="note note-warning" title="Warning">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m11.92 3.3047a1.3872 1.3872 0 0 0-1.129 0.6933l-8.6055 14.922a1.3872 1.3872 0 0 0 1.2012 2.08l17.226-8e-3a1.3872 1.3872 0 0 0 1.201-2.08l-8.619-14.916a1.3872 1.3872 0 0 0-1.136-0.6913 1.3872 1.3872 0 0 0-0.139 0zm0.08 4.6953a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm0 9a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+            <p class="para">Marks that are linked to keywords will also be cleared. This may result in a metadata write operation being triggered.</p>
+          </div></div></div>
+</div>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens submenu for manipulating mark n</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Toggle Mark n</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>n</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Set or unset mark n on selected files</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Set mark n</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Set mark n on selected files</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Reset mark n</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Unset mark n on selected files</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Select mark n</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>n</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Selects all files having mark n set</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Add mark n</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Adds files having mark n set to selection</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Intersection with mark n</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Intersects current selection and mark n</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Unselect mark n</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Removes files having mark n set from current selection</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Filter mark n</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Shows only the images that have mark n set.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Editmenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Edit menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Adjust image orientation</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Rotate clockwise</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>]</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Rotates the current image clockwise 90 degrees, does not modify the file on disk.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Rotate counterclockwise</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>[</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Rotates the current image counterclockwise 90 degrees, does not modify the file on disk.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Rotate 180</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>R</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Rotates the current image 180 degrees, does not modify the file on disk.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Mirror</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>M</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Swaps the left and right sides of the image so that the result is similar to that of looking at the image in a mirror, does not modify the file on disk.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Flip</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>F</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Swaps the top and bottom sides of the image, does not modify the file on disk.</p>
+          <div class="note note-warning" title="Warning">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m11.92 3.3047a1.3872 1.3872 0 0 0-1.129 0.6933l-8.6055 14.922a1.3872 1.3872 0 0 0 1.2012 2.08l17.226-8e-3a1.3872 1.3872 0 0 0 1.201-2.08l-8.619-14.916a1.3872 1.3872 0 0 0-1.136-0.6913 1.3872 1.3872 0 0 0-0.139 0zm0.08 4.6953a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm0 9a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+            <p class="para">
+              The above orientation commands - Rotate, Mirror and Flip - do not change the image on disk. The changes will be lost when Geeqie closes. Refer to the
+              <a class="link" href="GuideOptionsMetadata.html#MetadataMiscellaneous" title="Miscellaneous">Metadata tab of the Preferences Dialog</a>
+              if you wish these changes to be written to metadata.
+            </p>
+            <p class="para">
+              Refer also to the
+              <a class="link" href="ExifRotation.html#HowdotheExifauto-rotationcommandswork" title="How do the Exif auto-rotation commands work?">FAQ</a>
+              .
+            </p>
+          </div></div></div>
+</div>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Original state</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>O</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Removes all temporary effects applied through the above commands, reverting the image according to its Exif Orientation tag.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Auto rotate image using EXIF information</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Auto rotates images based on metadata stored in images that have Exif data. Refer also to the
+            <a class="link" href="ExifRotation.html#HowdotheExifauto-rotationcommandswork" title="How do the Exif auto-rotation commands work?">FAQ</a>
+            .
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Apply the orientation to image content</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">This command affects only jpeg, tiff and png files. The image file on disk is rotated to the orientation as specified by its Exif Orientation tag.</p>
+          <div class="note note-warning" title="Warning">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m11.92 3.3047a1.3872 1.3872 0 0 0-1.129 0.6933l-8.6055 14.922a1.3872 1.3872 0 0 0 1.2012 2.08l17.226-8e-3a1.3872 1.3872 0 0 0 1.201-2.08l-8.619-14.916a1.3872 1.3872 0 0 0-1.136-0.6913 1.3872 1.3872 0 0 0-0.139 0zm0.08 4.6953a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm0 9a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+            <p class="para">
+              The file rotate.desktop, using external commands exiftran, exiv2 and mogrify, is used to implement this command. Refer to
+              <a class="link" href="GuideImageManagementPlugins.html" title="Plugins">Plugins section</a>
+              for details.
+            </p>
+          </div></div></div>
+</div>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Rotate counterclockwise</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>[</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Rotates the current image counterclockwise 90 degrees, does not modify the file on disk.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Rotate 180</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>R</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Rotates the current image 180 degrees, does not modify the file on disk.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Write orientation to file</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Saves the current image orientation to the disk file. This operation can only be carried out on jpeg, tiff and png files. Jpeg rotations are lossless.
+            <div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+              The Preferences/Metadata option "Write altered image orientation to the metadata" must be off.
+              <p class="para"></p>
+              Exiftran and mogrify must be installed.
+            </div></div></div>
+</div>
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Orientation</span> ▸ <span class="gui guimenuitem">Write orientation to file (preserve timestamp)</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">As above, but the file date and time are preserved.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Rating</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Set a Rating value for each image.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Rating</span> ▸ <span class="gui guimenuitem">n</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Alt+Keypad+n</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">"n" is in the range 0 to 5. Sets the Rating value for the image.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Rating</span> ▸ <span class="gui guimenuitem">-1</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Alt+Keypad+Minus</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Sets the Rating value to -1 for the image.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Save metadata</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>S</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Saves queued metadata changes. Autosave can be configured too.</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Preferences</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>O</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Opens the
+            <a class="link" href=".html#GuideOptions" title="">Preferences Dialog</a>
+            for changing of global preferences.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Configure Plugins…</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Opens the
+            <a class="link" href="GuideImageManagementPlugins.html" title="Plugins">Plugins Dialog</a>
+            for changing of desktop files.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Configure This window…</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Opens the
+            <a class="link" href="GuideOptionsWindow.html" title="Window Options">Window Preferences Dialog</a>
+            for changing of options that can differ for each window.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Cache maintenance</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Opens a dialog with utilities for thumbnail and keyword
+            <a class="link" href="GuideReferenceManagement.html" title="Cache and Data Maintenance">Cache and Data Maintenance</a>
+            .
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Set as wallpaper</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Renders the current image to the root window (desktop). The resulting image will be tiled to fit the root window if zoom is not set to
+            <span class="em emphasis">Fit to window</span>
+            ; when zoom is set to
+            <span class="em emphasis">Fit to window</span>
+            , the image will be scaled to fill the root window.
+          </p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Pluginsmenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Plugins menu</h2></div>
+<div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Plugins</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            This menu contains the plugins (desktop files) that were found on the system. See the
+            <a class="link" href="GuideImageManagementPlugins.html" title="Plugins">Plugins section</a>
+            for details.
+          </p>
+        </dd>
+</dl></div></div></div></div></div></div>
+</div></section><section id="Viewmenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">View menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">View in new window</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>V</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens selected image in its own window</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Pan view</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>J</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens current folder in Pan view window</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Exif data</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>E</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles display of the Exif sidebar.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Files and Folders</span> ▸ <span class="gui guimenu">Folder List</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Meta</kbd></span>+<span class="key keycap"><kbd>L</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Set the folder view mode to list.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Files and Folders</span> ▸ <span class="gui guimenuitem">Folder Tree</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>T</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Set the folder view mode to tree.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Files and Folders</span> ▸ <span class="gui guimenuitem">Image List</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>L</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Changes the file list to display files in list format.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Files and Folders</span> ▸ <span class="gui guimenuitem">Icons</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>I</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Changes the file list to display files as icons.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Files and Folders</span> ▸ <span class="gui guimenuitem">Show Thumbnails</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles the display of image thumbnails in the file list, this item is not available when the file list is in icon view mode. A check appears next to this item when thumbnails are enabled.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Files and Folders</span> ▸ <span class="gui guimenuitem">Float file list</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>L</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Splits the 3-pane main window into two parts:
+            <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">File pane and Folder pane, along with menu and status bar</li>
+<li class="list itemizedlist">Image pane and its associated sidebar and sort manager (if displayed)</li>
+</ul></div></div></div></div>
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Files and Folders</span> ▸ <span class="gui guimenuitem">Hide file list</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>H</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Hides the File and Folder panes, along with menu and status bar.
+            <span class="code">Right-click</span>
+            on the Image pane provides a menu item to redisplay these items.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Files and Folders</span> ▸ <span class="gui guimenuitem">Hide toolbar</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles visibility of the tool bar. A check appears next to this item when the tool bar is not visible.</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Zoom</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para"></p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Zoom</span> ▸ <span class="gui guimenuitem">Connected zoom</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Actions in this menu are identical to those in
+            <span class="em em-bold emphasis">Zoom</span>
+            menu, but apply to all images displayed in split view.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Zoom</span> ▸ <span class="gui guimenuitem">Zoom in</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Increases the zoom by one increment, resulting in a larger image.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Zoom</span> ▸ <span class="gui guimenuitem">Zoom out</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Decreases the zoom by one increment, resulting in a smaller image.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Zoom</span> ▸ <span class="gui guimenuitem">Zoom to fit</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Automatically adjusts the zoom so that the image will fit within the display pane. The effect on images with an original size smaller than the display pane can be changed with the
+            <span class="em emphasis">Allow enlargement of image for zoom to fit</span>
+            option located on the
+            <a class="link" href="GuideOptionsImage.html" title="Image Options">Image tab</a>
+            of the preferences dialog.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Zoom</span> ▸ <span class="gui guimenuitem">Fit Horizontally</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Adjusts the zoom so image height fit within the display pane.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Zoom</span> ▸ <span class="gui guimenuitem">Fit Vertically</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Adjusts the zoom so image width fit within the display pane.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="code">
+              <span class="gui guibutton">
+                <span class="gui guiicon">
+                  <span class="inlinegraphic"><img src="document-new.png"></span>
+                </span>
+                New
+              </span>
+            </span> ▸ <span class="gui guimenu">Zoom</span> ▸ <span class="gui guimenuitem">Zoom n:m</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Z</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Set zoom to the n:m value. 1:1 is the original size of the image. When n is greater than m, zoom in occurs else zoom out occurs.</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Zoom</span> ▸ <span class="gui guimenuitem">Zoom n:m</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Z</kbd></span></span>
+            )</span></span>
+          <span class="gui guimenu">Split</span>
+        </dt>
+<dd class="terms">
+          <p class="para"></p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Split</span> ▸ <span class="gui guimenuitem">Horizontal</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Splits main image view in two horizontal panes.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Split</span> ▸ <span class="gui guimenuitem">Vertical</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>U</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Splits main image view in two vertical panes.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Split</span> ▸ <span class="gui guimenuitem">Quad</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Splits main image view in four panes.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Split</span> ▸ <span class="gui guimenuitem">Single</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Y</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Reverts to normal view mode (one image).</p>
+        </dd>
+</dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist"></dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Image Overlay</span> ▸ <span class="gui guimenu">Image Overlay</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Displays Image Overlay information box (OSD), use twice to add histogram to it.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Image Overlay</span> ▸ <span class="gui guimenu">Histogram channels</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Switches channels displayed in the histogram (red, green, blue, RGB, value, maximum value).</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Image Overlay</span> ▸ <span class="gui guimenu">Histogram log mode</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles between linear and logarithmical histogram.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Full screen</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles the full screen window display.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Over/Under Exposure</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>E</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Toggles highlighting of pixels that are either over or under exposed. This function operates on the displayed pixels. If a raw file is being displayed, the embedded jpeg data is being used. If the image is zoomed, the zoom type affects the results. Two-pass rendering also has some influence.
+            <p class="para"></p>
+            If a pixel has any channel at zero or full-scale, the pixel is displayed in red.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Keywords</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles display of the Keywords sidebar.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Sort manager</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Toggles display of the Sort Manager sidebar.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Hide Bars</span>
+        </dt>
+<dd class="terms">
+          <p class="para">This item is intended to be used by its shortcut key - by default this is the backtick key. When pressed, the info sidebar, sort manager and file list will be hidden (if displayed). Pressing backtick again will revert the display to its previous layout.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Toggle slideshow</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Begins or ends a slide show, the slide show status is displayed in the status bar.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Pause slideshow</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Pauses a slide show, the slide show status is displayed in the status bar.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Faster</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Decreases slide show interval in units of 0.5 seconds.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Slower</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Increases slide show interval in units of 0.5 seconds.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guimenu">Refresh</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Updates the contents of the folder and file lists to match what is currently on disk, the current image will also be reread from disk.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Windowmenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Windows menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">This menu permits you to define several different window layouts that can be recalled at any time.</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">New window</span> ▸ <span class="gui guimenuitem">default</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>N</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a new window with the default layout. The window is given a name in the form "lw&lt;n&gt;".</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">New window</span> ▸ <span class="gui guimenuitem">from current</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a new window with the layout of the window that has focus.  The window is given a name in the form "lw&lt;n&gt;".</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Rename window</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">If a window is given a name that does not begin with the characters "lw", the layout will be saved and be available for loading at a later time..</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Delete window</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Delete a saved window layout from the list.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Close window</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Close the window. If the window is the "main" window, close all windows.</p>
+        </dd>
+</dl></div></div></div></div>
+</div></div>
+</div></section><section id="Helpmenu" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Help menu</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Contents</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>F1</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens the Geeqie user manual in a new browser window.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Search and Run Commands</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>/</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Opens a text box in which you may type characters to find a command. The characters you type will be matched to the first characters of any word in all the commands in Geeqie - both built-in commands and plugins - and matching actions will be displayed in a pop-up. You may scroll to any of the matching commands and press
+            <span class="code">Enter</span>
+            to execute the command. Pressing
+            <span class="code">Enter</span>
+            without selecting from the list will execute the first action in the list. Press
+            <span class="code">Esc</span>
+            to close the box.
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">On-line help search</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            Use a web browser to search Geeqie's on-line help files. The search engine used is defined in
+            <a class="link" href="GuideOptionsGeneral.html#OnLineHelpSearch" title="On-line help search">Preferences General</a>
+            .
+          </p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Keyboard shortcuts</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Displays a window listing the default keyboard shortcuts.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Keyboard Map</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Displays an image showing the currently allocated keyboard shortcuts.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Release notes</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Displays a window containing the release notes for the version of Geeqie in use.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">About</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens a window containing the Geeqie version, credits, website, and email contact information.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Log window</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Opens the log window, mostly used for debugging purposes.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Tearoffmenus" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Tear off menus</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Menus can be permanently displayed by selecting the dotted line item at the top of each menu category. A tear off menu will behave the same as an ordinary window. To close a tear off menu, select the dotted line item at the top of the menu.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Keyboardshortcuts" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Keyboard shortcuts</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      The keyboard sequence associated to each menu entry is listed within the main window menu bar. For reference, the complete list of default keyboard shortcuts can be found in section
+      <a class="link" href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Keyboard Shortcuts</a>
+      .
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Changingthemainwindowmenubarkeyboardshortcuts" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Changing the main window menu bar keyboard shortcuts</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+      The section
+      <a class="link" href="GuideOptionsKeyboard.html" title="Keyboard Options">Keyboard Options</a>
+      describes how to modify the keyboard shortcuts used in the main menu.
+    </p></div></div>
+</div></section><div class="footnotes"><div id="ref1" class="footnote">
+<a class="footnote" href="#-noteref-ref1">3</a>
+              The clipboard used is selected
+              <a class="link" href="GuideOptionsBehavior.html#Behaviour" title="Behavior">here.</a>
+            </div></div>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideMainWindowNavigation.html" title="Navigation">Previous</a><a href="GuideMainWindowStatusBar.html" title="Status Bar">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

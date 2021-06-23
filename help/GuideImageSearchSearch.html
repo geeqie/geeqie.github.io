@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Search Window</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideImageSearch.html" title="Search and Select">Search and Select</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageSearchCache.html" title="Caching Data For Searches">Previous</a><a href="GuideImageSearchFindingDuplicates.html" title="Finding Duplicates">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideImageSearchSearch"></a>Search Window</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">Geeqie provides a utility to find one or more images based on various parameters.</p>
+<p class="para">
+    To display a new Search Window press
+    <span class="key keycap"><kbd>F3</kbd></span>
+    or select
+    <span class="gui guimenu">Search</span>
+    from the File menu.
+  </p>
+<p class="para">
+    To start a search activate the
+    <span class="code">
+      <span class="gui guibutton">
+        <span class="gui guiicon">
+          <span class="inlinegraphic"><img src="edit-find.png"></span>
+        </span>
+        Find
+      </span>
+    </span>
+    button or press
+    <span class="code">Ctrl + Enter</span>
+    . A search in progress can be stopped by activating the
+    <span class="code">
+      <span class="gui guibutton">
+        <span class="gui guiicon">
+          <span class="inlinegraphic"><img src="process-stop.png"></span>
+        </span>
+        Stop
+      </span>
+    </span>
+    button or press
+    <span class="code">Ctrl + Enter</span>
+    .
+  </p>
+<p class="para">The progress of an active search is displayed as a progress bar at the bottom of the window. The progress bar will also display the total files that match the search parameters, and the total number of files searched.</p>
+<p class="para">When a search is completed, the total number of files found and their total size will be displayed in the status bar.</p>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideImageSearchSearch.html#Searchlocation" title="Search location">Search location</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchSearch.html#Searchparameters" title="Search parameters">Search parameters</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchSearch.html#Resultslist" title="Results list">Results list</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchSearch.html#Statusbar" title="Status bar">Status bar</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchSearch.html#DragandDrop" title="Drag and Drop">Drag and Drop</a></li>
+</ul></div>
+</div>
+<section id="Searchlocation" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Search location</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">One of several locations can be chosen as the source to use in the search.</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Path</span>
+        </dt>
+<dd class="terms">The search will include files located in the selected folder, enable the Recurse check box to include the contents of all sub folders.</dd>
+<dt class="terms">
+          <span class="gui guilabel">Comments</span>
+        </dt>
+<dd class="terms">
+          This option is only for use with GqView legacy metadata.
+          <p class="para"></p>
+          The search will include all files that have a keyword or comment associated to it.
+          <div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">Only keyword and comment associations stored in the user's home folder are included in this search type.</div></div></div>
+</div>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Results</span>
+        </dt>
+<dd class="terms">The search will include all files currently listed in the results list. Use this to refine a previous search.</dd>
+<dt class="terms">
+          <span class="gui guilabel">Collection</span>
+        </dt>
+<dd class="terms">The search will include all files in the selected collection.</dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Searchparameters" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Search parameters</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Each search parameter can be enabled or disabled with the check box to its left. For a file to be a match, all enabled parameters must be true.</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">File</span>
+        </dt>
+<dd class="terms">
+          If "name is" is selected, the search will match if the text exactly matches the file name. If "name contains" or "path contains" is selected, the search will match if the entered text appears within the file name or path.<p class="para"></p>The text comparison can be made to be case sensitive by enabling the Match case checkbox.
+          <p class="para"></p>
+          If "contains" or "path contains" is selected,
+          <a class="link" href="GuideReferencePCRE.html" title="Perl Compatible Regular Expressions">Perl Compatible Regular Expressions</a>
+          are used.
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">File size</span>
+        </dt>
+<dd class="terms">
+          The search will match if the file size on disk is equal to, less than, greater than, or between the entered value, depending on the method selected from the drop down menu. The
+          <span class="em emphasis">between</span>
+          test is inclusive - for example a file of size 10 will match if the size parameters are between 10 and 15.
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">File date</span>
+        </dt>
+<dd class="terms">
+          The search will match if the file date is equal to, before, after, or between the entered date, depending on the method selected from the drop down menu. The
+          <span class="em emphasis">between</span>
+          test is inclusive, for example a file with date of 10/04/2003 will match if the date parameters are between 10/04/2003 and 12/31/2003.
+          <p class="para"></p>
+          For convenience, the
+          <span class="code">
+            <span class="gui guibutton">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="go-down.png"></span>
+              </span>
+            </span>
+          </span>
+          button displays a pop up calendar to enter the date.
+          <p class="para"></p>
+          One of four date types may be selected. They are described in the
+          <a class="link" href="GuideReferenceFileDates.html" title="File date types">Reference section</a>
+          .
+          <div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">If an image does not have an exif date, it will default to 01 January 1970.</div></div></div>
+</div>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Image dimensions</span>
+        </dt>
+<dd class="terms">
+          The search will match if the image dimensions are equal to, less than, greater than, or between the entered values, depending on the method selected from the drop down menu. The
+          <span class="em emphasis">between</span>
+          test is inclusive.
+          <p class="para"></p>
+          The image dimensions test is simple, both width and height must be within the allowed values for a match.
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Image content</span>
+        </dt>
+<dd class="terms">
+          The search will match if the image contents are similar within the percentage value, inclusive. This uses the same test and data that is used to determine image similarity when
+          <a class="link" href="GuideImageSearchFindingDuplicates.html" title="Finding Duplicates">Finding Duplicates</a>
+          . The entry is for entering the path for the image to use in this test.
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Keywords</span>
+        </dt>
+<dd class="terms">The search will match if the file's associated keywords match all, match any, or exclude the entered keywords, depending on the method selected from the drop down menu. Keywords can be separated with a space, comma, or tab character.</dd>
+<dt class="terms">
+          <span class="gui guilabel">Comment</span>
+        </dt>
+<dd class="terms">
+          The search will match if the file's Comments field contains the entered pattern.
+          <a class="link" href="GuideReferencePCRE.html" title="Perl Compatible Regular Expressions">Perl Compatible Regular Expressions</a>
+          are used.
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Geocoded position</span>
+        </dt>
+<dd class="terms">
+          The search will match if the file's GPS position is less than or greater than the selected distance from the specified position, or is not geocoded, depending on the method selected from the drop down menu.
+          The search location can be specified by
+          <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">
+              Type in a latitude/longitude in the format
+              <span class="code">89.123 179.123</span>
+            </li>
+<li class="list itemizedlist">Drag-and-drop a geocoded image onto the search box</li>
+<li class="list itemizedlist">If Geeqie's map is displayed, a left-click on the map will store the latitude/longitude under the mouse cursor into the clipboard. It can then be pasted into the search box.</li>
+<li class="list itemizedlist">Copy-and-paste (in some circumstances drag-and-drop) the result of an Internet search.</li>
+</ul></div></div></div></div>
+          <div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+            In this last case, the result of a search may contain the latitude/longitude embedded in the URL. This may be automatically decoded with the help of an external file:-
+            <div class="code"><pre class="contents"><code>$HOME/.config/geeqie/geocode-parameters.awk</code></pre></div>
+            See
+            <a class="link" href="GuideReferenceDecodeLatLong.html" title="Decoding Latitude and Longitude">Decoding Latitude and Longitude</a>
+            for details on how to create this file.
+          </div></div></div>
+</div>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Class</span>
+        </dt>
+<dd class="terms">
+          The search will match if the file's class is, or is not, one of the following types.
+          <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">Unknown</li>
+<li class="list itemizedlist">Image</li>
+<li class="list itemizedlist">Raw Image</li>
+<li class="list itemizedlist">Video</li>
+<li class="list itemizedlist">Document</li>
+<li class="list itemizedlist">Metadata</li>
+<li class="list itemizedlist">Unknown</li>
+<li class="list itemizedlist">Broken (Of class Image, Raw Image, Video, or Document, but Geeqie cannot display an image)</li>
+</ul></div></div></div></div>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Marks</span>
+        </dt>
+<dd class="terms">
+          The search will match if the file does or does not have a mark attached to it. Refer to
+          <a class="link" href="GuideImageMarks.html" title="Marking Images">Marking Images</a>
+          .
+        </dd>
+</dl></div></div></div></div>
+<p class="para"></p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Resultslist" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Results list</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Files that match the parameters of the search are shown in the list. By default they are displayed in the order that they are found. To sort the results list by a column, activate or click the column title. Activating a column that is already used to sort the list will toggle between increasing and decreasing sort order.</p>
+<p class="para">
+      A
+      <span class="em em-bold emphasis">context menu</span>
+      is available for the result list by right clicking the mouse or pressing the Menu key when a row has the focus.
+    </p>
+<p class="para">
+      The
+      <a class="link" href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Keyboard and Mouse Shortcuts</a>
+      available are listed here.
+    </p>
+<p class="para">The image Dimensions column of the result list will only contain dimension information when dimensions are included in the search parameters.</p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="Statusbar" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Status bar</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">At the bottom of the search window is an area that includes the following items from left to right:</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents">
+<p class="para"></p>
+<dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Thumbnails</span>
+        </dt>
+<dd class="terms">Enable this check box to display a thumbnail next to each image in the results list.</dd>
+<dt class="terms">
+          <span class="gui guilabel">File count display</span>
+        </dt>
+<dd class="terms">Displays the total count of files in the results list, and their size on disk. The count of selected files will appear in parenthesis.</dd>
+<dt class="terms">
+          <span class="gui guilabel">Search progress</span>
+        </dt>
+<dd class="terms">When a search is active, the text “Searching...” will appear here. Two numbers in parenthesis will also be displayed, the first number is the number of files that match the search parameters and the second number is the total number of files that were searched.</dd>
+<dt class="terms">
+          <span class="code">
+            <span class="gui guibutton">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="edit-find.png"></span>
+              </span>
+              Find
+            </span>
+          </span>
+        </dt>
+<dd class="terms">Activate the find button to start a search with the selected parameters.</dd>
+<dt class="terms">
+          <span class="code">
+            <span class="gui guibutton">
+              <span class="gui guiicon">
+                <span class="inlinegraphic"><img src="process-stop.png"></span>
+              </span>
+              Stop
+            </span>
+          </span>
+        </dt>
+<dd class="terms">Activate the stop button to end a search that is in progress.</dd>
+</dl>
+</div></div></div></div>
+<p class="para"></p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="DragandDrop" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Drag and Drop</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Drag and drop can be initiated with the primary or middle mouse buttons. Dragging a file that is selected will include all selected files in the drag. Dragging a file that is not selected will first change the selection to the dragged file, and clear the previous selection.</p>
+<p class="para"></p>
+</div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageSearchCache.html" title="Caching Data For Searches">Previous</a><a href="GuideImageSearchFindingDuplicates.html" title="Finding Duplicates">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Lua Extensions</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideReference.html" title="Reference">Reference</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferenceMetadata.html" title="Metadata Processing">Previous</a><a href="GuideReferenceLuaAPI.html" title="Lua API">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">Lua Extensions</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+    Lua scripts allow the functionality of Geeqie to be extended. Lua scripts may only be used in conjunction with the
+    <a class="link" href="GuideOptionsOSD.html#OverlayScreenDisplay" title="Overlay Screen Display">Overlay Screen Display</a>
+    ,
+    <a class="link" href="GuideSidebarsInfo.html" title="Info Sidebar">List panes</a>
+    on the Info Sidebar, and the
+    <div class="code"><pre class="contents"><code>geeqie --remote --lua:</code></pre></div>
+    command line option.
+  </p>
+<p class="para"></p>
+<p class="para">Some knowledge of the Lua programming language is required.</p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideReferenceLua.html#Requirements" title="Requirements">Requirements</a></li>
+<li class="links"><a class="xref" href="GuideReferenceLua.html#HowToUseLua" title="How to use Lua">How to use Lua</a></li>
+<li class="links"><a class="xref" href="GuideReferenceLua.html#GeeqieBuiltIn%20Functions" title="Geeqie Lua built-in functions">Geeqie Lua built-in functions</a></li>
+<li class="links"><a class="xref" href="GuideReferenceLua.html#Examples" title="Examples">Examples</a></li>
+<li class="links"><a class="xref" href="GuideReferenceLua.html#Warning" title="Warning">Warning</a></li>
+</ul></div>
+</div>
+<section id="Requirements" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Requirements</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Use of Lua within Geeqie requires Lua to be installed. If you are compiling from sources, Lua functionality will be available if the development files dependencies are met.</p>
+<p class="para">If you are using a pre-compiled distribution, availability depends on the package maintainer.</p>
+</div></div>
+</div></section><section id="HowToUseLua" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">How to use Lua</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      Lua scripts must be stored in a single folder as defined in
+      <a class="link" href="GuideReferenceConfig.html" title="Configuration Files and Locations">Configuration Files and Locations</a>
+      .
+    </p>
+<p class="para">
+      A link to a Lua script must be inserted into the overlay template. Refer to the
+      <a class="link" href="GuideOptionsOSD.html#OverlayScreenDisplay" title="Overlay Screen Display">Overlay Screen Display</a>
+      section of Window Options.
+    </p>
+<p class="para">The full extent of the Lua language is available.</p>
+</div></div>
+</div></section><section id="GeeqieBuiltIn Functions" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Geeqie Lua built-in functions</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The following functions are built in to Geeqie:</p>
+<p class="para">
+      <div class="table"><table style="border: solid 1px;"><tbody>
+<tr>
+<td class="td-colsep">
+                <span class="em em-bold emphasis">Function</span>
+              </td>
+<td>
+                <span class="em em-bold emphasis">Returns</span>
+              </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep">Image:get_path()</td>
+<td>The full path of the file, including filename and extension</td>
+</tr>
+<tr>
+<td class="td-colsep">Image:get_name()</td>
+<td>The full filename including extension</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep">Image:get_extension</td>
+<td>The file extension including preceding dot</td>
+</tr>
+<tr>
+<td class="td-colsep">Image:get_date()</td>
+<td>The file date in Unix timestamp format.</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep">Image:get_size()</td>
+<td>The file size in bytes</td>
+</tr>
+<tr>
+<td class="td-colsep">Image:get_marks()</td>
+<td>An integer representing the marks set for the file</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep">Image:get_exif()</td>
+<td>A data structure containing the entire exif data</td>
+</tr>
+<tr>
+<td class="td-colsep">&lt;exif_str&gt;:get_datum("&lt;exif_tag&gt;")</td>
+<td>A single exif tag extracted from a structure output by the above command</td>
+</tr>
+</tbody></table></div>
+    </p>
+<p class="para">The keyword "Image" refers to the file currently being displayed by Geeqie.</p>
+</div></div>
+</div></section><section id="Examples" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Examples</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      The following example, which outputs the jpeg comment of a file, demonstrates the use of a built-in function and how to call a system command from a Lua script:
+      <div class="code"><pre class="contents"><code>        path=Image:get_path()
+        commentfile=io.popen("exiv2 -p c \"" .. path .. "\"" )
+        comment = commentfile:read("*a")
+        commentfile:close()
+        return (comment)
+      </code></pre></div>
+    </p>
+<p class="para">Note that it is necessary to have escape characters surrounding path and filenames.</p>
+<p class="para">
+      The following example demonstrates how to extract exif data from a file:
+      <div class="code"><pre class="contents"><code>        --Retrieve the DateTimeDigitized exif tag
+        exif_structure = Image:get_exif();
+        DateTimeDigitized = exif_structure:get_datum("Exif.Photo.DateTimeDigitized");
+        return (os.date(DateTimeDigitized))
+      </code></pre></div>
+    </p>
+</div></div>
+</div></section><section id="Warning" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Warning</h2></div>
+<div class="region"><div class="contents pagewide"><div class="note note-warning" title="Warning">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m11.92 3.3047a1.3872 1.3872 0 0 0-1.129 0.6933l-8.6055 14.922a1.3872 1.3872 0 0 0 1.2012 2.08l17.226-8e-3a1.3872 1.3872 0 0 0 1.201-2.08l-8.619-14.916a1.3872 1.3872 0 0 0-1.136-0.6913 1.3872 1.3872 0 0 0-0.139 0zm0.08 4.6953a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm0 9a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+      <p class="para">Lua is a powerful programming language. Errors in script files, besides having undesirable side-effects, may cause Geeqie to crash.</p>
+    </div></div></div>
+</div></div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferenceMetadata.html" title="Metadata Processing">Previous</a><a href="GuideReferenceLuaAPI.html" title="Lua API">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

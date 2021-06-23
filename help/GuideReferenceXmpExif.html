@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>XMP, Exif and IPTC</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideReference.html" title="Reference">Reference</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferenceLIRC.html" title="Infra-red controller">Previous</a><a href="GuideReferenceSupportedFormats.html" title="Supported File Formats">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideReferenceXmpExif"></a>XMP, Exif and IPTC</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">The tables below show the XMP, Exif and IPTC tags used by Geeqie.</p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideReferenceXmpExif.html#preformatted" title="Geeqie pre-formatted tags">Geeqie pre-formatted tags</a></li>
+<li class="links"><a class="xref" href="GuideReferenceXmpExif.html#infosidebar" title="Info sidebar panes">Info sidebar panes</a></li>
+<li class="links"><a class="xref" href="GuideReferenceXmpExif.html#exifiptc" title="Exif IPTC alternative keys">Exif IPTC alternative keys</a></li>
+</ul></div>
+</div>
+<section id="preformatted" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Geeqie pre-formatted tags</h2></div>
+<div class="region"><div class="contents pagewide"><div class="table">
+<div class="title"><h3><span class="title">Pre-formatted tags</span></h3></div>
+<table summary="Pre-formatted tags" style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">
+              <p class="para">Geeqie Tag</p>
+            </th>
+<th class="td-colsep">
+              <p class="para">Exif tags used</p>
+            </th>
+<th>
+              <p class="para">Description</p>
+            </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.Camera</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.Image.Make
+                <p class="para"></p>
+                Exif.Image.Model
+                <p class="para"></p>
+                Exif.Image.Software
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Camera and software name</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.DateTime</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.Photo.DateTimeOriginal
+                <p class="para"></p>
+                Exif.Photo.SubSecTimeOriginal
+                <p class="para"></p>
+                Exif.Image.DateTime
+                <p class="para"></p>
+                Exif.Photo.SubSecTime
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Image Date</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.ShutterSpeed</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.Photo.ExposureTime
+                <p class="para"></p>
+                Exif.Photo.ShutterSpeedValue
+
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Shutter speed in seconds (e.g. 1/60s)</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.Aperture</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                <p class="para">
+                  Exif.Photo.Fnumber
+                  <p class="para"></p>
+                  Exif.Photo.ApertureValue
+                </p>
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Aperture (e.g. f5.6)</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.ExposureBias</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">Exif.Photo.ExposureBiasValue</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Exposure bias (e.g. +0.3)</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.ISOSpeedRating</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">Exif.Photo.ISOSpeedRatings</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">ISO sensitivity (e.g. 100)</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.FocalLength</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">Exif.Photo.FocalLength</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Focal length</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.FocalLength35mmFilm</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.Photo.FocalLengthIn35mmFilm
+                <p class="para"></p>
+                Exif.Photo.FocalLength
+                <p class="para"></p>
+                Exif.Photo.FocalPlaneXResolution
+                <p class="para"></p>
+                Exif.Photo.FocalPlaneYResolution
+                <p class="para"></p>
+                Exif.Photo.FocalPlaneResolutionUnit
+                <p class="para"></p>
+                Exif.Photo.PixelXDimension
+                <p class="para"></p>
+                Exif.Photo.PixelYDimension
+
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Focal length 35mm</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.SubjectDistance</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">Exif.Photo.SubjectDistance</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Subject distance</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.Flash</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">Exif.Photo.Flash</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Flash</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.Resolution</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.Image.Xresolution
+                <p class="para"></p>
+                Exif.Image.Yresolution
+                <p class="para"></p>
+                Exif.Image.ResolutionUnit
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Resolution</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.ColorProfile</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.Image.InterColorProfile
+                <p class="para"></p>
+                Exif.Photo.ColorSpace
+                <p class="para"></p>
+                Exif.Iop.InteroperabilityIndex
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Color profile</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.GPSAltitude</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.GPSInfo.GPSAltitudeRef
+                <p class="para"></p>
+                Exif.GPSInfo.GPSAltitude
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Altitude above sea level</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.GPSPosition</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.GPSInfo.GPSLatitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLatitudeRef
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitudeRef
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Latitude, Longitude</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.localtime</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.GPSInfo.GPSLatitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLatitudeRef
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitudeRef
+                <p class="para"></p>
+                Exif.GPSInfo.GPSDateStamp
+                <p class="para"></p>
+                Exif.GPSInfo.GPSTimeStamp
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">
+                Local time corrected for UTC offset, DST correction
+                <sup class="footnote"><a class="footnote" href="#ref1" id="-noteref-ref1">14</a></sup>
+              </p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.timezone</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.GPSInfo.GPSLatitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLatitudeRef
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitudeRef
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">
+                Timezone indicated by lat/long
+                <sup class="footnote"><a class="footnote" href="#ref1" id="-noteref-ref1">15</a></sup>
+              </p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.countryname</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.GPSInfo.GPSLatitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLatitudeRef
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitudeRef
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">ISO 3166 country name indicated by lat/long</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.countrycode</p>
+            </td>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                Exif.GPSInfo.GPSLatitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLatitudeRef
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitude
+                <p class="para"></p>
+                Exif.GPSInfo.GPSLongitudeRef
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">ISO 3166 two-letter abbreviated country name indicated by lat/long</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep">
+              <p class="para">formatted.star_rating</p>
+            </td>
+<td class="td-colsep">
+              <p class="para">Xmp.xmp.Rating</p>
+            </td>
+<td>
+              <p class="para">Rating shown as a set of 🟊  characters</p>
+            </td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+</div></section><section id="infosidebar" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Info sidebar panes</h2></div>
+<div class="region"><div class="contents pagewide">
+<div class="table">
+<div class="title"><h3><span class="title">Fixed panes</span></h3></div>
+<table summary="Fixed panes" style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">
+              <p class="para">Tag</p>
+            </th>
+<th>
+              <p class="para">Pane title</p>
+            </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.description</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Comment</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.subject</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Keywords</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.title</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Title</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.xmp.Rating</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Rating</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep">
+              <p class="para">Xmp.photoshop.Headline</p>
+            </td>
+<td>
+              <p class="para">Headline</p>
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table">
+<div class="title"><h3><span class="title">Location and GPS pane</span></h3></div>
+<table summary="Location and GPS pane" style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">
+              <p class="para">Tag</p>
+            </th>
+<th>
+              <p class="para">Field</p>
+            </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.GPSPosition</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">GPS position</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.GPSAltitude</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">GPS altitiude</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.timezone</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Time zone</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.Country</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Country</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">
+                <p class="para">Xmp.iptc.CountryCode</p>
+              </p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Country Code</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.State</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">State</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.City</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">City</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep">
+              <p class="para">Xmp.iptc.Location</p>
+            </td>
+<td>
+              <p class="para">Location</p>
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table">
+<div class="title"><h3><span class="title">Copyright pane</span></h3></div>
+<table summary="Copyright pane" style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">
+              <p class="para">Tag</p>
+            </th>
+<th>
+              <p class="para">Field</p>
+            </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.creator</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Creator</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.contributor</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Contributor</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep">
+              <p class="para">Xmp.dc.rights</p>
+            </td>
+<td>
+              <p class="para">Rights</p>
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table">
+<div class="title"><h3><span class="title">Exif pane</span></h3></div>
+<table summary="Exif pane" style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">
+              <p class="para">Tag</p>
+            </th>
+<th>
+              <p class="para">Field</p>
+            </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.Camera</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Camera</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.DateTime</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Date</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.localtime</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Local time</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.ShutterSpeed</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Shutter speed</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.Aperture</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Aperture</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.ExposureBias</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Exposure bias</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.ISOSpeedRating</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">ISO sensitivity</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.FocalLength</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Focal length</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.FocalLength35mmFilm</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Focal length 35mm</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.SubjectDistance</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Subject distance</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.Flash</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Flash</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.Resolution</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Resolution</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">formatted.ColorProfile</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Color profile</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Exif.Photo.ExposureProgram</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Exposure Program</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Exif.Photo.MeteringMode</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Metering Mode</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep">
+              <p class="para">Exif.Photo.LightSource</p>
+            </td>
+<td>
+              <p class="para">Light Source</p>
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+</div></section><section id="exifiptc" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Exif IPTC alternative keys</h2></div>
+<div class="region"><div class="contents pagewide"><div class="table">
+<div class="title"><h3><span class="title">Conversion table</span></h3></div>
+<table summary="Conversion table" style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">
+              <p class="para">Tag</p>
+            </th>
+<th>
+              <p class="para">Field</p>
+            </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.tiff.Orientation</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Exif.Image.Orientation</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.title</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.ObjectName</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.Urgency</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.Urgency</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.Category</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.Category</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.SupplementalCategory</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.SuppCategory</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.subject</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.Keywords</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.iptc.Location</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.LocationName</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.Instruction</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.SpecialInstructions</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.DateCreated</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.DateCreated</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.creator</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.Byline</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.AuthorsPosition</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.BylineTitle</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.City</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.City</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.State</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.ProvinceState</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.iptc.CountryCode</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.CountryCode</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.Country</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.CountryName</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.TransmissionReference</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.TransmissionReference</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.Headline</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.Headline</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.Credit</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.Credit</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.photoshop.Source</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.Source</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.rights</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.Copyright</p>
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">
+              <p class="para">Xmp.dc.description</p>
+            </td>
+<td class="td-rowsep">
+              <p class="para">Iptc.Application2.Caption</p>
+            </td>
+</tr>
+<tr class="shade">
+<td class="td-colsep">
+              <p class="para">Xmp.photoshop.CaptionWriter</p>
+            </td>
+<td>
+              <p class="para">Iptc.Application2.Writer</p>
+            </td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+</div></section><div class="footnotes">
+<div id="ref1" class="footnote">
+<a class="footnote" href="#-noteref-ref1">14</a>
+                  <p class="para">
+                    Refer to
+                    <a class="link" href="GuideReferenceUTC.html" title="UTC and Daylight Saving Time (DST)">UTC and DST</a>
+                    section.
+                  </p>
+                </div>
+<div id="ref1" class="footnote">
+<a class="footnote" href="#-noteref-ref1">15</a>
+                  <p class="para">
+                    Refer to
+                    <a class="link" href="GuideReferenceUTC.html" title="UTC and Daylight Saving Time (DST)">UTC and DST</a>
+                    section.
+                  </p>
+                </div>
+</div>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferenceLIRC.html" title="Infra-red controller">Previous</a><a href="GuideReferenceSupportedFormats.html" title="Supported File Formats">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>

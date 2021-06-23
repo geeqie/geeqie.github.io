@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Delete</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideImageManagement.html" title="File Management">File Management</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageManagementRename.html" title="Rename">Previous</a><a href="GuideReferenceManagement.html" title="Cache and Data Maintenance">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">Delete</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+    To delete a file in Geeqie select
+    <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Delete</span> <span class="shortcut">(
+        <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>D</kbd></span></span>
+      )</span></span>
+    . Delete is also available in the context menu of all images and files. If
+    <a class="link" href="GuideOptionsBehavior.html#Delete" title="Delete">Enable delete key</a>
+    is enabled in Options, pressing the
+    <span class="key keycap"><kbd>Delete</kbd></span>
+    key can also be used to delete files.
+  </p>
+<p class="para">
+    The behavior when starting a delete operation depends on the
+    <a class="link" href="GuideOptionsBehavior.html#Delete" title="Delete">Confirm file delete</a>
+    option in Options. If the option is enabled a dialog will appear to confirm the operation, if it is not enabled the files will be deleted without further interaction. In all cases if the file is unable to be deleted you will be notified by a dialog.
+  </p>
+<p class="para"></p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideImageManagementDelete.html#Confirmdeletedialog" title="Confirm delete dialog">Confirm delete dialog</a></li>
+<li class="links"><a class="xref" href="GuideImageManagementDelete.html#SafeDelete" title="Safe Delete">Safe Delete</a></li>
+</ul></div>
+</div>
+<section id="Confirmdeletedialog" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Confirm delete dialog</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      The dialog that appears when delete confirmation is enabled will show the file or files to be deleted. To delete the file press
+      <span class="key keycap"><kbd>Enter</kbd></span>
+      or activate the Delete button. Pressing
+      <span class="key keycap"><kbd>Escape</kbd></span>
+      or activating the Cancel button will close the dialog and abort the operation.
+    </p>
+<p class="para">When deleting multiple files, the dialog will include two arrow buttons to step the image preview through the list of files to be deleted. Initially the preview will be blank, activate the right arrow to display the first file.</p>
+<p class="para">
+      The dialog will also display the status of the
+      <a class="link" href="GuideOptionsBehavior.html#Delete" title="Delete">Safe Delete</a>
+      feature. Use this to determine if a file to be deleted will be immediately lost, or if the file can possibly be recovered from the Safe Delete folder.
+    </p>
+<p class="para">
+      If a file is unable to be deleted, a dialog will appear to notify you. If multiple files were selected and any remain, the dialog will include a Continue button, activating this button or pressing Enter will delete the remaining files. Pressing
+      <span class="key keycap"><kbd>Escape</kbd></span>
+      or activating the Cancel button will close the dialog and the remaining files will not be deleted.
+    </p>
+<p class="para"></p>
+</div></div>
+</div></section><section id="SafeDelete" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Safe Delete</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+      Geeqie includes a feature to temporarily store deleted files in a selected folder, to use this feature enable
+      <a class="link" href="GuideOptionsBehavior.html#Delete" title="Delete">Safe Delete</a>
+      on the advanced tab of the preferences dialog.
+    </p></div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideImageManagementRename.html" title="Rename">Previous</a><a href="GuideReferenceManagement.html" title="Cache and Data Maintenance">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>
