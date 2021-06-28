@@ -43,7 +43,7 @@
     </style>
     <style type="text/css">
     input.c3 {
-        width: 350px;
+        width: 500px;
         font-family: "Source Sans Pro", "Source Sans", "Roboto", "Helvetica", "Arial", sans-serif;
         font-size: 12px;
         font-weight: 300;
@@ -88,8 +88,41 @@
                 var copyText = document.getElementById("myInput4"); 
                 copyText.select(); copyText.setSelectionRange(0, 99999); 
                 document.execCommand("copy");  alert("Copied the text: " +    copyText.value);}
-    </script> 
-    <script></script>
+
+    var storedText;
+
+    fetch('https://raw.githubusercontent.com/geeqie/geeqie.github.io/master/AppImage/appimages.txt')
+    .then(function(response) {
+        response.text().then(function(text) {
+          storedText = text;
+          done();
+        });
+    });
+
+    function done() {
+        function tableCreate () {
+            var myTable = document.getElementById('history');
+            var table = document.createElement('table');
+            table.border = '0';
+            var tblBody = document.createElement('tbody');
+            var appimageList = storedText.split(/\n/);
+
+            document.getElementById("myInput1").value = "cd $HOME/bin && wget https://cclark.uk/Geeqie/" + appimageList[0] + " && chmod +x " + appimageList[0] + " && ln -sf " + appimageList[0] + "geeqie && cd -";
+
+            for(var i = 0; i < appimageList.length; i++){
+                var tr = document.createElement('tr');
+            tblBody.appendChild(tr)
+                var td = document.createElement('td');
+              td.innerHTML = ('My column' + i, "<a href=https://cclark.uk/Geeqie/" + appimageList[i] + ">" + appimageList[i]+ "</a");
+              tr.appendChild(td);
+            }
+
+            table.appendChild(tblBody);
+            myTable.appendChild(table);
+        }
+        tableCreate();
+    }
+</script>
     <div class="content">
         <div class="a">
             <table>
@@ -115,41 +148,8 @@
             <p>These AppImages have been created with Ubuntu 20.04.<br>
             <br>
             Install the latest AppImage to $HOME/bin:<br>
-            <input type="text" class="c3" value=
-            " cd $HOME/bin &amp;&amp; wget https://cclark.uk/Geeqie/Geeqie-v1.6+20210625.AppImage &amp;&amp; chmod +x Geeqie-v1.6+20210625.AppImage &amp;&amp; ln -sf Geeqie-v1.6+20210625.AppImage geeqie &amp;&amp; cd -"
-            id="myInput1"><button class="fa fa-clipboard c1" onclick="myFunction1()"></button><br></p>
-            <div class="table">
-                <table>
-                    <tr>
-                        <td>
-                            <a href=
-                            "https://cclark.uk/Geeqie/Geeqie-v1.6+20210625.AppImage">Geeqie-v1.6+20210625.AppImage</a>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href=
-                            "https://cclark.uk/Geeqie/Geeqie-v1.6+20210617.AppImage">Geeqie-v1.6+20210617.AppImage</a>
-                        </td>
-                        <td>Sigma .x3f files</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href=
-                            "https://cclark.uk/Geeqie/Geeqie-v1.6+20210614.AppImage">Geeqie-v1.6+20210614.AppImage</a>
-                        </td>
-                        <td>Canon .cr3 files</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href=
-                            "https://cclark.uk/Geeqie/Geeqie-v1.6+20210613.AppImage">Geeqie-v1.6+20210613.AppImage</a>
-                        </td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
+            <input type="text" class="c3" value= " " id="myInput1"><button class="fa fa-clipboard c1" onclick="myFunction1()"></button><br></p>
+            <div id="history" class="table"></div>
             <hr class="c1">
             Desktop integration (optional)<br>
             <br>
