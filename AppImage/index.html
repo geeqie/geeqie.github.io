@@ -107,7 +107,7 @@
             var tblBody = document.createElement('tbody');
             var appimageList = storedText.split(/\n/);
 
-            document.getElementById("myInput1").value = "cd $HOME/bin && wget https://cclark.uk/Geeqie/" + appimageList[0] + " && chmod +x " + appimageList[0] + " && ln -sf " + appimageList[0] + "geeqie && cd -";
+            document.getElementById("myInput1").value = "cd $HOME/bin && wget https://cclark.uk/Geeqie/" + appimageList[0] + " && chmod +x " + appimageList[0] + " && ln -sf " + appimageList[0] + "  geeqie && cd -";
 
             for(var i = 0; i < appimageList.length; i++){
                 var tr = document.createElement('tr');
