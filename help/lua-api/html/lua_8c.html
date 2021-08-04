@@ -176,60 +176,7 @@ DateTimeDigitized = exif_structure:get_datum("Exif.Photo.DateTimeDigitized");</p
 Exif.Photo.DateTimeOriginal = signed integer time_t <br  />
 Exif.Photo.DateTimeDigitized = signed integer time_t <br  />
 otherwise char </p>
-<div class="fragment"><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;{</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keyword">const</span> gchar *key;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        gchar *value = NULL;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        ExifData *exif;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keyword">struct </span>tm tm;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        time_t datetime;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        exif = lua_check_exif(L, 1);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        key = luaL_checkstring(L, 2);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">if</span> (key == (gchar*)NULL || key[0] == <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                lua_pushnil(L);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                }</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">if</span> (!exif)</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                lua_pushnil(L);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        value = exif_get_data_as_text(exif, key);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">if</span> (strcmp(key, <span class="stringliteral">&quot;Exif.Photo.DateTimeOriginal&quot;</span>) == 0)</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                memset(&amp;tm, 0, <span class="keyword">sizeof</span>(tm));</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="keywordflow">if</span> (value &amp;&amp; strptime(value, <span class="stringliteral">&quot;%Y:%m:%d %H:%M:%S&quot;</span>, &amp;tm))</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                        datetime = mktime(&amp;tm);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                        lua_pushnumber(L, datetime);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                        }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                        {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                        lua_pushnil(L);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        }</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(key, <span class="stringliteral">&quot;Exif.Photo.DateTimeDigitized&quot;</span>) == 0)</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                memset(&amp;tm, 0, <span class="keyword">sizeof</span>(tm));</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordflow">if</span> (value &amp;&amp; strptime(value, <span class="stringliteral">&quot;%Y:%m:%d %H:%M:%S&quot;</span>, &amp;tm))</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                        {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                        datetime = mktime(&amp;tm);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                        lua_pushnumber(L, datetime);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                        }</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                        {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                        lua_pushnil(L);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                        }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        lua_pushstring(L, value);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a44364b90fbb9ff09543f6fd0307f3a0a"></a>
@@ -265,14 +212,7 @@ otherwise char </p>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>time_t The file date in Unix timestamp format.</dd></dl>
 <p>time_t - signed integer which represents the number of seconds since the start of the Unix epoch: midnight UTC of January 1, 1970 </p>
-<div class="fragment"><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        FileData *fd;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        fd = lua_check_image(L, 1);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        lua_pushnumber(L, fd-&gt;date);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a085dc763b1a2fc6e8eeb4e0bb315268e"></a>
@@ -308,23 +248,7 @@ otherwise char </p>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An ExifData data structure containing the entire exif data</dd></dl>
 <p>To be used in conjunction with <a class="el" href="lua_8c.html#ac9ce283551bf63c8147cb780bff5d209">&lt;exif-structure&gt;:get_datum() </a> </p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        FileData *fd;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        ExifData *exif;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        ExifData **exif_data;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        fd = lua_check_image(L, 1);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        exif = exif_read_fd(fd);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        exif_data = (ExifData **)lua_newuserdata(L, <span class="keyword">sizeof</span>(ExifData *));</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        luaL_getmetatable(L, <span class="stringliteral">&quot;Exif&quot;</span>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        lua_setmetatable(L, -2);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        *exif_data = exif;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a87e2f0caafe7c3b7c56d3956d9fcc7c1"></a>
@@ -359,14 +283,7 @@ otherwise char </p>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>char The file extension including preceding dot </dd></dl>
-<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        FileData *fd;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        fd = lua_check_image(L, 1);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        lua_pushstring(L, fd-&gt;extension);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa9c605d65074a310c050f036c8c8d4c8"></a>
@@ -402,14 +319,7 @@ otherwise char </p>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>unsigned integer Bit map of marks set</dd></dl>
 <p>Bit 0 == Mark 1 etc. </p>
-<div class="fragment"><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;{</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        FileData *fd;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        fd = lua_check_image(L, 1);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        lua_pushnumber(L, fd-&gt;marks);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1890e1bdf4c29bd0ab64afc24188f1dd"></a>
@@ -444,14 +354,7 @@ otherwise char </p>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>char The full filename including extension </dd></dl>
-<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        FileData *fd;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        fd = lua_check_image(L, 1);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        lua_pushstring(L, fd-&gt;name);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a65ddfd7d38490cdb6d21d1d09408c253"></a>
@@ -486,14 +389,7 @@ otherwise char </p>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>char The full path of the file, including filename and extension </dd></dl>
-<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        FileData *fd;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        fd = lua_check_image(L, 1);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        lua_pushstring(L, fd-&gt;path);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2299bcb5935a4c8f02c0e1c20e4e2ed9"></a>
@@ -528,14 +424,7 @@ otherwise char </p>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>integer The file size in bytes </dd></dl>
-<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        FileData *fd;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        fd = lua_check_image(L, 1);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        lua_pushnumber(L, fd-&gt;size);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
