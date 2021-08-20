@@ -121,9 +121,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <td class="td-rowsep">Use alternate similarity algorithm - experimental - requires re-compile.</td>
 </tr>
 <tr class="shade">
+<td class="td-colsep td-rowsep"></td>
+<td class="td-colsep td-rowsep">--disable-clutter</td>
+<td class="td-rowsep">Disable use of Clutter library (i.e. GPU accel.). If the Clutter library is compiled into Geeqie but Clutter fails to initialize, it is necessary to start Geeqie with this option.</td>
+</tr>
+<tr>
 <td class="td-colsep"></td>
-<td class="td-colsep">--disable-clutter</td>
-<td>Disable use of Clutter library (i.e. GPU accel.). If the Clutter library is compiled into Geeqie but Clutter fails to initialize, it is necessary to start Geeqie with this option.</td>
+<td class="td-colsep">--cache-maintenance &lt;path&gt;</td>
+<td>
+            Run cache maintenance
+            <sup class="footnote"><a class="footnote" href="#cachemaintenance" id="-noteref-cachemaintenance">9</a></sup>
+            in non-GUI mode.
+          </td>
 </tr>
 </tbody>
 </table></div>
@@ -296,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <td class="td-colsep td-rowsep">--get-file-info</td>
 <td class="td-rowsep">
               Get file info
-              <sup class="footnote"><a class="footnote" href="#fileinfo" id="-noteref-fileinfo">9</a></sup>
+              <sup class="footnote"><a class="footnote" href="#fileinfo" id="-noteref-fileinfo">10</a></sup>
             </td>
 </tr>
 <tr class="shade">
@@ -334,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <td class="td-colsep td-rowsep">--id:&lt;ID&gt;</td>
 <td class="td-rowsep">
               Window ID for following commands
-              <sup class="footnote"><a class="footnote" href="#ref3" id="-noteref-ref3">10</a></sup>
+              <sup class="footnote"><a class="footnote" href="#ref3" id="-noteref-ref3">11</a></sup>
             </td>
 </tr>
 <tr>
@@ -382,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <td class="td-colsep td-rowsep">--cache-render-shared:&lt;folder&gt;</td>
 <td class="td-rowsep">
               render thumbnails
-              <sup class="footnote"><a class="footnote" href="#ref2" id="-noteref-ref2">11</a></sup>
+              <sup class="footnote"><a class="footnote" href="#ref2" id="-noteref-ref2">12</a></sup>
             </td>
 </tr>
 <tr class="shade">
@@ -412,16 +421,20 @@ document.addEventListener('DOMContentLoaded', function() {
 </div></section><div class="footnotes">
 <div id="ref1" class="footnote">
 <a class="footnote" href="#-noteref-ref1">8</a>The name of a collection, with or without either path or extension (.gqv) may be used. If a path is not used and there is a name conflict with a file or folder, that will take precedence.</div>
+<div id="cachemaintenance" class="footnote">
+<a class="footnote" href="#-noteref-cachemaintenance">9</a>
+              <p class="para"><a class="link" href="GuideReferenceManagement.html#CacheMaintenance" title="Command line program">Cache Maintenance</a>.</p>
+            </div>
 <div id="fileinfo" class="footnote">
-<a class="footnote" href="#-noteref-fileinfo">9</a>
+<a class="footnote" href="#-noteref-fileinfo">10</a>
                 <p class="para">File info consists of: class, no. of pages (if multi-page image), (and if exif exists) country name, country code, timezone, local time.</p>
               </div>
 <div id="ref3" class="footnote">
-<a class="footnote" href="#-noteref-ref3">10</a>
+<a class="footnote" href="#-noteref-ref3">11</a>
                 <p class="para">The ID is shown in the titlebar of the window. If multiple windows are open, it can be used to direct commands to a particular window e.g. --remote --id:main --tell</p>
               </div>
 <div id="ref2" class="footnote">
-<a class="footnote" href="#-noteref-ref2">11</a>
+<a class="footnote" href="#-noteref-ref2">12</a>
                 <p class="para">If standard thumbnail cache is not enabled, this command will be ignored.</p>
               </div>
 </div>

@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#Createthumbnails" title="Create thumbnails">Create thumbnails</a></li>
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#CreateSimFiles" title="Create file similarity cache">Create file similarity cache</a></li>
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#Metadata" title="Metadata">Metadata</a></li>
+<li class="links"><a class="xref" href="GuideReferenceManagement.html#CacheMaintenance" title="Command line program">Command line program</a></li>
 </ul></div>
 </div>
 <section id="Geeqiethumbnailcache" class="section"><div class="inner">
@@ -166,6 +167,13 @@ document.addEventListener('DOMContentLoaded', function() {
         </dd>
 </dl></div></div></div></div>
 </div></div>
+</div></section><section id="CacheMaintenance" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Command line program</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+      Geeqie can be run as a command line program: <span class="code">geeqie --cache-maintenance &lt;path&gt;</span>. It will recursively remove orphaned thumbnails, and create thumbnails and similarity data for all images found.
+    <p class="para"></p>
+      It may also be called from <span class="code">cron</span> or <span class="code">anacron</span> thus enabling automatic updating of the cached data for all your images.
+    </p></div></div>
 </div></section>
 </div>
 <nav class="prevnext pagewide"><div class="inner">
