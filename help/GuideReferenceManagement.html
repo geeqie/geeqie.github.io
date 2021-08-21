@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#Createthumbnails" title="Create thumbnails">Create thumbnails</a></li>
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#CreateSimFiles" title="Create file similarity cache">Create file similarity cache</a></li>
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#Metadata" title="Metadata">Metadata</a></li>
+<li class="links"><a class="xref" href="GuideReferenceManagement.html#BackgroundCacheMaintenance" title="Background Cache Maintenance">Background Cache Maintenance</a></li>
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#CacheMaintenance" title="Command line program">Command line program</a></li>
 </ul></div>
 </div>
@@ -154,7 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <a class="link" href="GuideOptionsMetadata.html#MetadataWritingProcess" title="Metadata writing process">Metadata</a>
       located in the folder:
       <div class="code"><pre class="contents"><code>$HOME/.local/share/Geeqie/metadata</code></pre></div>
-      .
     </p>
 <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
 <dt class="terms">
@@ -167,10 +167,15 @@ document.addEventListener('DOMContentLoaded', function() {
         </dd>
 </dl></div></div></div></div>
 </div></div>
+</div></section><section id="BackgroundCacheMaintenance" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Background Cache Maintenance</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+      This facility will run the command line program described below as a stand-alone background job.
+    </p></div></div>
 </div></section><section id="CacheMaintenance" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Command line program</h2></div>
 <div class="region"><div class="contents pagewide"><p class="para">
-      Geeqie can be run as a command line program: <span class="code">geeqie --cache-maintenance &lt;path&gt;</span>. It will recursively remove orphaned thumbnails, and create thumbnails and similarity data for all images found.
+      Geeqie can be run as a command line program: <span class="code">geeqie --cache-maintenance &lt;path&gt;</span>. It will recursively remove orphaned thumbnails and .sim files, and create thumbnails and similarity data for all images found.
     <p class="para"></p>
       It may also be called from <span class="code">cron</span> or <span class="code">anacron</span> thus enabling automatic updating of the cached data for all your images.
     </p></div></div>
