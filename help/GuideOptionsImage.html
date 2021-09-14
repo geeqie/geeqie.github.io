@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="links sectionlinks" role="navigation"><ul>
 <li class="links"><a class="xref" href="GuideOptionsImage.html#Zoom" title="Zoom">Zoom</a></li>
 <li class="links"><a class="xref" href="GuideOptionsImage.html#FitImageToWindow" title="Fit Image To Window">Fit Image To Window</a></li>
+<li class="links"><a class="xref" href="GuideOptionsImage.html#TileSize" title="Tile Size">Tile Size</a></li>
 <li class="links"><a class="xref" href="GuideOptionsImage.html#Appearance" title="Appearance">Appearance</a></li>
 <li class="links"><a class="xref" href="GuideOptionsImage.html#Convenience" title="Convenience">Convenience</a></li>
 </ul></div>
@@ -105,6 +106,18 @@ document.addEventListener('DOMContentLoaded', function() {
             This value will set the virtual size of the window when
             <span class="em emphasis">Fit image to window</span>
             is set. Instead of using the actual size of the window, the specified percentage of the window will be used. It allows one to keep a border around the image (values lower than 100%) or to auto zoom the image (values greater than 100%). It affects fullscreen mode too.
+          </p>
+        </dd>
+</dl></div></div></div></div></div></div>
+</div></section><section id="TileSize" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Tile Size</h2></div>
+<div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+          <span class="gui guilabel">Tile size in pixels</span>
+        </dt>
+<dd class="terms">
+          <p class="para">
+            This option is only available when GPU acceleration is not selected. It sets the size in pixels that large images are split into during rendering. Setting a larger value will reduce the tiling effect seen as the image is displayed, but will also slightly increase the delay until the first part of the image is seen.
           </p>
         </dd>
 </dl></div></div></div></div></div></div>
