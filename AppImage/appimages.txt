@@ -1,3 +1,4 @@
+Geeqie-v1.6+20210924.AppImage
 Geeqie-v1.6+20210922.AppImage
 Geeqie-v1.6+20210917.AppImage
 Geeqie-v1.6+20210915.AppImage
