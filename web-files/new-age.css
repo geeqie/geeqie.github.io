@@ -304,7 +304,7 @@ section.cta {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('https://images.pexels.com/photos/230324/pexels-photo-230324.jpeg');
+  background-image: url('../web-files/hp-laptop-computer-between-nikon-dslr-camera-and-smartphone.jpg');
   padding: 250px 0;
 }
 
@@ -315,7 +315,7 @@ section.hta {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('https://static.pexels.com/photos/60838/pexels-photo-60838.png');
+  background-image: url('../web-files/black-and-white-camera-vintage-picture.jpg');
   padding: 50px 0;
 }
 
