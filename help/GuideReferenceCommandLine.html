@@ -18,427 +18,383 @@ document.addEventListener('DOMContentLoaded', function() {
 <a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideReference.html" title="Reference">Reference</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
 <a href="GuideReference.html" title="Reference">Previous</a><a href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Next</a>
 </div></nav><div class="hgroup pagewide"><h1 class="title">Command Line Options</h1></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+  <section id="geeqie1" class="refentry"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">GEEQIE(1)</h3></div>
+<div class="region">
+<div class="contents pagewide"><div class="refnamedivs"><div class="refnamediv">
+<span class="refname">Geeqie</span> — <span class="refpurpose">GTK based multiformat image viewer</span>
+</div></div></div>
+<section id="synopsis" class="refsynopsisdiv"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">Synopsis</h4></div>
+<div class="region"><div class="contents pagewide"><div class="synopsis cmdsynopsis"><pre class="contents cmdsynopsis"><span class="cmd command">geeqie</span> <span class="arg-punc">[<span class="arg"><span class="var replaceable">options</span></span>]</span> <span class="arg-punc">[<span class="arg"><span class="var replaceable">path</span></span>]</span></pre></div></div></div>
+</div></section><section id="description" class="refsect1"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">DESCRIPTION</h4></div>
 <div class="region">
 <div class="contents pagewide">
-<p class="para">
-    Geeqie is called by the command:
-    <div class="code"><pre class="contents"><code>      geeqie [options] [path_to_file_or_collection]
-      <sup class="footnote"><a class="footnote" href="#ref1" id="-noteref-ref1">8</a></sup>
-    </code></pre></div>
-  </p>
-<p class="para">You may also use a URL as a filename. The file will be downloaded to a temporary file and displayed.</p>
-<p class="para">These are the command line options available to Geeqie:</p>
-<div class="table"><table style="border: solid 1px;">
-<thead><tr>
-<th class="td-colsep">Short Option</th>
-<th class="td-colsep">Long Option</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td class="td-colsep td-rowsep">+t</td>
-<td class="td-colsep td-rowsep">--with-tools</td>
-<td class="td-rowsep">Show file list, menu, and statusbar.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-t</td>
-<td class="td-colsep td-rowsep">--without-tools</td>
-<td class="td-rowsep">Hide file list, menu, and statusbar. Window contains image only.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-f</td>
-<td class="td-colsep td-rowsep">--fullscreen</td>
-<td class="td-rowsep">Start up in fullscreen.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-s</td>
-<td class="td-colsep td-rowsep">--slideshow</td>
-<td class="td-rowsep">Start up in slideshow mode.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-l [filelist] [collectionlist]</td>
-<td class="td-colsep td-rowsep">--list [filelist] [collectionlist]</td>
-<td class="td-rowsep">Open collection window containing images specified on the command line. Any collections on the command line will also be appended to this collection.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--blank</td>
-<td class="td-rowsep">Start with file list blank.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--geometry=&lt;w&gt;x&lt;h&gt;+&lt;x&gt;+&lt;y&gt;</td>
-<td class="td-rowsep">Set the &lt;width&gt; &lt;height&gt; &lt;xoffset&gt; &lt;yoffset&gt; of the window. The parameters are in pixels.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-n</td>
-<td class="td-colsep td-rowsep">--new-instance</td>
-<td class="td-rowsep">Open a new instance of Geeqie.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-r</td>
-<td class="td-colsep td-rowsep">--remote</td>
-<td class="td-rowsep">Send command line options to existing Geeqie process.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-rh</td>
-<td class="td-colsep td-rowsep">--remote-help</td>
-<td class="td-rowsep">List command line options available to --remote.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-h</td>
-<td class="td-colsep td-rowsep">--help</td>
-<td class="td-rowsep">Display brief command line option list.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-v</td>
-<td class="td-colsep td-rowsep">--version</td>
-<td class="td-rowsep">Display version of Geeqie.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--debug[=&lt;level&gt;]</td>
-<td class="td-rowsep">Turn on debugging output (when compiled with Debug enabled). &lt;level&gt; is 0 to 4.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-g:&lt;regexp&gt;</td>
-<td class="td-colsep td-rowsep">--grep:&lt;regexp&gt;</td>
-<td class="td-rowsep">Filter debug output with regular expression</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">+w</td>
-<td class="td-colsep td-rowsep">--show-log-window</td>
-<td class="td-rowsep">Display log window</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-o:&lt;file&gt;</td>
-<td class="td-colsep td-rowsep">--log-file:&lt;file&gt;</td>
-<td class="td-rowsep">Save log data to file</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--alternate</td>
-<td class="td-rowsep">Use alternate similarity algorithm - experimental - requires re-compile.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--disable-clutter</td>
-<td class="td-rowsep">Disable use of Clutter library (i.e. GPU accel.). If the Clutter library is compiled into Geeqie but Clutter fails to initialize, it is necessary to start Geeqie with this option.</td>
-</tr>
-<tr>
-<td class="td-colsep"></td>
-<td class="td-colsep">--cache-maintenance &lt;path&gt;</td>
-<td>
-            Run cache maintenance
-            <sup class="footnote"><a class="footnote" href="#cachemaintenance" id="-noteref-cachemaintenance">9</a></sup>
-            in non-GUI mode.
-          </td>
-</tr>
-</tbody>
-</table></div>
-<p class="para"></p>
-<div class="links sectionlinks" role="navigation"><ul><li class="links"><a class="xref" href="GuideReferenceCommandLine.html#Remotecommands" title="Remote commands">Remote commands</a></li></ul></div>
+<p class="para">Geeqie is an interactive GTK based image viewer that supports multiple image formats,
+zooming, panning, thumbnails and sorting images into collections.</p>
+<p class="para">Generated for version:</p>
+<p class="para">Geeqie 1.6+git20211107-31197b3d</p>
 </div>
-<section id="Remotecommands" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Remote commands</h2></div>
+<section id="valid_options" class="refsect2"><div class="inner">
+<div class="hgroup pagewide"><h5 class="title">Valid options:</h5></div>
 <div class="region"><div class="contents pagewide">
-<p class="para">The --remote command line option will send all entered commands to an existing Geeqie process, a new process will be started if one does not exist. These are the additional commands that can be used with the remote command:</p>
-<div class="table"><table style="border: solid 1px;">
-<thead><tr>
-<th class="td-colsep">Short Option</th>
-<th class="td-colsep">Long Option</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td class="td-colsep td-rowsep">-n</td>
-<td class="td-colsep td-rowsep">--next</td>
-<td class="td-rowsep">Change main window to display next image.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-b</td>
-<td class="td-colsep td-rowsep">--back</td>
-<td class="td-rowsep">Change main window to display previous image.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--first</td>
-<td class="td-rowsep">Change main window to display first image.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--last</td>
-<td class="td-rowsep">Change main window to display last image.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-f</td>
-<td class="td-colsep td-rowsep">--fullscreen</td>
-<td class="td-rowsep">Toggle full screen mode of the main window.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-fs</td>
-<td class="td-colsep td-rowsep">--fullscreen-start</td>
-<td class="td-rowsep">Start full screen mode for main window.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-fS</td>
-<td class="td-colsep td-rowsep">--fullscreen-stop</td>
-<td class="td-rowsep">Stop full screen mode for main window.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-s</td>
-<td class="td-colsep td-rowsep">--slideshow</td>
-<td class="td-rowsep">Toggle slide show for main window.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-ss</td>
-<td class="td-colsep td-rowsep">--slideshow-start</td>
-<td class="td-rowsep">Start slide show for main window.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-sS</td>
-<td class="td-colsep td-rowsep">--slideshow-stop</td>
-<td class="td-rowsep">Stop slide show for main window.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--slideshow-recurse:&lt;folder&gt;</td>
-<td class="td-rowsep">Start recursive slide show for &lt;folder&gt; in main window.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-d&lt;[h:][m:][n][.m]&gt;</td>
-<td class="td-colsep td-rowsep">--delay=&lt;[h:][m:][n][.m]&gt;</td>
-<td class="td-rowsep">Set slide show delay to &lt;[hrs:][mins:][n][.m]&gt; seconds, range is 0.1 secs to 24 hours</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">+t</td>
-<td class="td-colsep td-rowsep">--tools-show</td>
-<td class="td-rowsep">Show tools for main window.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-t</td>
-<td class="td-colsep td-rowsep">--tools-hide</td>
-<td class="td-rowsep">Hide tools for main window.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-q</td>
-<td class="td-colsep td-rowsep">--quit</td>
-<td class="td-rowsep">Quit Geeqie.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--config-load:&lt;file&gt;|layout ID</td>
-<td class="td-rowsep">Load configuration from &lt;file&gt;. Use either a full path, or a saved window layout ID.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--get-sidecars:&lt;file&gt;</td>
-<td class="td-rowsep">Get list of sidecars of &lt;file&gt;.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--get-destination:&lt;file&gt;</td>
-<td class="td-rowsep">Get destination path of &lt;file&gt;. This is used by the symlink desktop file to implement the symbolic link operation. There is no useful function for the user.</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">file:&lt;file&gt;|&lt;URL&gt;</td>
-<td class="td-rowsep">Open  &lt;file&gt; or &lt;URL&gt; and bring Geeqie window to the top</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--file:&lt;file&gt;|&lt;URL&gt;</td>
-<td class="td-rowsep">Open  &lt;file&gt; or &lt;URL&gt; and bring Geeqie window to the top</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">File:&lt;file&gt;|&lt;URL&gt;</td>
-<td class="td-rowsep">Open  &lt;file&gt; or &lt;URL&gt; and do not bring Geeqie window to the top</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--File:&lt;file&gt;|&lt;URL&gt;</td>
-<td class="td-rowsep">Open  &lt;file&gt; or &lt;URL&gt; and do not bring Geeqie window to the top</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--tell</td>
-<td class="td-rowsep">Print filename [and Collection] of current image</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--pixel-info</td>
-<td class="td-rowsep">Print X, Y and RGB of mouse pointer on current image</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--get-rectangle</td>
-<td class="td-rowsep">Get rectangle coordinates</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--get-render-intent</td>
-<td class="td-rowsep">Get render intent</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--get-filelist:[&lt;FOLDER&gt;]</td>
-<td class="td-rowsep">Get list of files and class</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--get-filelist-recurse:[&lt;FOLDER&gt;]</td>
-<td class="td-rowsep">Get list of files and class recursive</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--get-collection:&lt;COLLECTION&gt;</td>
-<td class="td-rowsep">Get collection content</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--get-collection-list</td>
-<td class="td-rowsep">Get collection list</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--get-file-info</td>
-<td class="td-rowsep">
-              Get file info
-              <sup class="footnote"><a class="footnote" href="#fileinfo" id="-noteref-fileinfo">10</a></sup>
-            </td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">view:&lt;file&gt;</td>
-<td class="td-rowsep">Open new window containing &lt;file&gt;</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--view:&lt;file&gt;</td>
-<td class="td-rowsep">Open new window containing &lt;file&gt;</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--list-clear</td>
-<td class="td-rowsep">Clear command line collection list</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--list-add:&lt;file&gt;</td>
-<td class="td-rowsep">Add &lt;file&gt; to command line collection list</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">raise</td>
-<td class="td-rowsep">Bring the geeqie window to the top</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--raise</td>
-<td class="td-rowsep">Bring the geeqie window to the top</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--id:&lt;ID&gt;</td>
-<td class="td-rowsep">
-              Window ID for following commands
-              <sup class="footnote"><a class="footnote" href="#ref3" id="-noteref-ref3">11</a></sup>
-            </td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--new-window</td>
-<td class="td-rowsep">Open new window</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--close-window</td>
-<td class="td-rowsep">Close window</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--geometry=[&lt;w&gt;x&lt;h&gt;][+&lt;x&gt;+&lt;y&gt;]</td>
-<td class="td-rowsep">Set the &lt;width&gt; &lt;height&gt; &lt;xoffset&gt; &lt;yoffset&gt; of the window. The parameters are in pixels.</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-ct:clear|clean</td>
-<td class="td-colsep td-rowsep">--cache-thumbs:clear|clean</td>
-<td class="td-rowsep">clear or clean thumbnail cache</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-cs:clear|clean</td>
-<td class="td-colsep td-rowsep">--cache-shared:clear|clean</td>
-<td class="td-rowsep">clear or clean shared thumbnail cache</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-cm</td>
-<td class="td-colsep td-rowsep">--cache-metadata</td>
-<td class="td-rowsep">clean the metadata cache</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-cr:&lt;folder&gt;</td>
-<td class="td-colsep td-rowsep">--cache-render:&lt;folder&gt;</td>
-<td class="td-rowsep">render thumbnails</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-crr:&lt;folder&gt;</td>
-<td class="td-colsep td-rowsep">--cache-render-recurse:&lt;folder&gt;</td>
-<td class="td-rowsep">render thumbnails recursively</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep">-crs:&lt;folder&gt;</td>
-<td class="td-colsep td-rowsep">--cache-render-shared:&lt;folder&gt;</td>
-<td class="td-rowsep">
-              render thumbnails
-              <sup class="footnote"><a class="footnote" href="#ref2" id="-noteref-ref2">12</a></sup>
-            </td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep">-crsr:&lt;folder&gt;</td>
-<td class="td-colsep td-rowsep">--cache-render-shared-recurse:&lt;folder&gt;</td>
-<td class="td-rowsep">render thumbnails recursively</td>
-</tr>
-<tr>
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--lua:&lt;file&gt;,&lt;lua script&gt;</td>
-<td class="td-rowsep">run lua script on file</td>
-</tr>
-<tr class="shade">
-<td class="td-colsep td-rowsep"></td>
-<td class="td-colsep td-rowsep">--PWD:&lt;PWD&gt;</td>
-<td class="td-rowsep">Use PWD as working directory for following commands</td>
-</tr>
-<tr>
-<td class="td-colsep"></td>
-<td class="td-colsep">--print0</td>
-<td>Terminate returned data with null character instead of newline</td>
-</tr>
-</tbody>
-</table></div>
-<p class="para"></p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms"><span class="em em-bold emphasis">--blank</span></dt>
+<dd class="terms">
+<p class="para">start with blank file list</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--cache-maintenance</span> &lt;path&gt;</dt>
+<dd class="terms">
+<p class="para">run cache maintenance in non-GUI mode</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--disable-clutter</span></dt>
+<dd class="terms">
+<p class="para">disable use of Clutter library (i.e. GPU accel.)</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-f</span>, <span class="em em-bold emphasis">--fullscreen</span>
+</dt>
+<dd class="terms">
+<p class="para">start in full screen mode</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--geometry</span>=<span class="em emphasis">WxH</span>+XOFF+YOFF</dt>
+<dd class="terms">
+<p class="para">set main window location</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-h</span>, <span class="em em-bold emphasis">--help</span>
+</dt>
+<dd class="terms">
+<p class="para">show this message</p>
+  </dd>
+</dl></div></div></div></div>
+<p class="para"><span class="em em-bold emphasis">-l</span>, <span class="em em-bold emphasis">--list</span> [files] [collections] open collection window for command line</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+<span class="em em-bold emphasis">-n</span>, <span class="em em-bold emphasis">--new-instance</span>
+</dt>
+<dd class="terms">
+<p class="para">open a new instance of Geeqie</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-o</span>:, <span class="em em-bold emphasis">--log-file</span>:&lt;file&gt;</dt>
+<dd class="terms">
+<p class="para">save log data to file</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-r</span>, <span class="em em-bold emphasis">--remote</span>
+</dt>
+<dd class="terms">
+<p class="para">send following commands to open window</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-rh</span>, <span class="em em-bold emphasis">--remote-help</span>
+</dt>
+<dd class="terms">
+<p class="para">print remote command list</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-s</span>, <span class="em em-bold emphasis">--slideshow</span>
+</dt>
+<dd class="terms">
+<p class="para">start in slideshow mode</p>
+  </dd>
+<dt class="terms">+t, <span class="em em-bold emphasis">--with-tools</span>
+</dt>
+<dd class="terms">
+<p class="para">force show of tools</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-t</span>, <span class="em em-bold emphasis">--without-tools</span>
+</dt>
+<dd class="terms">
+<p class="para">force hide of tools</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-v</span>, <span class="em em-bold emphasis">--version</span>
+</dt>
+<dd class="terms">
+<p class="para">print version info</p>
+  </dd>
+<dt class="terms">+w, <span class="em em-bold emphasis">--show-log-window</span>
+</dt>
+<dd class="terms">
+<p class="para">show log window</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--debug</span>[=<span class="em emphasis">level</span>]</dt>
+<dd class="terms">
+<p class="para">turn on debug output</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-g</span>:, <span class="em em-bold emphasis">--grep</span>:&lt;regexp&gt;</dt>
+<dd class="terms">
+<p class="para">filter debug output</p>
+  </dd>
+</dl></div></div></div></div>
 </div></div>
-</div></section><div class="footnotes">
-<div id="ref1" class="footnote">
-<a class="footnote" href="#-noteref-ref1">8</a>The name of a collection, with or without either path or extension (.gqv) may be used. If a path is not used and there is a name conflict with a file or folder, that will take precedence.</div>
-<div id="cachemaintenance" class="footnote">
-<a class="footnote" href="#-noteref-cachemaintenance">9</a>
-              <p class="para"><a class="link" href="GuideReferenceManagement.html#CacheMaintenance" title="Command line program">Cache Maintenance</a>.</p>
-            </div>
-<div id="fileinfo" class="footnote">
-<a class="footnote" href="#-noteref-fileinfo">10</a>
-                <p class="para">File info consists of: class, no. of pages (if multi-page image), (and if exif exists) country name, country code, timezone, local time.</p>
-              </div>
-<div id="ref3" class="footnote">
-<a class="footnote" href="#-noteref-ref3">11</a>
-                <p class="para">The ID is shown in the titlebar of the window. If multiple windows are open, it can be used to direct commands to a particular window e.g. --remote --id:main --tell</p>
-              </div>
-<div id="ref2" class="footnote">
-<a class="footnote" href="#-noteref-ref2">12</a>
-                <p class="para">If standard thumbnail cache is not enabled, this command will be ignored.</p>
-              </div>
+</div></section><section id="remote_command_list" class="refsect2"><div class="inner">
+<div class="hgroup pagewide"><h5 class="title">Remote command list:</h5></div>
+<div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms">
+<span class="em em-bold emphasis">-b</span> <span class="em em-bold emphasis">--back</span>
+</dt>
+<dd class="terms">
+<p class="para">previous image</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--close-window</span></dt>
+<dd class="terms">
+<p class="para">close window</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--config-load</span>: &lt;FILE&gt;|layout ID</dt>
+<dd class="terms">
+<p class="para">load configuration from FILE</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-cm</span> <span class="em em-bold emphasis">--cache-metadata</span>
+</dt>
+<dd class="terms">
+<p class="para">clean the metadata cache</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-cr</span>: <span class="em em-bold emphasis">--cache-render</span>:&lt;folder&gt;</dt>
+<dd class="terms">
+<p class="para">render thumbnails</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-crr</span>: <span class="em em-bold emphasis">--cache-render-recurse</span>:&lt;folder&gt;</dt>
+<dd class="terms">
+<p class="para">render thumbnails recursively</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-crs</span>: <span class="em em-bold emphasis">--cache-render-shared</span>:&lt;folder&gt;</dt>
+<dd class="terms">
+<p class="para">render thumbnails (see Help)</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-crsr</span>: <span class="em em-bold emphasis">--cache-render-shared-recurse</span>:&lt;folder&gt;</dt>
+<dd class="terms">
+<p class="para">render thumbnails recursively (see Help)</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-cs</span>: <span class="em em-bold emphasis">--cache-shared</span>:clear|clean</dt>
+<dd class="terms">
+<p class="para">clear or clean shared thumbnail cache</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-ct</span>: <span class="em em-bold emphasis">--cache-thumbs</span>:clear|clean</dt>
+<dd class="terms">
+<p class="para">clear or clean thumbnail cache</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-d</span> <span class="em em-bold emphasis">--delay=</span>&lt;[H:][M:][N][.M]&gt;</dt>
+<dd class="terms">
+<p class="para">set slide show delay to Hrs Mins N.M seconds</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--first</span></dt>
+<dd class="terms">
+<p class="para">first image</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-f</span> <span class="em em-bold emphasis">--fullscreen</span>
+</dt>
+<dd class="terms">
+<p class="para">toggle full screen</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--file</span>:&lt;FILE&gt;|&lt;URL&gt;</dt>
+<dd class="terms">
+<p class="para">open FILE or URL, bring Geeqie window to the top</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--File</span>:&lt;FILE&gt;|&lt;URL&gt;</dt>
+<dd class="terms">
+<p class="para">open FILE or URL, do not bring Geeqie window to the top</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-fs</span> <span class="em em-bold emphasis">--fullscreen-start</span>
+</dt>
+<dd class="terms">
+<p class="para">start full screen</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-fS</span> <span class="em em-bold emphasis">--fullscreen-stop</span>
+</dt>
+<dd class="terms">
+<p class="para">stop full screen</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--geometry=</span>&lt;GEOMETRY&gt;</dt>
+<dd class="terms">
+<p class="para">set window geometry</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--get-collection</span>:&lt;COLLECTION&gt;</dt>
+<dd class="terms">
+<p class="para">get collection content</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--get-collection-list</span></dt>
+<dd class="terms">
+<p class="para">get collection list</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--get-destination</span>:&lt;FILE&gt;</dt>
+<dd class="terms">
+<p class="para">get destination path of FILE (See Plugins Configuration)</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--get-file-info</span></dt>
+<dd class="terms">
+<p class="para">get file info</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--get-filelist</span>:[&lt;FOLDER&gt;]</dt>
+<dd class="terms">
+<p class="para">get list of files and class</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--get-filelist-recurse</span>:[&lt;FOLDER&gt;]</dt>
+<dd class="terms">
+<p class="para">get list of files and class recursive</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--get-rectangle</span></dt>
+<dd class="terms">
+<p class="para">get rectangle co-ordinates</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--get-render-intent</span></dt>
+<dd class="terms">
+<p class="para">get render intent</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--get-sidecars</span>:&lt;FILE&gt;</dt>
+<dd class="terms">
+<p class="para">get list of sidecars of FILE</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--id</span>:&lt;ID&gt;</dt>
+<dd class="terms">
+<p class="para">window id for following commands</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--last</span></dt>
+<dd class="terms">
+<p class="para">last image</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--list-add</span>:&lt;FILE&gt;</dt>
+<dd class="terms">
+<p class="para">add FILE to command line collection list</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--list-clear</span></dt>
+<dd class="terms">
+<p class="para">clear command line collection list</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--lua</span>:&lt;FILE&gt;,&lt;lua script&gt;</dt>
+<dd class="terms">
+<p class="para">run lua script on FILE</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--new-window</span></dt>
+<dd class="terms">
+<p class="para">new window</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-n</span> <span class="em em-bold emphasis">--next</span>
+</dt>
+<dd class="terms">
+<p class="para">next image</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--pixel-info</span></dt>
+<dd class="terms">
+<p class="para">print pixel info of mouse pointer on current image</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--print0</span></dt>
+<dd class="terms">
+<p class="para">terminate returned data with null character instead of newline</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--PWD</span>:&lt;PWD&gt;</dt>
+<dd class="terms">
+<p class="para">use PWD as working directory for following commands</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-q</span> <span class="em em-bold emphasis">--quit</span>
+</dt>
+<dd class="terms">
+<p class="para">quit</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--raise</span></dt>
+<dd class="terms">
+<p class="para">bring the Geeqie window to the top</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-s</span> <span class="em em-bold emphasis">--slideshow</span>
+</dt>
+<dd class="terms">
+<p class="para">toggle slide show</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--slideshow-recurse</span>:&lt;FOLDER&gt;</dt>
+<dd class="terms">
+<p class="para">start recursive slide show in FOLDER</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-ss</span> <span class="em em-bold emphasis">--slideshow-start</span>
+</dt>
+<dd class="terms">
+<p class="para">start slide show</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-sS</span> <span class="em em-bold emphasis">--slideshow-stop</span>
+</dt>
+<dd class="terms">
+<p class="para">stop slide show</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--tell</span></dt>
+<dd class="terms">
+<p class="para">print filename [and Collection] of current image</p>
+  </dd>
+<dt class="terms">+t <span class="em em-bold emphasis">--tools-show</span>
+</dt>
+<dd class="terms">
+<p class="para">show tools</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-t</span> <span class="em em-bold emphasis">--tools-hide</span>
+</dt>
+<dd class="terms">
+<p class="para">hide tools</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--view</span>:&lt;FILE&gt;</dt>
+<dd class="terms">
+<p class="para">open FILE in new window</p>
+
+<p class="para">All other command line parameters are used as plain files if they exist.</p>
+
+<p class="para">The name of a collection, with or without either path or extension (.gqv) may be used.</p>
+  </dd>
+</dl></div></div></div></div></div></div>
+</div></section>
 </div>
+</div></section><section id="bugs" class="refsect1"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">BUGS</h4></div>
+<div class="region"><div class="contents pagewide"><p class="para">Please send bug reports and feedback to https://github.com/BestImageViewer/geeqie/issues</p></div></div>
+</div></section><section id="copyright" class="refsect1"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">COPYRIGHT</h4></div>
+<div class="region"><div class="contents pagewide"><p class="para">Copyright (C) 1999-2004 by John Ellis. Copyright (C) 2004-2021 by The Geeqie Team. Use this software  at  your
+own  risk! This  software released under the GNU General Public License. Please read the COPYING file for more
+information.</p></div></div>
+</div></section><section id="see_also" class="refsect1"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">SEE ALSO</h4></div>
+<div class="region"><div class="contents pagewide"><p class="para">Full documentation: https://www.geeqie.org/help/GuideIndex.html</p></div></div>
+</div></section>
 </div>
+</div></section>
+  </p></div></div>
 <nav class="prevnext pagewide"><div class="inner">
 <a href="GuideReference.html" title="Reference">Previous</a><a href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Next</a>
 </div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
