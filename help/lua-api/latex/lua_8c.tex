@@ -69,64 +69,7 @@ Date\+Time\+Digitized = exif\+\_\+structure\+:get\+\_\+datum(\char`\"{}\+Exif.\+
 Where {\itshape return} is\+: ~\newline
 Exif.\+Photo.\+Date\+Time\+Original = signed integer time\+\_\+t ~\newline
 Exif.\+Photo.\+Date\+Time\+Digitized = signed integer time\+\_\+t ~\newline
-otherwise char 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{233 \{}
-\DoxyCodeLine{234         \textcolor{keyword}{const} gchar *key;}
-\DoxyCodeLine{235         gchar *value = NULL;}
-\DoxyCodeLine{236         ExifData *exif;}
-\DoxyCodeLine{237         \textcolor{keyword}{struct }tm tm;}
-\DoxyCodeLine{238         time\_t datetime;}
-\DoxyCodeLine{239 }
-\DoxyCodeLine{240         exif = lua\_check\_exif(L, 1);}
-\DoxyCodeLine{241         key = luaL\_checkstring(L, 2);}
-\DoxyCodeLine{242         \textcolor{keywordflow}{if} (key == (gchar*)NULL || key[0] == \textcolor{charliteral}{'\(\backslash\)0'})}
-\DoxyCodeLine{243                 \{}
-\DoxyCodeLine{244                 lua\_pushnil(L);}
-\DoxyCodeLine{245                 \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{246                 \}}
-\DoxyCodeLine{247         \textcolor{keywordflow}{if} (!exif)}
-\DoxyCodeLine{248                 \{}
-\DoxyCodeLine{249                 lua\_pushnil(L);}
-\DoxyCodeLine{250                 \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{251                 \}}
-\DoxyCodeLine{252         value = exif\_get\_data\_as\_text(exif, key);}
-\DoxyCodeLine{253         \textcolor{keywordflow}{if} (strcmp(key, \textcolor{stringliteral}{"{}Exif.Photo.DateTimeOriginal"{}}) == 0)}
-\DoxyCodeLine{254                 \{}
-\DoxyCodeLine{255                 memset(\&tm, 0, \textcolor{keyword}{sizeof}(tm));}
-\DoxyCodeLine{256                 \textcolor{keywordflow}{if} (value \&\& strptime(value, \textcolor{stringliteral}{"{}\%Y:\%m:\%d \%H:\%M:\%S"{}}, \&tm))}
-\DoxyCodeLine{257                         \{}
-\DoxyCodeLine{258                         datetime = mktime(\&tm);}
-\DoxyCodeLine{259                         lua\_pushnumber(L, datetime);}
-\DoxyCodeLine{260                         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{261                         \}}
-\DoxyCodeLine{262                 \textcolor{keywordflow}{else}}
-\DoxyCodeLine{263                         \{}
-\DoxyCodeLine{264                         lua\_pushnil(L);}
-\DoxyCodeLine{265                         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{266                         \}}
-\DoxyCodeLine{267                 \}}
-\DoxyCodeLine{268         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(key, \textcolor{stringliteral}{"{}Exif.Photo.DateTimeDigitized"{}}) == 0)}
-\DoxyCodeLine{269                 \{}
-\DoxyCodeLine{270                 memset(\&tm, 0, \textcolor{keyword}{sizeof}(tm));}
-\DoxyCodeLine{271                 \textcolor{keywordflow}{if} (value \&\& strptime(value, \textcolor{stringliteral}{"{}\%Y:\%m:\%d \%H:\%M:\%S"{}}, \&tm))}
-\DoxyCodeLine{272                         \{}
-\DoxyCodeLine{273                         datetime = mktime(\&tm);}
-\DoxyCodeLine{274                         lua\_pushnumber(L, datetime);}
-\DoxyCodeLine{275                         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{276                         \}}
-\DoxyCodeLine{277                 \textcolor{keywordflow}{else}}
-\DoxyCodeLine{278                         \{}
-\DoxyCodeLine{279                         lua\_pushnil(L);}
-\DoxyCodeLine{280                         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{281                         \}}
-\DoxyCodeLine{282                 \}}
-\DoxyCodeLine{283         lua\_pushstring(L, value);}
-\DoxyCodeLine{284         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{285 \}}
-
-\end{DoxyCode}
-\mbox{\label{lua_8c_a44364b90fbb9ff09543f6fd0307f3a0a}} 
+otherwise char \mbox{\label{lua_8c_a44364b90fbb9ff09543f6fd0307f3a0a}} 
 \index{lua.c@{lua.c}!lua\_image\_get\_date@{lua\_image\_get\_date}}
 \index{lua\_image\_get\_date@{lua\_image\_get\_date}!lua.c@{lua.c}}
 \doxysubsubsection{lua\_image\_get\_date()}
@@ -144,18 +87,7 @@ Get file date of selected image.
 \begin{DoxyReturn}{Returns}
 time\+\_\+t The file date in Unix timestamp format.
 \end{DoxyReturn}
-time\+\_\+t -\/ signed integer which represents the number of seconds since the start of the Unix epoch\+: midnight UTC of January 1, 1970 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{166 \{}
-\DoxyCodeLine{167         FileData *fd;}
-\DoxyCodeLine{168 }
-\DoxyCodeLine{169         fd = lua\_check\_image(L, 1);}
-\DoxyCodeLine{170         lua\_pushnumber(L, fd-\/>date);}
-\DoxyCodeLine{171         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{172 \}}
-
-\end{DoxyCode}
-\mbox{\label{lua_8c_a085dc763b1a2fc6e8eeb4e0bb315268e}} 
+time\+\_\+t -\/ signed integer which represents the number of seconds since the start of the Unix epoch\+: midnight UTC of January 1, 1970 \mbox{\label{lua_8c_a085dc763b1a2fc6e8eeb4e0bb315268e}} 
 \index{lua.c@{lua.c}!lua\_image\_get\_exif@{lua\_image\_get\_exif}}
 \index{lua\_image\_get\_exif@{lua\_image\_get\_exif}!lua.c@{lua.c}}
 \doxysubsubsection{lua\_image\_get\_exif()}
@@ -173,27 +105,7 @@ Get exif structure of selected image.
 \begin{DoxyReturn}{Returns}
 An Exif\+Data data structure containing the entire exif data
 \end{DoxyReturn}
-To be used in conjunction with \doxyref{$<$exif-\/structure$>$\+:get\+\_\+datum() }{p.}{lua_8c_ac9ce283551bf63c8147cb780bff5d209} 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{92 \{}
-\DoxyCodeLine{93         FileData *fd;}
-\DoxyCodeLine{94         ExifData *exif;}
-\DoxyCodeLine{95         ExifData **exif\_data;}
-\DoxyCodeLine{96 }
-\DoxyCodeLine{97         fd = lua\_check\_image(L, 1);}
-\DoxyCodeLine{98         exif = exif\_read\_fd(fd);}
-\DoxyCodeLine{99 }
-\DoxyCodeLine{100         exif\_data = (ExifData **)lua\_newuserdata(L, \textcolor{keyword}{sizeof}(ExifData *));}
-\DoxyCodeLine{101         luaL\_getmetatable(L, \textcolor{stringliteral}{"{}Exif"{}});}
-\DoxyCodeLine{102         lua\_setmetatable(L, -\/2);}
-\DoxyCodeLine{103 }
-\DoxyCodeLine{104         *exif\_data = exif;}
-\DoxyCodeLine{105 }
-\DoxyCodeLine{106         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{107 \}}
-
-\end{DoxyCode}
-\mbox{\label{lua_8c_a87e2f0caafe7c3b7c56d3956d9fcc7c1}} 
+To be used in conjunction with \doxyref{$<$exif-\/structure$>$\+:get\+\_\+datum() }{p.}{lua_8c_ac9ce283551bf63c8147cb780bff5d209} \mbox{\label{lua_8c_a87e2f0caafe7c3b7c56d3956d9fcc7c1}} 
 \index{lua.c@{lua.c}!lua\_image\_get\_extension@{lua\_image\_get\_extension}}
 \index{lua\_image\_get\_extension@{lua\_image\_get\_extension}!lua.c@{lua.c}}
 \doxysubsubsection{lua\_image\_get\_extension()}
@@ -211,17 +123,6 @@ Get file extension of selected image.
 \begin{DoxyReturn}{Returns}
 char The file extension including preceding dot 
 \end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{149 \{}
-\DoxyCodeLine{150         FileData *fd;}
-\DoxyCodeLine{151 }
-\DoxyCodeLine{152         fd = lua\_check\_image(L, 1);}
-\DoxyCodeLine{153         lua\_pushstring(L, fd-\/>extension);}
-\DoxyCodeLine{154         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{155 \}}
-
-\end{DoxyCode}
 \mbox{\label{lua_8c_aa9c605d65074a310c050f036c8c8d4c8}} 
 \index{lua.c@{lua.c}!lua\_image\_get\_marks@{lua\_image\_get\_marks}}
 \index{lua\_image\_get\_marks@{lua\_image\_get\_marks}!lua.c@{lua.c}}
@@ -240,18 +141,7 @@ Get marks of selected image.
 \begin{DoxyReturn}{Returns}
 unsigned integer Bit map of marks set
 \end{DoxyReturn}
-Bit 0 == Mark 1 etc. 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{200 \{}
-\DoxyCodeLine{201         FileData *fd;}
-\DoxyCodeLine{202 }
-\DoxyCodeLine{203         fd = lua\_check\_image(L, 1);}
-\DoxyCodeLine{204         lua\_pushnumber(L, fd-\/>marks);}
-\DoxyCodeLine{205         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{206 \}}
-
-\end{DoxyCode}
-\mbox{\label{lua_8c_a1890e1bdf4c29bd0ab64afc24188f1dd}} 
+Bit 0 == Mark 1 etc. \mbox{\label{lua_8c_a1890e1bdf4c29bd0ab64afc24188f1dd}} 
 \index{lua.c@{lua.c}!lua\_image\_get\_name@{lua\_image\_get\_name}}
 \index{lua\_image\_get\_name@{lua\_image\_get\_name}!lua.c@{lua.c}}
 \doxysubsubsection{lua\_image\_get\_name()}
@@ -269,17 +159,6 @@ Get full filename of selected image.
 \begin{DoxyReturn}{Returns}
 char The full filename including extension 
 \end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{133 \{}
-\DoxyCodeLine{134         FileData *fd;}
-\DoxyCodeLine{135 }
-\DoxyCodeLine{136         fd = lua\_check\_image(L, 1);}
-\DoxyCodeLine{137         lua\_pushstring(L, fd-\/>name);}
-\DoxyCodeLine{138         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{139 \}}
-
-\end{DoxyCode}
 \mbox{\label{lua_8c_a65ddfd7d38490cdb6d21d1d09408c253}} 
 \index{lua.c@{lua.c}!lua\_image\_get\_path@{lua\_image\_get\_path}}
 \index{lua\_image\_get\_path@{lua\_image\_get\_path}!lua.c@{lua.c}}
@@ -298,17 +177,6 @@ Get full path of selected image.
 \begin{DoxyReturn}{Returns}
 char The full path of the file, including filename and extension 
 \end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{117 \{}
-\DoxyCodeLine{118         FileData *fd;}
-\DoxyCodeLine{119 }
-\DoxyCodeLine{120         fd = lua\_check\_image(L, 1);}
-\DoxyCodeLine{121         lua\_pushstring(L, fd-\/>path);}
-\DoxyCodeLine{122         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{123 \}}
-
-\end{DoxyCode}
 \mbox{\label{lua_8c_a2299bcb5935a4c8f02c0e1c20e4e2ed9}} 
 \index{lua.c@{lua.c}!lua\_image\_get\_size@{lua\_image\_get\_size}}
 \index{lua\_image\_get\_size@{lua\_image\_get\_size}!lua.c@{lua.c}}
@@ -327,17 +195,6 @@ Get file size of selected image.
 \begin{DoxyReturn}{Returns}
 integer The file size in bytes 
 \end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{182 \{}
-\DoxyCodeLine{183         FileData *fd;}
-\DoxyCodeLine{184 }
-\DoxyCodeLine{185         fd = lua\_check\_image(L, 1);}
-\DoxyCodeLine{186         lua\_pushnumber(L, fd-\/>size);}
-\DoxyCodeLine{187         \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{188 \}}
-
-\end{DoxyCode}
 
 
 \doxysubsection{Variable Documentation}
