@@ -9,6 +9,7 @@
   <name xml:lang="cs">Geeqie</name>
   <name xml:lang="de">Geeqie</name>
   <name xml:lang="el">Τζήκιυ</name>
+  <name xml:lang="en_GB">Geeqie</name>
   <name xml:lang="fr">Geeqie</name>
   <name xml:lang="nl">Geeqie</name>
   <name xml:lang="pl">Geeqie</name>
@@ -23,19 +24,22 @@
   <summary>A lightweight image viewer</summary>
   <summary xml:lang="ca">Un visualitzador d'imatges lleuger</summary>
   <summary xml:lang="de">Ein leichtgewichtiger Bildbetrachter</summary>
+  <summary xml:lang="en_GB">A lightweight image viewer</summary>
   <summary xml:lang="nl">Een lichtgewicht afbeeldings-viewer</summary>
   <summary xml:lang="sk">Odľahčený prehliadač obrázkov</summary>
   <description>
     <p>Geeqie is a lightweight image viewer for Linux, BSDs and compatibles.</p>
     <p xml:lang="ca">Geeqie és un visualitzador d'imatges lleuger per Linux, BSDs i compatibles.</p>
     <p xml:lang="de">Geeqie ist ein leichtgewichtiger Bildbetrachter für Linux, BSDs und kompatible Geräte.</p>
+    <p xml:lang="en_GB">Geeqie is a lightweight image viewer for Linux, BSDs and compatibles.</p>
     <p xml:lang="nl">Geeqie is een lichtgewicht afbeeldings-viewer voor Linux, BSDs en compatibel systemen.</p>
     <p xml:lang="sk">Geeqie je odľahčený prehliadac obrázkov pre Linux, BSD a kompatibilné systémy.</p>
     <p>It can be used as a simple, fast, database-free image viewer, but equally it can be used to manage large collections of images.</p>
     <p xml:lang="ca">Pot ser usat com a visualitzador d'imatges simple, ràpid i sense base de dades, però també pot ser utilitzat per gestionar col·leccions d'imatges grans.</p>
     <p xml:lang="de">Es kann als einfacher, schneller und datenbankfreier Bildbetrachter verwendet werden, aber auch zum Verwalten großer Bildersammlungen.</p>
+    <p xml:lang="en_GB">It can be used as a simple, fast, database-free image viewer, but equally it can be used to manage large collections of images.</p>
     <p xml:lang="nl">Het kan gebruikt worden als een eenvoudige afbeeldings-viewer, zonder database, maar kan ook goed gebruikt worden bij het beheren van grote verzamelingen afbeeldingen.</p>
-    <p xml:lang="sk">Môže poslúžiť ako jednoduchý, rýchly, bezdatabázový prehliadač obrázkov, ale rovnako tiež na správu veľkej zbierky obrázkov.</p>
+    <p xml:lang="sk">Poslúži ako jednoduchý, rýchly, bezdatabázový prehliadač obrázkov, ale takisto ho môžete použiť aj na správu veľkých zbierok obrázkov.</p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -46,7 +50,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v1.5.1" date="2019-08-20"/>
+    <release version="v1.7.3" date="2022-04-12"/>
   </releases>
   <keywords>
     <keyword>image</keyword>

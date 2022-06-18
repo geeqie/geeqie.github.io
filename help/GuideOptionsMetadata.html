@@ -16,18 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <body><main><div class="page">
 <header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
 <a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideOptionsMain.html" title="Preferences">Preferences</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
-<a href="GuideOptionsFiltering.html" title="Files Options">Previous</a><a href="GuideOptionsKeywords.html" title="Keywords">Next</a>
+<a href="GuideOptionsFiltering.html" title="File Filters Options">Previous</a><a href="GuideOptionsKeywords.html" title="Keywords">Next</a>
 </div></nav><div class="hgroup pagewide"><h1 class="title">
 <a name="titleGuideOptionsMetadata"></a>Metadata</h1></div>
 <div class="region">
 <div class="contents pagewide">
 <p class="para">This section describes the options for metadata writing.</p>
-<p class="para"></p>
-<p class="para">
-    The settings in the
-    <a class="link" href="GuideOptionsFiltering.html#Filetypes" title="File types">Files tab of Preferences</a>
-    influence whether an attempt is made to write metadata to the file itself, to a sidecar file or to a local folder.
-  </p>
 <p class="para">
     Refer also to
     <a class="link" href="GuideReferenceMetadata.html" title="Metadata Processing">Metadata Processing</a>
@@ -35,11 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
   </p>
 <div class="links sectionlinks" role="navigation"><ul>
 <li class="links"><a class="xref" href="GuideOptionsMetadata.html#MetadataWritingProcess" title="Metadata writing process">Metadata writing process</a></li>
-<li class="links"><a class="xref" href="GuideOptionsMetadata.html#WriteToImageFiles" title="Step 1: Write to image files">Step 1: Write to image files</a></li>
-<li class="links"><a class="xref" href="GuideOptionsMetadata.html#WriteToGeeqiePrivateFiles" title="Steps 2 and 3: Write to Geeqie private files">Steps 2 and 3: Write to Geeqie private files</a></li>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#WriteToImageFiles" title="Step 1 Options:">Step 1 Options:</a></li>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#WriteToGeeqiePrivateFiles" title="Steps 2 and 3 Option:">Steps 2 and 3 Option:</a></li>
 <li class="links"><a class="xref" href="GuideOptionsMetadata.html#MetadataMiscellaneous" title="Miscellaneous">Miscellaneous</a></li>
 <li class="links"><a class="xref" href="GuideOptionsMetadata.html#AutoSaveOptions" title="Auto-save options">Auto-save options</a></li>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#SpellCheck" title="Spelling Checks">Spelling Checks</a></li>
 <li class="links"><a class="xref" href="GuideOptionsMetadata.html#PreLoadMetadata" title="Pre-load metadata">Pre-load metadata</a></li>
+<li class="links"><a class="xref" href="GuideOptionsMetadata.html#MetadataFlowchart" title="Metadata Write Sequence Flowchart">Metadata Write Sequence Flowchart</a></li>
 </ul></div>
 </div>
 <section id="MetadataWritingProcess" class="section"><div class="inner">
@@ -47,13 +43,19 @@ document.addEventListener('DOMContentLoaded', function() {
 <a name="titleMetadataWritingProcess"></a>Metadata writing process</h2></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">
-      When writing metadata, Geeqie will follow three steps. This process will stop when the first successful write occurs.
+      When writing metadata, Geeqie will follow these steps. This process will stop when the first successful write occurs. A flowchart showing the sequence is
+      <a class="link" href="GuideOptionsMetadata.html#MetadataFlowchart" title="Metadata Write Sequence Flowchart">here</a>
+      .
       <div class="list orderedlist"><div class="inner"><div class="region"><div class="contents"><ol class="list orderedlist">
 <li class="list orderedlist">
           <p class="para">
-            <span class="gui guilabel">Save metadata in image files, resp. sidecar files, according to the XMP standard</span>
+            <span class="gui guilabel">Save metadata in image files or sidecar files, according to the XMP standard</span>
             <p class="para"></p>
             If checked, Geeqie will attempt to write metadata to the file itself, or to an associated XMP sidecar file
+            <p class="para"></p>
+            The destination is dependent on the settings in the "Writable" and "Sidecar Is Allowed" columns of the
+            <a class="link" href="GuideOptionsFiltering.html#Filetypes" title="File types">File Filters tab</a>
+            .
           </p>
         </li>
 <li class="list orderedlist">
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">When writing to local metadata folders, the directory structure duplicates that of the location of the source files.</p>
 </div></div>
 </div></section><section id="WriteToImageFiles" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Step 1: Write to image files</h2></div>
+<div class="hgroup pagewide"><h2 class="title">Step 1 Options:</h2></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">If Step 1 above was successful, the following options take effect:</p>
 <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
@@ -86,6 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="para"></p>
           If checked, Geeqie will write IPTC tags as defined in
           <a class="link" href="GuideReferenceStandards.html" title="Standards">Standards</a>
+          <p class="para"></p>
+          The conversion from XMP tag to IPTC tag is performed by exiv2. A list of the XMP-IPTC conversions is at the end of
+          <a href="https://exiv2.org/conversion.html" class="ulink" title="https://exiv2.org/conversion.html">this table</a>
+          .
         </p>
       </li>
 <li class="list itemizedlist">
@@ -106,13 +112,13 @@ document.addEventListener('DOMContentLoaded', function() {
         <p class="para">
           <span class="gui guilabel">Create sidecar files named image.ext.xmp (as opposed to image.xmp)</span>
           <p class="para"></p>
-          If checked, new sidecar files will use image.ext.xmp naming scheme
+          If checked, new sidecar files will use image.ext.xmp naming scheme. This scheme is used by Darktable.
         </p>
       </li>
 </ul></div></div></div></div>
 </div></div>
 </div></section><section id="WriteToGeeqiePrivateFiles" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Steps 2 and 3: Write to Geeqie private files</h2></div>
+<div class="hgroup pagewide"><h2 class="title">Steps 2 and 3 Option:</h2></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">If Step 2 or 3 above was successful, the following option takes effect:</p>
 <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist"><li class="list itemizedlist">
@@ -129,12 +135,36 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
 <li class="list itemizedlist">
         <p class="para">
-          <span class="gui guilabel">Write the same description tags (keywords, comment, title) to all grouped sidecars</span>
+          <span class="gui guilabel">Write the same description tags to all grouped sidecars</span>
           <p class="para"></p>
           If checked the same descriptive tags are written to all files in a group. File grouping is as defined in the
-          <a class="link" href="GuideOptionsFiltering.html#Groupingsidecarextensions" title="Grouping sidecar extensions">Files tab</a>
+          <a class="link" href="GuideOptionsFiltering.html#Groupingsidecarextensions" title="Grouping sidecar extensions">File Filters tab</a>
           of main Preferences. Technical tags (exif) are handled separately for each file.
         </p>
+        <p class="para">The tags written are:</p>
+        <div class="code"><pre class="contents"><code>          "Xmp.dc.title"
+          "Xmp.photoshop.Urgency"
+          "Xmp.photoshop.Category",
+          "Xmp.photoshop.SupplementalCategory",
+          "Xmp.dc.subject",
+          "Xmp.iptc.Location",
+          "Xmp.photoshop.Instruction",
+          "Xmp.photoshop.DateCreated",
+          "Xmp.dc.creator",
+          "Xmp.photoshop.AuthorsPosition",
+          "Xmp.photoshop.City",
+          "Xmp.photoshop.State",
+          "Xmp.iptc.CountryCode",
+          "Xmp.photoshop.Country",
+          "Xmp.photoshop.TransmissionReference",
+          "Xmp.photoshop.Headline",
+          "Xmp.photoshop.Credit",
+          "Xmp.photoshop.Source",
+          "Xmp.dc.rights",
+          "Xmp.dc.description",
+          "Xmp.photoshop.CaptionWriter",
+        </code></pre></div>
+        <p class="para"></p>
       </li>
 <li class="list itemizedlist">
         <p class="para">
@@ -195,6 +225,29 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul></div></div></div></div>
 <p class="para"></p>
 </div></div>
+</div></section><section id="SpellCheck" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Spelling Checks</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">If selected, spelling checks will be enabled on the following panes:</p>
+<div class="list itemizedlist"><div class="inner"><div class="region"><div class="contents"><ul class="list itemizedlist">
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Title</span>
+        </p>
+      </li>
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Comment</span>
+        </p>
+      </li>
+<li class="list itemizedlist">
+        <p class="para">
+          <span class="gui guilabel">Headline</span>
+        </p>
+      </li>
+</ul></div></div></div></div>
+<p class="para"></p>
+</div></div>
 </div></section><section id="PreLoadMetadata" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Pre-load metadata</h2></div>
 <div class="region"><div class="contents pagewide">
@@ -219,10 +272,18 @@ document.addEventListener('DOMContentLoaded', function() {
       </li></ul></div></div></div></div>
 <p class="para"></p>
 </div></div>
+</div></section><section id="MetadataFlowchart" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Metadata Write Sequence Flowchart</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      <span class="inlinegraphic"><img src="metadata-flowchart.png"></span>
+    </p>
+<p class="para"></p>
+</div></div>
 </div></section>
 </div>
 <nav class="prevnext pagewide"><div class="inner">
-<a href="GuideOptionsFiltering.html" title="Files Options">Previous</a><a href="GuideOptionsKeywords.html" title="Keywords">Next</a>
+<a href="GuideOptionsFiltering.html" title="File Filters Options">Previous</a><a href="GuideOptionsKeywords.html" title="Keywords">Next</a>
 </div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
 <div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
 <div class="inner">
@@ -257,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </p>
 <p class="para">
         Website:
-        <a href="http://geeqie.org" class="ulink" title="http://geeqie.org">geeqie.org</a>
+        <a href="https://www.geeqie.org" class="ulink" title="https://www.geeqie.org">geeqie.org</a>
       </p>
 </div>
 </div>
