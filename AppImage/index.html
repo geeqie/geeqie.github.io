@@ -88,6 +88,11 @@
                 var copyText = document.getElementById("myInput4"); 
                 copyText.select(); copyText.setSelectionRange(0, 99999); 
                 document.execCommand("copy");  alert("Copied the text: " +    copyText.value);}
+    function myFunction5() {
+                var copyText = document.getElementById("myInput5"); 
+                copyText.select(); copyText.setSelectionRange(0, 99999); 
+                document.execCommand("copy");
+                alert("Copied the text: " +    copyText.value);}
 
     var storedText;
 
@@ -108,6 +113,8 @@
             var appimageList = storedText.split(/\n/);
 
             document.getElementById("myInput1").value = "cd $HOME/bin && wget https://cclark.uk/Geeqie/" + appimageList[0] + " && chmod +x " + appimageList[0] + " && ln -sf " + appimageList[0] + "  geeqie && cd -";
+
+            document.getElementById("myInput5").value = "cd $HOME/bin && wget https://cclark.uk/Geeqie/" + appimageList[1] + " && chmod +x " + appimageList[1] + " && ln -sf " + appimageList[1] + "  geeqie && cd -";
 
             for(var i = 0; i < appimageList.length; i++){
                 var tr = document.createElement('tr');
@@ -145,10 +152,12 @@
         </div>
         <div class="b">
             <hr class="c1">
-            <p>These AppImages have been created with Ubuntu 20.04.<br>
+            <p>These AppImages have been created with Ubuntu 22.04.<br>
             <br>
-            Install the latest AppImage to $HOME/bin:<br>
+            Install the latest x86_64 AppImage to $HOME/bin:<br>
             <input type="text" class="c3" value= " " id="myInput1"><button class="fa fa-clipboard c1" onclick="myFunction1()"></button><br></p>
+            Install the latest arm64 AppImage to $HOME/bin:<br>
+            <input type="text" class="c3" value= " " id="myInput5"><button class="fa fa-clipboard c1" onclick="myFunction5()"></button><br></p>
             <div id="history" class="table"></div>
             <hr class="c1">
             Desktop integration (optional)<br>
