@@ -1,3 +1,5 @@
+Geeqie-v2.0+20221113-x86_64.AppImage
+Geeqie-v2.0+20221025-aarch64.AppImage
 Geeqie-v2.0+20221025-x86_64.AppImage
 Geeqie-v2.0+20221025-aarch64.AppImage
 Geeqie-v2.0+20221007-x86_64.AppImage
