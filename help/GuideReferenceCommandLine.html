@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">Geeqie is an interactive GTK based image viewer that supports multiple image formats,
 zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">Generated for version:</p>
-<p class="para">Geeqie 2.0.1</p>
+<p class="para">Geeqie 2.0+git20230323-96b2cd4e</p>
 </div>
 <section id="valid_options" class="refsect2"><div class="inner">
 <div class="hgroup pagewide"><h5 class="title">Valid options:</h5></div>
@@ -277,6 +277,10 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <dd class="terms">
 <p class="para">get render intent</p>
   </dd>
+<dt class="terms"><span class="em em-bold emphasis">--get-selection</span></dt>
+<dd class="terms">
+<p class="para">get list of selected files</p>
+  </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--get-sidecars</span>:&lt;FILE&gt;</dt>
 <dd class="terms">
@@ -343,6 +347,20 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">bring the Geeqie window to the top</p>
   </dd>
 <dt class="terms">
+<span class="em em-bold emphasis">--selection-add</span>:[&lt;FILE&gt;]</dt>
+<dd class="terms">
+<p class="para">adds the current file (or the specified file) to the current selection</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--selection-clear</span></dt>
+<dd class="terms">
+<p class="para">clears the current selection</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--selection-remove</span>:[&lt;FILE&gt;]</dt>
+<dd class="terms">
+<p class="para">removes the current file (or the specified file) from the current selection</p>
+  </dd>
+<dt class="terms">
 <span class="em em-bold emphasis">-s</span> <span class="em em-bold emphasis">--slideshow</span>
 </dt>
 <dd class="terms">
@@ -401,7 +419,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <div class="region"><div class="contents pagewide"><p class="para">Please send bug reports and feedback to https://github.com/BestImageViewer/geeqie/issues</p></div></div>
 </div></section><section id="copyright" class="refsect1"><div class="inner">
 <div class="hgroup pagewide"><h4 class="title">COPYRIGHT</h4></div>
-<div class="region"><div class="contents pagewide"><p class="para">Copyright (C) 1999-2004 by John Ellis. Copyright (C) 2004-2022 by The Geeqie Team. Use this software  at  your
+<div class="region"><div class="contents pagewide"><p class="para">Copyright (C) 1999-2004 by John Ellis. Copyright (C) 2004-2023 by The Geeqie Team. Use this software  at  your
 own  risk! This  software released under the GNU General Public License. Please read the COPYING file for more
 information.</p></div></div>
 </div></section><section id="see_also" class="refsect1"><div class="inner">
