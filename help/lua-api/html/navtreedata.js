@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Geeqie-v2.0.1", "index.html", [
+  [ "Geeqie-v2.1", "index.html", [
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
