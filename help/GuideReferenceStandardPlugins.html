@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Imagecrop" title="Image crop">Image crop</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Randomimage" title="Random image">Random image</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Tetheredphotography" title="Tethered photography">Tethered photography</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#downsize" title="Resize image">Resize image</a></li>
 </ul></div>
 </div>
 <section id="Symlink" class="section"><div class="inner">
@@ -140,6 +141,74 @@ document.addEventListener('DOMContentLoaded', function() {
       <span class="em em-bold emphasis">Plugins</span>
       menu.
     </p>
+</div></div>
+</div></section><section id="downsize" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Resize image</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Reduce the size of an image.</p>
+<div class="table"><table style="border: solid 1px;">
+<thead><tr>
+<th class="td-colsep">Option</th>
+<th>Meaning</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="td-colsep td-rowsep">Required size kB</td>
+<td class="td-rowsep">desired output file size in kilobytes</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">Tolerance %</td>
+<td class="td-rowsep">tolerance or allowed size of result greater than desired size expressed as percent of desired</td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">Max. iterations</td>
+<td class="td-rowsep">maximum number of iterations to stop</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">Copy if unchanged</td>
+<td class="td-rowsep">
+              copy to output when not downsizing and no image
+              format change
+            </td>
+</tr>
+<tr>
+<td class="td-colsep td-rowsep">Strip metadata</td>
+<td class="td-rowsep">strip all meta data</td>
+</tr>
+<tr class="shade">
+<td class="td-colsep td-rowsep">Show computation</td>
+<td class="td-rowsep">show the values of each iteration</td>
+</tr>
+<tr>
+<td class="td-colsep">Open output file in Geeqie</td>
+<td>on successful conversion set Geeqie focus to the file</td>
+</tr>
+</tbody>
+</table></div>
+<p class="para">
+      This plugin uses the Downsize script. The original may be found
+      <a href="http://www.fmwconcepts.com/imagemagick/downsize/index.php" class="ulink" title="http://www.fmwconcepts.com/imagemagick/downsize/index.php">here.</a>
+      It is subject to the following copyright:
+    </p>
+<div class="code"><pre class="contents"><code>      Copyright © Fred Weinhaus
+
+      My scripts are available free of charge for non-commercial (non-profit) use, ONLY.
+
+      For use of my scripts in commercial (for-profit) environments or non-free applications,
+      please contact me (Fred Weinhaus) for licensing arrangements. My email address is fmw at
+      alink dot net.
+
+      If you:
+      1) redistribute,
+      2) incorporate any of these scripts into other free applications or
+      3) reprogram them in another scripting language, then you must contact me for permission,
+      especially if the result might be used in a commercial or for-profit environment.
+
+      Usage, whether stated or not in the script, is restricted to the above licensing
+      arrangements. It is also subject, in a subordinate manner, to the ImageMagick license, which
+      can be found at: http://www.imagemagick.org/script/license.php
+    </code></pre></div>
+<p class="para"></p>
 </div></div>
 </div></section>
 </div>
