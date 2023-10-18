@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Similarity Algorithms</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideReference.html" title="Reference">Reference</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferenceSupportedFormats.html" title="Supported File Formats">Previous</a><a href="GuideReferencePixbufLoaders.html" title="Additional pixbuf loaders">Next</a>
+</div></nav><div class="hgroup pagewide"><h1 class="title">
+<a name="titleGuideReferenceSimilarityAlgorithms"></a>Similarity Algorithms</h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+    This function is intended to find images with similar color content. For example when an image was saved at different compression levels or dimensions (scaled down/up) the contents are similar, but these files do not match by file size, dimensions, or checksum.
+    <p class="para"></p>
+    A 32 x 32 array is created for each image. Imagine the image cut into 1024 rectangles, 32 across and 32 down.
+    <p class="para"></p>
+    For each array element, the average value of all the red and the green and the blue pixels is computed and stored in the array. Therefore the array represents the average color of each corresponding part of the image.
+    <p class="para"></p>
+    This data is stored in a file with the same name is the image and with the extension .sim. It is stored in the same location as thumbnails. If many images are to be compered, run-time is reduced by having these .sim files already created. This can be done via Edit/Cache Maintenance or by the command line instruction:
+    <span class="code">geeqie --cache-maintenance &lt;path&gt;</span>
+  </p>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideReferenceSimilarityAlgorithms.html#standard" title="Standard Algorithm">Standard Algorithm</a></li>
+<li class="links"><a class="xref" href="GuideReferenceSimilarityAlgorithms.html#alternate" title="Alternate Algorithm">Alternate Algorithm</a></li>
+</ul></div>
+</div>
+<section id="standard" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Standard Algorithm</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      To compare two images, each array element of each image is compared in turn. The computed value is the percent match of all elements of the two images. For this, simple comparisons are used - basically the value is an average of the corresponding array differences.
+      <p class="para"></p>
+      The value computed is in the range 0% to 100%.
+      <div class="literallayout">
+        100% for exact matches (an image is compared to itself)
+        0% for exact opposite images (compare an all black to an all white image)
+      </div>
+      Generally only a match of &gt;85% is significant at all, and &gt;95% is useful to find images that have been re-saved to other formats, dimensions, or compression.
+    </p>
+<p class="para">If the Ignore Orientation checkbox on the Duplicates window is selected, images are also checked for 90°, 180°, 270°, rotations and mirror and flip. This will increase run-time.</p>
+</div></div>
+</div></section><section id="alternate" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Alternate Algorithm</h2></div>
+<div class="region"><div class="contents pagewide"><p class="para">
+      The alternate algorithm can be enabled on the Advanced tab of Preferences.
+      <p class="para"></p>
+      It does not check for rotations, mirror or flip.
+      <p class="para"></p>
+      After comparing two array elements of two images, the difference from the preceding element comparison is included in the computation.
+      <p class="para"></p>
+      There is an additional option to reduce the fingerprint to grayscale before comparisons are made.
+    </p></div></div>
+</div></section>
+</div>
+<nav class="prevnext pagewide"><div class="inner">
+<a href="GuideReferenceSupportedFormats.html" title="Supported File Formats">Previous</a><a href="GuideReferencePixbufLoaders.html" title="Additional pixbuf loaders">Next</a>
+</div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
+<div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="copyrights">
+<div class="copyright">© <span class="year">2004</span> <span class="holder">John Ellis</span>
+</div>
+<div class="copyright">© <span class="year">2008-2016</span> <span class="holder">The Geeqie Team</span>
+</div>
+</div>
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li><span class="author"><span class="firstname">John</span> <span class="surname">Ellis</span></span></li></ul>
+</div>
+<div class="credits-publishers">
+<div class="title"><span class="title">Published By</span></div>
+<ul class="credits"><li><span class="publishername">The Geeqie Team</span></li></ul>
+</div>
+</div>
+<div class="license">
+<div class="title"><span class="title">Feedback</span></div>
+<div class="contents">
+<p class="para">
+        Comments and general help:
+        <span class="email">&lt;<a href="mailto:geeqie@freelists.org" title="Send email to ‘geeqie@freelists.org’.">geeqie@freelists.org</a>&gt;</span>
+      </p>
+<p class="para">
+        Bugs and Feature Requests:
+        <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">Geeqie Issues</a>
+      </p>
+<p class="para">
+        Website:
+        <a href="https://www.geeqie.org" class="ulink" title="https://www.geeqie.org">geeqie.org</a>
+      </p>
+</div>
+</div>
+</div></div>
+</div>
+</div></div></footer>
+</div></main></body>
+</html>
