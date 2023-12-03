@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">Geeqie is an interactive GTK based image viewer that supports multiple image formats,
 zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">Generated for version:</p>
-<p class="para">Geeqie 2.1+git20230810-c41eb43c</p>
+<p class="para">Geeqie 2.1+git20231026-2338cf60</p>
 </div>
 <section id="valid_options" class="refsect2"><div class="inner">
 <div class="hgroup pagewide"><h5 class="title">Valid options:</h5></div>
@@ -78,7 +78,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <span class="em em-bold emphasis">-n</span>, <span class="em em-bold emphasis">--new-instance</span>
 </dt>
 <dd class="terms">
-<p class="para">open a new instance of Geeqie</p>
+<p class="para">open a new instance of Geeqie *</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">-o</span>:, <span class="em em-bold emphasis">--log-file</span>:&lt;file&gt;</dt>
@@ -136,6 +136,10 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">filter debug output</p>
   </dd>
 </dl></div></div></div></div>
+<p class="para">* Normally a single set of configuration files is used for all instances.
+However, the environment variables XDG_CONFIG_HOME, XDG_CACHE_HOME, XDG_DATA_HOME
+can be used to modify this behavior on an individual basis e.g.</p>
+<p class="para">XDG_CONFIG_HOME=/tmp/a XDG_CACHE_HOME=/tmp/b geeqie</p>
 </div></div>
 </div></section><section id="remote_command_list" class="refsect2"><div class="inner">
 <div class="hgroup pagewide"><h5 class="title">Remote command list:</h5></div>
@@ -220,16 +224,8 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <dd class="terms">
 <p class="para">open FILE or URL, bring Geeqie window to the top</p>
   </dd>
-<dt class="terms">file:&lt;FILE&gt;|&lt;URL&gt;</dt>
-<dd class="terms">
-<p class="para">open FILE or URL, bring Geeqie window to the top</p>
-  </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--File</span>:&lt;FILE&gt;|&lt;URL&gt;</dt>
-<dd class="terms">
-<p class="para">open FILE or URL, do not bring Geeqie window to the top</p>
-  </dd>
-<dt class="terms">File:&lt;FILE&gt;|&lt;URL&gt;</dt>
 <dd class="terms">
 <p class="para">open FILE or URL, do not bring Geeqie window to the top</p>
   </dd>
@@ -351,10 +347,6 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <dd class="terms">
 <p class="para">bring the Geeqie window to the top</p>
   </dd>
-<dt class="terms">raise</dt>
-<dd class="terms">
-<p class="para">bring the Geeqie window to the top</p>
-  </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--selection-add</span>:[&lt;FILE&gt;]</dt>
 <dd class="terms">
@@ -409,10 +401,6 @@ zooming, panning, thumbnails and sorting images into collections.</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--view</span>:&lt;FILE&gt;</dt>
-<dd class="terms">
-<p class="para">open FILE in new window</p>
-  </dd>
-<dt class="terms">view:&lt;FILE&gt;</dt>
 <dd class="terms">
 <p class="para">open FILE in new window</p>
 

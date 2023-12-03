@@ -23,27 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="contents pagewide">
 <p class="para">The following plugins are supplied as standard with Geeqie.</p>
 <div class="links sectionlinks" role="navigation"><ul>
-<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Symlink" title="Symlink">Symlink</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Applytheorientationtoimagecontent" title="Apply the orientation to image content">Apply the orientation to image content</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Cameraimport" title="Camera import">Camera import</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Exportjpeg" title="Export jpeg">Export jpeg</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Imagecrop" title="Image crop">Image crop</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#OpenWith" title="Open With">Open With</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Randomimage" title="Random image">Random image</a></li>
-<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Tetheredphotography" title="Tethered photography">Tethered photography</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#downsize" title="Resize image">Resize image</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Symlink" title="Symlink">Symlink</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Tetheredphotography" title="Tethered photography">Tethered photography</a></li>
 </ul></div>
 </div>
-<section id="Symlink" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Symlink</h2></div>
-<div class="region"><div class="contents pagewide">
-<p class="para">Creates a symbolic link on the selected files. If a file has sidecars, they will also be symlinked.</p>
-<p class="para">
-      This item is displayed in the
-      <span class="em em-bold emphasis">File</span>
-      menu.
-    </p>
-</div></div>
-</div></section><section id="Applytheorientationtoimagecontent" class="section"><div class="inner">
+<section id="Applytheorientationtoimagecontent" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Apply the orientation to image content</h2></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">This command affects only jpeg, tiff and png files. The image file on disk is rotated to the orientation as specified by its Exif Orientation tag.</p>
@@ -111,31 +102,20 @@ document.addEventListener('DOMContentLoaded', function() {
       menu.
     </p>
 </div></div>
+</div></section><section id="OpenWith" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Open With</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Call the standard GTK application chooser for a single file.</p>
+<p class="para">
+      This item is also displayed in the
+      <span class="em em-bold emphasis">File</span>
+      menu.
+    </p>
+</div></div>
 </div></section><section id="Randomimage" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Random image</h2></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">Selects and displays a random image from a list of all images in Collections and the currently displayed folder.</p>
-<p class="para">
-      This item is displayed in the
-      <span class="em em-bold emphasis">Plugins</span>
-      menu.
-    </p>
-</div></div>
-</div></section><section id="Tetheredphotography" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Tethered photography</h2></div>
-<div class="region"><div class="contents pagewide">
-<p class="para">
-      If a camera is connected to the computer via USB, photos taken are immediately downloaded to the current folder and displayed on the computer.
-      <p class="para"></p>
-      If a file already exists with the same name, it is not overwritten but the download will not take place.
-      <p class="para"></p>
-      Auto-rename can be achieved with the --filename option of gphoto2.
-      <p class="para"></p>
-      In file
-      <span class="code">$HOME/.config/gphoto2/settings</span>
-      , set the option:
-      <span class="code">gphoto2=filename=&lt;see the gphoto2 manual&gt;</span>
-    </p>
 <p class="para">
       This item is displayed in the
       <span class="em em-bold emphasis">Plugins</span>
@@ -209,6 +189,37 @@ document.addEventListener('DOMContentLoaded', function() {
       can be found at: http://www.imagemagick.org/script/license.php
     </code></pre></div>
 <p class="para"></p>
+</div></div>
+</div></section><section id="Symlink" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Symlink</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Creates a symbolic link on the selected files. If a file has sidecars, they will also be symlinked.</p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">File</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="Tetheredphotography" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Tethered photography</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      If a camera is connected to the computer via USB, photos taken are immediately downloaded to the current folder and displayed on the computer.
+      <p class="para"></p>
+      If a file already exists with the same name, it is not overwritten but the download will not take place.
+      <p class="para"></p>
+      Auto-rename can be achieved with the --filename option of gphoto2.
+      <p class="para"></p>
+      In file
+      <span class="code">$HOME/.config/gphoto2/settings</span>
+      , set the option:
+      <span class="code">gphoto2=filename=&lt;see the gphoto2 manual&gt;</span>
+    </p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Plugins</span>
+      menu.
+    </p>
 </div></div>
 </div></section>
 </div>
