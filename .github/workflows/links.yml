@@ -3,7 +3,7 @@ name: Links
 on:
   push:
   schedule:
-    - cron: "15 03 * * *"
+    - cron: "15 15 * * *"
 
 jobs:
   linkChecker:
