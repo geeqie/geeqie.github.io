@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="links sectionlinks" role="navigation"><ul>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Applytheorientationtoimagecontent" title="Apply the orientation to image content">Apply the orientation to image content</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Cameraimport" title="Camera import">Camera import</a></li>
+<li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Exifdatetimetofile" title="Exif datetime to file">Exif datetime to file</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Exportjpeg" title="Export jpeg">Export jpeg</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#Imagecrop" title="Image crop">Image crop</a></li>
 <li class="links"><a class="xref" href="GuideReferenceStandardPlugins.html#OpenWith" title="Open With">Open With</a></li>
@@ -61,6 +62,20 @@ document.addEventListener('DOMContentLoaded', function() {
       <span class="code">--filename</span>
       option to ensure that all filenames are unique when downloading. Refer to the
       <a href="http://www.gphoto.org/doc/manual/ref-gphoto2-cli.html" class="ulink" title="http://www.gphoto.org/doc/manual/ref-gphoto2-cli.html">gphoto2 documentation.</a>
+    </p>
+<p class="para">
+      This item is displayed in the
+      <span class="em em-bold emphasis">Plugins</span>
+      menu.
+    </p>
+</div></div>
+</div></section><section id="Exifdatetimetofile" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Exif datetime to file</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      Sets the file datetime (mtime) to the Exif.Image.DateTimeOriginal value. If the exif tag does not exist, no action is taken.
+      <p class="para"></p>
+      This may be useful if you wish to sort on Exif.Image.DateTimeOriginal. This requires that the metadata for all files in the folder must be read each time. This is time consuming. If this operation is carried out when images are imported from the camera, future sorting can utilize file datetime which will be much faster.
     </p>
 <p class="para">
       This item is displayed in the
