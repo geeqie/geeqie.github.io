@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">Geeqie is an interactive GTK based image viewer that supports multiple image formats,
 zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">Generated for version:</p>
-<p class="para">Geeqie 2.4</p>
+<p class="para">Geeqie 2.4+git20240413-fc816858</p>
 </div>
 <section id="valid_options" class="refsect2"><div class="inner">
 <div class="hgroup pagewide"><h5 class="title">Valid options:</h5></div>
@@ -46,7 +46,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">start with blank file list</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--cache-maintenance</span> &lt;path&gt;</dt>
+<span class="em em-bold emphasis">--cache-maintenance=</span>&lt;path&gt;</dt>
 <dd class="terms">
 <p class="para">run cache maintenance in non-GUI mode</p>
   </dd>
@@ -81,7 +81,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">open a new instance of Geeqie *</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-o</span>:, <span class="em em-bold emphasis">--log-file</span>:&lt;file&gt;</dt>
+<span class="em em-bold emphasis">-o</span>, <span class="em em-bold emphasis">--log-file=</span>&lt;file&gt;</dt>
 <dd class="terms">
 <p class="para">save log data to file</p>
   </dd>
@@ -91,9 +91,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <dd class="terms">
 <p class="para">send following commands to open window</p>
   </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-rh</span>, <span class="em em-bold emphasis">--remote-help</span>
-</dt>
+<dt class="terms"><span class="em em-bold emphasis">--remote-help</span></dt>
 <dd class="terms">
 <p class="para">print remote command list</p>
   </dd>
@@ -103,7 +101,8 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <dd class="terms">
 <p class="para">start in slideshow mode</p>
   </dd>
-<dt class="terms">+t, <span class="em em-bold emphasis">--with-tools</span>
+<dt class="terms">
+<span class="em em-bold emphasis">-T</span>, <span class="em em-bold emphasis">--with-tools</span>
 </dt>
 <dd class="terms">
 <p class="para">force show of tools</p>
@@ -120,7 +119,8 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <dd class="terms">
 <p class="para">print version info</p>
   </dd>
-<dt class="terms">+w, <span class="em em-bold emphasis">--show-log-window</span>
+<dt class="terms">
+<span class="em em-bold emphasis">-w</span>, <span class="em em-bold emphasis">--show-log-window</span>
 </dt>
 <dd class="terms">
 <p class="para">show log window</p>
@@ -131,7 +131,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">turn on debug output</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-g</span>:, <span class="em em-bold emphasis">--grep</span>:&lt;regexp&gt;</dt>
+<span class="em em-bold emphasis">-g</span>, <span class="em em-bold emphasis">--grep=</span>&lt;regexp&gt;</dt>
 <dd class="terms">
 <p class="para">filter debug output</p>
   </dd>
@@ -145,7 +145,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <div class="hgroup pagewide"><h5 class="title">Remote command list:</h5></div>
 <div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
 <dt class="terms">
-<span class="em em-bold emphasis">--action</span>:&lt;ACTION&gt;</dt>
+<span class="em em-bold emphasis">--action=</span>&lt;ACTION&gt;</dt>
 <dd class="terms">
 <p class="para">execute keyboard action (See Help/Reference/Remote Keyboard Actions)</p>
   </dd>
@@ -164,48 +164,46 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">close window</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--config-load</span>:&lt;FILE&gt;|layout ID</dt>
+<span class="em em-bold emphasis">--config-load=</span>&lt;FILE&gt;|layout ID</dt>
 <dd class="terms">
 <p class="para">load configuration from FILE</p>
   </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-cm</span> <span class="em em-bold emphasis">--cache-metadata</span>
-</dt>
+<dt class="terms"><span class="em em-bold emphasis">--cache-metadata</span></dt>
 <dd class="terms">
 <p class="para">clean the metadata cache</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-cr</span>: <span class="em em-bold emphasis">--cache-render</span>:&lt;folder&gt;</dt>
+<span class="em em-bold emphasis">--cache-render=</span>&lt;folder&gt;</dt>
 <dd class="terms">
 <p class="para">render thumbnails</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-crr</span>: <span class="em em-bold emphasis">--cache-render-recurse</span>:&lt;folder&gt;</dt>
+<span class="em em-bold emphasis">--cache-render-recurse=</span>&lt;folder&gt;</dt>
 <dd class="terms">
 <p class="para">render thumbnails recursively</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-crs</span>: <span class="em em-bold emphasis">--cache-render-shared</span>:&lt;folder&gt;</dt>
+<span class="em em-bold emphasis">--cache-render-shared=</span>&lt;folder&gt;</dt>
 <dd class="terms">
 <p class="para">render thumbnails (see Help)</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-crsr</span>: <span class="em em-bold emphasis">--cache-render-shared-recurse</span>:&lt;folder&gt;</dt>
+<span class="em em-bold emphasis">--cache-render-shared-recurse=</span>&lt;folder&gt;</dt>
 <dd class="terms">
 <p class="para">render thumbnails recursively (see Help)</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-cs</span>: <span class="em em-bold emphasis">--cache-shared</span>:clear|clean</dt>
+<span class="em em-bold emphasis">--cache-shared</span>=<span class="em emphasis">clean</span>|clear</dt>
 <dd class="terms">
-<p class="para">clear or clean shared thumbnail cache</p>
+<p class="para">clean or clear shared thumbnail cache</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-ct</span>: <span class="em em-bold emphasis">--cache-thumbs</span>:clear|clean</dt>
+<span class="em em-bold emphasis">--cache-thumbs</span>=<span class="em emphasis">clean</span>|clear</dt>
 <dd class="terms">
-<p class="para">clear or clean thumbnail cache</p>
+<p class="para">clean or clear thumbnail cache</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-d</span> <span class="em em-bold emphasis">--delay=</span>&lt;[H:][M:][N][.M]&gt;</dt>
+<span class="em em-bold emphasis">-d</span> <span class="em em-bold emphasis">--delay=</span>&lt;[H=][M=][N][.M]&gt;</dt>
 <dd class="terms">
 <p class="para">set slide show delay to Hrs Mins N.M seconds</p>
   </dd>
@@ -220,24 +218,20 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">toggle full screen</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--file</span>:&lt;FILE&gt;|&lt;URL&gt;</dt>
+<span class="em em-bold emphasis">--file=</span>&lt;FILE&gt;|&lt;URL&gt;</dt>
 <dd class="terms">
 <p class="para">open FILE or URL, bring Geeqie window to the top</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--File</span>:&lt;FILE&gt;|&lt;URL&gt;</dt>
+<span class="em em-bold emphasis">--File=</span>&lt;FILE&gt;|&lt;URL&gt;</dt>
 <dd class="terms">
 <p class="para">open FILE or URL, do not bring Geeqie window to the top</p>
   </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-fs</span> <span class="em em-bold emphasis">--fullscreen-start</span>
-</dt>
+<dt class="terms"><span class="em em-bold emphasis">--fullscreen-start</span></dt>
 <dd class="terms">
 <p class="para">start full screen</p>
   </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-fS</span> <span class="em em-bold emphasis">--fullscreen-stop</span>
-</dt>
+<dt class="terms"><span class="em em-bold emphasis">--fullscreen-stop</span></dt>
 <dd class="terms">
 <p class="para">stop full screen</p>
   </dd>
@@ -247,7 +241,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">set window geometry</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--get-collection</span>:&lt;COLLECTION&gt;</dt>
+<span class="em em-bold emphasis">--get-collection=</span>&lt;COLLECTION&gt;</dt>
 <dd class="terms">
 <p class="para">get collection content</p>
   </dd>
@@ -256,7 +250,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">get collection list</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--get-destination</span>:&lt;FILE&gt;</dt>
+<span class="em em-bold emphasis">--get-destination=</span>&lt;FILE&gt;</dt>
 <dd class="terms">
 <p class="para">get destination path of FILE (See Plugins Configuration)</p>
   </dd>
@@ -265,12 +259,12 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">get file info</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--get-filelist</span>:[&lt;FOLDER&gt;]</dt>
+<span class="em em-bold emphasis">--get-filelist</span>=<span class="em emphasis">[</span>&lt;FOLDER&gt;]</dt>
 <dd class="terms">
 <p class="para">get list of files and class</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--get-filelist-recurse</span>:[&lt;FOLDER&gt;]</dt>
+<span class="em em-bold emphasis">--get-filelist-recurse</span>=<span class="em emphasis">[</span>&lt;FOLDER&gt;]</dt>
 <dd class="terms">
 <p class="para">get list of files and class recursive</p>
   </dd>
@@ -287,7 +281,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">get list of selected files</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--get-sidecars</span>:&lt;FILE&gt;</dt>
+<span class="em em-bold emphasis">--get-sidecars=</span>&lt;FILE&gt;</dt>
 <dd class="terms">
 <p class="para">get list of sidecars of FILE</p>
   </dd>
@@ -296,7 +290,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">get window list</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--id</span>:&lt;ID&gt;</dt>
+<span class="em em-bold emphasis">--id=</span>&lt;ID&gt;</dt>
 <dd class="terms">
 <p class="para">window id for following commands</p>
   </dd>
@@ -305,7 +299,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">last image</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--list-add</span>:&lt;FILE&gt;</dt>
+<span class="em em-bold emphasis">--list-add=</span>&lt;FILE&gt;</dt>
 <dd class="terms">
 <p class="para">add FILE to command line collection list</p>
   </dd>
@@ -314,7 +308,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">clear command line collection list</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--lua</span>:&lt;FILE&gt;,&lt;lua script&gt;</dt>
+<span class="em em-bold emphasis">--lua=</span>&lt;FILE&gt;,&lt;lua script&gt;</dt>
 <dd class="terms">
 <p class="para">run lua script on FILE</p>
   </dd>
@@ -337,7 +331,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">terminate returned data with null character instead of newline</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--PWD</span>:&lt;PWD&gt;</dt>
+<span class="em em-bold emphasis">--PWD=</span>&lt;PWD&gt;</dt>
 <dd class="terms">
 <p class="para">use PWD as working directory for following commands</p>
   </dd>
@@ -352,7 +346,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">bring the Geeqie window to the top</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--selection-add</span>:[&lt;FILE&gt;]</dt>
+<span class="em em-bold emphasis">--selection-add</span>=<span class="em emphasis">[</span>&lt;FILE&gt;]</dt>
 <dd class="terms">
 <p class="para">adds the current file (or the specified file) to the current selection</p>
   </dd>
@@ -361,7 +355,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">clears the current selection</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--selection-remove</span>:[&lt;FILE&gt;]</dt>
+<span class="em em-bold emphasis">--selection-remove</span>=<span class="em emphasis">[</span>&lt;FILE&gt;]</dt>
 <dd class="terms">
 <p class="para">removes the current file (or the specified file) from the current selection</p>
   </dd>
@@ -372,19 +366,15 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">toggle slide show</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--slideshow-recurse</span>:&lt;FOLDER&gt;</dt>
+<span class="em em-bold emphasis">--slideshow-recurse=</span>&lt;FOLDER&gt;</dt>
 <dd class="terms">
 <p class="para">start recursive slide show in FOLDER</p>
   </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-ss</span> <span class="em em-bold emphasis">--slideshow-start</span>
-</dt>
+<dt class="terms"><span class="em em-bold emphasis">--slideshow-start</span></dt>
 <dd class="terms">
 <p class="para">start slide show</p>
   </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-sS</span> <span class="em em-bold emphasis">--slideshow-stop</span>
-</dt>
+<dt class="terms"><span class="em em-bold emphasis">--slideshow-stop</span></dt>
 <dd class="terms">
 <p class="para">stop slide show</p>
   </dd>
@@ -392,7 +382,8 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <dd class="terms">
 <p class="para">print filename [and Collection] of current image</p>
   </dd>
-<dt class="terms">+t <span class="em em-bold emphasis">--tools-show</span>
+<dt class="terms">
+<span class="em em-bold emphasis">-T</span> <span class="em em-bold emphasis">--tools-show</span>
 </dt>
 <dd class="terms">
 <p class="para">show tools</p>
@@ -404,7 +395,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">hide tools</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--view</span>:&lt;FILE&gt;</dt>
+<span class="em em-bold emphasis">--view=</span>&lt;FILE&gt;</dt>
 <dd class="terms">
 <p class="para">open FILE in new window</p>
 

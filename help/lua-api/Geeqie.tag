@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.9.4">
+<tagfile doxygen_version="1.10.0" doxygen_gitid="ebe22c618c483864e1686b3c92408aa9bdc78c4e">
   <compound kind="file">
     <name>lua.cc</name>
-    <path>/home/cclark/data/geeqie/geeqie/src/</path>
+    <path>src/</path>
     <filename>lua_8cc.html</filename>
     <member kind="function" static="yes">
       <type>static int</type>
