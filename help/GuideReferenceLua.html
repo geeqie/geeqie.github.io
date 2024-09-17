@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="contents pagewide">
 <p class="para">
     Lua scripts allow the functionality of Geeqie to be extended. Lua scripts may only be used in conjunction with the
-    <a class="link" href="GuideOptionsOSD.html#OverlayScreenDisplay" title="Overlay Screen Display">Overlay Screen Display</a>
+    <span class="em emphasis"><a class="link" href="GuideOptionsOSD.html#OverlayScreenDisplay" title="Overlay Screen Display">Overlay Screen Display</a></span>
     ,
-    <a class="link" href="GuideSidebarsInfo.html" title="Info Sidebar">List panes</a>
+    <span class="em emphasis"><a class="link" href="GuideSidebarsInfo.html" title="Info Sidebar">List panes</a></span>
     on the Info Sidebar, and the
     <div class="code"><pre class="contents"><code>geeqie --remote --lua:</code></pre></div>
     command line option.
@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="region"><div class="contents pagewide">
 <p class="para">
       Lua scripts must be stored in a single folder as defined in
-      <a class="link" href="GuideReferenceConfig.html" title="Configuration Files and Locations">Configuration Files and Locations</a>
+      <span class="em emphasis"><a class="link" href="GuideReferenceConfig.html" title="Configuration Files and Locations">Configuration Files and Locations</a></span>
       .
     </p>
 <p class="para">
       A link to a Lua script must be inserted into the overlay template. Refer to the
-      <a class="link" href="GuideOptionsOSD.html#OverlayScreenDisplay" title="Overlay Screen Display">Overlay Screen Display</a>
+      <span class="em emphasis"><a class="link" href="GuideOptionsOSD.html#OverlayScreenDisplay" title="Overlay Screen Display">Overlay Screen Display</a></span>
       section of Window Options.
     </p>
 <p class="para">The full extent of the Lua language is available.</p>
@@ -127,7 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
       The following example demonstrates how to extract exif data from a file:
       <div class="code"><pre class="contents"><code>        --Retrieve the DateTimeDigitized exif tag
         exif_structure = Image:get_exif();
-        DateTimeDigitized = exif_structure:get_datum("Exif.Photo.DateTimeDigitized");
+        DateTimeDigitized =
+             exif_structure:get_datum("Exif.Photo.DateTimeDigitized");
         return (os.date(DateTimeDigitized))
       </code></pre></div>
     </p>
@@ -181,7 +182,31 @@ document.addEventListener('DOMContentLoaded', function() {
         Website:
         <a href="https://www.geeqie.org" class="ulink" title="https://www.geeqie.org">geeqie.org</a>
       </p>
-</div>
+      
+        0.1
+        <span class="date">2004-01-01</span>
+        
+          <p class="para">John Ellis</p>
+          <p class="para">Gqview Project</p>
+        
+      
+      
+        0.2
+        <span class="date">2016-05-30</span>
+        
+          <p class="para">Colin Clark</p>
+          <p class="para">The Geeqie Team</p>
+        
+      
+      
+        0.3
+        <span class="date">2024-09-16</span>
+        
+          <p class="para">Colin Clark</p>
+          <p class="para">The Geeqie Team</p>
+        
+      
+    </div>
 </div>
 </div></div>
 </div>

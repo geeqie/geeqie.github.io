@@ -31,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
       The format of each entry is:
       <div class="code"><pre class="contents"><code>%tag[:max_length][:extra]%</code></pre></div>
     </p>
-<div class="table"><table style="border: solid 1px;"><tbody>
+<div class="table">
+<div class="title"><h3><span class="title">Overlay Screen Display templates</span></h3></div>
+<table summary="Overlay Screen Display templates" style="border: solid 1px;"><tbody>
 <tr>
 <td class="td-colsep td-rowsep">
               <span class="em em-bold emphasis">Tag</span>
@@ -108,10 +110,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <td class="td-colsep">lua//&lt;lua_command&gt;</td>
 <td>The output of a Lua command</td>
 </tr>
-</tbody></table></div>
+</tbody></table>
+</div>
 <p class="para">
       As an aide, in addition to standard metadata tags, Geeqie provides a number of
-      <a class="link" href="GuideSidebarsInfo.html#formatted_exif" title="List panes">pre-formatted tags</a>
+      <span class="em emphasis"><a class="link" href="GuideSidebarsInfo.html#formatted_exif" title="Pre-formatted tags">pre-formatted tags</a></span>
       .
     </p>
 <p class="para">Examples of usage are:</p>
@@ -124,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </p>
 <p class="para">
       Refer to
-      <a class="link" href="GuideReferenceLua.html" title="Lua Extensions">Lua Extensions</a>
+      <span class="em emphasis"><a class="link" href="GuideReferenceLua.html" title="Lua Extensions">Lua Extensions</a></span>
       for further information.
     </p>
 <p class="para">
@@ -137,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
       If two or more variables are connected with the
       <span class="code">|</span>
       character, the variables are displayed with a separator. For example::
-      <div class="code"><pre class="contents"><code>%formatted.ShutterSpeed%|%formatted.ISOSpeedRating%|%formatted.FocalLength%</code></pre></div>
+      <p class="para"><span class="code">%formatted.ShutterSpeed%|%formatted.ISOSpeedRating%|%formatted.FocalLength%</span></p><p class="para"></p>
       could show:
       <div class="code"><pre class="contents"><code>"1/20s - 400 - 80 mm"</code></pre></div>
       Or, if there is no ISO information in the Exif data:
@@ -155,11 +158,13 @@ document.addEventListener('DOMContentLoaded', function() {
       is used to mark the position of the Tag data item. If no
       <span class="code">*</span>
       is present, the extra string is just appended to the standard data displayed. Any "\n" is replaced by a newline on display.
-      <a class="link" href="GuideReferenceStandards.html" title="Standards">Pango mark up</a>
+      <span class="em emphasis"><a class="link" href="GuideReferenceStandards.html" title="Standards">Pango mark up</a></span>
       is accepted in both left and right parts. If the data item is empty, nothing will be displayed.
     </p>
 <p class="para">Examples:</p>
-<div class="table"><table style="border: solid 1px;"><tbody>
+<div class="table">
+<div class="title"><h3><span class="title">Overlay Screen Display template examples</span></h3></div>
+<table summary="Overlay Screen Display template examples" style="border: solid 1px;"><tbody>
 <tr>
 <td class="td-colsep td-rowsep">
               <span class="em em-bold emphasis">Template</span>
@@ -196,7 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
               <span class="em em-bold emphasis">my_new_collection</span>
             </td>
 </tr>
-</tbody></table></div>
+</tbody></table>
+</div>
 <p class="para"></p>
 <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
 <dt class="terms">
@@ -285,7 +291,31 @@ document.addEventListener('DOMContentLoaded', function() {
         Website:
         <a href="https://www.geeqie.org" class="ulink" title="https://www.geeqie.org">geeqie.org</a>
       </p>
-</div>
+      
+        0.1
+        <span class="date">2004-01-01</span>
+        
+          <p class="para">John Ellis</p>
+          <p class="para">Gqview Project</p>
+        
+      
+      
+        0.2
+        <span class="date">2016-05-30</span>
+        
+          <p class="para">Colin Clark</p>
+          <p class="para">The Geeqie Team</p>
+        
+      
+      
+        0.3
+        <span class="date">2024-09-16</span>
+        
+          <p class="para">Colin Clark</p>
+          <p class="para">The Geeqie Team</p>
+        
+      
+    </div>
 </div>
 </div></div>
 </div>
