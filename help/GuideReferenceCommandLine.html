@@ -25,124 +25,45 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="contents pagewide"><div class="refnamedivs"><div class="refnamediv">
 <span class="refname">Geeqie</span> — <span class="refpurpose">GTK based multiformat image viewer</span>
 </div></div></div>
-<section id="synopsis" class="refsynopsisdiv"><div class="inner">
-<div class="hgroup pagewide"><h4 class="title">Synopsis</h4></div>
-<div class="region"><div class="contents pagewide"><div class="synopsis cmdsynopsis"><pre class="contents cmdsynopsis"><span class="cmd command">geeqie</span> <span class="arg-punc">[<span class="arg"><span class="var replaceable">options</span></span>]</span> <span class="arg-punc">[<span class="arg"><span class="var replaceable">path</span></span>]</span></pre></div></div></div>
-</div></section><section id="description" class="refsect1"><div class="inner">
+<section id="description" class="refsect1"><div class="inner">
 <div class="hgroup pagewide"><h4 class="title">DESCRIPTION</h4></div>
 <div class="region">
 <div class="contents pagewide">
 <p class="para">Geeqie is an interactive GTK based image viewer that supports multiple image formats,
 zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">Generated for version:</p>
-<p class="para">Geeqie 2.4+git20240413-fc816858</p>
 </div>
-<section id="valid_options" class="refsect2"><div class="inner">
-<div class="hgroup pagewide"><h5 class="title">Valid options:</h5></div>
+<section id="usage" class="refsect2"><div class="inner">
+<div class="hgroup pagewide"><h5 class="title">Usage:</h5></div>
 <div class="region"><div class="contents pagewide">
-<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
-<dt class="terms"><span class="em em-bold emphasis">--blank</span></dt>
-<dd class="terms">
-<p class="para">start with blank file list</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">--cache-maintenance=</span>&lt;path&gt;</dt>
-<dd class="terms">
-<p class="para">run cache maintenance in non-GUI mode</p>
-  </dd>
-<dt class="terms"><span class="em em-bold emphasis">--disable-clutter</span></dt>
-<dd class="terms">
-<p class="para">disable use of Clutter library (i.e. GPU accel.)</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-f</span>, <span class="em em-bold emphasis">--fullscreen</span>
-</dt>
-<dd class="terms">
-<p class="para">start in full screen mode</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">--geometry</span>=<span class="em emphasis">WxH</span>+XOFF+YOFF</dt>
-<dd class="terms">
-<p class="para">set main window location</p>
-  </dd>
+<p class="para">geeqie [OPTION?] [path...]</p>
+<p class="para">Geeqie is an image viewer.</p>
+<p class="para">Version: Geeqie 2.5+git20241018-28accf20</p>
+</div></div>
+</div></section><section id="help_options" class="refsect2"><div class="inner">
+<div class="hgroup pagewide"><h5 class="title">Help Options:</h5></div>
+<div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
 <dt class="terms">
 <span class="em em-bold emphasis">-h</span>, <span class="em em-bold emphasis">--help</span>
 </dt>
 <dd class="terms">
-<p class="para">show this message</p>
+<p class="para">Show help options</p>
   </dd>
-</dl></div></div></div></div>
-<p class="para"><span class="em em-bold emphasis">-l</span>, <span class="em em-bold emphasis">--list</span> [files] [collections] open collection window for command line</p>
-<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
-<dt class="terms">
-<span class="em em-bold emphasis">-n</span>, <span class="em em-bold emphasis">--new-instance</span>
-</dt>
+<dt class="terms"><span class="em em-bold emphasis">--help-all</span></dt>
 <dd class="terms">
-<p class="para">open a new instance of Geeqie *</p>
+<p class="para">Show all help options</p>
   </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-o</span>, <span class="em em-bold emphasis">--log-file=</span>&lt;file&gt;</dt>
+<dt class="terms"><span class="em em-bold emphasis">--help-gapplication</span></dt>
 <dd class="terms">
-<p class="para">save log data to file</p>
+<p class="para">Show GApplication options</p>
   </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-r</span>, <span class="em em-bold emphasis">--remote</span>
-</dt>
+<dt class="terms"><span class="em em-bold emphasis">--help-gtk</span></dt>
 <dd class="terms">
-<p class="para">send following commands to open window</p>
+<p class="para">Show GTK+ Options</p>
   </dd>
-<dt class="terms"><span class="em em-bold emphasis">--remote-help</span></dt>
-<dd class="terms">
-<p class="para">print remote command list</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-s</span>, <span class="em em-bold emphasis">--slideshow</span>
-</dt>
-<dd class="terms">
-<p class="para">start in slideshow mode</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-T</span>, <span class="em em-bold emphasis">--with-tools</span>
-</dt>
-<dd class="terms">
-<p class="para">force show of tools</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-t</span>, <span class="em em-bold emphasis">--without-tools</span>
-</dt>
-<dd class="terms">
-<p class="para">force hide of tools</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-v</span>, <span class="em em-bold emphasis">--version</span>
-</dt>
-<dd class="terms">
-<p class="para">print version info</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-w</span>, <span class="em em-bold emphasis">--show-log-window</span>
-</dt>
-<dd class="terms">
-<p class="para">show log window</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">--debug</span>[=<span class="em emphasis">level</span>]</dt>
-<dd class="terms">
-<p class="para">turn on debug output</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-g</span>, <span class="em em-bold emphasis">--grep=</span>&lt;regexp&gt;</dt>
-<dd class="terms">
-<p class="para">filter debug output</p>
-  </dd>
-</dl></div></div></div></div>
-<p class="para">* Normally a single set of configuration files is used for all instances.
-However, the environment variables XDG_CONFIG_HOME, XDG_CACHE_HOME, XDG_DATA_HOME
-can be used to modify this behavior on an individual basis e.g.</p>
-<p class="para">XDG_CONFIG_HOME=/tmp/a XDG_CACHE_HOME=/tmp/b geeqie</p>
-</div></div>
-</div></section><section id="remote_command_list" class="refsect2"><div class="inner">
-<div class="hgroup pagewide"><h5 class="title">Remote command list:</h5></div>
+</dl></div></div></div></div></div></div>
+</div></section><section id="application_options" class="refsect2"><div class="inner">
+<div class="hgroup pagewide"><h5 class="title">Application Options:</h5></div>
 <div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
 <dt class="terms">
 <span class="em em-bold emphasis">--action=</span>&lt;ACTION&gt;</dt>
@@ -154,19 +75,10 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">list available keyboard actions (some are redundant)</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-b</span> <span class="em em-bold emphasis">--back</span>
+<span class="em em-bold emphasis">-b</span>, <span class="em em-bold emphasis">--back</span>
 </dt>
 <dd class="terms">
 <p class="para">previous image</p>
-  </dd>
-<dt class="terms"><span class="em em-bold emphasis">--close-window</span></dt>
-<dd class="terms">
-<p class="para">close window</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">--config-load=</span>&lt;FILE&gt;|layout ID</dt>
-<dd class="terms">
-<p class="para">load configuration from FILE</p>
   </dd>
 <dt class="terms"><span class="em em-bold emphasis">--cache-metadata</span></dt>
 <dd class="terms">
@@ -195,50 +107,57 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <dt class="terms">
 <span class="em em-bold emphasis">--cache-shared</span>=<span class="em emphasis">clean</span>|clear</dt>
 <dd class="terms">
-<p class="para">clean or clear shared thumbnail cache</p>
+<p class="para">clear or clean shared thumbnail cache</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--cache-thumbs</span>=<span class="em emphasis">clean</span>|clear</dt>
+<span class="em em-bold emphasis">--cache-thumbs</span>=<span class="em emphasis">clear</span>|clean</dt>
 <dd class="terms">
-<p class="para">clean or clear thumbnail cache</p>
+<p class="para">clear or clean thumbnail cache</p>
+  </dd>
+<dt class="terms"><span class="em em-bold emphasis">--close-window</span></dt>
+<dd class="terms">
+<p class="para">close window</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-d</span> <span class="em em-bold emphasis">--delay=</span>&lt;[H=][M=][N][.M]&gt;</dt>
+<span class="em em-bold emphasis">--config-load=</span>&lt;FILE&gt;</dt>
 <dd class="terms">
-<p class="para">set slide show delay to Hrs Mins N.M seconds</p>
+<p class="para">load configuration from FILE</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--debug</span>=<span class="em emphasis">[level]</span>
+</dt>
+<dd class="terms">
+<p class="para">turn on debug output</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-d</span>, <span class="em em-bold emphasis">--delay=</span>&lt;[H:][M:][N][.M]&gt;</dt>
+<dd class="terms">
+<p class="para">set slide show delay to Hrs Mins N.M seconds,</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--file=</span>&lt;FILE&gt;|&lt;URL&gt;</dt>
+<dd class="terms">
+<p class="para">open FILE or URL bring Geeqie window to the top</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--File=</span>&lt;FILE&gt;|&lt;URL&gt;</dt>
+<dd class="terms">
+<p class="para">open FILE or URL do not bring Geeqie window to the top</p>
   </dd>
 <dt class="terms"><span class="em em-bold emphasis">--first</span></dt>
 <dd class="terms">
 <p class="para">first image</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-f</span> <span class="em em-bold emphasis">--fullscreen</span>
+<span class="em em-bold emphasis">-f</span>, <span class="em em-bold emphasis">--fullscreen</span>
 </dt>
 <dd class="terms">
-<p class="para">toggle full screen</p>
+<p class="para">start / toggle in full screen mode</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--file=</span>&lt;FILE&gt;|&lt;URL&gt;</dt>
+<span class="em em-bold emphasis">--geometry=</span>&lt;W&gt;x&lt;H&gt;[+&lt;XOFF&gt;+&lt;YOFF&gt;]</dt>
 <dd class="terms">
-<p class="para">open FILE or URL, bring Geeqie window to the top</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">--File=</span>&lt;FILE&gt;|&lt;URL&gt;</dt>
-<dd class="terms">
-<p class="para">open FILE or URL, do not bring Geeqie window to the top</p>
-  </dd>
-<dt class="terms"><span class="em em-bold emphasis">--fullscreen-start</span></dt>
-<dd class="terms">
-<p class="para">start full screen</p>
-  </dd>
-<dt class="terms"><span class="em em-bold emphasis">--fullscreen-stop</span></dt>
-<dd class="terms">
-<p class="para">stop full screen</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">--geometry=</span>&lt;GEOMETRY&gt;</dt>
-<dd class="terms">
-<p class="para">set window geometry</p>
+<p class="para">set main window location and geometry</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--get-collection=</span>&lt;COLLECTION&gt;</dt>
@@ -270,7 +189,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
   </dd>
 <dt class="terms"><span class="em em-bold emphasis">--get-rectangle</span></dt>
 <dd class="terms">
-<p class="para">get rectangle co-ordinates</p>
+<p class="para">get rectangle coordinates</p>
   </dd>
 <dt class="terms"><span class="em em-bold emphasis">--get-render-intent</span></dt>
 <dd class="terms">
@@ -287,7 +206,12 @@ can be used to modify this behavior on an individual basis e.g.</p>
   </dd>
 <dt class="terms"><span class="em em-bold emphasis">--get-window-list</span></dt>
 <dd class="terms">
-<p class="para">get window list</p>
+<p class="para">get list of windows</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">-g</span>, <span class="em em-bold emphasis">--grep=</span>&lt;regexp&gt;</dt>
+<dd class="terms">
+<p class="para">filter debug output</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--id=</span>&lt;ID&gt;</dt>
@@ -299,13 +223,9 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">last image</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--list-add=</span>&lt;FILE&gt;</dt>
+<span class="em em-bold emphasis">-o</span>, <span class="em em-bold emphasis">--log-file=</span>&lt;file&gt;</dt>
 <dd class="terms">
-<p class="para">add FILE to command line collection list</p>
-  </dd>
-<dt class="terms"><span class="em em-bold emphasis">--list-clear</span></dt>
-<dd class="terms">
-<p class="para">clear command line collection list</p>
+<p class="para">open collection window for command line</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--lua=</span>&lt;FILE&gt;,&lt;lua script&gt;</dt>
@@ -317,7 +237,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">new window</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-n</span> <span class="em em-bold emphasis">--next</span>
+<span class="em em-bold emphasis">-n</span>, <span class="em em-bold emphasis">--next</span>
 </dt>
 <dd class="terms">
 <p class="para">next image</p>
@@ -331,12 +251,7 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">terminate returned data with null character instead of newline</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--PWD=</span>&lt;PWD&gt;</dt>
-<dd class="terms">
-<p class="para">use PWD as working directory for following commands</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-q</span> <span class="em em-bold emphasis">--quit</span>
+<span class="em em-bold emphasis">-q</span>, <span class="em em-bold emphasis">--quit</span>
 </dt>
 <dd class="terms">
 <p class="para">quit</p>
@@ -360,48 +275,75 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <p class="para">removes the current file (or the specified file) from the current selection</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-s</span> <span class="em em-bold emphasis">--slideshow</span>
+<span class="em em-bold emphasis">-w</span>, <span class="em em-bold emphasis">--show-log-window</span>
 </dt>
 <dd class="terms">
-<p class="para">toggle slide show</p>
+<p class="para">show log window</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--slideshow-recurse=</span>&lt;FOLDER&gt;</dt>
 <dd class="terms">
 <p class="para">start recursive slide show in FOLDER</p>
   </dd>
-<dt class="terms"><span class="em em-bold emphasis">--slideshow-start</span></dt>
+<dt class="terms">
+<span class="em em-bold emphasis">-s</span>, <span class="em em-bold emphasis">--slideshow</span>
+</dt>
 <dd class="terms">
-<p class="para">start slide show</p>
-  </dd>
-<dt class="terms"><span class="em em-bold emphasis">--slideshow-stop</span></dt>
-<dd class="terms">
-<p class="para">stop slide show</p>
+<p class="para">toggle slide show</p>
   </dd>
 <dt class="terms"><span class="em em-bold emphasis">--tell</span></dt>
 <dd class="terms">
 <p class="para">print filename [and Collection] of current image</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-T</span> <span class="em em-bold emphasis">--tools-show</span>
+<span class="em em-bold emphasis">-t</span>, <span class="em em-bold emphasis">--tools</span>
 </dt>
 <dd class="terms">
-<p class="para">show tools</p>
+<p class="para">toggle tools</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">-t</span> <span class="em em-bold emphasis">--tools-hide</span>
+<span class="em em-bold emphasis">-v</span>, <span class="em em-bold emphasis">--version</span>
 </dt>
 <dd class="terms">
-<p class="para">hide tools</p>
+<p class="para">print version info</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--view=</span>&lt;FILE&gt;</dt>
 <dd class="terms">
 <p class="para">open FILE in new window</p>
+  </dd>
+<dt class="terms">
+<span class="em em-bold emphasis">--display</span>=<span class="em emphasis">DISPLAY</span>
+</dt>
+<dd class="terms">
+<p class="para">X display to use</p>
 
-<p class="para">All other command line parameters are used as plain files if they exist.</p>
+<p class="para">All other command line parameters are used as plain files if they exist, or a URL or a folder.
+The name of a collection, with or without either path or extension (.gqv) may be used.</p>
 
-<p class="para">The name of a collection, with or without either path or extension (.gqv) may be used.</p>
+<p class="para">If more than one folder is on the command line, only the last will be used.</p>
+
+<p class="para">If more than one file is on the command line:</p>
+
+<p class="para">If they are in the same folder, that folder will be opened and those files will be selected.
+If they are not in the same folder, a new Collection containing those files will be opened.</p>
+
+<p class="para">To run Geeqie as a new instance, use:
+GQ_NEW_INSTANCE=y[es] geeqie
+Normally a single set of configuration files is used for all instances.
+However, the environment variables XDG_CONFIG_HOME, XDG_CACHE_HOME, XDG_DATA_HOME
+can be used to modify this behavior on an individual basis e.g.
+XDG_CONFIG_HOME=/tmp/a XDG_CACHE_HOME=/tmp/b GQ_NON_UNIQUE= geeqie</p>
+
+<p class="para">To disable Clutter use:
+GQ_DISABLE_CLUTTER=y[es] geeqie</p>
+
+<p class="para">To run or stop Geeqie in cache maintenance (non-GUI) mode use:
+GQ_CACHE_MAINTENANCE=y[es] geeqie <span class="em em-bold emphasis">--help</span> (This is disabled in this version and will be fixed in a future version.)</p>
+
+<p class="para">User manual: https://www.geeqie.org/help/GuideIndex.html</p>
+
+<p class="para">: https://www.geeqie.org/help-pdf/help.pdf</p>
   </dd>
 </dl></div></div></div></div></div></div>
 </div></section>
@@ -414,9 +356,6 @@ can be used to modify this behavior on an individual basis e.g.</p>
 <div class="region"><div class="contents pagewide"><p class="para">Copyright (C) 1999-2004 by John Ellis. Copyright (C) 2004-2024 by The Geeqie Team. Use this software  at  your
 own  risk! This  software released under the GNU General Public License. Please read the COPYING file for more
 information.</p></div></div>
-</div></section><section id="see_also" class="refsect1"><div class="inner">
-<div class="hgroup pagewide"><h4 class="title">SEE ALSO</h4></div>
-<div class="region"><div class="contents pagewide"><p class="para">Full documentation: https://www.geeqie.org/help/GuideIndex.html</p></div></div>
 </div></section>
 </div>
 </div></section>

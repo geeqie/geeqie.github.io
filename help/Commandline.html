@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="HowdoIopenanimageinanexistingGeeqieapplication" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">How do I open an image in an existing Geeqie application ?</h2></div>
 <div class="region"><div class="contents pagewide">
-<p class="para">Use the “--remote” command line option to send commands to an existing Geeqie, for a list of commands supported by the remote switch run:</p>
-<div class="code"><pre class="contents"><code>geeqie --remote-help</code></pre></div>
+<p class="para">Use command line options to send commands to an existing Geeqie instance, for a list of commands supported by the remote switch run:</p>
+<div class="code"><pre class="contents"><code>geeqie --help</code></pre></div>
 <p class="para"></p>
 </div></div>
 </div></section><section id="HowdoIsettheslideshowdelaywhenstartingGeeqieinslideshowfromthecommandline" class="section"><div class="inner">
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">How do I set the slide show delay when starting Geeqie in slide show from the command line ?
       </p>
 <p class="para">The delay can not be set when used with the standard --slideshow command line switch, as --slideshow uses the delay stored in the configuration file.</p>
-<p class="para">For this, use the remote command --slideshow-start to start the slide show after setting the delay with --delay=. The order of the command line is important. For example for a 12 second slide show delay use:</p>
-<div class="code"><pre class="contents"><code>geeqie --remote  --delay=12 --slideshow-start</code></pre></div>
+<p class="para">For this, use the remote command --slideshow to start the slide show after setting the delay with --delay=. The order of the command line is important. For example for a 12 second slide show delay use:</p>
+<div class="code"><pre class="contents"><code>geeqie --delay=12 --slideshow</code></pre></div>
 <p class="para">Note that if geeqie is running prior to this command, the slide show should also be stopped prior to changing the delay:</p>
-<div class="code"><pre class="contents"><code>geeqie --remote --slideshow-stop --delay=12 --slideshow-start</code></pre></div>
+<div class="code"><pre class="contents"><code>geeqie --slideshow --delay=12 --slideshow</code></pre></div>
 <p class="para"></p>
 </div></div>
 </div></section>
