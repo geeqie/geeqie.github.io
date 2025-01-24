@@ -38,7 +38,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <div class="region"><div class="contents pagewide">
 <p class="para">geeqie [OPTION?] [path...]</p>
 <p class="para">Geeqie is an image viewer.</p>
-<p class="para">Version: Geeqie 2.5+git20241126-85764a0f</p>
+<p class="para">Version: Geeqie 2.5+git20250101-2ec35a8e</p>
 </div></div>
 </div></section><section id="help_options" class="refsect2"><div class="inner">
 <div class="hgroup pagewide"><h5 class="title">Help Options:</h5></div>
@@ -229,7 +229,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <dt class="terms">
 <span class="em em-bold emphasis">-o</span>, <span class="em em-bold emphasis">--log-file=</span>&lt;file&gt;</dt>
 <dd class="terms">
-<p class="para">open collection window for command line</p>
+<p class="para">save log data to file</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--lua=</span>&lt;FILE&gt;,&lt;lua script&gt;</dt>
@@ -337,13 +337,13 @@ GQ_NEW_INSTANCE=y[es] geeqie
 Normally a single set of configuration files is used for all instances.
 However, the environment variables XDG_CONFIG_HOME, XDG_CACHE_HOME, XDG_DATA_HOME
 can be used to modify this behavior on an individual basis e.g.
-XDG_CONFIG_HOME=/tmp/a XDG_CACHE_HOME=/tmp/b GQ_NON_UNIQUE= geeqie</p>
+XDG_CONFIG_HOME=/tmp/a XDG_CACHE_HOME=/tmp/b GQ_NEW_INSTANCE=y geeqie</p>
 
 <p class="para">To disable Clutter use:
 GQ_DISABLE_CLUTTER=y[es] geeqie</p>
 
 <p class="para">To run or stop Geeqie in cache maintenance (non-GUI) mode use:
-GQ_CACHE_MAINTENANCE=y[es] geeqie <span class="em em-bold emphasis">--help</span> (This is disabled in this version and will be fixed in a future version.)</p>
+GQ_CACHE_MAINTENANCE=y[es] geeqie <span class="em em-bold emphasis">--help</span></p>
 
 <p class="para">User manual: https://www.geeqie.org/help/GuideIndex.html</p>
 
@@ -357,7 +357,7 @@ GQ_CACHE_MAINTENANCE=y[es] geeqie <span class="em em-bold emphasis">--help</span
 <div class="region"><div class="contents pagewide"><p class="para">Please send bug reports and feedback to https://github.com/BestImageViewer/geeqie/issues</p></div></div>
 </div></section><section id="copyright" class="refsect1"><div class="inner">
 <div class="hgroup pagewide"><h4 class="title">COPYRIGHT</h4></div>
-<div class="region"><div class="contents pagewide"><p class="para">Copyright (C) 1999-2004 by John Ellis. Copyright (C) 2004-2024 by The Geeqie Team. Use this software  at  your
+<div class="region"><div class="contents pagewide"><p class="para">Copyright (C) 1999-2004 by John Ellis. Copyright (C) 2004-2025 by The Geeqie Team. Use this software  at  your
 own  risk! This  software released under the GNU General Public License. Please read the COPYING file for more
 information.</p></div></div>
 </div></section>
