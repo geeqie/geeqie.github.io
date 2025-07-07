@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.9.8">
+<tagfile doxygen_version="1.10.0" doxygen_gitid="ebe22c618c483864e1686b3c92408aa9bdc78c4e">
   <compound kind="file">
     <name>lua.cc</name>
     <path>src/</path>
