@@ -38,7 +38,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <div class="region"><div class="contents pagewide">
 <p class="para">geeqie [OPTION?] [path...]</p>
 <p class="para">Geeqie is an image viewer.</p>
-<p class="para">Version: Geeqie 2.6</p>
+<p class="para">Version: Geeqie 2.6+git20250709-d20f3045</p>
 </div></div>
 </div></section><section id="help_options" class="refsect2"><div class="inner">
 <div class="hgroup pagewide"><h5 class="title">Help Options:</h5></div>
@@ -124,10 +124,9 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">load configuration from FILE</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--debug</span>=<span class="em emphasis">[level]</span>
-</dt>
+<span class="em em-bold emphasis">--debug</span>=<span class="code literal">0</span>|1|2|3|4</dt>
 <dd class="terms">
-<p class="para">turn on debug output</p>
+<p class="para">debug output: 0 none, 1 to 4 increasing level of verbosity</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">-d</span>, <span class="em em-bold emphasis">--delay=</span>&lt;[H:][M:][N][.M]&gt;</dt>
@@ -357,7 +356,8 @@ XDG_CONFIG_HOME=/tmp/a XDG_CACHE_HOME=/tmp/b GQ_NEW_INSTANCE=y geeqie</p>
 GQ_DISABLE_CLUTTER=y[es] geeqie</p>
 
 <p class="para">To run or stop Geeqie in cache maintenance (non-GUI) mode use:
-GQ_CACHE_MAINTENANCE=y[es] geeqie <span class="em em-bold emphasis">--help</span></p>
+GQ_CACHE_MAINTENANCE=y[es] geeqie <span class="em em-bold emphasis">--help</span>
+Note that bash command line completion does not work in this mode.</p>
 
 <p class="para">User manual: https://www.geeqie.org/help/GuideIndex.html</p>
 
