@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Info Sidebar</title>
 <link rel="stylesheet" type="text/css" href="C.css">
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">It consists of several panes. Left-clicking on the pane title expands or collapses the pane. Right-clicking on the pane title or on empty space opens a context menu allowing you to add and remove panes, or move them up and down.</p>
 <p class="para"></p>
 <div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideSidebarsInfo.html#AddingMetadataKeyPane" title="Adding a metadata key pane">Adding a metadata key pane</a></li>
 <li class="links"><a class="xref" href="GuideSidebarsInfo.html#Histogram" title="Histogram">Histogram</a></li>
 <li class="links"><a class="xref" href="GuideSidebarsInfo.html#TextpaneTitle" title="Title">Title</a></li>
 <li class="links"><a class="xref" href="GuideSidebarsInfo.html#TextpaneComment" title="Comment">Comment</a></li>
@@ -40,7 +41,26 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideSidebarsInfo.html#GPSMap" title="Map Display">Map Display</a></li>
 </ul></div>
 </div>
-<section id="Histogram" class="section"><div class="inner">
+<section id="AddingMetadataKeyPane" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Adding a metadata key pane</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      Select <span class="gui guimenuitem">Metadata key…</span> from the <span class="gui guibutton">Add</span> menu to create a pane for an individual metadata field. Enter the fully qualified XMP, Exif, or IPTC key and, optionally, a pane title. If the title is left empty, Geeqie uses the description of the metadata key when one is available.
+    </p>
+<p class="para">
+      Example keys include <span class="code">Xmp.dc.title</span>, <span class="code">Exif.Photo.DateTimeOriginal</span>, and <span class="code">Iptc.Application2.Headline</span>. The <span class="gui guibutton">OK</span> button is enabled only when the key begins with <span class="code">Xmp.</span>, <span class="code">Exif.</span>, or <span class="code">Iptc.</span>.
+    </p>
+<div class="note" title="Note">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+ <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+      <p class="para">XMP fields in these panes are editable. Exif and IPTC fields are displayed read-only.</p>
+    </div></div></div>
+</div>
+<p class="para">The new pane is saved as part of the current layout configuration.</p>
+</div></div>
+</div></section><section id="Histogram" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Histogram</h2></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">
@@ -294,119 +314,123 @@ document.addEventListener('DOMContentLoaded', function() {
 <td class="td-rowsep">Image Date</td>
 </tr>
 <tr class="shade">
+<td class="td-colsep td-rowsep">formatted.MediaDate</td>
+<td class="td-rowsep">Media date, with Exif, QuickTime and file modification date fallbacks</td>
+</tr>
+<tr>
 <td class="td-colsep td-rowsep">formatted.ShutterSpeed</td>
 <td class="td-rowsep">Shutter speed in seconds (e.g. 1/60s)</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">formatted.Aperture</td>
 <td class="td-rowsep">Aperture (e.g. f5.6)</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">formatted.ExposureBias</td>
 <td class="td-rowsep">Exposure bias (e.g. +0.3)</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">formatted.ISOSpeedRating</td>
 <td class="td-rowsep">ISO sensitivity (e.g. 100)</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">formatted.FocalLength</td>
 <td class="td-rowsep">Focal length</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">formatted.FocalLength35mmFilm</td>
 <td class="td-rowsep">Focal length 35mm</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">formatted.SubjectDistance</td>
 <td class="td-rowsep">Subject distance</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">formatted.Flash</td>
 <td class="td-rowsep">Flash</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">formatted.Resolution</td>
 <td class="td-rowsep">Resolution</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">formatted.ColorProfile</td>
 <td class="td-rowsep">Color profile</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">formatted.GPSAltitude</td>
 <td class="td-rowsep">Altitude above sea level</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">formatted.GPSPosition</td>
 <td class="td-rowsep">Latitude, Longitude</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">formatted.localtime</td>
 <td class="td-rowsep">
               Local time corrected for UTC offset, DST correction
               <sup class="footnote"><a class="footnote" href="#ref1" id="-noteref-ref1">4</a></sup>
             </td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">formatted.timezone</td>
 <td class="td-rowsep">
               Timezone indicated by GPS lat/long values
               <sup class="footnote"><a class="footnote" href="#ref1" id="-noteref-ref1">5</a></sup>
             </td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">formatted.countryname</td>
 <td class="td-rowsep">ISO 3166 country name indicated by GPS lat/long values</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">formatted.countrycode</td>
 <td class="td-rowsep">ISO 3166 two-letter abbreviated country name indicated by GPS lat/long values</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">file.size</td>
 <td class="td-rowsep">file size in bytes</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">file.date</td>
 <td class="td-rowsep">file date and time in human readable form</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">file.mode</td>
 <td class="td-rowsep">file mode flags</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">file.ctime</td>
 <td class="td-rowsep">refer to operating system documentation for the meaning of ctime</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">file.owner</td>
 <td class="td-rowsep">the file's owner. Refer to operating system documentation for the meaning of file permissions</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">file.group</td>
 <td class="td-rowsep">the file's group. Refer to operating system documentation for the meaning of file permissions</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">file.class</td>
 <td class="td-rowsep">the file's class e.g. Image, RAW image etc.</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">file.link</td>
 <td class="td-rowsep">if the file is a symbolic link, shows the path of the source file</td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep td-rowsep">file.page_no</td>
 <td class="td-rowsep">if the file is a multi-page file, e.g. .tiff, the current page number and page total is displayed (e.g. [2/10])</td>
 </tr>
-<tr>
+<tr class="shade">
 <td class="td-colsep td-rowsep">lua.lensID</td>
 <td class="td-rowsep">
               lens identification data
               <sup class="footnote"><a class="footnote" href="#lensid" id="-noteref-lensid">6</a></sup>
             </td>
 </tr>
-<tr class="shade">
+<tr>
 <td class="td-colsep">lua.&lt;lua script&gt;</td>
 <td>
               Call a lua script

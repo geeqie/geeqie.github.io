@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Menus</title>
 <link rel="stylesheet" type="text/css" href="C.css">
@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideMainWindowMenus.html#Windowmenu" title="Windows menu">Windows menu</a></li>
 <li class="links"><a class="xref" href="GuideMainWindowMenus.html#Helpmenu" title="Help menu">Help menu</a></li>
 <li class="links"><a class="xref" href="GuideMainWindowMenus.html#Tearoffmenus" title="Tear off menus">Tear off menus</a></li>
-<li class="links"><a class="xref" href="GuideMainWindowMenus.html#Keyboardshortcuts" title="Keyboard shortcuts">Keyboard shortcuts</a></li>
 <li class="links"><a class="xref" href="GuideMainWindowMenus.html#Changingthemainwindowmenubarkeyboardshortcuts" title="Changing the main window menu bar keyboard shortcuts">Changing the main window menu bar keyboard shortcuts</a></li>
 </ul></div>
 </div>
@@ -55,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             )</span></span>
         </dt>
 <dd class="terms">
-          <p class="para">Opens a new collection window, the new collection will be empty.</p>
+          <p class="para">Opens a new default window with an empty collection in its files pane.</p>
         </dd>
 <dt class="terms">
           <span class="guiseq menuchoice"><span class="gui guimenu">Open collection</span> <span class="shortcut">(
@@ -63,18 +62,22 @@ document.addEventListener('DOMContentLoaded', function() {
             )</span></span>
         </dt>
 <dd class="terms">
-          <p class="para">Displays a dialog to open a collection stored on disk, the selected collection will then appear in a new window.</p>
+          <p class="para">Displays a dialog to open a collection stored on disk in the files pane.</p>
         </dd>
 <dt class="terms">
           <span class="gui guimenu">Open recent</span>
         </dt>
 <dd class="terms">
           <p class="para">
-            This menu item lists the recently active collections, selecting an item from the list will open that collection in a new window. The most recent item will appear at the top of the list. Maximum number of entries can be modified through
+            This menu item lists the recently active collections. Selecting one displays it in the files pane. The most recent item will appear at the top of the list. Maximum number of entries can be modified through
             <span class="em emphasis"><a class="link" href="GuideOptionsBehavior.html#Behaviour" title="Behavior">Open recent list maximum size</a></span>
             option.
           </p>
         </dd>
+<dt class="terms"><span class="gui guimenu">Save collection</span></dt>
+<dd class="terms"><p class="para">Saves the collection displayed in the files pane. For a new collection, opens the save dialog.</p></dd>
+<dt class="terms"><span class="gui guimenu">Save collection as…</span></dt>
+<dd class="terms"><p class="para">Saves the displayed collection to a selected file.</p></dd>
 <dt class="terms">
           <span class="guiseq menuchoice"><span class="gui guimenu">Search…</span> <span class="shortcut">(
               <span class="keyseq keycombo"><span class="key keycap"><kbd>F3</kbd></span></span>
@@ -230,6 +233,22 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="para">Back Goes to the previous folder</p>
         </dd>
 <dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Next folder</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>Right</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the first image in the next sibling folder.</p>
+        </dd>
+<dt class="terms">
+          <span class="guiseq menuchoice"><span class="gui guimenu">Previous folder</span> <span class="shortcut">(
+              <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>Left</kbd></span></span>
+            )</span></span>
+        </dt>
+<dd class="terms">
+          <p class="para">Goes to the last image in the previous sibling folder.</p>
+        </dd>
+<dt class="terms">
           <span class="guiseq menuchoice"><span class="gui guimenu">Home</span> <span class="shortcut">(
               <span class="keyseq keycombo"><span class="key keycap"><kbd>Home</kbd></span></span>
             )</span></span>
@@ -328,12 +347,12 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="para">Copy selected item-path(s) to clipboard. The data will not be enclosed in quotes.</p>
         </dd>
 <dt class="terms">
-          <span class="guiseq menuchoice"><span class="gui guimenu">Cut to clipboard</span> <span class="shortcut">(
+          <span class="guiseq menuchoice"><span class="gui guimenu">Cut File to Clipboard</span> <span class="shortcut">(
               <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>X</kbd></span></span>
             )</span></span>
         </dt>
 <dd class="terms">
-          <p class="para">Perform a standard control-X operation.</p>
+          <p class="para">Place the selected files on the clipboard for moving when pasted into a compatible file manager. Selecting this command does not immediately move the files.</p>
         </dd>
 <dt class="terms">
           <span class="guiseq menuchoice"><span class="gui guimenu">Show marks</span> <span class="shortcut">(
@@ -377,10 +396,10 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="para">Set mark n on selected files</p>
         </dd>
 <dt class="terms">
-          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Reset mark n</span></span>
+          <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Clear mark n</span></span>
         </dt>
 <dd class="terms">
-          <p class="para">Unset mark n on selected files</p>
+          <p class="para">Clear mark n on selected files</p>
         </dd>
 <dt class="terms">
           <span class="guiseq menuchoice"><span class="gui guimenu">Mark n</span> ▸ <span class="gui guimenuitem">Select mark n</span> <span class="shortcut">(
@@ -1106,16 +1125,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="hgroup pagewide"><h2 class="title">Tear off menus</h2></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">Menus can be permanently displayed by selecting the dotted line item at the top of each menu category. A tear off menu will behave the same as an ordinary window. To close a tear off menu, select the dotted line item at the top of the menu.</p>
-<p class="para"></p>
-</div></div>
-</div></section><section id="Keyboardshortcuts" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Keyboard shortcuts</h2></div>
-<div class="region"><div class="contents pagewide">
-<p class="para">
-      The keyboard sequence associated to each menu entry is listed within the main window menu bar. For reference, the complete list of default keyboard shortcuts can be found in section
-      <span class="em emphasis"><a class="link" href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Keyboard Shortcuts</a></span>
-      .
-    </p>
 <p class="para"></p>
 </div></div>
 </div></section><section id="Changingthemainwindowmenubarkeyboardshortcuts" class="section"><div class="inner">

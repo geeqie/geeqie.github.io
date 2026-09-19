@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>org.geeqie.Geeqie</id>
+  <metadata_license>CC-BY-SA-4.0</metadata_license>
+  <content_rating type="oars-1.1"/>
+  <project_license>GPL-3.0+</project_license>
+  <name>Geeqie</name>
+  <name xml:lang="tr">Geeqie</name>
+  <name xml:lang="sv">Geeqie</name>
+  <name xml:lang="sr-Latn">Čudak</name>
+  <name xml:lang="sr-Cyrl">Чудак</name>
+  <name xml:lang="sk">Geeqie</name>
+  <name xml:lang="ru">Geeqie</name>
+  <name xml:lang="ro">Geeqie</name>
+  <name xml:lang="pt-BR">Geeqie</name>
+  <name xml:lang="pl">Geeqie</name>
+  <name xml:lang="ko">Geeqie</name>
+  <name xml:lang="it">Geeqie</name>
+  <name xml:lang="fr">Geeqie</name>
+  <name xml:lang="es">Geeqie</name>
+  <name xml:lang="en-GB">Geeqie</name>
+  <name xml:lang="el">Τζήκιυ</name>
+  <name xml:lang="de">Geeqie</name>
+  <name xml:lang="cs">Geeqie</name>
+  <name xml:lang="ca">Geeqie</name>
+  <summary>A lightweight image viewer</summary>
+  <summary xml:lang="sv">En lättviktig bildvisare</summary>
+  <summary xml:lang="sk">Odľahčený prehliadač obrázkov</summary>
+  <summary xml:lang="ru">Лёгкая программа просмотра изображений</summary>
+  <summary xml:lang="it">Un visualizzatore di immagini leggero</summary>
+  <summary xml:lang="es">Un visor de imágenes ligero</summary>
+  <summary xml:lang="en-GB">A lightweight image viewer</summary>
+  <summary xml:lang="de">Ein leichtgewichtiger Bildbetrachter</summary>
+  <summary xml:lang="cs">Jednoduchý prohlížeč obrázků</summary>
+  <summary xml:lang="ca">Un visualitzador d'imatges lleuger</summary>
+  <description>
+    <p>Geeqie is a lightweight image viewer and image manager for Linux and other Unix-like systems.</p>
+    <p xml:lang="sk">Geeqie je odľahčený prehliadač obrázkov a správca obrázkov pre Linux a ďalšie systémy podobné Unixu.</p>
+    <p xml:lang="es">Geeqie es un visor y administrador de imágenes ligero para Linux y otros sistemas similares a Unix.</p>
+    <p xml:lang="de">Geeqie ist ein leichtgewichtiger Bildbetrachter für Linux, BSDs und andere Unix-Artige Systeme.</p>
+    <p xml:lang="ca">Geeqie és un visualitzador d'imatges lleuger i gestor d'imatges per a Linux i altres sistemes tipus Unix.</p>
+    <p>It supports fast navigation using thumbnails, multiple windows, and full-screen viewing. Images can be copied, moved, renamed, and deleted directly from the interface.</p>
+    <p xml:lang="sk">Podporuje rýchlu navigáciu pomocou náhľadov, viacero okien a zobrazenie na celú obrazovku. Obrázky je možné priamo z rozhrania kopírovať, presúvať, premenovávať a odstraňovať.</p>
+    <p xml:lang="es">Soporta navegación rápida usando miniaturas, ventanas múltiples y visualización a pantalla completa. Las imágenes pueden ser copiadas, movidas, renombradas y borradas directamente desde la interfaz.</p>
+    <p xml:lang="de">Es unterstützt schnelle Navigation mit Vorschaubildern, mehrere Fenster und Vollbildansicht. Bilder können direkt aus dem Interface kopiert, verschoben, umbenannt und gelöscht werden.</p>
+    <p xml:lang="ca">Permet la navegació ràpida utilitzant miniatures, finestres múltiples i visualització a pantalla completa. Les imatges es poden copiar, moure, canviar de nom i suprimir directament de la interfície.</p>
+    <p>Geeqie provides tools for managing large image collections, including keyword tagging, powerful search features, and a duplicate image finder. Metadata such as EXIF information can be displayed as overlays on images.</p>
+    <p xml:lang="sk">Geeqie poskytuje nástroje na správu rozsiahlych zbierok obrázkov vrátane označovania kľúčovými slovami, výkonného vyhľadávania a hľadania duplicitných obrázkov. Metadáta, ako napríklad informácie EXIF, je možné zobrazovať ako prekrytia na obrázkoch.</p>
+    <p xml:lang="es">Geeqie provee herramientas para administrar extensas colecciones de imágenes, entre ellas el etiquetado por palabras clave, una poderosa función de búsqueda y un buscador de imágenes duplicadas. Los metadatos tales como la información EXIF se pueden mostrar superpuestos en las imágenes.</p>
+    <p xml:lang="de">Geeqie bietet Werkzeuge für die Verwaltung großer Bildsammlungen, darunter Verschlagwortung, umfangreiche Suchoptionen und einen Dublettenfinder. Metadaten wie etwa EXIF-Informationen können als Overlay in Bildern angezeigt werden.</p>
+    <p xml:lang="ca">Geeqie proporciona eines per gestionar col·leccions d'imatges grans, incloent-hi etiquetes de paraules clau, funcions de cerca potents i un cercador d'imatges duplicades. Les metadades com ara la informació EXIF es poden mostrar com a superposicions a les imatges.</p>
+    <p>Additional features include slideshow presentations and remote control via command-line scripts. Images are accessed directly from the filesystem without the need for import.</p>
+    <p xml:lang="sk">Ďalšie funkcie zahŕňajú prezentácie a vzdialené ovládanie pomocou skriptov príkazového riadka. K obrázkom sa pristupuje priamo z filesystému bez potreby importu.</p>
+    <p xml:lang="es">Incluye características tales como presentación de diapositivas y control remoto a través de scripts desde la línea de comandos. Se accede a las imágenes directamente desde el sistema de archivos sin necesidad de importarlas.</p>
+    <p xml:lang="de">Weitere Funktionen beinhalten Diashow-Präsentationen und Fernsteuerung durch Kommandozeilen-Skripte. Der Zugriff auf Bilder erfolgt direkt aus dem Dateisystem, ohne Import.</p>
+    <p xml:lang="ca">Altres funcions inclouen presentacions de diapositives i control remot a través de scripts. S'accedeix directament a les imatges des del sistema de fitxers sense necessitat d'importació.</p>
+  </description>
+  <developer id="org.geeqie">
+    <name>Geeqie developers</name>
+    <name xml:lang="sk">Vývojári Geeqie</name>
+    <name xml:lang="ru">Разработчики Geeqie</name>
+    <name xml:lang="it">Sviluppatori e sviluppatrici di Geeqie</name>
+    <name xml:lang="es">Desarrolladores de Geeqie</name>
+    <name xml:lang="de">Geeqie-Entwickler</name>
+    <name xml:lang="ca">Desenvolupadors de Geeqie</name>
+  </developer>
+  <launchable type="desktop-id">org.geeqie.Geeqie.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Folders, files, image and GPS map panes</caption>
+      <caption xml:lang="sk">Panely priečinkov, súborov, obrázkov a GPS mapy</caption>
+      <caption xml:lang="es">Paneles de carpetas, archivos, imagen y mapa de GPS</caption>
+      <caption xml:lang="de">Ordner-, Dateien-, Bild- und GPS-Karten-Reiter</caption>
+      <caption xml:lang="ca">Carpetes, fitxers, panells d'imatges i mapes GPS</caption>
+      <image>https://raw.githubusercontent.com/BestImageViewer/geeqie-test-images/main/screenshots/Screenshot_2017-08-13_12-02-32_rescaled.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Image search window</caption>
+      <caption xml:lang="sk">Okno hľadania obrázkov</caption>
+      <caption xml:lang="es">Ventana de búsqueda de imagen</caption>
+      <caption xml:lang="de">Bildersuche-Fenster</caption>
+      <caption xml:lang="ca">Finestra de cerca d'imatges</caption>
+      <image>https://raw.githubusercontent.com/BestImageViewer/geeqie-test-images/main/screenshots/Screenshot_2017-08-13_12-29-44_rescaled.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="3.1" date="2026-08-03"/>
+  </releases>
+  <categories>
+    <category>Graphics</category>
+    <category>Photography</category>
+    <category>Viewer</category>
+  </categories>
+  <keywords>
+    <keyword>image</keyword>
+    <keyword xml:lang="sv">bild</keyword>
+    <keyword xml:lang="sk">obrázok</keyword>
+    <keyword xml:lang="ru">изображение</keyword>
+    <keyword xml:lang="it">immagine</keyword>
+    <keyword xml:lang="es">imagen</keyword>
+    <keyword xml:lang="de">Bild</keyword>
+    <keyword xml:lang="cs">image</keyword>
+    <keyword xml:lang="ca">imatge</keyword>
+    <keyword>photo</keyword>
+    <keyword xml:lang="sk">foto</keyword>
+    <keyword xml:lang="es">foto</keyword>
+    <keyword xml:lang="de">Foto</keyword>
+    <keyword xml:lang="ca">foto</keyword>
+    <keyword>photography</keyword>
+    <keyword xml:lang="sv">fotografi</keyword>
+    <keyword xml:lang="sk">fotografovanie</keyword>
+    <keyword xml:lang="ru">фотография</keyword>
+    <keyword xml:lang="it">fotografia</keyword>
+    <keyword xml:lang="es">fotografía</keyword>
+    <keyword xml:lang="de">Fotografie</keyword>
+    <keyword xml:lang="cs">photography</keyword>
+    <keyword xml:lang="ca">fotografia</keyword>
+    <keyword>viewer</keyword>
+    <keyword xml:lang="sk">prehliadač</keyword>
+    <keyword xml:lang="es">visor</keyword>
+    <keyword xml:lang="de">Bildbetrachter</keyword>
+    <keyword xml:lang="ca">visor</keyword>
+    <keyword>manager</keyword>
+    <keyword xml:lang="sk">správca</keyword>
+    <keyword xml:lang="es">administrador</keyword>
+    <keyword xml:lang="de">Sortiermanager</keyword>
+    <keyword xml:lang="ca">gestor</keyword>
+    <keyword>gallery</keyword>
+    <keyword xml:lang="sk">galéria</keyword>
+    <keyword xml:lang="es">galería</keyword>
+    <keyword xml:lang="de">Gallerie</keyword>
+    <keyword xml:lang="ca">galeria</keyword>
+    <keyword>EXIF</keyword>
+    <keyword xml:lang="sk">EXIF</keyword>
+    <keyword xml:lang="es">EXIF</keyword>
+    <keyword xml:lang="de">EXIF</keyword>
+    <keyword xml:lang="ca">EXIF</keyword>
+  </keywords>
+  <provides>
+    <mime-type>image/jpeg</mime-type>
+    <mime-type>image/png</mime-type>
+    <mime-type>image/gif</mime-type>
+    <mime-type>image/tiff</mime-type>
+  </provides>
+  <url type="homepage">https://www.geeqie.org</url>
+  <url type="bugtracker">https://github.com/BestImageViewer/geeqie/issues</url>
+  <url type="vcs-browser">https://github.com/BestImageViewer/geeqie</url>
+  <update_contact>geeqie@freelists.org</update_contact>
+  <translation type="gettext">geeqie</translation>
+</component>

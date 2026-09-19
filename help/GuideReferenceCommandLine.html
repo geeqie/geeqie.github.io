@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Command Line Options</title>
 <link rel="stylesheet" type="text/css" href="C.css">
@@ -36,9 +36,9 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <section id="usage" class="refsect2"><div class="inner">
 <div class="hgroup pagewide"><h5 class="title">Usage:</h5></div>
 <div class="region"><div class="contents pagewide">
-<p class="para">geeqie [OPTION?] [path...]</p>
+<p class="para">geeqie [OPTION…] [path…]</p>
 <p class="para">Geeqie is an image viewer.</p>
-<p class="para">Version: Geeqie 2.6+git20250709-d20f3045</p>
+<p class="para">Version: Geeqie 3.1</p>
 </div></div>
 </div></section><section id="help_options" class="refsect2"><div class="inner">
 <div class="hgroup pagewide"><h5 class="title">Help Options:</h5></div>
@@ -56,10 +56,6 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <dt class="terms"><span class="em em-bold emphasis">--help-gapplication</span></dt>
 <dd class="terms">
 <p class="para">Show GApplication options</p>
-  </dd>
-<dt class="terms"><span class="em em-bold emphasis">--help-gtk</span></dt>
-<dd class="terms">
-<p class="para">Show GTK+ Options</p>
   </dd>
 </dl></div></div></div></div></div></div>
 </div></section><section id="application_options" class="refsect2"><div class="inner">
@@ -124,11 +120,6 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <p class="para">load configuration from FILE</p>
   </dd>
 <dt class="terms">
-<span class="em em-bold emphasis">--debug</span>=<span class="code literal">0</span>|1|2|3|4</dt>
-<dd class="terms">
-<p class="para">debug output: 0 none, 1 to 4 increasing level of verbosity</p>
-  </dd>
-<dt class="terms">
 <span class="em em-bold emphasis">-d</span>, <span class="em em-bold emphasis">--delay=</span>&lt;[H:][M:][N][.M]&gt;</dt>
 <dd class="terms">
 <p class="para">set slide show delay to Hrs Mins N.M seconds,</p>
@@ -169,7 +160,7 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <span class="em em-bold emphasis">-f</span>, <span class="em em-bold emphasis">--fullscreen</span>
 </dt>
 <dd class="terms">
-<p class="para">start / toggle in full screen mode</p>
+<p class="para">start / toggle in fullscreen mode</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--geometry=</span>&lt;W&gt;x&lt;H&gt;[+&lt;XOFF&gt;+&lt;YOFF&gt;]</dt>
@@ -224,11 +215,6 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <dt class="terms"><span class="em em-bold emphasis">--get-window-list</span></dt>
 <dd class="terms">
 <p class="para">get list of windows</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">-g</span>, <span class="em em-bold emphasis">--grep=</span>&lt;regexp&gt;</dt>
-<dd class="terms">
-<p class="para">filter debug output</p>
   </dd>
 <dt class="terms">
 <span class="em em-bold emphasis">--id=</span>&lt;ID&gt;</dt>
@@ -328,12 +314,6 @@ zooming, panning, thumbnails and sorting images into collections.</p>
 <span class="em em-bold emphasis">--view=</span>&lt;FILE&gt;</dt>
 <dd class="terms">
 <p class="para">open FILE in new window</p>
-  </dd>
-<dt class="terms">
-<span class="em em-bold emphasis">--display</span>=<span class="em emphasis">DISPLAY</span>
-</dt>
-<dd class="terms">
-<p class="para">X display to use</p>
 
 <p class="para">All other command line parameters are used as plain files if they exist, or a URL or a folder.
 The name of a collection, with or without either path or extension (.gqv) may be used.</p>
@@ -352,9 +332,6 @@ However, the environment variables XDG_CONFIG_HOME, XDG_CACHE_HOME, XDG_DATA_HOM
 can be used to modify this behavior on an individual basis e.g.
 XDG_CONFIG_HOME=/tmp/a XDG_CACHE_HOME=/tmp/b GQ_NEW_INSTANCE=y geeqie</p>
 
-<p class="para">To disable Clutter use:
-GQ_DISABLE_CLUTTER=y[es] geeqie</p>
-
 <p class="para">To run or stop Geeqie in cache maintenance (non-GUI) mode use:
 GQ_CACHE_MAINTENANCE=y[es] geeqie <span class="em em-bold emphasis">--help</span>
 Note that bash command line completion does not work in this mode.</p>
@@ -371,7 +348,7 @@ Note that bash command line completion does not work in this mode.</p>
 <div class="region"><div class="contents pagewide"><p class="para">Please send bug reports and feedback to https://github.com/BestImageViewer/geeqie/issues</p></div></div>
 </div></section><section id="copyright" class="refsect1"><div class="inner">
 <div class="hgroup pagewide"><h4 class="title">COPYRIGHT</h4></div>
-<div class="region"><div class="contents pagewide"><p class="para">Copyright (C) 1999-2004 by John Ellis. Copyright (C) 2004-2025 by The Geeqie Team. Use this software  at  your
+<div class="region"><div class="contents pagewide"><p class="para">Copyright (C) 1999-2004 by John Ellis. Copyright (C) 2004-2026 by The Geeqie Team. Use this software  at  your
 own  risk! This  software released under the GNU General Public License. Please read the COPYING file for more
 information.</p></div></div>
 </div></section>

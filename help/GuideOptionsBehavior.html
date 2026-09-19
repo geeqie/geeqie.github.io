@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Behavior Options</title>
 <link rel="stylesheet" type="text/css" href="C.css">
@@ -81,12 +81,13 @@ document.addEventListener('DOMContentLoaded', function() {
  <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
 </svg><div class="inner"><div class="region"><div class="contents">
             <p class="para">
-              Files moved to the Safe Delete folder are prefixed with a six digit number in the format:
-              <span class="code literal">nnnnnn_FILENAME</span>
+              Deleted files retain their original names in the <span class="code literal">files</span> subfolder. If a name is already present, Geeqie adds a numeric suffix before the file extension, for example <span class="code literal">image.2.jpg</span>, to make it unique without preventing the file type from being recognized.
               <p class="para"></p>
-              This is used by the delete feature to distinguish which files to remove first when clearing space for new files.
+              For each file, the <span class="code literal">info</span> subfolder contains a freedesktop.org-compatible <span class="code literal">.trashinfo</span> file recording its original path and deletion date. This information can be used to restore the file manually.
               <p class="para"></p>
-              The digit counter increments with each deleted file.
+              When viewing the <span class="code literal">files</span> subfolder in Geeqie, right-click a file to copy or move it back to its recorded original location. Copying leaves the trash entry intact; moving removes it after a successful restore.
+              <p class="para"></p>
+              Files created by older versions, with a six-digit prefix, remain in the Safe Delete folder and are still included when enforcing the maximum size or clearing the trash.
             </p>
           </div></div></div>
 </div>
@@ -119,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="gui guilabel">View button</span>
         </dt>
 <dd class="terms">
-          <p class="para">Changes the Geeqie main window to display the contents of the Safe Delete folder.</p>
+          <p class="para">Changes the Geeqie main window to display the deleted files in the Safe Delete folder.</p>
         </dd>
 </dl></div></div></div></div></div></div>
 </div></section><section id="Behaviour" class="section"><div class="inner">
@@ -158,6 +159,12 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="para">If selected, when traversing a list of selected images using Next or Previous Image, when the last or first image is encountered the focus moves to the beginning or end of the list. When deselected, focus will go no further than the start or end of the list.</p>
         </dd>
 <dt class="terms">
+          <span class="gui guilabel">Auto next folder</span>
+        </dt>
+<dd class="terms">
+          <p class="para">If selected, when the last image in the current folder is reached using Next Image, Geeqie will automatically advance to the first image in the next sibling folder. Likewise, when the first image is reached using Previous Image, Geeqie will automatically go to the last image in the previous sibling folder.</p>
+        </dd>
+<dt class="terms">
           <span class="gui guilabel">Save marks on exit</span>
         </dt>
 <dd class="terms">
@@ -174,12 +181,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </dt>
 <dd class="terms">
           <p class="para">If this option is set, an image can be inserted into a Collection any number of times.</p>
-        </dd>
-<dt class="terms">
-          <span class="gui guilabel">Open Collections on top</span>
-        </dt>
-<dd class="terms">
-          <p class="para">Open collection windows with "Always on Top" set.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Hide window in fullscreen</span>
@@ -281,6 +282,12 @@ document.addEventListener('DOMContentLoaded', function() {
             <span class="key keycap"><kbd>Shift</kbd></span>
             will change the image.
           </p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Show bird's-eye view when zoomed in</span>
+        </dt>
+<dd class="terms">
+          <p class="para">When enabled, zooming or panning an image that is larger than the image pane temporarily displays an overview of the complete image. The overview indicates the visible region and can be clicked or dragged to pan the image. It hides automatically after a short period of inactivity. This option is disabled by default.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Navigation by left or middle click on image</span>

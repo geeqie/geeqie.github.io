@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Copy and Move</title>
 <link rel="stylesheet" type="text/css" href="C.css">
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="contents pagewide">
 <p class="para">
     To copy a file in Geeqie select
-    <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Copy</span> <span class="shortcut">(
+    <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Copy File To…</span> <span class="shortcut">(
         <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>C</kbd></span></span>
       )</span></span>
     and to move a file select
@@ -35,12 +35,42 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">Initiating a Copy/Move operation will display a dialog to select the destination folder to Copy/Move the selected file, after the destination folder is selected Geeqie will proceed to Copy/Move the images to the destination. If an error occurs or a file exists with the same name as one of the files being Copy/Moved, a dialog will appear prompting how to handle the situation.</p>
 <p class="para"></p>
 <div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideImageManagementCopyMove.html#CopyAndClipboardCommands" title="Copy and clipboard commands">Copy and clipboard commands</a></li>
 <li class="links"><a class="xref" href="GuideImageManagementCopyMove.html#TheCopyMovedialog" title="The Copy/Move dialog">The Copy/Move dialog</a></li>
 <li class="links"><a class="xref" href="GuideImageManagementCopyMove.html#Theerrordialog" title="The error dialog">The error dialog</a></li>
 <li class="links"><a class="xref" href="GuideImageManagementCopyMove.html#Theoverwritedialog" title="The overwrite dialog">The overwrite dialog</a></li>
 </ul></div>
 </div>
-<section id="TheCopyMovedialog" class="section"><div class="inner">
+<section id="CopyAndClipboardCommands" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Copy and clipboard commands</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Geeqie menus contain several commands whose names include “Copy”. They copy different kinds of data and should not be confused with one another:</p>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms"><span class="gui guimenuitem">Copy File To…</span></dt>
+<dd class="terms">
+          <p class="para">Opens Geeqie's file-operation dialog and copies the selected files to a destination folder. This performs the filesystem operation immediately after the destination and any conflict options are confirmed. It does not use the clipboard.</p>
+          <p class="para">Associated sidecar files are copied with the main file and retain the corresponding destination names, preserving the group. The copy dialog lists these files in its Sidecars column. If only part of an expanded group is explicitly selected, however, the selected members are treated as independent files; unselected members of the group are not copied.</p>
+        </dd>
+<dt class="terms"><span class="gui guimenuitem">Copy to clipboard</span></dt>
+<dd class="terms">
+          <p class="para">Places the selected file paths on the clipboard as shell-quoted text. Geeqie also supplies file-manager clipboard data marked as a copy operation, so pasting into a compatible file manager copies the files. Pasting into a text editor inserts the paths.</p>
+        </dd>
+<dt class="terms"><span class="gui guimenuitem">Copy to clipboard (unquoted)</span></dt>
+<dd class="terms">
+          <p class="para">Provides the same file-copy clipboard data, but its plain-text representation contains paths without shell quoting. Paths containing spaces or shell metacharacters may therefore be ambiguous when pasted into a command line.</p>
+        </dd>
+<dt class="terms"><span class="gui guimenuitem">Cut File to Clipboard</span></dt>
+<dd class="terms">
+          <p class="para">Places the selected paths on the clipboard and marks the file-manager data as a cut operation. No file is moved when this command is selected. A compatible file manager moves the files when the clipboard is pasted.</p>
+        </dd>
+<dt class="terms"><span class="gui guimenuitem">Copy Image</span></dt>
+<dd class="terms">
+          <p class="para">Places the decoded image pixels on the clipboard for pasting into an image editor or another application that accepts image data. It does not copy the original encoded file, file metadata, or sidecar files. In the file-pane context menu it applies to the file that was right-clicked.</p>
+        </dd>
+</dl></div></div></div></div>
+<p class="para">The clipboard used for path and file commands is controlled by the <span class="em emphasis"><a class="link" href="GuideOptionsBehavior.html#Behaviour" title="Behavior">Copy path clipboard selection</a></span> preference. <span class="gui guimenuitem">Copy Image</span> always uses the standard clipboard.</p>
+</div></div>
+</div></section><section id="TheCopyMovedialog" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">The Copy/Move dialog</h2></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">This is the dialog that is displayed when initiating a Copy/Move operation. The dialog contains a row of buttons near the top, vertical list of bookmarks along the left side, a vertical list of folders in the current path, a text entry field, and a row of buttons along the bottom.</p>

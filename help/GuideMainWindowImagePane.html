@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Image Pane</title>
 <link rel="stylesheet" type="text/css" href="C.css">
@@ -90,8 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="hgroup pagewide"><h3 class="title">Keyboard and mouse</h3></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">
-        <span class="em emphasis"><a class="link" href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Keyboard and Mouse Shortcuts</a></span>
-        describes how you may manipulate the image displayed.
+        Keyboard Shortcuts describes how you may manipulate the image displayed.
       </p>
 <div class="note" title="Note">
 <svg width="24" height="24" version="1.1">
@@ -122,7 +121,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">To scale the image size hold down the Ctrl key and scroll the mouse wheel up to zoom in, or down to zoom out.</p>
 <p class="para"></p>
 </div>
-<section id="SmoothScroll" class="section"><div class="inner">
+<section id="BirdsEyeView" class="section"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">Bird's-eye view</h4></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">When <span class="em emphasis">Show bird's-eye view when zoomed in</span> is enabled in the <span class="em emphasis"><a class="link" href="GuideOptionsBehavior.html" title="Behavior Options">Behavior Options</a></span>, zooming or panning an image that is larger than the image pane temporarily displays a small overview of the complete image in the upper-right corner. A white rectangle in the overview indicates the region currently visible in the image pane. This feature is disabled by default.</p>
+<p class="para">Click a position in the overview to center that part of the image in the image pane. Press and hold the primary mouse button in the overview, then move the pointer to pan directly to another part of the image.</p>
+<p class="para">The overview remains visible while it is being used and hides automatically after a short period without zooming or scrolling. It is not displayed when the complete image fits inside the image pane.</p>
+</div></div>
+</div></section><section id="SmoothScroll" class="section"><div class="inner">
 <div class="hgroup pagewide"><h4 class="title">Smooth Scroll</h4></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">To start the smooth scroll function hold down the Control key and click the left mouse button. An icon will appear at the location of the mouse pointer, the mouse can then be positioned to pan the image. The image will pan in the direction of the mouse pointer relative to the icon. The pan speed will increase in proportion to the distance that the pointer is from the center of the icon. To end the smooth scroll function click the left mouse button within the image pane.</p>
@@ -170,7 +176,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="region"><div class="contents pagewide">
 <p class="para">
         To change to the next image in the list click the left mouse button, click the middle mouse button to change to the previous image. The mouse wheel can also be used to change the current image
-        
         .
       </p>
 <p class="para"></p>
@@ -194,9 +199,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <dd class="terms">
           <p class="para">Controls the pause state of an active slide show, the text of the menu will change to reflect the action that will be performed.</p>
         </dd>
-<dt class="terms">Copy image to clipboard</dt>
+<dt class="terms">Copy Image</dt>
 <dd class="terms">
-          <p class="para">Copy the pixbuf to the clipboard. This may be used by programs such as Gimp.</p>
+          <p class="para">Copy the decoded image pixels to the clipboard for use by applications such as GIMP. This does not copy the original image file or its metadata.</p>
         </dd>
 </dl></div></div></div></div>
 <p class="para"></p>

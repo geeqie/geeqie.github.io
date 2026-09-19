@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Collections</title>
 <link rel="stylesheet" type="text/css" href="C.css">
@@ -15,16 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
 </head>
 <body><main><div class="page">
 <header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
-<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideOtherWindows.html" title="Stand-alone Windows">Stand-alone Windows</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
-<a href="GuideOtherWindowsPanView.html" title="Pan View">Previous</a><a href="GuideImageSearch.html" title="Search and Select">Next</a>
+<a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideMainWindow.html" title="Main Window">Main Window</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
+<a href="GuideMainWindowFilePane.html" title="File Pane">Previous</a><a href="GuideMainWindowFolderPane.html" title="Folder pane">Next</a>
 </div></nav><div class="hgroup pagewide"><h1 class="title">
 <a name="titleGuideCollections"></a>Collections</h1></div>
 <div class="region">
 <div class="contents pagewide">
 <p class="para">Geeqie provides the ability to build lists of images, regardless of the location of the files on disk.</p>
-<p class="para">A collection window displays the contents of a collection. It allows the collection to be modified and access to the images contained in the collection.</p>
+<p class="para">When saving a new collection, select <span class="gui guilabel">Save paths relative to the collection file</span> to store image paths relative to the folder containing the <span class="file filename">.gqv</span> file. Paths begin with <span class="file filename">./</span> or <span class="file filename">../</span>. You can move the collection and images together while preserving their folder layout. The setting is retained when the collection is reopened or saved to another location. Absolute paths remain the default.</p>
+<p class="para">The files pane displays and edits collections in the main window.</p>
 <p class="para">
-    To open a new empty collection window select
+    To create a new empty collection in a new default window, select
     <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">New collection</span> <span class="shortcut">(
         <span class="keyseq keycombo"><span class="key keycap"><kbd>C</kbd></span></span>
       )</span></span>
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Open collection</span> <span class="shortcut">(
         <span class="keyseq keycombo"><span class="key keycap"><kbd>O</kbd></span></span>
       )</span></span>
-    . A dialog will appear requesting the location of the collection file. A window will the open containing the selected collection. Recently opened or saved collections can also be opened by selecting the collection's file name from the Open recent sub menu of the file menu.
+    . A dialog will appear requesting the location of the collection file. The selected collection will appear in the files pane. Recently opened or saved collections can also be opened from the Open recent submenu of the File menu.
   </p>
 <p class="para">
     To delete or rename a collection, select
@@ -48,100 +49,26 @@ document.addEventListener('DOMContentLoaded', function() {
     <span class="em em-bold emphasis">Rename</span>
     .
   </p>
-<p class="para">The collection window consists of a pane to display the contents of the collection, and a status bar along the bottom of the window.</p>
-<p class="para"></p>
-<div class="links sectionlinks" role="navigation"><ul>
-<li class="links"><a class="xref" href="GuideCollections.html#Iconpane" title="Icon pane">Icon pane</a></li>
-<li class="links"><a class="xref" href="GuideCollections.html#Statusbar3" title="Status bar">Status bar</a></li>
-<li class="links"><a class="xref" href="GuideCollections.html#DragandDrop4" title="Drag and Drop">Drag and Drop</a></li>
-<li class="links"><a class="xref" href="GuideCollections.html#AppendImages" title="Append Images">Append Images</a></li>
-<li class="links"><a class="xref" href="GuideCollections.html#RandomizedSort" title="Randomized Sort">Randomized Sort</a></li>
-<li class="links"><a class="xref" href="GuideCollections.html#InfoText" title="Infotext">Infotext</a></li>
-</ul></div>
+<div class="links sectionlinks" role="navigation"><ul><li class="links"><a class="xref" href="GuideCollections.html#CollectionFilesPane" title="Viewing a collection in the files pane">Viewing a collection in the files pane</a></li></ul></div>
 </div>
-<section id="Iconpane" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Icon pane</h2></div>
+<section id="CollectionFilesPane" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Viewing a collection in the files pane</h2></div>
 <div class="region"><div class="contents pagewide">
-<p class="para">The icon pane displays images contained in the collection as thumbnails in a grid, by default the file names also appear below each thumbnail.</p>
-<p class="para">
-      The Icon pane works exactly like the Icon view mode of the
-      <span class="em emphasis"><a class="link" href="GuideMainWindowFilePane.html" title="File Pane">File Pane</a></span>
-      in a main window, but with the addition that the contents of the collection can be organized with drag and drop.
-    </p>
-<p class="para">
-      A
-      <span class="em em-bold emphasis">context menu</span>
-      is available for the icon pane by right clicking the mouse or pressing the Menu key.
-    </p>
-<p class="para">
-      <span class="em emphasis"><a class="link" href="GuideReferenceKeyboardShortcuts.html" title="Keyboard and Mouse Shortcuts">Keyboard and Mouse Shortcuts</a></span>
-      are available in the collection window:
-    </p>
-<p class="para">
-      The
-      <span class="em em-bold emphasis">selection</span>
-      can be changed using the keyboard and mouse the same as in a
-      <span class="em emphasis"><a class="link" href="GuideMainWindowFilePane.html" title="File Pane">File Pane</a></span>
-      of the main window.
-    </p>
-<p class="para"></p>
-</div></div>
-</div></section><section id="Statusbar3" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Status bar</h2></div>
-<div class="region"><div class="contents pagewide">
-<p class="para">The status bar displays the total number of images in the collection, and the number of selected images in parenthesis. A progress bar also displays whenever thumbnails are loading from disk.</p>
-<p class="para"></p>
-</div></div>
-</div></section><section id="DragandDrop4" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Drag and Drop</h2></div>
-<div class="region"><div class="contents pagewide">
-<p class="para">Drag and drop can be initialized with the primary or middle mouse buttons. Dragging an image that is selected will include all selected images in the drag. Dragging an image that is not selected will drag only that image.</p>
-<p class="para">Dropping files and folders onto the collection window will add them to the collection, they will be inserted at the location of the drop. A red arrow will indicate the location of the drop as files are dragged over the collection window. When one or more folders are included in the drop list, a menu will appear to select how to handle the contents of the folders.</p>
-<p class="para">To move images within the collection to change their order, initiate a drag for the selected image(s) and then move the mouse to the desired location within the window. A red arrow will appear to assist in determining the destination of the dragged images. Release the drag to move the images to the new location in the list.</p>
-<div class="note" title="Note">
-<svg width="24" height="24" version="1.1">
- <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
- <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
-</svg><div class="inner"><div class="region"><div class="contents">
-      <p class="para">
-        When renaming or moving files within Geeqie, the contents of collections located in the
-        <span class="em emphasis"><a class="link" href="GuideReferenceConfig.html" title="Configuration Files and Locations">collections folder</a></span>
-        will automatically update to the new name or location.
-      </p>
-    </div></div></div>
-</div>
-<p class="para"></p>
-</div></div>
-</div></section><section id="AppendImages" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Append Images</h2></div>
-<div class="region"><div class="contents pagewide">
-<p class="para">Right-click menu items permit images to be appended from either another collection or from the currently selected folder.</p>
-<p class="para"></p>
-</div></div>
-</div></section><section id="RandomizedSort" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Randomized Sort</h2></div>
-<div class="region"><div class="contents pagewide">
-<p class="para">
-      Right-click menu item
-      <span class="em em-bold emphasis">Sort</span>
-      , in addition to the standard sort methods, permits images to be randomly arranged.
-    </p>
-<p class="para"></p>
-</div></div>
-</div></section><section id="InfoText" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Infotext</h2></div>
-<div class="region"><div class="contents pagewide">
-<p class="para">
-      Right-click menu item
-      <span class="em em-bold emphasis">Infotext</span>
-      , allows additional text to be placed against a thumbnail. See <a class="link" href="GuideReferenceCollectionFiles.html" title="Collection file format">Collection file format</a>.
-    </p>
-<p class="para"></p>
+<p class="para">When browsing a directory containing collection files, the folder pane displays them as folders with a pictures-folder icon. Click one to display its members in the files pane. This works in both folder-list and folder-tree views; these entries are not actual disk directories.</p>
+<p class="para">The files pane supports list and icon views, selection, filtering, sorting, and the usual file operations. The main path bar shows the collection path, or its name until it is saved.</p>
+<p class="para">Copy, move, rename, and delete operate on the actual files. Use <span class="gui guimenuitem">Remove from collection</span> in the files pane context menu to remove membership while leaving the files on disk. Dropping files into the pane adds them to the collection. When a drop includes folders, choose whether to add their contents, add contents recursively, or skip the folders. The same menu can append another collection, save or save as, and change or randomize the collection order.</p>
+<p class="para">Use <span class="gui guimenuitem">Go to original</span> on a collection member to open its containing folder in the files pane.</p>
+<p class="para">Use <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Alt</kbd></span>+<span class="key keycap"><kbd>S</kbd></span></span> to save the current collection, <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>S</kbd></span></span> to save it as another file, or <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Alt</kbd></span>+<span class="key keycap"><kbd>Backspace</kbd></span></span> to remove selected files from the collection.</p>
+<p class="para">When the files pane shows a collection, its context menu includes <span class="gui guimenu">Info text</span>. Select <span class="gui guimenuitem">Show info text</span> to display each entry's text in the list or icon view. Select <span class="gui guimenuitem">Edit info text</span> to create or change the text for the clicked file or selected files. Enter the text in the dialog and select <span class="gui guibutton">Save</span>. When multiple files are selected, the same text is applied to each one.</p>
+<p class="para">In list or icon view, drag images within the files pane to change their collection order. Drop before or after a row or icon, or in empty space to append. A marker indicates the insertion side. Selected images move together. Reordering switches the pane to collection order; save the collection to retain the new order.</p>
+<p class="para">You can drag images between the files panes of two main windows, whether each pane shows a folder or a collection. Dropping onto a collection adds references to the images without moving the files or removing them from the source collection. The drop position determines where new entries are inserted in both list and icon views. Dropping onto a folder uses the usual file copy or move operation.</p>
+<p class="para">Use <span class="gui guimenu">Windows</span> → <span class="gui guimenu">New window</span> → <span class="gui guimenuitem">New window from current</span> to show the same collection in another main window. Each window can then browse independently.</p>
+<p class="para">Select <span class="gui guimenuitem">Collection order</span> from the sort menu to use the collection's order. Other pane sorts do not change the saved collection order. Select a directory to return to directory browsing. If this is the last window showing a modified collection, Geeqie asks whether to save or discard the changes, or cancel navigation. The same choices are offered when closing or quitting. Collection mode is not restored after restarting Geeqie.</p>
 </div></div>
 </div></section>
 </div>
 <nav class="prevnext pagewide"><div class="inner">
-<a href="GuideOtherWindowsPanView.html" title="Pan View">Previous</a><a href="GuideImageSearch.html" title="Search and Select">Next</a>
+<a href="GuideMainWindowFilePane.html" title="File Pane">Previous</a><a href="GuideMainWindowFolderPane.html" title="Folder pane">Next</a>
 </div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">
 <div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
 <div class="inner">

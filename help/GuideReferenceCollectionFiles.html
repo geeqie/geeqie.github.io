@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Collection file format</title>
 <link rel="stylesheet" type="text/css" href="C.css">
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     Collection files have the following format:
     <div class="code"><pre class="contents"><code>      #Geeqie collection
       #created with Geeqie version 2.6+git20250705-01d997ed
-      #geometry: 0 0 1080 1106
       "&lt;filepath1&gt;"
       "&lt;filepath2&gt;"
       #end
@@ -37,13 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
     </code></pre></div>
   </p>
 <p class="para">
-    This text can be displayed via a right-click menu option from a
-    <a class="link" href="GuideCollections.html" title="Collections">Collections</a>
-    window.
+    This text can be displayed from the files pane when viewing a
+    <a class="link" href="GuideCollections.html" title="Collections">Collections</a>.
   </p>
 <p class="para">
-    It is assumed that you insert such text into a .gqv file via a script or program file. If you wish a facility to do this to be included within Geeqie, please raise a feature request on
-    <a href="https://github.com/BestImageViewer/geeqie/issues" class="ulink" title="https://github.com/BestImageViewer/geeqie/issues">https://github.com/BestImageViewer/geeqie/issues</a>
+    To add or edit this text in Geeqie, display the collection in the files pane and select <span class="gui guimenuitem">Edit info text</span> from the <span class="gui guimenu">Info text</span> submenu of a file's context menu. The text is stored when the collection is saved.
   </p>
 </div></div>
 <nav class="prevnext pagewide"><div class="inner">
