@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">Geeqie provides the ability to build lists of images, regardless of the location of the files on disk.</p>
 <p class="para">When saving a new collection, select <span class="gui guilabel">Save paths relative to the collection file</span> to store image paths relative to the folder containing the <span class="file filename">.gqv</span> file. Paths begin with <span class="file filename">./</span> or <span class="file filename">../</span>. You can move the collection and images together while preserving their folder layout. The setting is retained when the collection is reopened or saved to another location. Absolute paths remain the default.</p>
 <p class="para">The files pane displays and edits collections in the main window.</p>
+<p class="para">Collection entries are retained when their files are unavailable, including files on disconnected drives and files deleted outside Geeqie. Cached thumbnails are displayed when available; opening an unavailable image shows a broken image indicator. Saving the collection preserves these entries. Use <span class="gui guimenuitem">Remove from collection</span> to remove entries you no longer want.</p>
 <p class="para">
     To create a new empty collection in a new default window, select
     <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">New collection</span> <span class="shortcut">(
@@ -36,18 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Open collection</span> <span class="shortcut">(
         <span class="keyseq keycombo"><span class="key keycap"><kbd>O</kbd></span></span>
       )</span></span>
-    . A dialog will appear requesting the location of the collection file. The selected collection will appear in the files pane. Recently opened or saved collections can also be opened from the Open recent submenu of the File menu.
+    . The dialog combines collection files in the default collections directory with recently opened or saved collections, including those stored elsewhere. Each entry shows its filename followed by its full path. Duplicate paths appear only once, and entries are sorted by filename, then path. Click an entry or select it and press <span class="key keycap"><kbd>Return</kbd></span> to display the collection in the files pane. Press <span class="key keycap"><kbd>Escape</kbd></span> to close the list.
   </p>
+<p class="para">Unavailable or unreadable collection files remain in the list but are grayed out and cannot be selected. Their history entries are retained between sessions, so collections on disconnected drives can be opened again when the drives are available. The <span class="gui guilabel">Recent collections list maximum size</span> setting in <a class="link" href="GuideOptionsBehavior.html" title="Behavior Options">Behavior Options</a> controls how many collections are retained in history; it does not limit the files listed from the default collections directory.</p>
+<p class="para">When images are moved or renamed within Geeqie, existing collection files in the default collections directory and collection history are updated to use the new paths.</p>
+<p class="para"><span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Open recent</span></span> uses GTK's shared recent-files list instead of collection history. Its default <span class="gui guilabel">Geeqie image files</span> filter matches Geeqie's configured file extensions; select <span class="gui guilabel">All files</span> to show other recent files.</p>
 <p class="para">
-    To delete or rename a collection, select
-    <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Open collection</span> <span class="shortcut">(
-        <span class="keyseq keycombo"><span class="key keycap"><kbd>O</kbd></span></span>
-      )</span></span>
-    , right-click on the collection you wish to delete or rename, and then select
-    <span class="em em-bold emphasis">Delete</span>
-    or
-    <span class="em em-bold emphasis">Rename</span>
-    .
+    To delete or rename a collection file, use your file manager. The Open collection list does not provide file management actions.
   </p>
 <div class="links sectionlinks" role="navigation"><ul><li class="links"><a class="xref" href="GuideCollections.html#CollectionFilesPane" title="Viewing a collection in the files pane">Viewing a collection in the files pane</a></li></ul></div>
 </div>

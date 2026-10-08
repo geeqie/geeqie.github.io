@@ -181,70 +181,25 @@ document.addEventListener('DOMContentLoaded', function() {
         OnlyShowIn=X-Geeqie;
       </code></pre></div>
     </p>
+<p class="para">Plugins appear in the <span class="gui guimenu">Plugins</span> menu and in plugin context menus. The legacy <span class="code literal">X-Geeqie-Menu-Path</span> key does not control menu placement in GTK4; omit it from new desktop files.</p>
 <p class="para">
-      A menu path where the plugin will appear, instead of in the default
-      <span class="guiseq menuchoice"><span class="gui guimenu">Plugins</span></span>
-      , can be set by including:
-      <div class="code"><pre class="contents"><code>X-Geeqie-Menu-Path=&lt;FileMenuPath&gt;</code></pre></div>
-    </p>
-<p class="para">
-      Possible vales for
-      <span class="em emphasis">FileMenuPath</span>
-      are:
-      <div class="code"><pre class="contents"><code>        FileMenu
-        FileMenu/OpenSection
-        FileMenu/SearchSection
-        FileMenu/PrintSection
-        FileMenu/FileOpsSection
-        FileMenu/QuitSection
-        GoMenu
-        SelectMenu
-        SelectMenu/SelectSection
-        SelectMenu/ClipboardSection
-        SelectMenu/MarksSection
-        EditMenu/EditMenu
-        EditMenu/EditSection
-        EditMenu/OrientationMenu
-        EditMenu/RatingMenu
-        EditMenu/PropertiesSection
-        EditMenu/PreferencesSection
-        PluginsMenu
-        ViewMenu
-        ViewMenu/WindowSection
-        ViewMenu/FileDirMenu
-        ViewMenu/FileDirMenu/FolderSection
-        ViewMenu/FileDirMenu/ListSection
-        ViewMenu/DirSection
-        ViewMenu/ZoomMenu
-        ViewMenu/ZoomMenu/ConnectZoomMenu
-        ViewMenu/SplitMenu
-        ViewMenu/StereoMenu
-        ViewMenu/ColorMenu
-        ViewMenu/OverlayMenu
-        ViewMenu/ViewSection
-        ViewMenu/ToolsSection
-        ViewMenu/SlideShowSection
-        HelpMenu
-        HelpMenu/HelpSection
-      </code></pre></div>
-    </p>
-<p class="para">
-      If you want a plugin to use a user-definable path, the following entry must be made in the desktop file:
+      To let the user choose a destination folder for a plugin, add this entry to its desktop file:
       <div class="code"><pre class="contents"><code>X-Geeqie-Filter=true</code></pre></div>
     </p>
 <p class="para">
-      Desktop files containing this entry will be displayed in the Folder action list of the
+      The plugin will appear in the Folder action list of the
       <span class="em emphasis"><a class="link" href="GuideSidebarsSortManager.html#CopyMoveandLink" title="Copy, Move, Link and Desktop actions">Sort Manager Sidebar</a></span>
-      . The path of the bookmark clicked will be used by the desktop file.
-      <p class="para"></p>
-      If the desktop file is called from the menu, when the plugin is executed you are presented with a dialogue which enables a path to be selected. The path selected, appended by the filename currently being processed, is made available to the shell script either as an environment variable or via a call to geeqie. The following code demonstrates the use of both methods:
-      <div class="code"><pre class="contents"><code>        for file in "$@"
-        do
-        destination=$(geeqie --get-destination:"$file")
-        
-        echo "$destination"
-        echo $GEEQIE_DESTINATION
-        done
+      . Clicking a bookmark uses that folder as the destination. When you run the plugin from the Plugins menu, Geeqie asks you to choose a destination folder.
+    </p>
+<p class="para">
+      In the plugin script, use <span class="code literal">geeqie --get-destination="$file"</span> to get the destination folder with the file's name appended. For example, if the file is <span class="file filename">/photos/image.jpg</span> and you choose <span class="file filename">/backup</span>, the command returns <span class="file filename">/backup/image.jpg</span>. It only returns the path; the script must perform the operation.
+      <div class="code"><pre class="contents"><code>      for file in "$@"; do
+        destination=$(geeqie --get-destination="$file")
+        printf '%s\n' "$destination"
+      done
+      </code></pre></div>
+      The same path is available as <span class="code literal">$GEEQIE_DESTINATION</span> for the file currently being processed:
+      <div class="code"><pre class="contents"><code>      printf '%s\n' "$GEEQIE_DESTINATION"
       </code></pre></div>
       <div class="note" title="Note">
 <svg width="24" height="24" version="1.1">

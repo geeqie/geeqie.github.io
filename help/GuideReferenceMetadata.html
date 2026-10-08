@@ -24,11 +24,22 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">This section describes the metadata reading and writing process.</p>
 <p class="para"></p>
 <div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideReferenceMetadata.html#MetadataTemplates" title="Metadata templates">Metadata templates</a></li>
 <li class="links"><a class="xref" href="GuideReferenceMetadata.html#Metadatahandling" title="Metadata handling">Metadata handling</a></li>
 <li class="links"><a class="xref" href="GuideReferenceMetadata.html#Optionsthatinfluencestheprocess" title="Options that influence the process">Options that influence the process</a></li>
 </ul></div>
 </div>
-<section id="Metadatahandling" class="section"><div class="inner">
+<section id="MetadataTemplates" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Metadata templates</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Select files in the files pane, then choose <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guimenuitem">Metadata Templates…</span></span> to apply description, headline, keywords, copyright, creator, and credit together. The dialog applies to the selection captured when it was opened.</p>
+<p class="para">Choose one action for each field: <span class="gui guilabel">Leave unchanged</span>, <span class="gui guilabel">Replace</span>, <span class="gui guilabel">Append</span>, or <span class="gui guilabel">Clear</span>. New templates start with every field unchanged. Replace overwrites existing values. Text append adds the value after a newline; applying the template again repeats the appended text. List append adds values without duplicates. Replace and Append ignore blank values. Clear explicitly removes existing metadata. Text entry is available only for Replace and Append. Keywords can be separated by commas or newlines.</p>
+<p class="para">Choose <span class="gui guibutton">New template</span> to start with blank fields. Enter a name under <span class="gui guilabel">Save as</span> and choose <span class="gui guibutton">Save template</span> to store the values and per-field actions. Saving with an existing name replaces that template; use another name to create a copy. Choose a saved template from the list to load it, or choose <span class="gui guibutton">Delete template</span> to remove it. Editing or applying values does not automatically save the template.</p>
+<p class="para">Expand <span class="gui guilabel">Add field</span> to add more metadata fields. Choose a suggested field, or enter a label and a simple XMP metadata key such as <span class="code">Xmp.photoshop.City</span>. Keys can be copied from the Exif window. Select <span class="gui guilabel">List of values (one per line)</span> for list fields, then choose <span class="gui guibutton">Add field</span>. Duplicate keys are rejected. Custom fields support the same four actions and blank-value behavior as the standard fields, and their labels, keys, values, list settings, and actions are saved with the template.</p>
+<p class="para"><span class="gui guibutton">Remove field</span> removes a custom field from the current template without changing file metadata. Save the template to keep the change. Loading a template restores its own custom fields; <span class="gui guibutton">New template</span> starts with the standard fields.</p>
+<p class="para">Choose <span class="gui guibutton">Apply to selection</span> to queue the changes using the same metadata save and grouped-file settings as the info sidebar. Use <span class="gui guimenuitem">Save metadata</span> to write queued changes manually. Templates are stored as readable INI files in the <span class="file filename">metadata-templates</span> directory inside the Geeqie configuration directory. Filenames use the template name with unsuitable characters replaced by underscores. Numeric suffixes distinguish filenames that collide, including differences only in letter case. Saving an exact existing template name updates that template. Templates saved with the previous hashed filenames remain usable.</p>
+</div></div>
+</div></section><section id="Metadatahandling" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Metadata handling</h2></div>
 <div class="region">
 <div class="contents pagewide"><p class="para"></p></div>
@@ -85,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </p>
         </li>
 <li class="list itemizedlist">
-          <p class="para">Modifying the keywords, comment, orientation, etc. does not ask for confirmation, but immediately modifies the metadata in memory and adds the file to "write queue"</p>
+          <p class="para">Modifying the keywords, description, orientation, etc. does not ask for confirmation, but immediately modifies the metadata in memory and adds the file to "write queue"</p>
         </li>
 <li class="list itemizedlist">
           <p class="para">

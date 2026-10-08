@@ -43,6 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <dd class="terms">
           <p class="para">Prompts for confirmation before moving files to the trash bin.</p>
         </dd>
+<dt class="terms"><span class="gui guilabel">Confirm permanent folder delete</span></dt>
+<dd class="terms">
+          <p class="para">Enabled by default. Prompts before permanently deleting a folder and all its contents, including subfolders. The folder context menu offers both Move to Trash and Permanently Delete, each using its own confirmation setting. Disabling this option starts permanent deletion without confirmation; errors are still reported.</p>
+        </dd>
+<dt class="terms"><span class="gui guilabel">Confirm move folder to Trash</span></dt>
+<dd class="terms">
+          <p class="para">Enabled by default. Prompts before moving a complete folder tree to Trash as one item. The confirmation shows the number of descendant folders and all files, including hidden files, sidecars, symbolic links, and files excluded by display filters. Symbolic link targets are never traversed. If contents cannot be counted reliably, an error is shown and deletion stops.</p>
+          <p class="para">Built-in counting and recursive operations run in the background with a progress dialog and a Cancel button. Cancellation stops further work; files already removed are not restored. Failure messages distinguish incomplete copying from a completed copy followed by failed source removal. They identify the source and destination paths, say whether an incomplete copy was removed or remains, and report how many source entries were removed. A completed copy is retained when source removal fails. Built-in deletion refuses folder trees containing mount points, including bind mounts, before deleting any contents; symbolic links are not followed. Sources that change while being copied are checked before removal and the operation stops if a change is detected. Disabling this option starts trashing without confirmation. Failed trashing never falls back to permanent deletion.</p>
+        </dd>
 <dt class="terms">
           <span class="gui guilabel">
             Enable
@@ -74,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="gui guilabel">Use Geeqie trash location</span>
         </dt>
 <dd class="terms">
-          <p class="para">Moves deleted files to a temporary folder, for easy retrieval of deleted files. Files in the temporary folder are retained until the maximum size is reached, at which point deleting additional files will result in the removal of the oldest files to reclaim the space needed for the new files.</p>
+          <p class="para">Moves deleted files to a temporary folder, for easy retrieval of deleted files. Items in the temporary folder are retained until the maximum size is reached, at which point deleting additional items will result in removal of the oldest trash entries to reclaim space. Folder sizes include their descendants, and a folder tree is removed as a whole item. Automatic removal displays a desktop notification showing the number of entries permanently deleted and the space reclaimed. An incoming item larger than the limit is refused with an error before removing any existing trash entries. The original item and existing trash entries are preserved.</p>
           <div class="note" title="Note">
 <svg width="24" height="24" version="1.1">
  <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
@@ -83,9 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <p class="para">
               Deleted files retain their original names in the <span class="code literal">files</span> subfolder. If a name is already present, Geeqie adds a numeric suffix before the file extension, for example <span class="code literal">image.2.jpg</span>, to make it unique without preventing the file type from being recognized.
               <p class="para"></p>
-              For each file, the <span class="code literal">info</span> subfolder contains a freedesktop.org-compatible <span class="code literal">.trashinfo</span> file recording its original path and deletion date. This information can be used to restore the file manually.
+              For each file, the <span class="code literal">info</span> subfolder contains a freedesktop.org-compatible <span class="code literal">.trashinfo</span> file recording its original path and deletion date. A folder tree has one information file for the top-level folder, preserving the names of all its contents.
               <p class="para"></p>
-              When viewing the <span class="code literal">files</span> subfolder in Geeqie, right-click a file to copy or move it back to its recorded original location. Copying leaves the trash entry intact; moving removes it after a successful restore.
+              When viewing the <span class="code literal">files</span> subfolder in Geeqie, right-click a file or folder to copy or move it back to its recorded original location. Copying leaves the trash entry intact; moving removes it after a successful restore. Existing destinations are not overwritten. If the original parent no longer exists, use Restore to another folder to choose a destination.
               <p class="para"></p>
               Files created by older versions, with a six-digit prefix, remain in the Safe Delete folder and are still included when enforcing the maximum size or clearing the trash.
             </p>
@@ -98,6 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <dd class="terms">
           <p class="para">Moves deleted files to the system-defined trash bin.</p>
         </dd>
+<dt class="terms"><span class="gui guilabel">Use no trash at all</span></dt>
+<dd class="terms">
+          <p class="para">Selects permanent deletion as the default. The folder context menu still offers Move to Trash; that explicit action uses the last selected trash location without changing this default.</p>
+        </dd>
 <dt class="terms">
           <span class="gui guilabel">Folder</span>
         </dt>
@@ -108,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="gui guilabel">Maximum size</span>
         </dt>
 <dd class="terms">
-          <p class="para">The size to use for the Safe Delete folder, in megabytes. Note that setting this value to 0 (zero) will disable any limit.</p>
+          <p class="para">The size limit for Geeqie trash, in MiB. The default for new configurations is 5120 MiB (5 GiB). The control accepts limits up to 102400 MiB (100 GiB). Existing saved limits are preserved. Setting this value to 0 (zero) disables the limit.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Clear button</span>
@@ -199,6 +212,12 @@ document.addEventListener('DOMContentLoaded', function() {
         </dt>
 <dd class="terms">
           <p class="para">This is the maximum number of entries to be displayed in the recent open folder list drop-down box.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">Recent collections list maximum size</span>
+        </dt>
+<dd class="terms">
+          <p class="para">The maximum number of recently opened or saved collections retained between sessions. The default is 100, and the range is 1 to 1000. Open collection combines this history with files in the default collections directory; the limit applies only to history entries. Unavailable collections remain in history and appear grayed out in the list. Existing .gqv files in this history are also updated when images are renamed or moved within Geeqie, even if the collections are saved outside the default collections directory. This setting is independent of the recent folder list and does not control Open recent, which uses GTK's shared recent-files database.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Recent folder-image list maximum size</span>
