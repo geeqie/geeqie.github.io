@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#Createthumbnails" title="Create thumbnails">Create thumbnails</a></li>
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#CreateSimFiles" title="Create file similarity cache">Create file similarity cache</a></li>
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#Metadata" title="Metadata">Metadata</a></li>
-<li class="links"><a class="xref" href="GuideReferenceManagement.html#BackgroundCacheMaintenance" title="Background Cache Maintenance">Background Cache Maintenance</a></li>
+<li class="links"><a class="xref" href="GuideReferenceManagement.html#BackgroundCacheMaintenance" title="Clean and Update Caches">Clean and Update Caches</a></li>
 <li class="links"><a class="xref" href="GuideReferenceManagement.html#CacheMaintenance" title="Command line program">Command line program</a></li>
 </ul></div>
 </div>
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="gui guilabel">Clean up</span>
         </dt>
 <dd class="terms">
-          <p class="para">Removes thumbnails, sim. files, and data for which the source image is no longer present, or has been modified since the thumbnail was generated.</p>
+          <p class="para">Removes thumbnails, sim. files, and data for which the source image is no longer present, or has been modified since the cached data was generated. Valid similarity grids without perceptual hashes are retained and can be upgraded during similarity-cache creation.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Clear cache</span>
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="gui guilabel">Clean up</span>
         </dt>
 <dd class="terms">
-          <p class="para">Removes thumbnails for which the source image is no longer present, or has been modified since the thumbnail was generated.</p>
+          <p class="para">Removes thumbnails for which the source image is no longer present, or has been modified since the cached data was generated. Valid similarity grids without perceptual hashes are retained and can be upgraded during similarity-cache creation.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Clear cache</span>
@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
       and
       <span class="em emphasis"><a class="link" href="GuideImageSearchFindingDuplicates.html" title="Finding Duplicates">find duplicates</a></span>
       , are speeded up if similarity data files for the images have been created. This utility will create sim. files recursively under the specified folder.
+      When <span class="gui guilabel">Perceptual hash algorithm</span> is selected in the Duplicates window, it also creates all eight orientation hashes. Existing RGB grids are reused when adding missing hashes.
       <p class="para"></p>
       The sim. files contain some or all of the following fields:
       <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
@@ -128,10 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <p class="para">width x height</p>
           </dd>
 <dt class="terms">
-            <span class="gui guilabel">Date</span>
+            <span class="gui guilabel">DateTimeOriginal</span>
           </dt>
 <dd class="terms">
-            <p class="para">Exif date in time_t format</p>
+            <p class="para">Exif.Photo.DateTimeOriginal in time_t format, or -1 if unavailable. Legacy Date fields are ignored and removed when the cache is rewritten.</p>
           </dd>
 <dt class="terms">
             <span class="gui guilabel">checksum</span>
@@ -144,6 +145,12 @@ document.addEventListener('DOMContentLoaded', function() {
           </dt>
 <dd class="terms">
             <p class="para">[32 x 32] = 3072 bytes of data (1024 pixels in RGB format, 1 pixel is 24bits)</p>
+          </dd>
+<dt class="terms">
+            <span class="gui guilabel">PerceptualHashV1</span>
+          </dt>
+<dd class="terms">
+            <p class="para">Eight 64-bit DCT perceptual hashes, stored as 16-digit hexadecimal values separated by spaces. These cover all right-angle rotations and reflections. This optional field is added when pHash is enabled; the RGB grid is also retained.</p>
           </dd>
 </dl></div></div></div></div>
     </p></div></div>
@@ -168,17 +175,81 @@ document.addEventListener('DOMContentLoaded', function() {
 </dl></div></div></div></div>
 </div></div>
 </div></section><section id="BackgroundCacheMaintenance" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Background Cache Maintenance</h2></div>
-<div class="region"><div class="contents pagewide"><p class="para">
-      This facility will run the command line program described below as a stand-alone background job.
-    </p></div></div>
+<div class="hgroup pagewide"><h2 class="title">Clean and Update Caches</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+      Select <span class="gui guilabel">Select</span> in the <span class="gui guilabel">Clean and update caches</span> section, enter or choose a folder, and select <span class="gui guilabel">Start</span>. Geeqie launches the command line program described below as a separate background job, creating thumbnails and similarity data for the selected folder and all its subfolders. The initial cleanup removes orphaned and outdated entries from Geeqie's cache, not just entries for the selected folder.
+    </p>
+<p class="para">
+      Thumbnail caching must be enabled in the saved Preferences. A progress window shows the maintenance stage and current path. Select Stop or close this window to terminate maintenance. The viewer remains available during the background job. The job continues if you close Geeqie; use its progress window to stop it.
+    </p>
+</div></div>
 </div></section><section id="CacheMaintenance" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Command line program</h2></div>
-<div class="region"><div class="contents pagewide"><p class="para">
-      Geeqie can be run as a command line program: <span class="code">GQ_CACHE_MAINTENANCE=y[es] geeqie --cache-maintenance=&lt;path to images&gt;</span>. It will recursively remove orphaned thumbnails and .sim files, and create thumbnails and similarity data for all images found.
-    <p class="para"></p>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+      Geeqie can be run as a command line program: <span class="code">GQ_CACHE_MAINTENANCE=y[es] geeqie --cache-maintenance=&lt;path to images&gt;</span>. It will recursively remove orphaned and outdated thumbnails and .sim files, and create thumbnails and similarity data for all images found.
+    </p>
+<p class="para">
       It may also be called from <span class="code">cron</span> or <span class="code">anacron</span> thus enabling automatic updating of the cached data for all your images.
-    </p></div></div>
+    </p>
+</div>
+<section id="SchedulingCacheMaintenance" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Scheduling cache maintenance</h3></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
+        Run scheduled maintenance as the same user who normally runs Geeqie. Start Geeqie normally at least once and save its configuration before scheduling maintenance. Thumbnail caching must be enabled in Preferences. If you use custom <span class="code">XDG_CONFIG_HOME</span>, <span class="code">XDG_CACHE_HOME</span>, or <span class="code">XDG_DATA_HOME</span> values, set the same values in the maintenance script.
+      </p>
+<p class="para">
+        Although maintenance does not open a viewer window, the current GTK4 implementation requires a display connection. For jobs without a desktop session, install <span class="code">Xvfb</span>, <span class="code">xvfb-run</span> (including its <span class="code">xauth</span> dependency), and <span class="code">dbus-run-session</span> using your distribution's package manager. The following wrapper supplies a virtual display and a private D-Bus session.
+      </p>
+<p class="para">
+        Save this script as <span class="code">$HOME/.local/bin/geeqie-cache-maintenance</span>, creating the directory if necessary. Replace <span class="code">/usr/bin/geeqie</span> with the absolute path reported by <span class="code">command -v geeqie</span>, and replace the image folder with your own. Check the paths to the wrapper programs too. Quoting the image folder allows spaces in its name.
+      </p>
+<div class="code"><pre class="contents"><code>#!/bin/sh
+# SPDX-License-Identifier: GPL-2.0-or-later
+export GQ_CACHE_MAINTENANCE=y
+exec /usr/bin/xvfb-run --auto-servernum /usr/bin/dbus-run-session -- /usr/bin/geeqie --cache-maintenance="$HOME/Pictures"</code></pre></div>
+<p class="para">
+        Make the script executable, create the log directory, and test it manually before adding a schedule:
+      </p>
+<div class="code"><pre class="contents"><code>chmod +x "$HOME/.local/bin/geeqie-cache-maintenance"
+mkdir -p "$HOME/.local/state/geeqie"
+"$HOME/.local/bin/geeqie-cache-maintenance" &gt;&gt; "$HOME/.local/state/geeqie/cache-maintenance.log" 2&gt;&amp;1</code></pre></div>
+<p class="para">
+        Check the log for configuration errors or a <span class="code">Caching not enabled</span> message. The examples below append both standard output and errors to this log; remove or rotate it periodically. Ensure the image folder, including any external or network drive, is available when the job runs.
+      </p>
+</div>
+<section id="CacheMaintenanceCron" class="section"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">Using cron</h4></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+          Run <span class="code">crontab -e</span> as your normal user and add the following entry to run maintenance daily at 03:00. The cron service must be enabled, and the computer must be running at the scheduled time.
+        </p>
+<div class="code"><pre class="contents"><code>0 3 * * * "$HOME/.local/bin/geeqie-cache-maintenance" &gt;&gt; "$HOME/.local/state/geeqie/cache-maintenance.log" 2&gt;&amp;1</code></pre></div>
+</div></div>
+</div></section><section id="CacheMaintenanceAnacron" class="section"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title">Using anacron</h4></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">
+          Anacron can run a daily job that was missed while the computer was switched off. To keep maintenance under your own account, create a personal configuration and timestamp directory:
+        </p>
+<div class="code"><pre class="contents"><code>mkdir -p "$HOME/.config" "$HOME/.local/state/geeqie/anacron"</code></pre></div>
+<p class="para">
+          Save the following line in <span class="code">$HOME/.config/geeqie-anacrontab</span>. The first two fields specify a one-day interval and a five-minute delay; the third is the job identifier.
+        </p>
+<div class="code"><pre class="contents"><code>1 5 geeqie-cache-maintenance "$HOME/.local/bin/geeqie-cache-maintenance" &gt;&gt; "$HOME/.local/state/geeqie/cache-maintenance.log" 2&gt;&amp;1</code></pre></div>
+<p class="para">
+          Anacron must itself be started periodically. For example, add this entry with <span class="code">crontab -e</span> to check hourly for a due job. Replace <span class="code">/usr/sbin/anacron</span> with the path reported by <span class="code">command -v anacron</span>. Use this entry instead of the daily cron entry above.
+        </p>
+<div class="code"><pre class="contents"><code>0 * * * * /usr/sbin/anacron -s -t "$HOME/.config/geeqie-anacrontab" -S "$HOME/.local/state/geeqie/anacron" &gt;&gt; "$HOME/.local/state/geeqie/cache-maintenance.log" 2&gt;&amp;1</code></pre></div>
+</div></div>
+</div></section>
+</div>
+</div></section>
+</div>
 </div></section>
 </div>
 <nav class="prevnext pagewide"><div class="inner">

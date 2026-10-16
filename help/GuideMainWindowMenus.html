@@ -623,7 +623,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="guiseq menuchoice"><span class="gui guimenu">Draw rectangle</span></span>
         </dt>
 <dd class="terms">
-          <p class="para">Press and drag the mouse left button to draw a rectangle.</p>
+          <p class="para">Entering rectangle mode selects the whole image, or the largest rectangle matching the selected aspect ratio. Drag inside the rectangle to move it, or drag an edge or corner to resize it. A single click leaves the rectangle unchanged. Drag outside the rectangle to replace it. Press Escape to leave rectangle mode without changing the image.</p>
         </dd>
 <dt class="terms">
           <span class="guiseq menuchoice"><span class="gui guimenu">Aspect ratio</span></span>
@@ -632,10 +632,11 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="para">Select an aspect ratio for the above action.</p>
         </dd>
 <dt class="terms">
-          <span class="guiseq menuchoice"><span class="gui guimenu">Crop rectangle</span></span>
+          <span class="guiseq menuchoice"><span class="gui guimenu">Save Cropped Copy…</span></span>
         </dt>
 <dd class="terms">
-          <p class="para">Crop the image rectangle set above. See also <span class="em emphasis"><a class="link" href="GuideReferenceStandardPlugins.html#Imagecrop" title="Image crop">Image Crop plugin</a></span>.</p>
+          <p class="para">Save the selected rectangle as a new JPEG or PNG image. The original file is preserved. The copy uses the loaded image pixels at their available resolution and applies the displayed orientation. For RAW files, these pixels may be an embedded preview rather than full sensor data; the output dialog shows the available crop dimensions.</p>
+          <p class="para">JPEG quality defaults to 90. PNG preserves transparency; JPEG replaces transparency with white. Embedded color profiles are preserved when available. With Exiv2 support, Preserve metadata copies descriptive, camera, exposure, and GPS metadata and updates orientation and dimensions. Embedded thumbnails and source editing instructions are omitted.</p>
         </dd>
 </dl></div></div></div></div>
 <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">

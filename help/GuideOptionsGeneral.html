@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   The resulting location is the source image's folder, in a sub folder with the name
                   <span class="code">.thumbnails</span>
                   <p class="para"></p>
-                  When the image source folder cannot be written, Geeqie falls back to saving the thumbnail in the user's home folder.
+                  When the image source folder cannot be written, Geeqie falls back to saving the thumbnail in the configured Geeqie cache folder.
                 </p>
               </dd>
 </dl></div></div></div></div>
@@ -136,6 +136,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     for additional details.
                   </p>
                 </p>
+              </dd>
+</dl></div></div></div></div>
+          <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms"><span class="gui guilabel">Use Geeqie thumbnail style and custom folder</span></dt>
+<dd class="terms">
+                <p class="para">The folder field selects a parent folder. Geeqie creates a dedicated geeqie-cache subfolder for its thumbnails and .sim files, and marks it as a Geeqie cache. Existing nonempty folders without this marker are not adopted. Select Use Geeqie thumbnail style and cache to restore the default location. A dedicated folder on a larger local or network drive can reduce local disk usage. Existing cache files are not moved. Shared-style thumbnails remain in their standard location, while their .sim files use the configured Geeqie cache folder.</p>
               </dd>
 </dl></div></div></div></div>
         </dd>
