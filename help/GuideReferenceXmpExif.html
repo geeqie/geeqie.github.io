@@ -218,19 +218,22 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 <tr class="shade">
 <td class="td-colsep td-rowsep">
-              <p class="para">formatted.Resolution</p>
+              <p class="para"><a name="formatted-resolution"></a>formatted.Resolution</p>
             </td>
 <td class="td-colsep td-rowsep">
               <p class="para">
-                Exif.Image.Xresolution
+                Exif.Image.XResolution
                 <p class="para"></p>
-                Exif.Image.Yresolution
+                Exif.Image.YResolution
                 <p class="para"></p>
                 Exif.Image.ResolutionUnit
               </p>
             </td>
 <td class="td-rowsep">
-              <p class="para">Resolution</p>
+              <p class="para">Recorded horizontal and vertical image density, for example <span class="code literal">300 x 300 (dot/inch)</span>. This is separate from the image dimensions in pixels and the monitor's physical pixel density.</p>
+              <p class="para">Valid EXIF density values take precedence. EXIF density retains its recorded unit, which may be per inch or per centimeter; a missing unit is shown as unknown.</p>
+              <p class="para">If either EXIF density value is missing or invalid, Geeqie uses JPEG JFIF density or PNG pHYs density when available. JFIF density retains its recorded unit; PNG pixels per meter are converted to pixels per inch.</p>
+              <p class="para">Values that specify only pixel aspect ratio are not displayed. If no usable density is available, the tag is empty.</p>
             </td>
 </tr>
 <tr>

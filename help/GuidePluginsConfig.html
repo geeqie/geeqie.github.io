@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuidePluginsConfig.html#Addingnewplugin" title="Adding new plugin">Adding new plugin</a></li>
 <li class="links"><a class="xref" href="GuidePluginsConfig.html#Modifyinganexistingplugin" title="Modifying an existing plugin">Modifying an existing plugin</a></li>
 <li class="links"><a class="xref" href="GuidePluginsConfig.html#Deletingaplugin" title="Deleting a plugin">Deleting a plugin</a></li>
+<li class="links"><a class="xref" href="GuidePluginsConfig.html#ConvertImage" title="Convert image">Convert image</a></li>
+<li class="links"><a class="xref" href="GuidePluginsConfig.html#SymlinkGroupedFiles" title="Symlink grouped files">Symlink grouped files</a></li>
 <li class="links"><a class="xref" href="GuidePluginsConfig.html#Specialplugins" title="Special plugins">Special plugins</a></li>
 <li class="links"><a class="xref" href="GuidePluginsConfig.html#Geeqieextensions" title="Geeqie desktop file keys">Geeqie desktop file keys</a></li>
 </ul></div>
@@ -158,6 +160,20 @@ document.addEventListener('DOMContentLoaded', function() {
       <span class="code literal">Hidden=TRUE</span>
       , see above.
     </p></div></div>
+</div></section><section id="ConvertImage" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Convert image</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Choose <span class="gui guimenuitem">Convert image…</span> from the Plugins menu to create JPEG or PNG copies of the selected images. This plugin requires Zenity and ImageMagick (the <span class="cmd command">magick</span> or <span class="cmd command">convert</span> program).</p>
+<p class="para">Choose JPEG or PNG and a destination folder. For JPEG, also choose quality (1–100; default 90). PNG uses lossless compression and preserves transparency; JPEG renders transparent areas white. Originals are preserved. Existing destination names are skipped and reported in the plugin output window, along with conversion failures. Files with the same base name share a destination name, so only the first successful conversion is saved.</p>
+<p class="para">Images are automatically oriented, and metadata, including embedded color profiles, is retained where supported by ImageMagick and the output format. Only the first frame or page is converted. Supported input formats, including RAW formats, depend on the installed ImageMagick delegates and security policy. This operation converts the original file; it does not export Geeqie's displayed adjustments.</p>
+<p class="para">The separate Export jpeg plugin extracts an existing embedded preview from a RAW file.</p>
+</div></div>
+</div></section><section id="SymlinkGroupedFiles" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Symlink grouped files</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Drop files onto a writable folder in the folder pane, including the parent folder entry, and choose <span class="gui guimenuitem">Symlink grouped files</span>. The plugin creates symbolic links for the selected files and their grouped sidecars.</p>
+<p class="para">The plugin reports an error if grouped-file or destination lookup fails, a destination already exists, or a link cannot be created. It stops at the first failure. Existing files, directories and symbolic links are not replaced; links already created before a failure remain in place. Enable <span class="code literal">X-Geeqie-Verbose=true</span> in the plugin's desktop file to display its diagnostic output.</p>
+</div></div>
 </div></section><section id="Specialplugins" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Special plugins</h2></div>
 <div class="region"><div class="contents pagewide">

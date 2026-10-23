@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <dt class="terms">
           <span class="gui guilabel">Delay between image change</span>
         </dt>
-<dd class="terms">Specifies the delay between images for slide shows, in seconds.</dd>
+<dd class="terms">Specifies how long each image is displayed in a slide show, in seconds. The delay starts after the image has finished loading and rendering, so slow-loading images are not skipped. When a transition is enabled, the delay starts after the transition finishes.</dd>
 </dl></div></div></div></div>
 <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
 <dt class="terms">
@@ -206,6 +206,16 @@ document.addEventListener('DOMContentLoaded', function() {
         </dt>
 <dd class="terms">This will cause the slide show to loop indefinitely, it will continue with the first image after displaying the last image in the slide show list.</dd>
 </dl></div></div></div></div>
+<div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms"><span class="gui guilabel">Transition</span></dt>
+<dd class="terms">
+          <p class="para">Choose a transition: None (the default), Cross-fade, Slide in each direction or paired directions, Over and Under in each direction, paired Over directions, and Rotate left, right, or left/right. Paired transitions alternate direction between slides. The outgoing view remains visible until the incoming image is ready. Manual navigation or stopping the slide show cancels the transition. Desktop animation settings are respected.</p>
+        </dd>
+<dt class="terms"><span class="gui guilabel">Transition duration (milliseconds)</span></dt>
+<dd class="terms">
+          <p class="para">Sets the transition duration, from 50 to 5000 milliseconds (default 300). Image loading and transitions extend the time between image changes. The outgoing view is retained in memory until the transition finishes.</p>
+        </dd>
+</dl></div></div></div></div>
 </div></div>
 </div></section><section id="ImageLoadingandCaching" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Image loading and caching</h2></div>
@@ -215,6 +225,12 @@ document.addEventListener('DOMContentLoaded', function() {
         </dt>
 <dd class="terms">
           <p class="para">Limit the amount of memory available for caching images.</p>
+        </dd>
+<dt class="terms">
+          <span class="gui guilabel">JPEG decode memory limit (MiB)</span>
+        </dt>
+<dd class="terms">
+          <p class="para">Sets the maximum estimated memory for decoding one JPEG image, from 1 to 65536 MiB (default 1024 MiB). Increase this limit to open very large JPEG images. Rendering, caches, other images, and decoder overhead require additional memory. The limit is also capped by the process address space.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Preload next image</span>

@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Addingfilestobecompared" title="Adding files to be compared">Adding files to be compared</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Comparisonmethods" title="Comparison methods">Comparison methods</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Resultslist2" title="Results list">Results list</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#DuplicateResultsExport" title="Exporting results for scripts">Exporting results for scripts</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Statusbar2" title="Status bar">Status bar</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Thumbnails" title="Thumbnails">Thumbnails</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Orientation" title="Ignore Orientation">Ignore Orientation</a></li>
@@ -213,6 +214,29 @@ document.addEventListener('DOMContentLoaded', function() {
       of the main window.
     </p>
 <p class="para">The image Dimensions column of the result list will only contain dimension information when comparing by dimensions, or when the data is easily available from memory or has been read from the cache.</p>
+</div></div>
+</div></section><section id="DuplicateResultsExport" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Exporting results for scripts</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">After comparison finishes, use the results context menu's Export submenu to choose <span class="gui guilabel">Export to JSON</span> or <span class="gui guilabel">Run script with JSON…</span>. JSON exports all result groups, including unselected members, and records which files were selected. CSV and tab-delimited exports continue to export selected rows.</p>
+<p class="para">To run a script, choose an executable script with an interpreter line, such as <span class="code literal">#!/usr/bin/env python3</span>. Geeqie passes one argument: the path of a temporary JSON snapshot. The script runs asynchronously. Geeqie removes the snapshot when the script exits, and reports launch failures or unsuccessful exit status. The snapshot is captured when the menu command is invoked; later selection changes do not affect it.</p>
+<p class="para">The command <span class="code literal">geeqie --dupes-export-json</span> writes JSON from the most recently opened Find Duplicates window to standard output without changing its selection:</p>
+<div class="code"><pre class="contents"><code>geeqie --dupes-export-json &gt; duplicates.json</code></pre></div>
+<p class="para">Check <span class="code literal">schema</span> (<span class="code literal">org.geeqie.duplicates</span>), <span class="code literal">version</span> (<span class="code literal">1</span>), and <span class="code literal">status</span> before processing. A status of <span class="code literal">ready</span> means comparison is complete; <span class="code literal">incomplete</span> and <span class="code literal">no_window</span> return an empty groups array. An empty completed search also has status <span class="code literal">ready</span>.</p>
+<p class="para">Completed exports include stable, untranslated criterion names in <span class="code literal">criteria</span>, the numeric <span class="code literal">match_mask</span> from <span class="code literal">DupeMatchType</span>, <span class="code literal">two_sets</span>, <span class="code literal">algorithm</span> (<span class="code literal">standard</span> or <span class="code literal">phash</span>), <span class="code literal">threshold</span> in percent, and <span class="code literal">ignore_orientation</span>. Algorithm and threshold are null for comparisons that do not use similarity.</p>
+<p class="para">Each group has an export-local numeric <span class="code literal">id</span>, a <span class="code literal">representative_id</span>, and a <span class="code literal">members</span> array. Each member includes its file URI as <span class="code literal">id</span>, its <span class="code literal">path</span>, source <span class="code literal">set</span> (1 or 2), <span class="code literal">selected</span> flag, byte <span class="code literal">size</span>, modification time <span class="code literal">mtime</span> in seconds since the Unix epoch, and <span class="code literal">width</span> and <span class="code literal">height</span> when known. Unknown dimensions are null. A file may occur in multiple groups and retains the same URI identifier.</p>
+<p class="para">The <span class="code literal">similarity_to_representative</span> value is the numeric percentage stored for that member's match to its group representative. It is null for the representative itself and for comparisons without similarity. It does not describe every possible pair of group members. The root <span class="code literal">score_semantics</span> field is <span class="code literal">member_to_representative_percent</span>. JSON strings escape quotes, backslashes and control characters; numbers do not depend on locale.</p>
+<p class="para">For example, an executable Python script can read the snapshot and print each group's paths:</p>
+<div class="code"><pre class="contents"><code>#!/usr/bin/env python3
+import json
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as source:
+    results = json.load(source)
+if (results["schema"], results["version"], results["status"]) != ("org.geeqie.duplicates", 1, "ready"):
+    raise SystemExit("No completed duplicate results")
+for group in results["groups"]:
+    print(group["id"], [member["path"] for member in group["members"]])</code></pre></div>
 </div></div>
 </div></section><section id="Statusbar2" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Status bar</h2></div>

@@ -32,11 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">The mode of the Sort Manager is selected by the drop down list under the sidebar title. The Folder mode allows moving or copying the visible image to a folder, and the Collection mode allows adding the visible image or file selection to a collection.</p>
 <p class="para"></p>
 <div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideSidebarsSortManager.html#SortManagerDestination" title="Using a highlighted destination">Using a highlighted destination</a></li>
 <li class="links"><a class="xref" href="GuideSidebarsSortManager.html#Folderview" title="Folder view">Folder view</a></li>
 <li class="links"><a class="xref" href="GuideSidebarsSortManager.html#Collectionview" title="Collection view">Collection view</a></li>
 </ul></div>
 </div>
-<section id="Folderview" class="section"><div class="inner">
+<section id="SortManagerDestination" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Using a highlighted destination</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Hold <span class="key keycap"><kbd>Ctrl</kbd></span> and click a folder or collection to select it as the destination without processing any images. The destination remains highlighted when focus returns to the file list. Folder and collection destinations are remembered separately when switching modes and across restarts.</p>
+<p class="para">To process images without clicking the destination again, assign a keyboard shortcut to <span class="gui guilabel">Sort Manager: Process images using highlighted destination</span> in <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guimenuitem">Preferences</span> ▸ <span class="gui guisubmenu">Keyboard</span></span>. No shortcut is assigned by default. This action is available while the Sort Manager is visible.</p>
+<p class="para">In Folders mode, the shortcut applies the selected Copy, Move, or Desktop action to the selected images using the highlighted folder. In Collections mode, it adds the current image or selected images to the highlighted collection, according to the selection style. Clicking a destination normally both highlights it and performs the operation.</p>
+<p class="para">The <span class="gui guibutton">Help</span> button opens this Sort Manager help page.</p>
+</div></div>
+</div></section><section id="Folderview" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Folder view</h2></div>
 <div class="region">
 <div class="contents pagewide">
@@ -49,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="region"><div class="contents pagewide">
 <p class="para">This is a list of possible folders to use as a destination for the selected operation. A context menu will appear by right clicking on an item, or pressing the menu key when the item has the focus.</p>
 <p class="para">Folders can be added to the list by activating the Add button at the bottom of the sidebar, or dragging a folder onto the list.</p>
+<p class="para">By default, folder destinations are shared across source folders and Geeqie windows. Enable <span class="gui guilabel">Use destinations for this folder</span> to use a separate destination list for the currently displayed source folder. The list starts empty; use <span class="gui guibutton">Add</span> or drag destination folders onto it.</p>
+<p class="para">For example, configure Nature, Sports, and People as destinations while viewing Downloads, then configure Cycling, Skiing, and Swimming while viewing Sports. Geeqie switches lists when you navigate. The setting applies to that exact source folder, without inheritance by subfolders. Windows displaying the same source folder share its list.</p>
+<p class="para">Turning the option off restores the shared list and retains the folder's separate list for later use. Switching lists clears the highlighted destination, so select a destination before using the keyboard action to process images. Folder associations and destination lists are saved in Geeqie's configuration; no configuration files are created in image folders. Renaming or moving a source folder does not transfer its association to the new path. Collections mode is unaffected.</p>
 <p class="para">
         To edit an item select
         <span class="em em-bold emphasis">Properties</span>
@@ -75,9 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </div></section><section id="CopyMoveandLink" class="section"><div class="inner">
 <div class="hgroup pagewide"><h3 class="title">Copy, Move, Link and Desktop actions</h3></div>
 <div class="region"><div class="contents pagewide">
+<p class="para">Clicking a folder sets and highlights the destination and processes the selected images. Hold <span class="key keycap"><kbd>Ctrl</kbd></span> while clicking to set the destination only. The <span class="gui guilabel">Sort Manager: Process images using highlighted destination</span> action repeats the selected operation using that folder. A shortcut can be assigned in Keyboard preferences.</p>
 <p class="para">
-        Copy, Move and Symbolic Link are available operations to use on the active image; they should be self explanatory. In some cases, Desktop files are also listed. This is detailed in
-        <span class="em emphasis"><a class="link" href="GuidePluginsConfig.html#Geeqieextensions" title="Geeqie desktop file keys">Plugins Configuration</a></span>
+        Plugins whose desktop files contain <span class="code literal">X-Geeqie-Filter=true</span> also appear in the folder action list. Selecting a plugin and clicking a destination passes that folder to the plugin. See <a class="link" href="GuidePluginsConfig.html#Geeqieextensions" title="Geeqie desktop file keys">Geeqie desktop file keys</a> for the filter key and how a plugin retrieves its destination.
       </p>
 <p class="para"></p>
 </div></div>
@@ -100,7 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="region">
 <div class="contents pagewide">
 <p class="para">The Sort Manager collection view consists of a vertical list of collection, a section to determine the current selection, and a set of buttons along the bottom.</p>
-<p class="para">Clicking or activating an item in the list will add the selected image to that collection.</p>
+<p class="para">Clicking or activating an item in the list sets it as the destination and adds images according to the selection style below. Hold <span class="key keycap"><kbd>Ctrl</kbd></span> while clicking to set the destination without adding images. The destination remains highlighted when focus returns to the files pane. The highlighted folder and collection destinations are remembered separately across restarts.</p>
+<p class="para">The <span class="gui guilabel">Sort Manager: Process images using highlighted destination</span> action adds images to the highlighted collection according to the selection style below. It works while the Sort Manager is visible. In Folders mode, it processes the selected images using the highlighted folder and the selected Copy, Move, or Desktop action. No shortcut is assigned by default; one can be assigned in Keyboard preferences.</p>
 <p class="para"></p>
 </div>
 <section id="Collectionlist" class="section"><div class="inner">
@@ -109,9 +122,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">
         This is the list of collections located in the folder listed in
         <span class="em emphasis"><a class="link" href="GuideReferenceConfig.html" title="Configuration Files and Locations">Configuration Files</a></span>
-        . Activating a member of this list will result in the current image selection to be added to the collection. If the image already exists within the collection, it will not be added a second time.
+        , together with collections added from other folders. Activating a member of this list will result in the current image selection to be added to the collection. If the image already exists within the collection, it will not be added a second time.
       </p>
-<p class="para">A new empty collection can be added to the list by activating the Add button at the bottom of the sidebar.</p>
+<p class="para">An existing collection or a new empty collection can be added to the list by activating the Add button at the bottom of the sidebar.</p>
 <p class="para"></p>
 </div></div>
 </div></section><section id="Choosingtheselectionstyle" class="section"><div class="inner">
@@ -120,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">The images to add when activating a collection is determined by the selection style:</p>
 <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
 <dt class="terms">
-            <span class="gui guilabel">Add image</span>
+            <span class="gui guilabel">Add current image</span>
           </dt>
 <dd class="terms">
             <p class="para">The visible image is added to the collection.</p>
@@ -128,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </dl></div></div></div></div>
 <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
 <dt class="terms">
-            <span class="gui guilabel">Add selection</span>
+            <span class="gui guilabel">Add selected images</span>
           </dt>
 <dd class="terms">
             <p class="para">All images selected in the file list will be added to the collection.</p>
@@ -139,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div></section><section id="Addbutton1" class="section"><div class="inner">
 <div class="hgroup pagewide"><h3 class="title">Add button</h3></div>
 <div class="region"><div class="contents pagewide">
-<p class="para">Activate this button to add a new empty collection to the visible list. A dialog will appear to allow entry of the name to use for the new collection.</p>
+<p class="para">Activate this button to choose an existing .gqv collection or enter a new .gqv filename. Existing collections are added without changing their contents; a new filename creates an empty collection. Collections outside the default collections folder are remembered and remain available in the list. The added collection becomes the highlighted destination.</p>
 <p class="para"></p>
 </div></div>
 </div></section><section id="Undobutton1" class="section"><div class="inner">

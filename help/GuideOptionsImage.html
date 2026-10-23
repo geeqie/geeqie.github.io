@@ -31,6 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="Zoom" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Zoom</h2></div>
 <div class="region"><div class="contents pagewide"><div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
+<dt class="terms"><span class="gui guilabel">Use nearest-neighbor sampling above 200% zoom</span></dt>
+<dd class="terms">
+          <p class="para">Displays crisp pixel boundaries above 200% magnification. At 200% and below, the selected zoom quality is used. Disabled by default. A keyboard shortcut can be assigned to this option in Preferences → Keyboard.</p>
+        </dd>
+<dt class="terms"><span class="gui guilabel">Allow panning beyond image edges</span></dt>
+<dd class="terms">
+          <p class="para">Allows panning until any image edge or corner reaches the center of the viewing area. This makes it easier to inspect image boundaries. Disabled by default.</p>
+        </dd>
 <dt class="terms">
           <span class="gui guilabel">Quality</span>
         </dt>
@@ -60,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </p>
         </dd>
 <dt class="terms">
-          <span class="gui guilabel">Two pass zooming</span>
+          <span class="gui guilabel">Two pass rendering (apply HQ zoom and color correction in second pass)</span>
         </dt>
 <dd class="terms">
           <p class="para">
@@ -68,8 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <span class="em emphasis">Nearest</span>
             zoom quality. After image decoding is complete, the image is scaled again using the selected
             <span class="em emphasis">Zoom Quality</span>
-            method. This allows faster display of an image as it is decoded from the source file.
+            method, and ICC color correction is applied if color management is enabled. This allows faster display of an image as it is decoded from the source file, but the first pass is not color corrected and the colors may visibly change during the second pass.
           </p>
+          <p class="para">Disable this option to apply the selected zoom quality and ICC color correction in a single rendering pass. This avoids displaying an uncorrected first pass, but may delay the initial display. Image preloading caches decoded source pixels; it does not pre-render them for the display's color profile.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Zoom increment</span>

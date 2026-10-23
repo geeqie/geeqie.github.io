@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="gui guilabel">In place renaming</span>
         </dt>
 <dd class="terms">
-          <p class="para">When renaming a single file, this will allow the rename entry to appear directly over the original filename.</p>
+          <p class="para">When renaming a single file in a folder shown in list view, the rename entry appears directly over the original filename. This applies to the main Rename action (F2 by default) and the files pane context menu. Other views and multiple-file selections use the Rename dialog.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">List directory view uses single click to enter</span>
@@ -182,6 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </dt>
 <dd class="terms">
           <p class="para">Save all marks that have been set. Note that marks that are linked to a keyword will always be saved irrespective of this setting.</p>
+          <p class="para">Saved marks are retained for temporarily unavailable files, such as files on a disconnected drive. They become available again when the files return at the same paths. Clearing all marks also clears retained marks for unavailable files.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Use "With Rename" as default for Copy/Move dialogs</span>

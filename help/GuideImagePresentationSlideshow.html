@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideImagePresentationSlideshow.html#Pausingaslideshow" title="Pausing a slide show">Pausing a slide show</a></li>
 <li class="links"><a class="xref" href="GuideImagePresentationSlideshow.html#Selectingtheimagestoincludeinaslideshow" title="Selecting the images to include in a slide show">Selecting the images to include in a slide show</a></li>
 <li class="links"><a class="xref" href="GuideImagePresentationSlideshow.html#Recursiveslideshow" title="Recursive slide show">Recursive slide show</a></li>
+<li class="links"><a class="xref" href="GuideImagePresentationSlideshow.html#Collectionslideshowrepeat" title="Repeating a collection">Repeating a collection</a></li>
 <li class="links"><a class="xref" href="GuideImagePresentationSlideshow.html#Slideshowsequencenavigation" title="Slide show sequence navigation">Slide show sequence navigation</a></li>
 <li class="links"><a class="xref" href="GuideImagePresentationSlideshow.html#Configuringaslideshow" title="Configuring a slide show">Configuring a slide show</a></li>
 </ul></div>
@@ -152,7 +153,13 @@ document.addEventListener('DOMContentLoaded', function() {
         <p class="para">Slide show recursive: The slide show will include all images in the selected folder, and all images in the folders that are contained within the selected folder.</p>
       </li>
 </ul></div></div></div></div>
-<p class="para"></p>
+<p class="para">When Repeat is enabled, a recursive slide show rescans the starting folder and its subfolders before each new cycle. Newly added images are included and removed images are omitted. The original sort order is retained, or the updated list is shuffled if Random is enabled. If no images remain, the slide show stops.</p>
+</div></div>
+</div></section><section id="Collectionslideshowrepeat" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Repeating a collection</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">To start a slide show from a collection displayed as a virtual folder, right-click its entry in the folder pane and select Slide show. With Repeat enabled, the saved collection is reread before each new cycle so changes to its membership are included. This does not scan the folders containing its images.</p>
+<p class="para">If the collection has unsaved edits, playback uses its current in-memory contents instead. Reloading affects the slide show playlist without replacing the collection being edited. If the saved file cannot be read, playback retains its previous playlist; if it is successfully read and empty, playback stops. A slide show limited to selected images continues to use that selection.</p>
 </div></div>
 </div></section><section id="Slideshowsequencenavigation" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Slide show sequence navigation</h2></div>

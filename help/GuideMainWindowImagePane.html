@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="contents pagewide">
 <p class="para">The image pane is the region of the main window that displays the selected image. The image pane allows adjustment of display size and orientation; it also provides several methods to manipulate the image with the mouse and keyboard.</p>
 <p class="para"></p>
+<p class="para">At 100% zoom (1:1), one image pixel corresponds to one physical display pixel, independently of desktop scaling. Interface text and controls retain the desktop scale. Moving the window between displays preserves the selected zoom and adjusts the image size accordingly.</p>
 <div class="links sectionlinks" role="navigation"><ul>
 <li class="links"><a class="xref" href="GuideMainWindowImagePane.html#Imagedisplay" title="Image display">Image display</a></li>
 <li class="links"><a class="xref" href="GuideMainWindowImagePane.html#InformationandhistogramOverlay" title="Image Overlay">Image Overlay</a></li>
@@ -224,6 +225,10 @@ document.addEventListener('DOMContentLoaded', function() {
       menu item. Zoom is then applied to all displayed images.
     </p>
 <p class="para">Connected scrolling is also possible using Shift and primary mouse button.</p>
+<p class="para">To select images in split panes for file operations, click the checkbox in the upper-left corner of each desired pane. The checkbox appears when the pointer is over a pane and remains visible while selected. Its tooltip explains its purpose. You can also hold Ctrl and Shift and click a pane with the primary mouse button. Click a selected checkbox again, or repeat the gesture, to deselect a pane. Selected panes have a colored border, independent of the active pane.</p>
+<p class="para">Press Delete, or choose <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Move selection to Trash…</span></span>, to review and delete the selected images together. The confirmation lists full paths and includes grouped sidecars according to the normal deletion rules. Existing Trash settings apply.</p>
+<p class="para">While panes are selected, selection actions in the image-pane and file-list right-click menus use those images. This includes copy, move, rename, deletion, clipboard paths, plugins, and collections. Right-clicking another image preserves the pane selection. Copy Image is available for a single selected image; clipboard path actions support multiple selected images.</p>
+<p class="para">Escape clears the pane selection. Changing a displayed image or the split layout also clears the selection. Delete and Shift+Delete use the pane selection when present, otherwise they use the file-list selection. Shift+Delete requests permanent deletion.</p>
 <p class="para">As a general rule, hotkeys and mouse without shift affects just one image and with shift all images.</p>
 <p class="para"></p>
 </div></div>
