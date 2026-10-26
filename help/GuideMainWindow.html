@@ -83,19 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
     dialogue.
   </p>
 <p class="para">
-    If several instances of the main window are open, they may be closed individually or simultaneously. If
+    Multiple windows normally belong to one Geeqie application instance, including windows opened by separate command line launches. They may be closed individually or simultaneously. If
     <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Quit</span> <span class="shortcut">(
         <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Q</kbd></span></span>
       )</span></span>
-    is pressed, all windows will be closed. When Geeqie is re-opened the same windows will be re-displayed.
+    is pressed, all windows belonging to that application instance will be closed. Window restoration at the next startup depends on the <span class="gui guilabel">Remember session</span> setting in <a class="link" href="GuideOptionsWindow.html" title="Window Options">Window Options</a>.
     <p class="para"></p>
     If
     <span class="guiseq menuchoice"><span class="gui guimenu">Windows</span> ▸ <span class="gui guimenuitem">Close Window</span> <span class="shortcut">(
         <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>W</kbd></span></span>
       )</span></span>
-    is pressed, only that window will be closed unless that window is the "main" window, in which case all windows will be closed. When Geeqie is restarted only the main window will be displayed.
-    <p class="para"></p>
-    The main window may be recognised by the word "Geeqie" in the title bar, as opposed to other windows which have the word "geeqie".
+    is pressed, only that window will be closed. Closing the last main window quits the application instance. To start an independent instance, see <a class="link" href="GuideReferenceCommandLine.html#IndependentInstances" title="Independent Instances">Independent Instances</a>.
     <p class="para"></p>
     Several window layouts may be defined and displayed at any time, as described in the
     <span class="em emphasis"><a class="link" href="GuideMainWindowMenus.html#Windowmenu" title="Windows menu">Windows menu</a></span>

@@ -26,13 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
  <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
 </svg><div class="inner"><div class="region"><div class="contents">
     <p class="para">
-      This page only refers the Geeqie thumbnail caching mechanism, the shared thumbnail cache mechanism is described in
+      The storage layout below describes Geeqie's private thumbnail cache. The shared thumbnail cache format is described in
       <span class="em emphasis"><a class="link" href="GuideReferenceStandards.html" title="Standards">Thumbnail Standards</a></span>
       .
     </p>
   </div></div></div>
 </div>
-<p class="para"></p>
+<p class="para">When Geeqie detects that a tracked source file has changed or been replaced, it discards its cached thumbnails and reloads metadata, including orientation. Detection includes file identity and subsecond modification and status-change timestamps where the platform supports them. Cached thumbnails are retained when a source becomes unavailable, allowing missing collection members to keep their previews.</p>
+<p class="para">Shared thumbnails written by Geeqie also record the source file size. A cached thumbnail with a different recorded size is rejected even when its modification time matches. Older thumbnails without a size field remain supported. These checks cannot detect every replacement made while a file is not being tracked, particularly when cache-validation values are unchanged. Use <span class="gui guimenuitem">Rebuild thumbnails</span> in the files pane context menu to regenerate previews for selected files.</p>
 <div class="links sectionlinks" role="navigation"><ul>
 <li class="links"><a class="xref" href="GuideReferenceThumbnails.html#Format" title="Format">Format</a></li>
 <li class="links"><a class="xref" href="GuideReferenceThumbnails.html#Location" title="Location">Location</a></li>

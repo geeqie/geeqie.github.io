@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="region">
 <div class="contents pagewide">
 <p class="para">The Sort Manager sidebar provides a convenient method to quickly sort many files into a set of folders or collections.</p>
+<p class="para">Drag the divider beside the Sort Manager to adjust its width. The chosen width is retained when the sidebar is hidden or the window is resized, and is saved with the window layout. Enable <span class="gui guilabel">Remember session</span> in <a class="link" href="GuideOptionsWindow.html" title="Window Options">Window Options</a> to restore it at startup. The Info sidebar has its own divider.</p>
 <p class="para">
     To toggle display of the Sort Manager select
     <span class="guiseq menuchoice"><span class="gui guimenu">View</span> ▸ <span class="gui guimenuitem">Sort Manager</span> <span class="shortcut">(
@@ -32,16 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">The mode of the Sort Manager is selected by the drop down list under the sidebar title. The Folder mode allows moving or copying the visible image to a folder, and the Collection mode allows adding the visible image or file selection to a collection.</p>
 <p class="para"></p>
 <div class="links sectionlinks" role="navigation"><ul>
-<li class="links"><a class="xref" href="GuideSidebarsSortManager.html#SortManagerDestination" title="Using a highlighted destination">Using a highlighted destination</a></li>
+<li class="links"><a class="xref" href="GuideSidebarsSortManager.html#SortManagerDestination" title="Using destination shortcuts">Using destination shortcuts</a></li>
 <li class="links"><a class="xref" href="GuideSidebarsSortManager.html#Folderview" title="Folder view">Folder view</a></li>
 <li class="links"><a class="xref" href="GuideSidebarsSortManager.html#Collectionview" title="Collection view">Collection view</a></li>
 </ul></div>
 </div>
 <section id="SortManagerDestination" class="section"><div class="inner">
-<div class="hgroup pagewide"><h2 class="title">Using a highlighted destination</h2></div>
+<div class="hgroup pagewide"><h2 class="title">Using destination shortcuts</h2></div>
 <div class="region"><div class="contents pagewide">
+<p class="para">The first nine destinations are numbered in their displayed order. Assign shortcuts to <span class="gui guilabel">Sort Manager: Process using destination 1</span> through <span class="gui guilabel">Sort Manager: Process using destination 9</span> in Keyboard preferences to process images directly using those entries. No shortcuts are assigned by default. These actions use the current mode and operation, highlight the chosen destination, and work only while the Sort Manager is visible. They do nothing when that numbered entry is absent or its destination no longer exists.</p>
+<p class="para">Numbers follow the currently displayed list. Reordering destinations, switching between Folders and Collections, or navigating to a source folder with its own destinations can change the target of a shortcut. Leave <span class="gui guilabel">Use destinations for this folder</span> disabled if you want to use the shared folder list everywhere. The highlighted-destination action remains available for repeating an operation and for destinations beyond the first nine.</p>
 <p class="para">Hold <span class="key keycap"><kbd>Ctrl</kbd></span> and click a folder or collection to select it as the destination without processing any images. The destination remains highlighted when focus returns to the file list. Folder and collection destinations are remembered separately when switching modes and across restarts.</p>
-<p class="para">To process images without clicking the destination again, assign a keyboard shortcut to <span class="gui guilabel">Sort Manager: Process images using highlighted destination</span> in <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guimenuitem">Preferences</span> ▸ <span class="gui guisubmenu">Keyboard</span></span>. No shortcut is assigned by default. This action is available while the Sort Manager is visible.</p>
+<p class="para">To process images without clicking the destination again, assign a keyboard shortcut to <span class="gui guilabel">Sort Manager: Process using highlighted destination</span> in <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guimenuitem">Preferences</span> ▸ <span class="gui guisubmenu">Keyboard</span></span>. No shortcut is assigned by default. This action is available while the Sort Manager is visible.</p>
 <p class="para">In Folders mode, the shortcut applies the selected Copy, Move, or Desktop action to the selected images using the highlighted folder. In Collections mode, it adds the current image or selected images to the highlighted collection, according to the selection style. Clicking a destination normally both highlights it and performs the operation.</p>
 <p class="para">The <span class="gui guibutton">Help</span> button opens this Sort Manager help page.</p>
 </div></div>
@@ -87,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div></section><section id="CopyMoveandLink" class="section"><div class="inner">
 <div class="hgroup pagewide"><h3 class="title">Copy, Move, Link and Desktop actions</h3></div>
 <div class="region"><div class="contents pagewide">
-<p class="para">Clicking a folder sets and highlights the destination and processes the selected images. Hold <span class="key keycap"><kbd>Ctrl</kbd></span> while clicking to set the destination only. The <span class="gui guilabel">Sort Manager: Process images using highlighted destination</span> action repeats the selected operation using that folder. A shortcut can be assigned in Keyboard preferences.</p>
+<p class="para">Clicking a folder sets and highlights the destination and processes the selected images. Hold <span class="key keycap"><kbd>Ctrl</kbd></span> while clicking to set the destination only. The <span class="gui guilabel">Sort Manager: Process using highlighted destination</span> action repeats the selected operation using that folder. A shortcut can be assigned in Keyboard preferences.</p>
 <p class="para">
         Plugins whose desktop files contain <span class="code literal">X-Geeqie-Filter=true</span> also appear in the folder action list. Selecting a plugin and clicking a destination passes that folder to the plugin. See <a class="link" href="GuidePluginsConfig.html#Geeqieextensions" title="Geeqie desktop file keys">Geeqie desktop file keys</a> for the filter key and how a plugin retrieves its destination.
       </p>
@@ -113,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="contents pagewide">
 <p class="para">The Sort Manager collection view consists of a vertical list of collection, a section to determine the current selection, and a set of buttons along the bottom.</p>
 <p class="para">Clicking or activating an item in the list sets it as the destination and adds images according to the selection style below. Hold <span class="key keycap"><kbd>Ctrl</kbd></span> while clicking to set the destination without adding images. The destination remains highlighted when focus returns to the files pane. The highlighted folder and collection destinations are remembered separately across restarts.</p>
-<p class="para">The <span class="gui guilabel">Sort Manager: Process images using highlighted destination</span> action adds images to the highlighted collection according to the selection style below. It works while the Sort Manager is visible. In Folders mode, it processes the selected images using the highlighted folder and the selected Copy, Move, or Desktop action. No shortcut is assigned by default; one can be assigned in Keyboard preferences.</p>
+<p class="para">The <span class="gui guilabel">Sort Manager: Process using highlighted destination</span> action adds images to the highlighted collection according to the selection style below. It works while the Sort Manager is visible. In Folders mode, it processes the selected images using the highlighted folder and the selected Copy, Move, or Desktop action. No shortcut is assigned by default; one can be assigned in Keyboard preferences.</p>
 <p class="para"></p>
 </div>
 <section id="Collectionlist" class="section"><div class="inner">

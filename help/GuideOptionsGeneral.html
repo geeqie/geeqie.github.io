@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="contents pagewide">
 <p class="para">This section describes the options presented under the General Tab of the preferences dialog.</p>
 <div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideOptionsGeneral.html#PreferencesColorScheme" title="Color scheme">Color scheme</a></li>
 <li class="links"><a class="xref" href="GuideOptionsGeneral.html#PreferencesThumbnails" title="Thumbnails">Thumbnails</a></li>
 <li class="links"><a class="xref" href="GuideOptionsGeneral.html#StarRatingCharacters" title="Star Rating">Star Rating</a></li>
 <li class="links"><a class="xref" href="GuideOptionsGeneral.html#Slideshow" title="Slide show">Slide show</a></li>
@@ -34,9 +35,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideOptionsGeneral.html#OnLineHelpSearch" title="On-line help search">On-line help search</a></li>
 </ul></div>
 </div>
-<section id="PreferencesThumbnails" class="section"><div class="inner">
+<section id="PreferencesColorScheme" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Color scheme</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Select <span class="gui guilabel">Follow desktop</span>, <span class="gui guilabel">Light</span>, or <span class="gui guilabel">Dark</span> to control the interface appearance. The default follows the desktop preference. Changes take effect when you confirm the Preferences dialog; Cancel leaves the current scheme unchanged. Custom themes may not provide both light and dark variants.</p>
+<p class="para">The command-line option <span class="code literal">--color-scheme=system|light|dark</span> overrides this preference for the running application session without changing the saved setting. For example, <span class="cmd command">geeqie --color-scheme=dark</span> requests a dark interface. If Geeqie is already running, the override applies to its existing windows and remains active until it exits. <span class="code literal">system</span> follows the desktop even if the saved preference specifies Light or Dark. Changing the saved preference does not replace an active command-line override.</p>
+<p class="para">This setting controls the interface theme. Custom image background colors configured in Image preferences remain separate.</p>
+</div></div>
+</div></section><section id="PreferencesThumbnails" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Thumbnails</h2></div>
 <div class="region"><div class="contents pagewide">
+<p class="para">The files pane loads visible thumbnails first, then prefetches approximately one screen of thumbnails on either side. Loading resumes as you scroll or resize the pane; it does not generate thumbnails for the entire folder. This applies to both list and icon views, including collections and expanded file groups.</p>
+<p class="para"><span class="gui guilabel">Thumbnail memory (MiB)</span> sets the memory budget for retained thumbnail pixels shared by all file panes. The default is 64 MiB. Older thumbnails are released and reloaded from the disk cache or source image when needed. Visible thumbnails and active loads are protected, so they can exceed the budget. This setting does not limit total application memory, image decoding buffers, display textures, or file-list metadata, and does not change the disk cache.</p>
 <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
 <dt class="terms">
           <span class="gui guilabel">Size</span>

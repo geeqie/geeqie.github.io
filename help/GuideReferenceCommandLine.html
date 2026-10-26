@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <a class="trail" href="GuideIndex.html" title="The Geeqie User Manual">The Geeqie User Manual</a> » <a class="trail" href="GuideReference.html" title="Reference">Reference</a> » </div></div></div></header><article><nav class="prevnext pagewide"><div class="inner">
 <a href="GuideReference.html" title="Reference">Previous</a><a href="GuideReferenceRemoteKeyboardActions.html" title="Remote Keyboard Actions">Next</a>
 </div></nav><div class="hgroup pagewide"><h1 class="title">Command Line Options</h1></div>
-<div class="region"><div class="contents pagewide"><p class="para">
+<div class="region">
+<div class="contents pagewide">
+<p class="para">
   <section id="geeqie1" class="refentry"><div class="inner">
 <div class="hgroup pagewide"><h3 class="title">GEEQIE(1)</h3></div>
 <div class="region">
@@ -354,7 +356,23 @@ information.</p></div></div>
 </div></section>
 </div>
 </div></section>
-  </p></div></div>
+  </p>
+<p class="para">Use <span class="code literal">--color-scheme=system|light|dark</span> to override the interface color scheme for the running session. This does not change the saved <a class="link" href="GuideOptionsGeneral.html#PreferencesColorScheme" title="Color scheme">Color scheme preference</a>.</p>
+<div class="links sectionlinks" role="navigation"><ul><li class="links"><a class="xref" href="GuideReferenceCommandLine.html#IndependentInstances" title="Independent Instances">Independent Instances</a></li></ul></div>
+</div>
+<section id="IndependentInstances" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Independent Instances</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Normally, launching Geeqie again sends the command to the running application instance. Opening another window does not create an independent instance. <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Q</kbd></span></span> quits that instance and closes all its windows; <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>W</kbd></span></span> closes only the current window, quitting the instance if it is the last main window.</p>
+<p class="para">To start an independent application instance, use:</p>
+<div class="code"><pre class="contents"><code>GQ_NEW_INSTANCE=y geeqie /path/to/folder</code></pre></div>
+<p class="para">Quitting this instance does not close windows belonging to another instance. By default, independent instances share configuration and state files. Each instance saves configuration on exit, so the last one to exit can overwrite settings saved by another instance.</p>
+<p class="para">To keep a separate persistent configuration, set a different configuration root:</p>
+<div class="code"><pre class="contents"><code>XDG_CONFIG_HOME="$HOME/.config/geeqie-work" GQ_NEW_INSTANCE=y geeqie /path/to/folder</code></pre></div>
+<p class="para">This instance uses a separate configuration under <span class="file filename">$HOME/.config/geeqie-work/geeqie</span>. The <span class="code literal">XDG_CACHE_HOME</span> and <span class="code literal">XDG_DATA_HOME</span> environment variables can also be set to separate cache and data locations. Separate configurations do not isolate changes made to image files or their metadata.</p>
+</div></div>
+</div></section>
+</div>
 <nav class="prevnext pagewide"><div class="inner">
 <a href="GuideReference.html" title="Reference">Previous</a><a href="GuideReferenceRemoteKeyboardActions.html" title="Remote Keyboard Actions">Next</a>
 </div></nav><div class="clear"></div></article><footer><div class="inner pagewide"><div class="about ui-expander" role="contentinfo">

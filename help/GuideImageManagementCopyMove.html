@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     . These operations also appear in the context menu of all images and files.
   </p>
 <p class="para">The Copy and Move operations and dialogs behave the same in Geeqie, with the only difference being the final result. The remaining text of this page applies equally to the Copy and Move operations, for the remainder of this page these will be referred to as a Copy/Move operation.</p>
+<p class="para">When copying or moving an individual symbolic link, Geeqie preserves the location it points to. Relative links remain relative, with their target path adjusted for the destination folder; absolute links retain their target path. A link to a missing target is preserved as a link. Renaming a link within the same folder retains its original target text. When transferring a whole folder, link target text inside the folder is preserved so that links between files in the transferred tree remain relative to that tree.</p>
 <p class="para">Initiating a Copy/Move operation will display a dialog to select the destination folder to Copy/Move the selected file, after the destination folder is selected Geeqie will proceed to Copy/Move the images to the destination. If an error occurs or a file exists with the same name as one of the files being Copy/Moved, a dialog will appear prompting how to handle the situation.</p>
 <p class="para"></p>
 <div class="links sectionlinks" role="navigation"><ul>
@@ -125,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </dt>
 <dd class="terms">
           <p class="para">This text entry displays the active path of the dialog. The path can be directly edited using this entry. Tab completion is supported, and the drop down arrow will display a list of recently selected folders.</p>
+          <p class="para"><span class="key keycap"><kbd>Tab</kbd></span> completes the path rather than moving focus. Use <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Tab</kbd></span></span> to move focus forward out of the path entry, or <span class="keyseq keycombo"><span class="key keycap"><kbd>Shift</kbd></span>+<span class="key keycap"><kbd>Tab</kbd></span></span> to move backward. Continue keyboard navigation to reach the dialog buttons.</p>
         </dd>
 <dt class="terms">
           <span class="gui guilabel">Copy/Move button</span>
@@ -139,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="para">Activate this button to close the dialog, the operation will be aborted.</p>
         </dd>
 </dl></div></div></div></div>
+<p class="para">Press <span class="key keycap"><kbd>Return</kbd></span> to activate the default action, either <span class="gui guilabel">Copy</span>, <span class="gui guilabel">Move</span>, or <span class="gui guilabel">With Rename</span>, depending on the operation and preferences. A path completion popup may use Return to accept a completion first. To choose a different action, move focus to its button and press <span class="key keycap"><kbd>Space</kbd></span>. Press <span class="key keycap"><kbd>Escape</kbd></span> to cancel; if a completion popup is open, dismiss it first.</p>
 <p class="para"></p>
 </div></div>
 </div></section><section id="Theerrordialog" class="section"><div class="inner">

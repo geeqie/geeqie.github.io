@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         Returns: not used.
       </code></pre></div>
       The tool should load the output file with the decoded image.<p class="para"></p>
+      When external previews are enabled, image and read-ahead loading waits briefly after navigation so that rapid navigation can skip intermediate files. External preview commands are serialized across image, read-ahead, and thumbnail requests. Commands for cancelled loads are terminated together with their child processes; scripts should keep their extraction work in the same process group and run it in the foreground. Missing or unreadable output is reported as a loading failure.<p class="para"></p>
       This is an example of an identification tool using a shell script:
       <div class="code"><pre class="contents"><code>#! /bin/bash
 

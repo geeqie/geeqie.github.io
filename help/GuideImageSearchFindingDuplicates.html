@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Thumbnails" title="Thumbnails">Thumbnails</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Orientation" title="Ignore Orientation">Ignore Orientation</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Sort" title="Sort">Sort</a></li>
+<li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#IgnoreSameFolderMatches" title="Ignore matches within the same folder">Ignore matches within the same folder</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#Comparetwofilesets" title="Compare two file sets">Compare two file sets</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#DragandDrop2" title="Drag and Drop">Drag and Drop</a></li>
 <li class="links"><a class="xref" href="GuideImageSearchFindingDuplicates.html#ImageDataWindow" title="Image Data Window">Image Data Window</a></li>
@@ -195,7 +196,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </div></div>
 </div></section><section id="Resultslist2" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Results list</h2></div>
-<div class="region"><div class="contents pagewide">
+<div class="region">
+<div class="contents pagewide">
 <p class="para">Files that match with the selected comparison method will appear in the list. Matching files are grouped in alternating color.</p>
 <p class="para">The order of the result list can be changed by clicking on the column header. This will re-order the images within each set. When comparing by image content similarity, the matching sets will be sorted by order of rank starting with the files that are most similar.</p>
 <p class="para">
@@ -214,7 +216,16 @@ document.addEventListener('DOMContentLoaded', function() {
       of the main window.
     </p>
 <p class="para">The image Dimensions column of the result list will only contain dimension information when comparing by dimensions, or when the data is easily available from memory or has been read from the cache.</p>
+</div>
+<section id="SelectingDuplicatesBySize" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Selecting duplicates by file size</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The results context menu's <span class="gui guimenuitem">Select group 1 duplicates</span> command selects the first displayed file in each match group. <span class="gui guimenuitem">Select group 2 duplicates</span> selects all remaining files in each match group, including groups containing more than two files. These commands replace the current selection. Here, group 1 and group 2 refer to row positions within each displayed match group, not the two input file sets used by <span class="gui guilabel">Compare two file sets</span>.</p>
+<p class="para">To retain the largest file in each match group, click the <span class="gui guilabel">Size</span> column header until the largest file appears first in each group, then choose <span class="gui guimenuitem">Select group 2 duplicates</span>. All other files in every match group will be selected. Review the selection before deleting or moving files.</p>
+<p class="para">To retain the smallest file instead, sort with the smallest file first and use the same selection command. Sorting changes clear the selection, so sort before selecting. Size refers to bytes, not image dimensions. When sizes are equal, one file remains unselected without any quality-based preference; a larger file is not necessarily a higher-quality image.</p>
 </div></div>
+</div></section>
+</div>
 </div></section><section id="DuplicateResultsExport" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Exporting results for scripts</h2></div>
 <div class="region"><div class="contents pagewide">
@@ -223,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">The command <span class="code literal">geeqie --dupes-export-json</span> writes JSON from the most recently opened Find Duplicates window to standard output without changing its selection:</p>
 <div class="code"><pre class="contents"><code>geeqie --dupes-export-json &gt; duplicates.json</code></pre></div>
 <p class="para">Check <span class="code literal">schema</span> (<span class="code literal">org.geeqie.duplicates</span>), <span class="code literal">version</span> (<span class="code literal">1</span>), and <span class="code literal">status</span> before processing. A status of <span class="code literal">ready</span> means comparison is complete; <span class="code literal">incomplete</span> and <span class="code literal">no_window</span> return an empty groups array. An empty completed search also has status <span class="code literal">ready</span>.</p>
-<p class="para">Completed exports include stable, untranslated criterion names in <span class="code literal">criteria</span>, the numeric <span class="code literal">match_mask</span> from <span class="code literal">DupeMatchType</span>, <span class="code literal">two_sets</span>, <span class="code literal">algorithm</span> (<span class="code literal">standard</span> or <span class="code literal">phash</span>), <span class="code literal">threshold</span> in percent, and <span class="code literal">ignore_orientation</span>. Algorithm and threshold are null for comparisons that do not use similarity.</p>
+<p class="para">Completed exports include stable, untranslated criterion names in <span class="code literal">criteria</span>, the numeric <span class="code literal">match_mask</span> from <span class="code literal">DupeMatchType</span>, <span class="code literal">two_sets</span>, <span class="code literal">algorithm</span> (<span class="code literal">standard</span> or <span class="code literal">phash</span>), <span class="code literal">threshold</span> in percent, <span class="code literal">ignore_orientation</span>, and <span class="code literal">ignore_same_folder</span>. Algorithm and threshold are null for comparisons that do not use similarity.</p>
 <p class="para">Each group has an export-local numeric <span class="code literal">id</span>, a <span class="code literal">representative_id</span>, and a <span class="code literal">members</span> array. Each member includes its file URI as <span class="code literal">id</span>, its <span class="code literal">path</span>, source <span class="code literal">set</span> (1 or 2), <span class="code literal">selected</span> flag, byte <span class="code literal">size</span>, modification time <span class="code literal">mtime</span> in seconds since the Unix epoch, and <span class="code literal">width</span> and <span class="code literal">height</span> when known. Unknown dimensions are null. A file may occur in multiple groups and retains the same URI identifier.</p>
 <p class="para">The <span class="code literal">similarity_to_representative</span> value is the numeric percentage stored for that member's match to its group representative. It is null for the representative itself and for comparisons without similarity. It does not describe every possible pair of group members. The root <span class="code literal">score_semantics</span> field is <span class="code literal">member_to_representative_percent</span>. JSON strings escape quotes, backslashes and control characters; numbers do not depend on locale.</p>
 <p class="para">For example, an executable Python script can read the snapshot and print each group's paths:</p>
@@ -268,6 +279,12 @@ for group in results["groups"]:
       <p class="para"></p>
       If this box is checked, groups with the lowest number of matches are placed at the top of the list.
     </p></div></div>
+</div></section><section id="IgnoreSameFolderMatches" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Ignore matches within the same folder</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Enable this check box to compare files only when their immediate parent folders differ. This is useful when each folder contains a burst or sequence of similar images and you want to find matches across folders. Subfolders are treated as separate folders. The option applies to all comparison methods and to both single-set and two-file-set searches.</p>
+<p class="para">The option is off by default in each new Find Duplicates window. Changing it restarts the comparison. Each result group contains files that match its representative in another folder; two members of the same group can still belong to the same folder. A file can appear in more than one group when necessary to show cross-folder matches.</p>
+</div></div>
 </div></section><section id="Comparetwofilesets" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Compare two file sets</h2></div>
 <div class="region"><div class="contents pagewide">
