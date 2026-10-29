@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="links sectionlinks" role="navigation"><ul>
 <li class="links"><a class="xref" href="GuideOptionsGeneral.html#PreferencesColorScheme" title="Color scheme">Color scheme</a></li>
 <li class="links"><a class="xref" href="GuideOptionsGeneral.html#PreferencesThumbnails" title="Thumbnails">Thumbnails</a></li>
+<li class="links"><a class="xref" href="GuideOptionsGeneral.html#ColorLabels" title="Color labels">Color labels</a></li>
 <li class="links"><a class="xref" href="GuideOptionsGeneral.html#StarRatingCharacters" title="Star Rating">Star Rating</a></li>
 <li class="links"><a class="xref" href="GuideOptionsGeneral.html#Slideshow" title="Slide show">Slide show</a></li>
 <li class="links"><a class="xref" href="GuideOptionsGeneral.html#ImageLoadingandCaching" title="Image loading and caching">Image loading and caching</a></li>
@@ -182,6 +183,15 @@ document.addEventListener('DOMContentLoaded', function() {
         </dd>
 </dl></div></div></div></div>
 </div></div>
+</div></section><section id="ColorLabels" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Color labels</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">Color labels identify images using the XMP text field <span class="code literal">Xmp.xmp.Label</span>. Enable <span class="gui guilabel">Show color labels</span> to display a small indicator over icon thumbnails and beside filenames in list view. The indicator's tooltip shows the stored label text. Color labels are separate from numbered marks and star ratings.</p>
+<p class="para">The default mappings are Red, Yellow, Green, Blue, and Purple. Each entry specifies the text to store for that color. Change these entries to match the label names used by other applications. Matching ignores letter case; use different names for each color. An empty entry disables assignment for that color. Changing a mapping changes how existing labels are displayed, but does not rewrite their metadata.</p>
+<p class="para">Unknown label text is preserved and displayed with a neutral indicator. Geeqie uses <span class="code literal">Xmp.xmp.Label</span>, not the separate <span class="code literal">Xmp.photoshop.LabelColor</span> property. Color-label metadata support requires Exiv2.</p>
+<p class="para">In the files pane, right-click selected images and use <span class="gui guimenuitem">Color label</span> to assign a label or <span class="gui guimenuitem">Clear color label</span> to clear it. Writes follow the existing metadata confirmation, grouped-file, and image or XMP sidecar settings. Legacy comment files cannot store labels; choose image or XMP storage instead.</p>
+<p class="para">Use the <span class="gui guilabel">Label</span> drop-down in <span class="gui guimenuitem">Show File Filter</span> to show one color, unlabeled images, or images with other labels. <span class="gui guilabel">All labels</span> disables the label filter. Filtering may require reading metadata for every image in the folder. With no label filter, indicator metadata is read only for displayed rows.</p>
+</div></div>
 </div></section><section id="StarRatingCharacters" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Star Rating</h2></div>
 <div class="region"><div class="contents pagewide"><p class="para">The characters used to display the Star Rating are defined here. They are defined as a hexadecimal Unicode character. The complete list of Unicode characters can be found in many places on the Internet.</p></div></div>
@@ -243,16 +253,16 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="para">Sets the maximum estimated memory for decoding one JPEG image, from 1 to 65536 MiB (default 1024 MiB). Increase this limit to open very large JPEG images. Rendering, caches, other images, and decoder overhead require additional memory. The limit is also capped by the process address space.</p>
         </dd>
 <dt class="terms">
-          <span class="gui guilabel">Preload next image</span>
+          <span class="gui guilabel">Preload nearby images</span>
         </dt>
 <dd class="terms">
-          <p class="para">Enabling this option will cause Geeqie to read the next logical image from disk when idle, it will also retain the previously viewed image in memory. By reading the nearest images into memory, time to display the next image is reduced.</p>
+          <p class="para">Enabling this option preloads nearby full images while idle, following the direction in which you navigate. Images to preload selects the maximum number, from 1 to 32 (default 4). Reversing direction replaces pending work. Preloading follows the displayed order and, when navigating a selection, stays within that selection. It also works with collections. This is separate from thumbnail loading.</p>
           <div class="note" title="Note">
 <svg width="24" height="24" version="1.1">
  <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
  <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
 </svg><div class="inner"><div class="region"><div class="contents">
-            <p class="para">This option will increase Geeqie memory requirements, and may cause performance issues with very large images. If the use of Geeqie results in the system noticeably swapping memory to disk, try disabling this feature.</p>
+            <p class="para">The decoded image cache size limits the preloaded working set, including the current image. Preloading stops when that budget is exhausted; a zero cache size disables preloading. Decoding one candidate and rendering may temporarily require additional memory. Increasing the image count does not guarantee that all candidates will fit in the cache.</p>
           </div></div></div>
 </div>
         </dd>

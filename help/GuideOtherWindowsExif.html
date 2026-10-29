@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </div></nav><div class="hgroup pagewide"><h1 class="title">
 <a name="titleGuideOtherWindowsExif"></a>Exif Window</h1></div>
 <div class="region"><div class="contents pagewide">
-<p class="para">The Exif window shows the Exif, IPTC and XMP metadata that are present in the image file.</p>
+<p class="para">The Exif window shows the Exif, IPTC and XMP metadata that are present in the selected image or XMP sidecar file.</p>
+<p class="para">Use the <span class="gui guilabel">Source</span> selector to inspect the current file or an associated XMP sidecar. Sidecars named <span class="file filename">image.xmp</span> and <span class="file filename">image.ext.xmp</span> are listed when present, including when grouped with the image. Each source shows only that file's raw metadata; values from different files are not merged. The full path above the selector identifies the displayed source. If no sidecar is available, the selector is disabled. Selecting another image starts with that image's metadata.</p>
 <p class="para">Unlike the other parts of the program, this window shows the "raw" metadata read from the file, without any post-processing. Thus, this window is ideal for metadata debugging.</p>
 <p class="para">
     The Exif pane in the
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">
     A search of the Exif data can be initiated by clicking anywhere on the column you wish to search, and then type <span class="code">Ctrl + F</span> or press any alpha-numeric key. The search is case-insensitive
   </p>
+<p class="para">Cells display single-line previews of up to 512 characters. Clicking a cell copies its complete value to the primary selection, including any text omitted from the preview. Searches also use the complete value. Column widths can be adjusted by dragging their header dividers.</p>
 <p class="para"></p>
 </div></div>
 <nav class="prevnext pagewide"><div class="inner">

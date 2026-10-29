@@ -358,9 +358,61 @@ information.</p></div></div>
 </div></section>
   </p>
 <p class="para">Use <span class="code literal">--color-scheme=system|light|dark</span> to override the interface color scheme for the running session. This does not change the saved <a class="link" href="GuideOptionsGeneral.html#PreferencesColorScheme" title="Color scheme">Color scheme preference</a>.</p>
-<div class="links sectionlinks" role="navigation"><ul><li class="links"><a class="xref" href="GuideReferenceCommandLine.html#IndependentInstances" title="Independent Instances">Independent Instances</a></li></ul></div>
+<div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideReferenceCommandLine.html#BashCompletion" title="Bash Completion">Bash Completion</a></li>
+<li class="links"><a class="xref" href="GuideReferenceCommandLine.html#IndependentInstances" title="Independent Instances">Independent Instances</a></li>
+</ul></div>
 </div>
-<section id="IndependentInstances" class="section"><div class="inner">
+<section id="BashCompletion" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Bash Completion</h2></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="para">Geeqie provides Bash completion for command line options, action names, and image filenames. Type <span class="code literal">geeqie --</span> and press <span class="key keycap"><kbd>Tab</kbd></span> twice to list available options.</p>
+<p class="para">Install the <span class="code literal">bash-completion</span> package on the host and ensure it is enabled in your interactive Bash shell. On Ubuntu, install it with:</p>
+<div class="code"><pre class="contents"><code>sudo apt install bash-completion</code></pre></div>
+</div>
+<section id="BashCompletionSnap" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Snap</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The Snap package registers completion for <span class="cmd command">geeqie</span>, <span class="cmd command">geeqie.wayland</span>, and <span class="cmd command">geeqie.x11</span>.</p>
+<p class="para">Start a new Bash shell after installing or updating the Snap. Use the command directly, such as <span class="code literal">geeqie --</span>, rather than <span class="code literal">snap run geeqie --</span>. Snap manages the completion script; you do not need to copy or source files from <span class="file filename">/snap/geeqie/current</span>.</p>
+<p class="para">If completion does not work, type <span class="code literal">geeqie --</span>, press <span class="key keycap"><kbd>Tab</kbd></span>, and then run <span class="code literal">complete -p geeqie</span>. Snap's completion handler is named <span class="code literal">_complete_from_snap</span>. An older completion script from another Geeqie installation can take precedence; try a fresh shell after removing obsolete manual completion setup.</p>
+</div></div>
+</div></section><section id="BashCompletionFlatpak" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">Flatpak</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">To use Geeqie's Bash completion with Flatpak, create a host-side command named <span class="cmd command">geeqie</span> and install the completion script on the host. A script installed inside the Flatpak is not automatically loaded by your host shell.</p>
+<p class="para">Create the directory <span class="file filename">$HOME/.local/bin</span> if necessary, and save the following wrapper as <span class="file filename">$HOME/.local/bin/geeqie</span>:</p>
+<div class="code"><pre class="contents"><code>#!/bin/sh
+exec flatpak run org.geeqie.Geeqie "$@"</code></pre></div>
+<p class="para">Make it executable and ensure <span class="file filename">$HOME/.local/bin</span> is on your <span class="code literal">PATH</span>:</p>
+<div class="code"><pre class="contents"><code>chmod +x "$HOME/.local/bin/geeqie"</code></pre></div>
+<p class="para">Obtain the Geeqie source archive matching your Flatpak version from the <a href="https://github.com/BestImageViewer/geeqie/releases" class="ulink" title="https://github.com/BestImageViewer/geeqie/releases">release downloads</a>. Install its completion script on the host, replacing the source path below with your source directory:</p>
+<div class="code"><pre class="contents"><code>mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion/completions"
+cp /path/to/geeqie-source/data/completions/geeqie \
+   "${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion/completions/geeqie"</code></pre></div>
+<p class="para">Start a new Bash shell and check <span class="code literal">command -v geeqie</span> to confirm it selects your wrapper. Type <span class="code literal">geeqie --</span> and press <span class="key keycap"><kbd>Tab</kbd></span> twice. After triggering completion, <span class="code literal">complete -p geeqie</span> should show <span class="code literal">_geeqie</span>. These instructions register completion for the wrapper, not for arguments after <span class="code literal">flatpak run org.geeqie.Geeqie</span>.</p>
+<p class="para">Update the completion script when you update the Flatpak. Filename completion uses files visible to the host shell; the Flatpak's filesystem permissions still determine which files Geeqie can open.</p>
+</div></div>
+</div></section><section id="BashCompletionAppImage" class="section"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title">AppImage</h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">An AppImage does not need to be extracted to use Bash completion. The completion script runs in the host shell, separately from the AppImage.</p>
+<p class="para">Make the AppImage executable and create a symbolic link named <span class="cmd command">geeqie</span> in a directory on your <span class="code literal">PATH</span>. For example, replace the AppImage path below with its actual absolute path, and ensure <span class="file filename">$HOME/.local/bin</span> is on your <span class="code literal">PATH</span>:</p>
+<div class="code"><pre class="contents"><code>chmod +x /absolute/path/to/Geeqie.AppImage
+mkdir -p "$HOME/.local/bin"
+ln -s /absolute/path/to/Geeqie.AppImage "$HOME/.local/bin/geeqie"</code></pre></div>
+<p class="para">The <span class="cmd command">geeqie-download-appimage.sh</span> downloader already creates a <span class="cmd command">geeqie</span> link in <span class="file filename">$HOME/bin</span>. If you use that link, ensure <span class="file filename">$HOME/bin</span> is on your <span class="code literal">PATH</span>.</p>
+<p class="para">Obtain the Geeqie source archive matching your AppImage version from the <a href="https://github.com/BestImageViewer/geeqie/releases" class="ulink" title="https://github.com/BestImageViewer/geeqie/releases">release downloads</a>. Install its <span class="file filename">data/completions/geeqie</span> file on the host, replacing the source path below with your source directory:</p>
+<div class="code"><pre class="contents"><code>mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion/completions"
+cp /path/to/geeqie-source/data/completions/geeqie \
+   "${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion/completions/geeqie"</code></pre></div>
+<p class="para">Start a new Bash shell, type <span class="code literal">geeqie --</span>, and press <span class="key keycap"><kbd>Tab</kbd></span> twice. Use the command named <span class="cmd command">geeqie</span>; the script does not register completion for arbitrary AppImage filenames. After triggering completion, <span class="code literal">complete -p geeqie</span> should show <span class="code literal">_geeqie</span>.</p>
+<p class="para">Update the completion script when you update the AppImage so that the available options and actions stay current. If you have already extracted an AppImage, you can use its <span class="file filename">squashfs-root/usr/share/bash-completion/completions/geeqie</span> file instead of the source copy.</p>
+</div></div>
+</div></section>
+</div>
+</div></section><section id="IndependentInstances" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Independent Instances</h2></div>
 <div class="region"><div class="contents pagewide">
 <p class="para">Normally, launching Geeqie again sends the command to the running application instance. Opening another window does not create an independent instance. <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>Q</kbd></span></span> quits that instance and closes all its windows; <span class="keyseq keycombo"><span class="key keycap"><kbd>Ctrl</kbd></span>+<span class="key keycap"><kbd>W</kbd></span></span> closes only the current window, quitting the instance if it is the last main window.</p>

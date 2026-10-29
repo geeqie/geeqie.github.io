@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }</code></pre></div>
 <p class="para">If <span class="sys envar">XDG_CONFIG_HOME</span> is set, use <span class="file filename">gtk-4.0/gtk.css</span> inside that directory instead. Create the directory and file if they do not exist, and preserve any existing rules.</p>
 <p class="para">You can replace <span class="code literal">monospace</span> with an installed font name, such as <span class="code literal">"DejaVu Sans Mono"</span>, and optionally add <span class="code literal">font-size: 11pt;</span> inside the braces.</p>
-<p class="para">Restart Geeqie to apply the change. This rule applies only to the file list; the folder pane and icon view keep their usual fonts. To restore the default font, remove the rule and restart Geeqie.</p>
+<p class="para">Restart Geeqie to apply the change. This rule applies to the main file pane in list view, search results, and both file lists in the Find Duplicates window. The folder pane, icon view, metadata tables, and keyword trees keep their usual fonts. To restore the default font, remove the rule and restart Geeqie.</p>
 </div></div>
 </div></section><section id="Iconview" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">
@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p class="para">By default filtering is case-insensitive. A checkbox labelled "Case" permits the filter to be made case-sensitive.
     </p>
 <p class="para">Additionally a drop-down box permits any of the file <span class="em emphasis"><a class="link" href="GuideOptionsFiltering.html#Filetypes" title="File types">Classes</a></span> to be selected or deselected from the viewed list.</p>
+<p class="para">The <span class="gui guilabel">Label</span> drop-down filters by a mapped color, unlabeled images, or other label text. See <a class="link" href="GuideOptionsGeneral.html#ColorLabels" title="Color labels">Color labels</a> for assignment and mapping preferences.</p>
 <p class="para">Also additionally a drop-down box permits any of the file <span class="em emphasis"><a class="link" href="GuideReferenceXmpExif.html" title="XMP, Exif and IPTC">Rating</a></span> to be selected or deselected from the viewed list.</p>
 <p class="para"></p>
 </div></div>
