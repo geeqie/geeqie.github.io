@@ -46,16 +46,24 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="para">Pan view recursively visits each folder under the specified folder. This can consume considerable computer resources.</p>
   </div></div></div>
 </div>
+<p class="para">Folder scanning runs in the background, and the status bar shows indexing progress. Image data, layouts, and the image index are prepared in short steps so the window remains responsive. Use <span class="gui guilabel">Cancel</span> to stop indexing, or close the window. Choosing another folder or changing the layout cancels the previous build and starts a new one.</p>
 <p class="para">Enable thumbnail caching to reuse thumbnails in Pan View. Both Geeqie's own cache and the shared thumbnail cache are supported. With Geeqie's own cache, new thumbnails are saved at the size configured in Preferences and scaled to the selected Pan View size. Changing the Pan View size does not regenerate valid cached thumbnails.</p>
 <p class="para"></p>
 <div class="links sectionlinks" role="navigation"><ul>
+<li class="links"><a class="xref" href="GuideOtherWindowsPanView.html#PanViewKeyboardPanning" title="Keyboard Panning">Keyboard Panning</a></li>
 <li class="links"><a class="xref" href="GuideOtherWindowsPanView.html#Selectafolder" title="Select a folder">Select a folder</a></li>
 <li class="links"><a class="xref" href="GuideOtherWindowsPanView.html#Chooseaviewmode" title="Choose a view mode">Choose a view mode</a></li>
 <li class="links"><a class="xref" href="GuideOtherWindowsPanView.html#Howeachimageshouldberepresented" title="How each image should be represented">How each image should be represented</a></li>
 <li class="links"><a class="xref" href="GuideOtherWindowsPanView.html#Find" title="Find">Find</a></li>
 </ul></div>
 </div>
-<section id="Selectafolder" class="section"><div class="inner">
+<section id="PanViewKeyboardPanning" class="section"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title">Keyboard Panning</h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="para">The Close window shortcut (Ctrl+W by default) also works while the location or search field has focus. You can change this shortcut in <a class="link" href="GuideOptionsKeyboard.html" title="Keyboard Options">Keyboard Options</a>.</p>
+<p class="para">With the image view focused, arrow keys pan the view, Shift increases the step, and Ctrl moves to an edge. Page Up and Page Down move vertically by half a viewport; Home and End move horizontally by half a viewport. These are the default bindings for the Pan View panning commands in <a class="link" href="GuideOptionsKeyboard.html" title="Keyboard Options">Keyboard Options</a>. Keys in the search field retain their editing behavior.</p>
+</div></div>
+</div></section><section id="Selectafolder" class="section"><div class="inner">
 <div class="hgroup pagewide"><h2 class="title">Select a folder</h2></div>
 <div class="region"><div class="contents pagewide">
 <div class="terms variablelist"><div class="inner"><div class="region"><div class="contents"><dl class="terms variablelist">
